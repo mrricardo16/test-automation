@@ -18,8 +18,10 @@
 16. Preserve logs, screenshots, traces, and error stacks whenever available.
 17. Mark unreliable automation as MANUAL instead of forcing automation.
 18. Avalonia work follows Headless tests first, then a small Appium real desktop E2E set.
-19. Appium installation is prohibited during the current initialization phase.
-20. Never commit keys, passwords, tokens, secrets, or sensitive configuration.
-21. Keep all Markdown, TypeScript, JSON, and text files encoded as UTF-8.
-22. Keep generated reports in reports and generated evidence in artifacts.
-23. Keep node_modules and browser binaries out of Git.
+19. Avalonia Headless tests must not depend on a real Desktop Session or screen coordinates; validate ViewModel, Command, Binding, and Control State.
+20. Appium is only for real desktop E2E scenarios that Headless cannot cover, and Appium installation is prohibited during the current Phase 2 initialization.
+21. Real Avalonia business projects are read-only by default; do not change product code, AutomationId, or testability interfaces to make tests pass.
+22. Never commit keys, passwords, tokens, secrets, or sensitive configuration.
+23. Keep all Markdown, TypeScript, JSON, and text files encoded as UTF-8.
+24. Keep generated reports in reports and generated evidence in artifacts.
+25. Keep node_modules and browser binaries out of Git.

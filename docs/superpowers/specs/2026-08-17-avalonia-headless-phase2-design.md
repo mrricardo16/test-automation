@@ -10,7 +10,7 @@ This phase includes:
 
 - A standalone .NET test project under tests/avalonia/headless.
 - Target framework net8.0, reusing the existing .NET 8 SDK.
-- Avalonia.Headless.XUnit 12.1.0, Avalonia.Themes.Fluent 12.1.0, xunit.v3 3.2.2, and Microsoft.NET.Test.Sdk 18.8.1, with compatible package versions.
+- Avalonia.Headless.XUnit 12.1.0, Avalonia.Themes.Fluent 12.1.0, xunit.v3 3.2.2, xunit.runner.visualstudio 3.1.4, and Microsoft.NET.Test.Sdk 18.8.1, with compatible package versions.
 - A code-only TestWindow containing TextBox, Button, and TextBlock.
 - A small ViewModel with InputText, StatusText, and SubmitCommand.
 - A single formal TestCase: TC-AVA-ENV-001.
@@ -37,7 +37,7 @@ It will start only after this standalone fixture passes. It must first inspect t
 
 ## Version and Framework Choice
 
-The fixture targets net8.0 even though .NET 10 is installed. This keeps the baseline on the already installed LTS-era SDK and avoids coupling the fixture to the newest local SDK. Avalonia.Headless.XUnit 12.1.0 is selected as the integration package and is kept at the same Avalonia major/minor line as Avalonia.Themes.Fluent 12.1.0. Avalonia 12 Headless uses xUnit v3, so xunit.v3 3.2.2 and Microsoft.NET.Test.Sdk 18.8.1 are selected as the test runner dependencies.
+The fixture targets net8.0 even though .NET 10 is installed. This keeps the baseline on the already installed LTS-era SDK and avoids coupling the fixture to the newest local SDK. Avalonia.Headless.XUnit 12.1.0 is selected as the integration package and is kept at the same Avalonia major/minor line as Avalonia.Themes.Fluent 12.1.0. Avalonia 12 Headless uses xUnit v3, so xunit.v3 3.2.2, xunit.runner.visualstudio 3.1.4, and Microsoft.NET.Test.Sdk 18.8.1 are selected as the test runner dependencies.
 
 No .NET SDK installation, upgrade, global tool installation, PATH change, or system configuration change is required.
 
@@ -51,7 +51,7 @@ The fixture is intentionally code-only and has five focused components:
 - TestViewModel.cs: InputText, StatusText, and an ICommand implementation that copies InputText to StatusText.
 - TC_AVA_ENV_001_HeadlessInteractionShouldWork.cs: the formal test linked to TC-AVA-ENV-001.
 
-The assembly-level AvaloniaTestApplication attribute configures AppBuilder.Configure<App>().UseHeadless(new AvaloniaHeadlessPlatformOptions()). Each test uses the default per-test isolation so Application and Dispatcher state do not leak between tests.
+The assembly-level AvaloniaTestFramework attribute configures the Avalonia 12 xUnit v3 integration. The convention-based public TestAppBuilder.BuildAvaloniaApp method returns AppBuilder.Configure<App>().UseHeadless(new AvaloniaHeadlessPlatformOptions()). Each test uses the default per-test isolation so Application and Dispatcher state do not leak between tests.
 
 ## Interaction and Data Flow
 

@@ -4,9 +4,9 @@
 
 **Goal:** Add an independent net8.0 Avalonia Headless + xUnit v3 fixture that passes TC-AVA-ENV-001 without referencing any real Avalonia business project, while keeping Phase 1 Playwright green.
 
-**Architecture:** Create one standalone test project under tests/avalonia/headless. Build the UI in C# with a Window, TextBox, Button, and TextBlock; bind them to a small ViewModel and ICommand; initialize Avalonia with AvaloniaTestApplication and UseHeadless; run one AvaloniaFact test on the Avalonia UI thread. Reserve tests/avalonia/e2e for the later Phase 2B real-project integration boundary.
+**Architecture:** Create one standalone test project under tests/avalonia/headless. Build the UI in C# with a Window, TextBox, Button, and TextBlock; bind them to a small ViewModel and ICommand; initialize Avalonia 12 with AvaloniaTestFramework, the convention-based TestAppBuilder, and UseHeadless; run one AvaloniaFact test on the Avalonia UI thread. Reserve tests/avalonia/e2e for the later Phase 2B real-project integration boundary.
 
-**Tech Stack:** .NET SDK 8.0.100, net8.0, Avalonia.Headless.XUnit 12.1.0, Avalonia.Themes.Fluent 12.1.0, xunit.v3 3.2.2, Microsoft.NET.Test.Sdk 18.8.1, PowerShell, Git.
+**Tech Stack:** .NET SDK 8.0.100, net8.0, Avalonia.Headless.XUnit 12.1.0, Avalonia.Themes.Fluent 12.1.0, xunit.v3 3.2.2, xunit.runner.visualstudio 3.1.4, Microsoft.NET.Test.Sdk 18.8.1, PowerShell, Git.
 
 ## Global Constraints
 
@@ -104,6 +104,7 @@ Interfaces:
         <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
         <PackageReference Include="xunit.v3" Version="3.2.2" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" PrivateAssets="all" />
       </ItemGroup>
     </Project>
 
@@ -138,8 +139,7 @@ Interfaces:
 
     using Avalonia.Headless.XUnit;
 
-    [assembly: AvaloniaTestApplication(
-        typeof(AutomatedTesting.Avalonia.Headless.TestAppBuilder))]
+    [assembly: AvaloniaTestFramework]
 
 - [ ] Step 4: Create TestViewModel.cs.
 

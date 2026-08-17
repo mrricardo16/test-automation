@@ -32,18 +32,19 @@ Implemented:
 - Agent repository rules
 - Environment and initialization reports
 - Project-local npm and Playwright browser mirror configuration
+- Independent Avalonia Headless + xUnit fixture (`TC-AVA-ENV-001`)
 
-Not implemented:
+Deferred or not implemented:
 
-- Avalonia Headless
 - Avalonia Appium E2E
+- Phase 2B / Phase 2.5 real Avalonia project Headless integration
 - API automation
 - CI/CD
 - Automatic requirement parsing
 - Automatic test-case generation
 - Result aggregation
 
-Avalonia is intentionally staged for later: Headless tests first, then a small set of real desktop E2E tests using Appium.
+Avalonia Phase 2 uses an independent code-only Headless fixture first. Phase 2B / Phase 2.5 is reserved for later real Avalonia project Headless integration. Appium remains uninstalled and out of scope for the current phase.
 
 ## Directory guide
 
@@ -53,7 +54,8 @@ Avalonia is intentionally staged for later: Headless tests first, then a small s
 - test-cases: TestCase source records
 - tests/web: Playwright Web tests
 - tests/api: reserved API automation boundary
-- tests/avalonia: deferred Avalonia automation boundary
+- tests/avalonia/headless: independent Avalonia Headless fixture
+- tests/avalonia/e2e: reserved Phase 2B / Phase 2.5 real-project boundary
 - tests/manual: manual-only test records
 - config: future non-secret configuration templates
 - scripts: repeatable local setup helpers
@@ -73,6 +75,10 @@ Equivalent command:
 Reinstall project dependencies:
 
     npm ci
+
+Run the Avalonia Headless environment test:
+
+    dotnet test tests/avalonia/headless/AutomatedTesting.Avalonia.Headless.csproj
 
 Install Chromium through the configured domestic mirror:
 
