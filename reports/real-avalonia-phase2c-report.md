@@ -176,9 +176,10 @@ Appium: No, not installed
 The final commit and remote synchronization are recorded in the closing section of this report after publication:
 
 ```text
-Final commit: pending final verification
-Push: pending final verification
-origin/main...HEAD: pending final verification
+Implementation commit: 1bfef41 feat: add Avalonia 11 real-project harness
+Publication commit: recorded by the follow-up report commit below
+Push: origin/main updated successfully
+origin/main...HEAD: 0 0
 ```
 
 ## 11. Boundary after Phase 2C
