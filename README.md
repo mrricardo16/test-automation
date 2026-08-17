@@ -33,11 +33,12 @@ Implemented:
 - Environment and initialization reports
 - Project-local npm and Playwright browser mirror configuration
 - Independent Avalonia Headless + xUnit fixture (`TC-AVA-ENV-001`)
+- Phase 2B / Phase 2.5 real Avalonia project read-only testability assessment
 
 Deferred or not implemented:
 
 - Avalonia Appium E2E
-- Phase 2B / Phase 2.5 real Avalonia project Headless integration
+- Executed real-project Headless test; current candidate is assessed but blocked from execution
 - API automation
 - CI/CD
 - Automatic requirement parsing
@@ -45,6 +46,20 @@ Deferred or not implemented:
 - Result aggregation
 
 Avalonia Phase 2 uses an independent code-only Headless fixture first. Phase 2B / Phase 2.5 is reserved for later real Avalonia project Headless integration. Appium remains uninstalled and out of scope for the current phase.
+
+## Phase 2B / Phase 2.5 assessment
+
+The real project was inspected read-only from `D:\HZ_RSS40\03_trunk\src_m_logclient`, with runtime evidence from `E:\logclient\logclient20260812\net8.0`.
+
+Current conclusion:
+
+- Pure analysis state, filtering, parsing, projection, and aggregation are suitable for `AUTO_UNIT`.
+- AnalysisView and ReplayView are potential `AUTO_HEADLESS_WITH_MOCK` targets after a version-matched Avalonia 11.3.14 harness and test-owned external data/storage doubles exist.
+- MainWindow/App startup is currently `BLOCKED` for direct integration because the real project is Avalonia 11.3.14 while the independent fixture is Avalonia 12.1.0, and a ProjectReference build could write into the read-only source project.
+- Native file pickers, dialogs, shell opening, and OS window behavior are `NEEDS_APPIUM`; map/canvas visual acceptance is currently `MANUAL`.
+- No real-project Headless test has been created or executed. The first business candidate is `TC-AVA-LOG-001`, classified `AUTO_UNIT` but currently `BLOCKED` for safe assembly execution.
+
+See `reports/real-avalonia-automation-assessment.md` and `reports/real-avalonia-phase2b-report.md` for evidence and the full matrix.
 
 ## Directory guide
 
@@ -55,6 +70,7 @@ Avalonia Phase 2 uses an independent code-only Headless fixture first. Phase 2B 
 - tests/web: Playwright Web tests
 - tests/api: reserved API automation boundary
 - tests/avalonia/headless: independent Avalonia Headless fixture
+- tests/avalonia/real-project: reserved for a future version-matched real-project test harness; not created in this assessment
 - tests/avalonia/e2e: reserved Phase 2B / Phase 2.5 real-project boundary
 - tests/manual: manual-only test records
 - config: future non-secret configuration templates

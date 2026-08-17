@@ -25,3 +25,16 @@
 23. Keep all Markdown, TypeScript, JSON, and text files encoded as UTF-8.
 24. Keep generated reports in reports and generated evidence in artifacts.
 25. Keep node_modules and browser binaries out of Git.
+
+## Real Project Safety Rules
+
+1. `D:\HZ_RSS40\03_trunk\src_m_logclient` is read-only source evidence for Phase 2B / Phase 2.5.
+2. Do not modify, format, generate into, commit, push, stash, checkout, reset, or clean the real source directory.
+3. Put all test adapters, reports, scripts, and test doubles in `E:\automated-testing` only.
+4. Do not change product source, AutomationId, test hooks, InternalsVisibleTo, NuGet dependencies, or DI solely to make automation pass.
+5. Prefer Mock, Fake, Stub, or Test Double for external services and side-effecting paths.
+6. If safe automation is not possible, record `BLOCKED` or `PRODUCT_CHANGE_RECOMMENDED` with the evidence and do not fabricate PASS.
+7. Distinguish real product failures from test infrastructure errors.
+8. Do not execute destructive tests against real production files, databases, services, devices, or network endpoints.
+9. Do not build or restore a real source project when it would write `bin`, `obj`, generated resources, or other outputs into the read-only source tree.
+10. Runtime binaries may be inspected read-only; they are not permission to replace, patch, inject, or instrument the installed application.
