@@ -35,10 +35,12 @@ Implemented:
 - Independent Avalonia Headless + xUnit fixture (`TC-AVA-ENV-001`)
 - Phase 2B / Phase 2.5 real Avalonia project read-only testability assessment
 - Phase 2C Avalonia 11.3.14 real-project Harness with executed runtime-DLL unit and bounded real-view Headless smoke
+- Phase 3A real Avalonia business Headless coverage for AnalysisView and ReplayView using the compiled runtime DLL
 
 Deferred or not implemented:
 
 - Avalonia Appium E2E
+- Phase 3B and broader real-project business integration
 - Full real-project UI workflow automation with storage/dialog/export doubles
 - API automation
 - CI/CD
@@ -75,6 +77,18 @@ The real project is tested through a separate Avalonia `11.3.14` / `net8.0` Harn
 Machine-specific paths are documented in `config/local-projects.example.json`; copy it to ignored `config/local-projects.json` only when local overrides are needed. The submitted repository contains no real DLL.
 
 See `reports/real-avalonia-phase2c-report.md` for package versions, DLL/reference decisions, source integrity, test output, and the remaining boundary.
+
+## Phase 3A real business Headless / Mock extension
+
+Phase 3A uses the read-only compiled `HZ.LogClient.dll` from the configured runtime directory and keeps the real source directory and runtime directory unchanged. It adds:
+
+- `TC-AVA-ANALYSIS-002`: real filter input invalidates the query snapshot and clears result UI.
+- `TC-AVA-ANALYSIS-003`: real result-limit action updates query state and visible text.
+- `TC-AVA-REPLAY-001`: real replay time-range state updates slider bounds and time labels.
+
+No ProjectReference, source copy, Mock/Fake product object, Appium installation, or product-side AutomationId change is used. Full package/session loading remains a test-double boundary; native picker/export/window behavior is `NEEDS_APPIUM`; map pixels remain `MANUAL`; missing stable AutomationIds and direct storage/session coupling are `PRODUCT_CHANGE_RECOMMENDED` recommendations only.
+
+See `reports/real-avalonia-phase3a-report.md`, `reports/real-avalonia-automation-assessment.md`, and `reports/appium-e2e-candidate-list.md`.
 
 ## Directory guide
 
@@ -119,6 +133,10 @@ Run the Avalonia 11.3.14 real-project Harness:
 Run the real-project runtime-DLL unit test:
 
     dotnet test tests/avalonia/real-project/unit/AutomatedTesting.Avalonia.RealProject.Unit.csproj
+
+Run the Phase 3A real business Headless cases:
+
+    dotnet test tests/avalonia/real-project/headless/AutomatedTesting.Avalonia11.RealProject.Headless.csproj
 
 Install Chromium through the configured domestic mirror:
 

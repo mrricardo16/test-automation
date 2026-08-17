@@ -1,7 +1,7 @@
 # Real Avalonia Automation Assessment Matrix
 
 **Assessment date:** 2026-08-17
-**Phase 2C update:** 2026-08-17; bounded real-project Harness coverage added without changing the source project
+**Phase 3A update:** 2026-08-17; behavior-level real AnalysisView and ReplayView Headless coverage added without changing the source project
 **Source:** `D:\HZ_RSS40\03_trunk\src_m_logclient`
 **Actual project directory:** `D:\HZ_RSS40\03_trunk\src_m_logclient\logclient`
 **Runtime:** `E:\logclient\logclient20260812\net8.0`
@@ -187,3 +187,48 @@ Counts are matrix-row counts, not executable test counts:
 | `TC-AVA-ANALYSIS-001` | Real `AnalysisView` constructor and representative control tree | `AUTO_HEADLESS` | `PASS` |
 
 The full AnalysisView row remains `AUTO_HEADLESS_WITH_MOCK` because import, storage provider, dialogs, and export are coupled to external side effects. The bounded constructor/control-tree smoke must not be interpreted as full page workflow coverage.
+
+## Phase 3A behavior-level matrix
+
+The rows below refine the broad module rows above. Classification is applied by behavior, not by page name. `AUTO_UNIT` takes priority over Headless when no Avalonia session is needed; Headless takes priority over Appium when control state is observable without native desktop integration.
+
+### AnalysisView
+
+| Behavior | Evidence from real source | TestCase / layer | Classification | Phase 3A result | Boundary |
+| --- | --- | --- | --- | --- | --- |
+| Constructor and representative control tree | `AnalysisView` initializes real AXAML controls and event wiring | `TC-AVA-ANALYSIS-001` / Headless | `AUTO_HEADLESS` | PASS | Smoke only; no session data |
+| Task-code filter input invalidates the query snapshot | `GenericTextFilter_Changed` calls the real `InvalidateQuerySnapshot` path | `TC-AVA-ANALYSIS-002` / Headless | `AUTO_HEADLESS` | PASS | No package/session required |
+| Result-limit action updates the query state and visible label | `ResultLimit_Click` calls real `_queryState.TrySetResultLimit` and updates `ResultLimitText` | `TC-AVA-ANALYSIS-003` / Headless | `AUTO_HEADLESS` | PASS | Snapshot setup uses reflection on the real runtime object; no fake state object |
+| Result-limit/page arithmetic | `AnalysisQueryState` is deterministic state logic | `TC-AVA-LOG-001` / unit | `AUTO_UNIT` | PASS | No UI required |
+| JSONL/package parsing and projections | `LogPackageReader`, `LogReportProjection`, aggregation and alignment services operate on records | Future unit / test-owned fixture | `AUTO_UNIT` | Candidate | Synthetic fixture schema must be confirmed; no sensitive production package copied |
+| Full query execution and result rendering | `QueryRowsAsync` directly calls `context.Session.QueryAnalysisRecords` and uses code-behind state | Future Headless + test double | `AUTO_HEADLESS_WITH_MOCK` | Boundary assessed | Current context/session seam is not injectable from the external Harness |
+| Import, save export, and report opening | Direct `TopLevel.StorageProvider`, `File.WriteAllTextAsync`, and `Process.Start` calls | Appium candidate / manual file contract | `NEEDS_APPIUM` | Deferred | Requires real native picker/shell or an approved product seam |
+
+### ReplayView
+
+| Behavior | Evidence from real source | TestCase / layer | Classification | Phase 3A result | Boundary |
+| --- | --- | --- | --- | --- | --- |
+| Constructor and empty replay control tree | Real `ReplayView` initializes timer, custom slider, map canvas, and status controls | Phase 3A harness | `AUTO_HEADLESS` | PASS as part of `TC-AVA-REPLAY-001` | No map or package loaded |
+| Selected time range updates slider and labels | Real private `SetReplayTimeRange` updates `AnalysisTimeRange`, slider bounds, enabled state, and labels | `TC-AVA-REPLAY-001` / Headless | `AUTO_HEADLESS` | PASS | Reflection invokes the real method; pixel output is not asserted |
+| Replay status classification and timing rules | `ReplayStatusSelector`, `ReplayStatusClassifier`, and `ReplayPlaybackTiming` are deterministic | Future unit | `AUTO_UNIT` | Candidate | Prefer unit coverage before page integration |
+| Package/frame loading and playback state | `RefreshReplay` directly uses `LogClientContext`, session records, package frames, map loading, and a DispatcherTimer | Future Headless + test double | `AUTO_HEADLESS_WITH_MOCK` | Boundary assessed | Test-owned session/package seam is not currently exposed |
+| Native map selection | Direct `TopLevel.StorageProvider.OpenFilePickerAsync` | Appium candidate | `NEEDS_APPIUM` | Deferred | Requires OS picker |
+| Canvas geometry/pixels and visual status panels | `ReplayMapCanvas` custom drawing and pointer/layout behavior | Manual visual evidence; unit rules separately | `MANUAL` | Deferred | Headless state does not prove pixel fidelity |
+
+## Phase 3A test doubles and unmockable dependencies
+
+No Mock, Fake, Stub, or copied product object was introduced. The test-only reflection adapter only loads the compiled DLL and invokes real view members for setup/observation. The following direct dependencies remain unmockable from the current external Harness: `TopLevel.StorageProvider`, `File.WriteAllTextAsync`, `Process.Start`, `LogClientContext.Session`, `ImportedLogSession.QueryAnalysisRecords`, `ImportedLogSession.BuildReplayFrames`, map loading, and the view-owned `DispatcherTimer`. They remain `AUTO_HEADLESS_WITH_MOCK` boundary candidates or `PRODUCT_CHANGE_RECOMMENDED`; the test repository does not alter the product to create seams.
+
+## Phase 3A AutomationId assessment
+
+The source scan found no `AutomationProperties.AutomationId` or `AutomationProperties.Name` in `MainWindow.axaml`, `AnalysisView.axaml`, or `ReplayView.axaml`. Existing `x:Name` values provide useful Headless/reflection handles but are not a stable cross-process Appium locator contract. Product-side AutomationId additions are therefore `PRODUCT_CHANGE_RECOMMENDED` for the small future Appium scope; no AXAML or product code was modified.
+
+## Phase 3A executed coverage
+
+| TestCaseId | Executed scope | Classification | Status |
+|---|---|---|---|
+| `TC-AVA-ANALYSIS-002` | Real TaskCodeFilter input invalidates real query state and clears real result/pagination controls | `AUTO_HEADLESS` | `PASS` |
+| `TC-AVA-ANALYSIS-003` | Real result-limit event updates real query state and visible label | `AUTO_HEADLESS` | `PASS` |
+| `TC-AVA-REPLAY-001` | Real ReplayView time-range state updates real slider and labels | `AUTO_HEADLESS` | `PASS` |
+
+These three cases are behavior-level coverage, not full import, export, replay-data, native-window, or visual-map acceptance.

@@ -47,3 +47,14 @@
 4. Prefer the read-only compiled runtime assembly for real-project business tests. Do not add a `ProjectReference` when restore/build could write `bin`, `obj`, generated resources, or other outputs under the source project.
 5. The version-matched Harness may reference only test-repository packages and test-owned helpers. Machine-specific source/runtime locations belong in `config/local-projects.example.json` and the ignored `config/local-projects.json`, not scattered through tests.
 6. A PASS from the real-project Harness must identify the exact Avalonia package version, target framework, assembly path, and executed TestCaseId. A constructor/control-tree smoke does not imply that native file pickers, dialogs, export, desktop window state, or visual map acceptance are covered.
+
+## Phase 3A Business Automation Rules
+
+1. Phase 3A real business tests load `HZ.LogClient.dll` from `E:\logclient\logclient20260812\net8.0` through the independent Avalonia 11.3.14 Harness; do not add a `ProjectReference` to the real project.
+2. `D:\HZ_RSS40\03_trunk\src_m_logclient` and `E:\logclient\logclient20260812\net8.0` remain read-only. Do not build, restore, patch, instrument, clean, or generate into either location.
+3. Write TestCase records under `test-cases/avalonia/` before formal test methods. Every new AnalysisView or ReplayView behavior test must retain its TestCaseId in the executable method name and report.
+4. Use this classification priority: `AUTO_UNIT` before Headless; Headless before Appium; native file picker/window/shell behavior is `NEEDS_APPIUM`; Canvas pixel and visual fidelity claims are `MANUAL`.
+5. Test doubles, adapters, fakes, stubs, test data, reports, and scripts belong only in `E:\automated-testing`. Do not copy product source or production log packages into the repository.
+6. Use a Test Double only when the real product structure permits safe replacement. If direct storage/session/file/timer dependencies cannot be replaced from the external Harness, record the exact blocker and use `PRODUCT_CHANGE_RECOMMENDED`; never fabricate a PASS.
+7. Missing stable `AutomationProperties.AutomationId` values are a product-side recommendation for the approved Appium surface only. Do not modify AXAML or product code during Phase 3A.
+8. Before completion, recompute the source-tree hash using the Phase 2B/2C manifest method, excluding only build/cache/temp directories, and require equality before and after. Appium remains uninstalled and Phase 3B is not started.
