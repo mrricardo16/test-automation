@@ -20,3 +20,5 @@ obj/
 **/TestResults/
 TestResults/
 *.trx
+
+config/local-projects.json

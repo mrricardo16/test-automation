@@ -1,0 +1,8 @@
+{
+  "realProjectSourceRoot": "D:\\HZ_RSS40\\03_trunk\\src_m_logclient",
+  "realProjectDirectory": "D:\\HZ_RSS40\\03_trunk\\src_m_logclient\\logclient",
+  "runtimeDirectory": "E:\\logclient\\logclient20260812\\net8.0",
+  "expectedTargetFramework": "net8.0",
+  "expectedAvaloniaVersion": "11.3.14",
+  "expectedBusinessAssembly": "HZ.LogClient.dll"
+}

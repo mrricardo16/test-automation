@@ -1,6 +1,7 @@
 # Real Avalonia Automation Assessment Matrix
 
 **Assessment date:** 2026-08-17
+**Phase 2C update:** 2026-08-17; bounded real-project Harness coverage added without changing the source project
 **Source:** `D:\HZ_RSS40\03_trunk\src_m_logclient`
 **Actual project directory:** `D:\HZ_RSS40\03_trunk\src_m_logclient\logclient`
 **Runtime:** `E:\logclient\logclient20260812\net8.0`
@@ -33,7 +34,7 @@ This is a read-only assessment. No source code, project file, solution file, res
 | AutomationClassification | `AUTO_UNIT` |
 | Risk | Low |
 | Reason | `AnalysisQueryState`, `AnalysisTimeRange`, and `LogAnalysisFilter` contain deterministic local state and filtering logic. |
-| RecommendedNextStep | Add a test-repository-only unit test after establishing a safe reference to the real assembly or an explicitly approved source seam. |
+| RecommendedNextStep | `TC-AVA-LOG-001` now executes against the read-only runtime assembly through the independent unit Harness. |
 
 ### 2. Log package import and record session
 
@@ -81,7 +82,7 @@ This is a read-only assessment. No source code, project file, solution file, res
 | AutomationClassification | `AUTO_HEADLESS_WITH_MOCK` |
 | Risk | High; no ViewModel/DI seam, native storage provider, dialogs, direct file writes, and static parser calls |
 | Reason | The control tree is present and the page can potentially be exercised with controlled fixtures, but file selection and export paths are coupled to `TopLevel.StorageProvider`. |
-| RecommendedNextStep | First create a version-matched Avalonia 11.3.14 test harness in `E:\automated-testing`; do not change the product. If storage/dialog seams cannot be isolated, report `PRODUCT_CHANGE_RECOMMENDED`. |
+| RecommendedNextStep | A bounded real constructor/control-tree smoke is now covered by `TC-AVA-ANALYSIS-001`. Full import, storage, dialog, and export flows still require test-owned doubles; if those seams cannot be isolated, report `PRODUCT_CHANGE_RECOMMENDED`. |
 
 ### 5. ReplayView state and playback controls
 
@@ -124,12 +125,12 @@ This is a read-only assessment. No source code, project file, solution file, res
 | ViewModel | None |
 | PrimaryControls | Window, custom title bar, tab buttons, image resources, window state controls, analysis/replay pages |
 | ExternalDependencies | Avalonia resources, Semi.Avalonia, Ursa themes, image assets, theme persistence, desktop lifetime |
-| HeadlessSuitability | Not currently executable through the Phase 2 fixture because the real project is Avalonia 11.3.14 while the fixture is Avalonia 12.1.0 |
+| HeadlessSuitability | The version-matched Harness now covers a bounded control-tree smoke; full shell startup remains blocked by resource, theme, and page coupling |
 | RecommendedTestLayer | Version-matched Headless smoke test after isolated harness setup |
 | AutomationClassification | `BLOCKED` |
 | Risk | High; direct assembly integration can cause version conflicts and a source-project build can write `bin/obj` into the read-only project |
-| Reason | `App` loads XAML and theme resources, while `MainWindow` immediately constructs both pages, loads an icon, applies persisted theme state, and wires desktop window behavior. |
-| RecommendedNextStep | Do not add a ProjectReference in the current phase. Build a separate, explicitly versioned test harness only after its output paths and resource loading are proven safe. |
+| Reason | `TC-AVA11-ENV-001` proves the independent 11.3.14 Harness. `App` still loads XAML and theme resources, while `MainWindow` immediately constructs both pages, loads an icon, applies persisted theme state, and wires desktop window behavior. |
+| RecommendedNextStep | Keep the independent Harness and runtime-DLL path. Do not add a ProjectReference; evaluate full App/MainWindow only after resource loading and side-effect boundaries are separately controlled. |
 
 ### 8. Native file, dialog, export, and OS window behavior
 
@@ -170,9 +171,19 @@ Counts are matrix-row counts, not executable test counts:
 | Classification | Count |
 |---|---:|
 | `AUTO_UNIT` | 3 |
-| `AUTO_HEADLESS` | 0 |
+| `AUTO_HEADLESS` | 1 |
 | `AUTO_HEADLESS_WITH_MOCK` | 2 |
 | `NEEDS_APPIUM` | 1 |
 | `MANUAL` | 1 |
 | `BLOCKED` | 1 |
 | `PRODUCT_CHANGE_RECOMMENDED` | 1 |
+
+## Phase 2C Executed Coverage
+
+| TestCaseId | Executed scope | Classification | Status |
+|---|---|---|---|
+| `TC-AVA11-ENV-001` | Independent Avalonia 11.3.14 Window/Control Tree/Binding/Command/Headless input baseline | `AUTO_HEADLESS` | `PASS` |
+| `TC-AVA-LOG-001` | Real `AnalysisQueryState` from read-only `HZ.LogClient.dll` | `AUTO_UNIT` | `PASS` |
+| `TC-AVA-ANALYSIS-001` | Real `AnalysisView` constructor and representative control tree | `AUTO_HEADLESS` | `PASS` |
+
+The full AnalysisView row remains `AUTO_HEADLESS_WITH_MOCK` because import, storage provider, dialogs, and export are coupled to external side effects. The bounded constructor/control-tree smoke must not be interpreted as full page workflow coverage.

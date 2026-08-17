@@ -38,3 +38,12 @@
 8. Do not execute destructive tests against real production files, databases, services, devices, or network endpoints.
 9. Do not build or restore a real source project when it would write `bin`, `obj`, generated resources, or other outputs into the read-only source tree.
 10. Runtime binaries may be inspected read-only; they are not permission to replace, patch, inject, or instrument the installed application.
+
+## Real Avalonia Version Rules
+
+1. The independent baseline fixture under `tests/avalonia/headless` is pinned to Avalonia `12.1.0`; preserve it as an independent regression baseline.
+2. The real LogClient runtime and source project are Avalonia `11.3.14` on `net8.0`; real-project tests must use an independent `11.3.14` Harness under `tests/avalonia/real-project`.
+3. Do not mix Avalonia 12 packages with the real-project Harness, and do not downgrade the existing baseline fixture to make real-project tests compile.
+4. Prefer the read-only compiled runtime assembly for real-project business tests. Do not add a `ProjectReference` when restore/build could write `bin`, `obj`, generated resources, or other outputs under the source project.
+5. The version-matched Harness may reference only test-repository packages and test-owned helpers. Machine-specific source/runtime locations belong in `config/local-projects.example.json` and the ignored `config/local-projects.json`, not scattered through tests.
+6. A PASS from the real-project Harness must identify the exact Avalonia package version, target framework, assembly path, and executed TestCaseId. A constructor/control-tree smoke does not imply that native file pickers, dialogs, export, desktop window state, or visual map acceptance are covered.

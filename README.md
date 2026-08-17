@@ -34,11 +34,12 @@ Implemented:
 - Project-local npm and Playwright browser mirror configuration
 - Independent Avalonia Headless + xUnit fixture (`TC-AVA-ENV-001`)
 - Phase 2B / Phase 2.5 real Avalonia project read-only testability assessment
+- Phase 2C Avalonia 11.3.14 real-project Harness with executed runtime-DLL unit and bounded real-view Headless smoke
 
 Deferred or not implemented:
 
 - Avalonia Appium E2E
-- Executed real-project Headless test; current candidate is assessed but blocked from execution
+- Full real-project UI workflow automation with storage/dialog/export doubles
 - API automation
 - CI/CD
 - Automatic requirement parsing
@@ -61,6 +62,20 @@ Current conclusion:
 
 See `reports/real-avalonia-automation-assessment.md` and `reports/real-avalonia-phase2b-report.md` for evidence and the full matrix.
 
+## Phase 2C real-project Harness
+
+The real project is tested through a separate Avalonia `11.3.14` / `net8.0` Harness under `tests/avalonia/real-project`. The existing generic fixture under `tests/avalonia/headless` remains Avalonia `12.1.0` and is an independent regression baseline.
+
+- `TC-AVA11-ENV-001`: PASS; independent 11.3.14 window, control tree, binding, command, and Headless input baseline.
+- `TC-AVA-LOG-001`: PASS; real `AnalysisQueryState` loaded from the read-only runtime `HZ.LogClient.dll`, with no ProjectReference or source build.
+- `TC-AVA-ANALYSIS-001`: PASS; real `AnalysisView` constructor/control-tree smoke in Headless. This does not cover file pickers, dialogs, export, shell opening, or desktop window integration.
+- Full AnalysisView/ReplayView workflows remain `AUTO_HEADLESS_WITH_MOCK` candidates and may be `PRODUCT_CHANGE_RECOMMENDED` if direct storage/dialog coupling cannot be isolated. No product changes are made here.
+- Appium is not installed. Native OS behaviors remain deferred to the separately scoped next stage.
+
+Machine-specific paths are documented in `config/local-projects.example.json`; copy it to ignored `config/local-projects.json` only when local overrides are needed. The submitted repository contains no real DLL.
+
+See `reports/real-avalonia-phase2c-report.md` for package versions, DLL/reference decisions, source integrity, test output, and the remaining boundary.
+
 ## Directory guide
 
 - docs/requirements: requirement source and analysis
@@ -70,7 +85,8 @@ See `reports/real-avalonia-automation-assessment.md` and `reports/real-avalonia-
 - tests/web: Playwright Web tests
 - tests/api: reserved API automation boundary
 - tests/avalonia/headless: independent Avalonia Headless fixture
-- tests/avalonia/real-project: reserved for a future version-matched real-project test harness; not created in this assessment
+- tests/avalonia/real-project/headless: independent Avalonia 11.3.14 real-project Harness and bounded real-view smoke
+- tests/avalonia/real-project/unit: runtime-DLL unit tests for real business state
 - tests/avalonia/e2e: reserved Phase 2B / Phase 2.5 real-project boundary
 - tests/manual: manual-only test records
 - config: future non-secret configuration templates
@@ -95,6 +111,14 @@ Reinstall project dependencies:
 Run the Avalonia Headless environment test:
 
     dotnet test tests/avalonia/headless/AutomatedTesting.Avalonia.Headless.csproj
+
+Run the Avalonia 11.3.14 real-project Harness:
+
+    dotnet test tests/avalonia/real-project/headless/AutomatedTesting.Avalonia11.RealProject.Headless.csproj
+
+Run the real-project runtime-DLL unit test:
+
+    dotnet test tests/avalonia/real-project/unit/AutomatedTesting.Avalonia.RealProject.Unit.csproj
 
 Install Chromium through the configured domestic mirror:
 
