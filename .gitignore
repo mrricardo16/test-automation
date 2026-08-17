@@ -15,3 +15,8 @@ obj/
 .vs/
 .idea/
 .vscode/
+**/bin/
+**/obj/
+**/TestResults/
+TestResults/
+*.trx
