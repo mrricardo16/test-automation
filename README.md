@@ -36,11 +36,11 @@ Implemented:
 - Phase 2B / Phase 2.5 real Avalonia project read-only testability assessment
 - Phase 2C Avalonia 11.3.14 real-project Harness with executed runtime-DLL unit and bounded real-view Headless smoke
 - Phase 3A real Avalonia business Headless coverage for AnalysisView and ReplayView using the compiled runtime DLL
+- Phase 3B real HZ.LogClient.exe Appium Windows minimum-loop evaluation; environment and business Cases are currently BLOCKED by missing WinAppDriver and approved test data
 
 Deferred or not implemented:
 
 - Avalonia Appium E2E
-- Phase 3B and broader real-project business integration
 - Full real-project UI workflow automation with storage/dialog/export doubles
 - API automation
 - CI/CD
@@ -48,7 +48,7 @@ Deferred or not implemented:
 - Automatic test-case generation
 - Result aggregation
 
-Avalonia Phase 2 uses an independent code-only Headless fixture first. Phase 2B / Phase 2.5 is reserved for later real Avalonia project Headless integration. Appium remains uninstalled and out of scope for the current phase.
+Avalonia Phase 2 uses an independent code-only Headless fixture first. Phase 2B / Phase 2.5 is reserved for later real Avalonia project Headless integration. Phase 3B is now separately evaluated in the Appium report below.
 
 ## Phase 2B / Phase 2.5 assessment
 
@@ -89,6 +89,12 @@ Phase 3A uses the read-only compiled `HZ.LogClient.dll` from the configured runt
 No ProjectReference, source copy, Mock/Fake product object, Appium installation, or product-side AutomationId change is used. Full package/session loading remains a test-double boundary; native picker/export/window behavior is `NEEDS_APPIUM`; map pixels remain `MANUAL`; missing stable AutomationIds and direct storage/session coupling are `PRODUCT_CHANGE_RECOMMENDED` recommendations only.
 
 See `reports/real-avalonia-phase3a-report.md`, `reports/real-avalonia-automation-assessment.md`, and `reports/appium-e2e-candidate-list.md`.
+
+## Phase 3B real HZ.LogClient.exe Appium E2E
+
+Phase 3B added project-local Appium 3.6.0 and Appium Windows Driver 6.1.1. The Appium server itself started and returned ready, but the official Microsoft WinAppDriver 1.2.1 backend was not discoverable after installation attempts, so `TC-AVA-E2E-ENV-001` is `BLOCKED`. `TC-AVA-E2E-001` is also `BLOCKED` because no approved non-sensitive parser-valid package is configured; the real executable was not falsely reported as launched or connected.
+
+The E2E scripts, lifecycle helpers, and ignored evidence boundary are under `tests/avalonia/e2e/` and `artifacts/phase3b/`. No Android SDK, Android Studio, unrelated driver, product source, runtime file, AutomationId, or coordinate-based formal locator was added. See [real-avalonia-phase3b-report.md](<E:/automated-testing/reports/real-avalonia-phase3b-report.md>) for the exact blocker and next prerequisites.
 
 ## Directory guide
 

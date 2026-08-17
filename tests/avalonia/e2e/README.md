@@ -1,9 +1,10 @@
-# Avalonia E2E Boundary
+# Avalonia Desktop E2E Boundary
 
-This directory is reserved for Phase 2B / Phase 2.5: real Avalonia project Headless integration.
+This directory contains the Phase 3B minimum real `HZ.LogClient.exe` Appium evaluation.
 
-That future phase must first inspect the real project's TargetFramework, Avalonia version, XAML, ViewModels, DI, resources, and service dependencies. It must classify candidate cases as directly Headless-testable, requiring a Test Double or Mock, requiring Appium E2E, or requiring manual execution.
+Only these formal Cases belong here during Phase 3B:
 
-The real business project must remain read-only by default. Product-side AutomationId or testability changes are recommendations only unless separately authorized.
+- `TC-AVA-E2E-ENV-001`: project-local Appium/Windows backend/session/page-source environment probe.
+- `TC-AVA-E2E-001`: the single real AnalysisView log-import attempt, currently blocked until the Windows backend and approved non-sensitive package are available.
 
-No Appium package, driver, desktop E2E test, or real business project reference belongs in the current Phase 2 fixture.
+The real source and runtime remain read-only. Product-side AutomationId or testability changes are recommendations only. Do not add export, Replay, map, CI/CD, or coordinate-based formal automation in this phase.

@@ -57,4 +57,16 @@
 5. Test doubles, adapters, fakes, stubs, test data, reports, and scripts belong only in `E:\automated-testing`. Do not copy product source or production log packages into the repository.
 6. Use a Test Double only when the real product structure permits safe replacement. If direct storage/session/file/timer dependencies cannot be replaced from the external Harness, record the exact blocker and use `PRODUCT_CHANGE_RECOMMENDED`; never fabricate a PASS.
 7. Missing stable `AutomationProperties.AutomationId` values are a product-side recommendation for the approved Appium surface only. Do not modify AXAML or product code during Phase 3A.
-8. Before completion, recompute the source-tree hash using the Phase 2B/2C manifest method, excluding only build/cache/temp directories, and require equality before and after. Appium remains uninstalled and Phase 3B is not started.
+8. Before completion, recompute the source-tree hash using the Phase 2B/2C manifest method, excluding only build/cache/temp directories, and require equality before and after. Appium installation and Phase 3B remain separately scoped and must be recorded in their own report.
+
+## Phase 3B Appium E2E Rules
+
+1. Phase 3B may use project-local Appium and the official Windows Driver only for the real `E:\logclient\logclient20260812\net8.0\HZ.LogClient.exe` minimum loop. Do not add Android SDK, Android Studio, iOS tooling, Selenium, or unrelated drivers.
+2. `D:\HZ_RSS40\03_trunk\src_m_logclient` and `E:\logclient\logclient20260812\net8.0` remain read-only. Do not modify, patch, replace, inject, instrument, build into, or copy from either directory.
+3. Formal Appium Cases are `TC-AVA-E2E-ENV-001` and `TC-AVA-E2E-001` only in Phase 3B. Do not start export, Replay, map, CI/CD, or product testability work in this phase.
+4. Start only the executable and Appium server owned by the current test run. Record PID and close only those owned processes; never issue broad image-name kills.
+5. Accessibility id, Name, ControlType, role, stable visible text, and parent/child structure are preferred in that order. Index and screen coordinates are diagnostic only and cannot be the formal locator strategy.
+6. If WinAppDriver, desktop session, approved test package, or other prerequisite is absent, classify `BLOCKED`. If the test automation itself cannot create a session or locate a control after prerequisites are present, classify `ERROR`; do not call either a product `FAIL`.
+7. If a real interaction completes but the product result contradicts Expected Result, classify `FAIL` and preserve evidence without modifying the product.
+8. Page source, screenshots, Appium logs, product packages, binaries, and private local configuration belong in ignored `artifacts/` or ignored local paths. Review page source for sensitive content before retaining it.
+9. Before completion, run the Phase 3A and Web regression, recompute source hash before/after with `*.tmp`/`*.temp` excluded as temp files, run `git diff --check`, verify no forbidden artifacts are staged, and confirm `origin/main...HEAD = 0 0`.

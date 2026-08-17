@@ -232,3 +232,14 @@ The source scan found no `AutomationProperties.AutomationId` or `AutomationPrope
 | `TC-AVA-REPLAY-001` | Real ReplayView time-range state updates real slider and labels | `AUTO_HEADLESS` | `PASS` |
 
 These three cases are behavior-level coverage, not full import, export, replay-data, native-window, or visual-map acceptance.
+
+## Phase 3B Appium update
+
+| Behavior | Phase 3B evidence | Classification | Status |
+|---|---|---|---|
+| Project-local Appium server readiness | Appium 3.6.0 `/status` returned ready | `AUTO` infrastructure | PASS |
+| Windows Appium backend discovery | Official Windows Driver 6.1.1 installed; WinAppDriver 1.2.1 not discoverable after official install attempt | `BLOCKED` | BLOCKED |
+| Real executable session / MainWindow page source | No session could be created because WinAppDriver is missing | `BLOCKED` | BLOCKED |
+| Real Analysis log import | No approved non-sensitive package configured; file picker not triggered | `BLOCKED` | BLOCKED |
+
+Phase 3B confirms the Appium server layer only. It does not provide evidence that `HZ.LogClient.exe` was launched, connected, or imported a file. The missing WinAppDriver backend and missing approved fixture are recorded as environment/data blockers, not product failures.

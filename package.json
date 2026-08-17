@@ -8,13 +8,16 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:appium": "node --test tests/avalonia/e2e/appium/TC_AVA_E2E_ENV_001_AppiumEnvironment.spec.mjs tests/avalonia/e2e/appium/TC_AVA_E2E_001_RealLogImport.spec.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.62.1"
+    "@playwright/test": "^1.62.1",
+    "appium": "3.6.0",
+    "appium-windows-driver": "6.1.1"
   }
 }
