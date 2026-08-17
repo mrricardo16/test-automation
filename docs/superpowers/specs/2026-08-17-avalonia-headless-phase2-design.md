@@ -69,7 +69,7 @@ The test flow is:
         ↓
     Two-way TextBox.Text binding updates ViewModel.InputText
         ↓
-    Raise the Button click event
+    Focus the Button and send a Headless Space key release
         ↓
     SubmitCommand copies InputText to ViewModel.StatusText
         ↓
@@ -77,7 +77,7 @@ The test flow is:
         ↓
     Assert TextBlock.Text == "hello"
 
-The test also asserts that the Window and all three controls exist before interaction. It will use AvaloniaFact so execution and awaited operations run on the Avalonia UI thread. It will not use Thread.Sleep, Task.Delay, screen coordinates, real desktop sessions, or external services.
+The test also asserts that the Window and all three controls exist before interaction. It will use AvaloniaFact so execution and awaited operations run on the Avalonia UI thread. It will trigger the bound Button command through Headless keyboard interaction rather than calling ICommand directly. It will not use Thread.Sleep, Task.Delay, screen coordinates, real desktop sessions, or external services.
 
 ## TestCase Contract
 
