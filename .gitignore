@@ -1,0 +1,17 @@
+node_modules/
+playwright-report/
+test-results/
+reports/playwright-report/
+artifacts/
+*.log
+
+.env
+.env.*
+!.env.example
+
+bin/
+obj/
+
+.vs/
+.idea/
+.vscode/
