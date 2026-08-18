@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { execFile } from 'node:child_process';
+import { execFile, execFileSync } from 'node:child_process';
 import { promisify } from 'node:util';
 import { spawn } from 'node:child_process';
 import { loadProjectConfig } from './project-config.mjs';
-import { startOwnedProduct, stopOwnedProduct } from './real-app-process.mjs';
+import { captureOwnedProductProcesses, stopOwnedProduct } from './real-app-process.mjs';
 import { evidenceDirectory, writeEvidence } from './evidence.mjs';
 
 const execFileAsync = promisify(execFile);
@@ -81,7 +81,9 @@ async function stopProcess(processHandle) {
     return;
   }
   if (process.platform === 'win32') {
-    await execFileAsync('taskkill.exe', ['/PID', String(processHandle.pid), '/T', '/F']).catch(() => {});
+    try {
+      execFileSync('taskkill.exe', ['/PID', String(processHandle.pid), '/T', '/F'], { stdio: 'ignore' });
+    } catch {}
     return;
   }
   processHandle.kill();
@@ -113,7 +115,7 @@ export async function runEnvironmentProbe() {
       });
     }
 
-    ownedProduct = startOwnedProduct(config.executablePath, config.runtimeDirectory);
+    ownedProduct = { executablePath: config.executablePath, pids: [] };
     const session = await requestJson(`http://127.0.0.1:${config.appiumPort}/session`, {
       method: 'POST',
       body: JSON.stringify({
@@ -134,6 +136,7 @@ export async function runEnvironmentProbe() {
     if (!sessionId) {
       throw new Error(`Appium session response did not contain a session id: ${JSON.stringify(session)}`);
     }
+    captureOwnedProductProcesses(ownedProduct);
 
     const source = await requestJson(`http://127.0.0.1:${config.appiumPort}/session/${sessionId}/source`);
     const pageSource = source.value ?? source;
@@ -150,10 +153,11 @@ export async function runEnvironmentProbe() {
       pageSource: '',
     });
   } finally {
+    captureOwnedProductProcesses(ownedProduct);
     if (sessionId) {
       await requestJson(`http://127.0.0.1:${config.appiumPort}/session/${sessionId}`, { method: 'DELETE' }).catch(() => {});
     }
-    stopOwnedProduct(ownedProduct);
+    await stopOwnedProduct(ownedProduct);
     await stopProcess(server);
   }
 }

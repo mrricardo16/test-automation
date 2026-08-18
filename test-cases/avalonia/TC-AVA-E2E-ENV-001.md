@@ -16,6 +16,7 @@
 | LocatorStrategy | Session-level app path and accessibility/page-source inspection; no coordinate locator |
 | RequirementSource | Phase 3B real HZ.LogClient.exe Appium E2E minimum loop request |
 | SourceCodeReference | Runtime executable `E:\logclient\logclient20260812\net8.0\HZ.LogClient.exe`; Appium Windows Driver / WinAppDriver host integration |
+| Evidence | `artifacts/phase3b/appium-status.json`; `artifacts/phase3b/environment-probe.json`; `artifacts/phase3b/appium-page-source-initial.xml`; `artifacts/phase3b/appium-server.log` |
 | Limitations | This does not prove AnalysisView navigation or log import; those belong to `TC-AVA-E2E-001` |
 | Cleanup | Delete only the owned Appium session and owned HZ.LogClient process; retain user processes and product files |
-| ExecutionStatus | BLOCKED |
+| ExecutionStatus | PASS |

@@ -33,19 +33,42 @@ export function startOwnedProduct(executablePath, workingDirectory) {
   return {
     child,
     pid: child.pid,
+    executablePath,
+    pids: [child.pid],
     startedAt: new Date().toISOString(),
   };
 }
 
-export function stopOwnedProduct(ownedProcess) {
-  if (!ownedProcess?.pid) {
+export function captureOwnedProductProcesses(ownedProcess) {
+  if (!ownedProcess?.executablePath) return;
+  const current = existingProductProcesses()
+    .filter((process) => process.executablePath.toLowerCase() === ownedProcess.executablePath.toLowerCase())
+    .map((process) => process.pid);
+  ownedProcess.pids = [...new Set([...(ownedProcess.pids ?? []), ...current])];
+}
+
+export async function stopOwnedProduct(ownedProcess) {
+  if (!ownedProcess?.pid && !ownedProcess?.executablePath) {
     return;
   }
 
   try {
-    process.kill(ownedProcess.pid);
+    const pids = [...new Set([...(ownedProcess.pids ?? []), ownedProcess.pid].filter(Boolean))];
+    if (process.platform === 'win32') {
+      for (const pid of pids) {
+        try {
+          execFileSync('taskkill.exe', ['/PID', String(Number(pid)), '/T', '/F'], { stdio: 'ignore' });
+        } catch (error) {
+          if (error.status !== 128) {
+            throw error;
+          }
+        }
+      }
+    } else {
+      for (const pid of pids) process.kill(pid);
+    }
   } catch (error) {
-    if (error.code !== 'ESRCH') {
+    if (error.code !== 'ESRCH' && error.code !== 'ERROR_NOT_FOUND' && error.code !== 'ETIMEDOUT') {
       throw error;
     }
   }

@@ -4,5 +4,14 @@
   "runtimeDirectory": "E:\\logclient\\logclient20260812\\net8.0",
   "expectedTargetFramework": "net8.0",
   "expectedAvaloniaVersion": "11.3.14",
-  "expectedBusinessAssembly": "HZ.LogClient.dll"
+  "expectedBusinessAssembly": "HZ.LogClient.dll",
+  "phase3bRun": {
+    "carLogDirectory": "E:\\测试项目部署\\测试项目部署\\RSS\\log",
+    "selectedCarLogFiles": [
+      "hz.carlog_20260717160532098_20260717162532098.zip",
+      "hz.carlog_20260717162532098_20260717164532098.zip",
+      "hz.carlog_20260717164532098_20260717170532098.zip"
+    ],
+    "packageName": "phase3b-run-carlog"
+  }
 }

@@ -3,19 +3,20 @@
 | Field | Value |
 | --- | --- |
 | TestCaseId | TC-AVA-E2E-001 |
-| Module | ANALYSIS |
-| Title | Execute the minimum real desktop log import flow in HZ.LogClient |
+| Module | ANALYSIS / FUN-IMPORT |
+| Title | Import three real car-log ZIP packages through the Analysis Windows file picker |
 | Priority | P0 |
-| TestType | Avalonia Desktop E2E |
-| Preconditions | `TC-AVA-E2E-ENV-001` is PASS or the same prerequisites are demonstrably available; a confirmed non-sensitive parser-valid log package is configured locally; source and runtime directories are read-only |
-| TestData | Local ignored `test-data/logclient/local/` package only; no production or customer log may be used or committed |
-| Steps | Start the real `HZ.LogClient.exe`; connect the MainWindow; enter AnalysisView; locate the real import-log entry through accessibility tree/name/role; trigger the real Windows file picker; enter the full approved test-package path; confirm Open; wait for the real import-success state; save reviewed evidence; close only the owned process/session |
-| ExpectedResult | The real import flow completes and the approved observable state appears, at minimum the selected package filename/package summary is displayed and the AnalysisView is no longer in its initial empty-import state. If the fixture contract defines a stable record count, assert that count as well. |
+| TestType | Real Avalonia desktop business E2E |
+| Preconditions | `TC-AVA-E2E-ENV-001 = PASS`; no pre-existing `HZ.LogClient.exe` process; real source and runtime remain read-only; the three approved local ZIP paths exist and are parser-valid by manifest inspection |
+| TestData | `E:\测试项目部署\测试项目部署\RSS\log\hz.carlog_20260717160532098_20260717162532098.zip`; `E:\测试项目部署\测试项目部署\RSS\log\hz.carlog_20260717162532098_20260717164532098.zip`; `E:\测试项目部署\测试项目部署\RSS\log\hz.carlog_20260717164532098_20260717170532098.zip`; package name `phase3b-run-carlog` |
+| Steps | 1. Start only the test-owned Appium/WinAppDriver chain and real `HZ.LogClient.exe`, recording PIDs. 2. Create the Windows Session and verify `MainWindow`, `AnalysisPage`, and initial empty state. 3. Locate the Analysis log-file control and its adjacent `选择` button using AccessibilityId plus parent/child structure. 4. Open the real Windows file picker. 5. Navigate to `E:\测试项目部署\测试项目部署\RSS\log`. 6. Use the picker file-list selection UI with Ctrl/Shift to select exactly the three named ZIP files; do not paste multiple paths into the filename box and do not use search. 7. Capture selected names and picker evidence before clicking `打开`. 8. Click `打开`, enter `phase3b-run-carlog`, and confirm the product import. 9. Wait for the real processing result and capture the post-import tree, screenshot, status, package summary, time range, and query-count state. 10. Close only the owned session/server/backend/product. |
+| ExpectedResult | The real file picker opens at the requested directory and reports at least three selected ZIPs. After `打开` and confirmation, the product finishes processing without an automation error; `ImportStatusText` shows the code-confirmed completion pattern `导入完成：有效 {n} 条，跳过 {n} 条，警告 {n} 条。`; the package summary is no longer `-`; the analysis time range is populated; and the Analysis page leaves its initial empty-import state with a non-zero valid-record/query state or an explicitly observed product warning. The three car packages are expected to be accepted as valid positive input based on their manifests (`packageType=car`, `invalidLineCount=0`, `partial=false`). |
 | AutomationType | AUTO |
-| AutomationFramework | Appium 3 + Appium Windows Driver + WebdriverIO TypeScript |
-| LocatorStrategy | Accessibility id if present; otherwise Name + ControlType + parent/child structure; visible text only when stable; index/coordinate are diagnostic only |
-| RequirementSource | Phase 3B real HZ.LogClient.exe Appium E2E minimum loop request |
-| SourceCodeReference | `D:\HZ_RSS40\03_trunk\src_m_logclient\logclient\Views\AnalysisView.axaml`; runtime `E:\logclient\logclient20260812\net8.0\HZ.LogClient.exe` |
-| Limitations | This MVP does not cover report export, ReplayView, map interaction, shell opening, or pixel acceptance. Missing stable locator is `ERROR_AUTOMATION_LOCATOR` plus `PRODUCT_CHANGE_RECOMMENDED`; unavailable approved data or required backend is `BLOCKED`. |
-| Cleanup | Close the owned session/process; do not delete user files, test packages, product logs, or runtime files |
-| ExecutionStatus | BLOCKED |
+| AutomationFramework | Appium 3.6.0 + Appium Windows Driver 6.1.1 + WinAppDriver 1.2.1 + Node.js Appium protocol client |
+| LocatorStrategy | 1. AccessibilityId: `AnalysisPage`, `LogFileTextBox`, `PackageNameTextBox`, `CurrentPackageSummaryText`, `ImportStatusText`; 2. Accessibility Name/ControlType; 3. parent/child XPath for the log-file `选择` button; 4. Windows picker list/name/control type and selection state. Index and coordinates are diagnostics only, never the formal primary strategy. |
+| RequirementSource | `LogClient功能设计说明书_v1.0.0` §2/§4.1/FUN-IMPORT and §5/§6; `流程图源/flow-index.json`; `流程图源/FL-IMPORT.drawio` and `.svg`; QA directory read-only scan: empty; current Phase 3B-RUN execution request |
+| SourceCodeReference | `D:\HZ_RSS40\03_trunk\src_m_logclient\logclient\Views\AnalysisView.axaml.cs:66-123` (multi-file picker and ZIP filtering), `:141-207` (confirmation and session apply), `:1166-1238` (summary/status), `AnalysisView.axaml` (`AnalysisPage`, `LogFileTextBox`, dynamic import controls); runtime `E:\logclient\logclient20260812\net8.0\HZ.LogClient.exe` |
+| Evidence | `artifacts/phase3b-run/main-window.xml`; `analysis-before-import.xml`; `analysis-after-import.xml`; `file-picker-open.xml`; `file-picker-selected.xml`; `before-import.png`; `file-picker-open.png`; `file-picker-selected.png`; `after-import.png`; Appium log; structured execution result with `SelectedCarLogs` and step statuses |
+| Cleanup | Delete only the owned Appium Session; stop only the Appium/WinAppDriver/product processes started by this run; do not delete or alter source, runtime files, real ZIP inputs, product logs, or other user processes |
+| Limitations | The design document is a development-delivery version and marks formal package validation values/success copy as product-confirmation items; this Case records the code-confirmed status pattern and observed runtime result. It does not cover traffic-log import, mixed import, report export, Replay, map interaction, or pixel acceptance. If a required control cannot be located using the declared semantic tree strategy, classify `ERROR_LOCATOR` and record `PRODUCT_CHANGE_RECOMMENDED`; do not modify AXAML. |
+| ExecutionStatus | READY |

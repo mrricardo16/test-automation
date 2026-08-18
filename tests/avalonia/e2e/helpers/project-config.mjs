@@ -20,7 +20,7 @@ export function loadProjectConfig() {
   return {
     ...project,
     executablePath,
-    appiumPort: Number(process.env.APPium_PORT ?? 4723),
+    appiumPort: Number(process.env.APPIUM_PORT ?? process.env.APPium_PORT ?? 4723),
     appiumLaunchTimeoutMs: Number(process.env.APPIUM_LAUNCH_TIMEOUT_MS ?? 30000),
     appiumCommandTimeoutMs: Number(process.env.APPIUM_COMMAND_TIMEOUT_MS ?? 30000),
   };
