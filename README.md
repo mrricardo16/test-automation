@@ -116,6 +116,12 @@ The E2E scripts, lifecycle helpers, and ignored evidence boundary are under `tes
 
 ## Commands
 
+## Web UI evidence
+
+Every automated Web UI `FAIL` or `ERROR` records machine-generated evidence when a browser page is available. The minimum evidence is a safe screenshot, current URL, failed step, expected versus actual result, and the Playwright error; the recommended bundle also includes trace, console, page-error, and failed/4xx/5xx network records.
+
+`BLOCKED` records its reason and captures the page screenshot and URL when a page exists. The Playwright defaults remain `screenshot: "only-on-failure"`, `trace: "retain-on-failure"`, and `video: "off"`. Evidence is written locally under ignored `artifacts/web/<TestCaseId>/<RunId>/` and is never committed. If evidence cannot be captured, the summary records why. URLs omit query strings, and evidence never writes request or response bodies, headers, cookies, browser-storage snapshots, passwords, tokens, or arbitrary full DOM content.
+
 Run the Web environment test:
 
     npm test
