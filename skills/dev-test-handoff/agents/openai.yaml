@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dev Test Handoff"
+  short_description: "Build validated As-Built design and black-box test handoff packs"
+  default_prompt: "Use $dev-test-handoff to analyze readable frontend and backend source into a validated As-Built baseline and derive a sanitized Markdown test handoff without executing tests."
