@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://automated-testing.local/contracts/coverage.schema.json",
+  "title": "Coverage Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["TestCaseId", "ApplicabilityStatus", "CoverageStatus"],
+  "properties": {
+    "TestCaseId": { "type": "string" },
+    "ApplicabilityStatus": { "enum": ["APPLICABLE", "NOT_APPLICABLE", "CONDITIONAL", "UNKNOWN"] },
+    "CoverageStatus": { "enum": ["COVERED", "PARTIAL", "UNTESTED", "MANUAL", "NOT_APPLICABLE"] },
+    "ApplicabilityReason": { "type": "string" },
+    "ApplicabilityCondition": { "type": "string" },
+    "CoverageBasis": { "type": "string" },
+    "EvidenceIds": { "type": "array", "items": { "type": "string" } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "ApplicabilityStatus": { "const": "NOT_APPLICABLE" } } },
+      "then": { "required": ["ApplicabilityReason"], "properties": { "CoverageStatus": { "const": "NOT_APPLICABLE" } } }
+    }
+  ]
+}

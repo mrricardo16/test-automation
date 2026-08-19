@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://automated-testing.local/contracts/evidence-index.schema.json",
+  "title": "Evidence Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["EvidenceId", "TestCaseId", "Kind", "Path", "Sanitized"],
+  "properties": {
+    "EvidenceId": { "type": "string", "minLength": 1 },
+    "TestCaseId": { "type": "string", "minLength": 1 },
+    "Kind": { "enum": ["ACTUAL", "OBSERVATION", "SCREENSHOT", "TRACE", "LOG", "REPORT"] },
+    "Path": { "type": "string", "minLength": 1 },
+    "Sanitized": { "type": "boolean", "const": true },
+    "ObservationType": { "type": "string" },
+    "ObservedAt": { "type": "string" },
+    "Source": { "type": "string" }
+  }
+}

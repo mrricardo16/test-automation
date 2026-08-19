@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://automated-testing.local/contracts/execution-result.schema.json",
+  "title": "Canonical Execution Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["TestCaseId", "ExecutionStatus", "ApplicabilityStatus", "CoverageStatus", "ExpectedBasis", "EvidenceIds", "ObservationEvidenceIds", "EnvironmentId", "GateStatus"],
+  "properties": {
+    "TestCaseId": { "type": "string", "pattern": "^(TC-[A-Z0-9]+-[A-Z0-9-]+|INFRASTRUCTURE_SELF_TEST)$" },
+    "ExecutionStatus": { "enum": ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "SKIPPED"] },
+    "ApplicabilityStatus": { "enum": ["APPLICABLE", "NOT_APPLICABLE", "CONDITIONAL", "UNKNOWN"] },
+    "CoverageStatus": { "enum": ["COVERED", "PARTIAL", "UNTESTED", "MANUAL", "NOT_APPLICABLE"] },
+    "ExpectedBasis": { "enum": ["REQUIREMENT", "DESIGN", "APPROVED_BASELINE", "HANDOFF_BASELINE", "CODE_BEHAVIOR", "UNKNOWN"] },
+    "EvidenceIds": { "type": "array", "items": { "type": "string" } },
+    "ObservationEvidenceIds": { "type": "array", "items": { "type": "string" } },
+    "EnvironmentId": { "type": "string", "minLength": 1 },
+    "GateStatus": { "enum": ["PASS", "LIMITED", "FAIL"] },
+    "ApplicabilityReason": { "type": "string" },
+    "ApplicabilityCondition": { "type": "string" },
+    "BaselineStatus": { "enum": ["BASELINE_VALIDATED", "BASELINE_LIMITED", "BASELINE_INCOMPLETE"] },
+    "SourceRuntimeAlignment": { "enum": ["ALIGNED", "MISMATCH", "UNKNOWN", "NOT_APPLICABLE"] },
+    "AcceptanceExpectation": { "enum": ["EXPECT_PASS", "EXPECT_PRODUCT_FAIL", "EXPECT_BLOCKED", "EXPECT_MANUAL", "EXPECT_BASELINE_LIMITED"] },
+    "ClaimType": { "enum": ["CHARACTERIZATION", "IMPLEMENTATION_REGRESSION", "REQUIREMENTS_COMPLIANCE"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "ApplicabilityStatus": { "const": "NOT_APPLICABLE" } } },
+      "then": { "required": ["ApplicabilityReason"], "properties": { "CoverageStatus": { "const": "NOT_APPLICABLE" } } }
+    },
+    {
+      "if": { "properties": { "ApplicabilityStatus": { "const": "CONDITIONAL" } } },
+      "then": { "required": ["ApplicabilityCondition"] }
+    },
+    {
+      "if": { "properties": { "BaselineStatus": { "const": "BASELINE_INCOMPLETE" } } },
+      "then": { "properties": { "GateStatus": { "not": { "const": "PASS" } } } }
+    },
+    {
+      "if": { "properties": { "AcceptanceExpectation": { "const": "EXPECT_PRODUCT_FAIL" } } },
+      "then": { "properties": { "ExecutionStatus": { "const": "FAIL" } } }
+    }
+  ]
+}

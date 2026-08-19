@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://automated-testing.local/contracts/defect.schema.json",
+  "title": "Defect Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["DefectId", "TestCaseId", "ExecutionStatus", "Summary", "EvidenceIds"],
+  "properties": {
+    "DefectId": { "type": "string", "minLength": 1 },
+    "TestCaseId": { "type": "string", "minLength": 1 },
+    "ExecutionStatus": { "enum": ["FAIL", "ERROR", "BLOCKED"] },
+    "Summary": { "type": "string", "minLength": 1 },
+    "EvidenceIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "AcceptanceExpectation": { "enum": ["EXPECT_PRODUCT_FAIL", "EXPECT_PASS", "EXPECT_BLOCKED", "EXPECT_MANUAL", "EXPECT_BASELINE_LIMITED"] },
+    "ExpectedDefectDiscovered": { "type": "boolean" }
+  }
+}

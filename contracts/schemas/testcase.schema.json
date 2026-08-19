@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://automated-testing.local/contracts/testcase.schema.json",
+  "title": "Canonical TestCase",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["TestCaseId", "ModuleId", "FeatureId", "Title", "Priority", "TestType", "TestLayer", "ApplicabilityStatus", "ExpectedBasis", "ExpectedResult", "AutomationType", "AutomationFramework"],
+  "properties": {
+    "TestCaseId": { "type": "string", "pattern": "^(TC-[A-Z0-9]+-[A-Z0-9-]+|INFRASTRUCTURE_SELF_TEST)$" },
+    "ModuleId": { "type": "string", "minLength": 1 },
+    "FeatureId": { "type": "string", "minLength": 1 },
+    "Title": { "type": "string", "minLength": 1 },
+    "Priority": { "enum": ["P0", "P1", "P2", "P3"] },
+    "TestType": { "type": "string", "minLength": 1 },
+    "TestLayer": { "type": "string", "minLength": 1 },
+    "ApplicabilityStatus": { "enum": ["APPLICABLE", "NOT_APPLICABLE", "CONDITIONAL", "UNKNOWN"] },
+    "ExpectedBasis": { "enum": ["REQUIREMENT", "DESIGN", "APPROVED_BASELINE", "HANDOFF_BASELINE", "CODE_BEHAVIOR", "UNKNOWN"] },
+    "ExpectedResult": { "type": "string", "minLength": 1 },
+    "AutomationType": { "enum": ["AUTO", "AUTO_PARTIAL", "MANUAL"] },
+    "AutomationFramework": { "type": "string", "minLength": 1 }
+  }
+}
