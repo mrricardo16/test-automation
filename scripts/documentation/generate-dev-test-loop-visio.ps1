@@ -34,7 +34,7 @@ function Set-ShapeStyle {
     Set-CellFormula $Shape 'LineWeight' '1.2 pt'
     $effectiveFontSize = [Math]::Round($FontSize * 1.22, 1)
     Set-CellFormula $Shape 'Char.Size' "$effectiveFontSize pt"
-    Set-CellFormula $Shape 'Char.Font' ('FONTNAME("' + $Font + '")')
+    Set-CellFormula $Shape 'Char.Font' ('FONT("' + $Font + '")')
     Set-CellFormula $Shape 'Para.HorzAlign' '1'
     Set-CellFormula $Shape 'Para.VertAlign' '1'
     Set-CellFormula $Shape 'TxtWidth' 'GUARD(Width-0.10 in)'
@@ -88,7 +88,7 @@ function New-PlainText {
     Set-CellFormula $shape 'Char.Color' $Color
     $effectiveFontSize = [Math]::Round($FontSize * 1.22, 1)
     Set-CellFormula $shape 'Char.Size' "$effectiveFontSize pt"
-    Set-CellFormula $shape 'Char.Font' 'FONTNAME("微软雅黑")'
+    Set-CellFormula $shape 'Char.Font' 'FONT("微软雅黑")'
     Set-CellFormula $shape 'Para.HorzAlign' '1'
     Set-CellFormula $shape 'Para.VertAlign' '1'
     Set-CellFormula $shape 'TxtWidth' 'GUARD(Width)'
