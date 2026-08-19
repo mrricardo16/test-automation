@@ -22,19 +22,6 @@ Formal automation starts with a TestCase record and keeps the TestCaseId linked 
 
 ## Current phase
 
-## Three-Skill test modes
-
-| Skill | Responsibility | Executes tests |
-|---|---|---|
-| dev-test-handoff | Read source into an As-Built baseline and Test Handoff. | No |
-| test-execution | Consume a Test Handoff for black-box execution. | Yes |
-| whitebox-test-execution | Directly drive white-box testing from readable, read-only source. | Yes |
-
-Mode A: Source → DEV-TEST-HANDOFF → Test Handoff → TEST-EXECUTION
-Mode B: Source → WHITEBOX-TEST-EXECUTION → White-box Regression
-
-Mode B does not claim a real project regression until an approved runtime execution has occurred.
-
 Implemented:
 
 - Pre-install environment scan
@@ -62,6 +49,19 @@ Deferred or not implemented:
 - Result aggregation
 
 Avalonia Phase 2 uses an independent code-only Headless fixture first. Phase 2B / Phase 2.5 is reserved for later real Avalonia project Headless integration. Phase 3B is now separately evaluated in the Appium report below.
+
+## Three-Skill test modes
+
+| Skill | Responsibility | Executes tests |
+|---|---|---|
+| dev-test-handoff | Read source into an As-Built baseline and Test Handoff. | No |
+| test-execution | Consume a Test Handoff for black-box execution. | Yes |
+| whitebox-test-execution | Directly drive white-box testing from readable, read-only source. | Yes |
+
+Mode A: Source → DEV-TEST-HANDOFF → Test Handoff → TEST-EXECUTION
+Mode B: Source → WHITEBOX-TEST-EXECUTION → White-box Regression
+
+Mode B does not claim a real project regression until an approved runtime execution has occurred.
 
 ## Phase 2B / Phase 2.5 assessment
 
