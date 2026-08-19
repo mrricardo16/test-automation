@@ -159,7 +159,12 @@ export function adaptLegacyCoverage(input: LegacyCoverageInput): LegacyCoverageM
   switch (coverage) {
     case 'PASS':
     case 'COVERED':
+    case 'COVERED_PASS':
       return { ExecutionStatus: 'PASS', CoverageStatus: 'COVERED' };
+    case 'COVERED_FAIL':
+      return { ExecutionStatus: 'FAIL', CoverageStatus: 'COVERED' };
+    case 'COVERED_ERROR':
+      return { ExecutionStatus: 'ERROR', CoverageStatus: 'COVERED' };
     case 'PARTIAL':
     case 'LIMITED':
       return { GateStatus: 'LIMITED', CoverageStatus: 'PARTIAL' };
@@ -169,7 +174,10 @@ export function adaptLegacyCoverage(input: LegacyCoverageInput): LegacyCoverageM
         CoverageStatus: 'NOT_APPLICABLE',
         ApplicabilityReason: 'Mapped from legacy coverage status NOT_APPLICABLE.',
       };
+    case 'NOT_COVERED':
+      return { ExecutionStatus: 'SKIPPED', CoverageStatus: 'UNTESTED' };
     case 'MANUAL':
+    case 'MANUAL_PENDING':
       return { ExecutionStatus: 'MANUAL', CoverageStatus: 'MANUAL' };
     case 'UNTESTED':
       return { ExecutionStatus: 'SKIPPED', CoverageStatus: 'UNTESTED' };

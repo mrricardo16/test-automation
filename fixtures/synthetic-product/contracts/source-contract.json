@@ -1,0 +1,16 @@
+{
+  "contractVersion": "SYNTHETIC-SOURCE-1",
+  "stableIds": {
+    "MOD": ["MOD-SYNTHETIC-RUNTIME", "MOD-SYNTHETIC-DATA", "MOD-SYNTHETIC-AUTH"],
+    "FEAT": ["FEAT-SYNTHETIC-CRUD", "FEAT-SYNTHETIC-FLAGS", "FEAT-SYNTHETIC-KNOWN-BUG"],
+    "RULE": ["RULE-ITEM-NAME-REQUIRED", "RULE-ADMIN-WRITE"],
+    "FLOW": ["FLOW-ITEM-DRAFT-SUBMITTED-APPROVED"],
+    "API": ["API-AUTH-LOGIN", "API-ITEMS-CRUD", "API-FEATURE-FLAGS"],
+    "VALID": ["VALID-ITEM-NAME-LENGTH"],
+    "STATE": ["STATE-ITEM-LIFECYCLE"]
+  },
+  "expected": {
+    "featureFlag": "enabled",
+    "itemLifecycle": ["draft", "submitted", "approved"]
+  }
+}
