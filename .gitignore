@@ -22,3 +22,8 @@ TestResults/
 *.trx
 
 config/local-projects.json
+
+__pycache__/
+*.pyc
+coverage/
+.eslintcache

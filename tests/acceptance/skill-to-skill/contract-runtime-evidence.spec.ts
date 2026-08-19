@@ -1,7 +1,7 @@
 import { test, expect, request } from '@playwright/test';
 
 import { validateExecutionResult } from '../../../scripts/platform/validate-contracts';
-let evaluateAcceptanceExpectation;
+let evaluateAcceptanceExpectation: typeof import('./helpers/contract-acceptance.mjs')['evaluateAcceptanceExpectation'];
 
 test.beforeAll(async () => {
   ({ evaluateAcceptanceExpectation } = await import('./helpers/contract-acceptance.mjs'));

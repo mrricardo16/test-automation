@@ -1,13 +1,13 @@
 import { test, expect } from '@playwright/test';
 
-let helpers;
+let helpers: typeof import('./helpers/contract-acceptance.mjs');
 
 test.beforeAll(async () => {
   helpers = await import('./helpers/contract-acceptance.mjs');
 });
 
 test('TC-SYN-ACCEPTANCE-001 evaluates all canonical AcceptanceExpectation values', async () => {
-  const cases = [
+  const cases: Array<[string, Record<string, string>]> = [
     ['EXPECT_PASS', { ExecutionStatus: 'PASS' }],
     ['EXPECT_PRODUCT_FAIL', { ExecutionStatus: 'FAIL' }],
     ['EXPECT_BLOCKED', { ExecutionStatus: 'BLOCKED' }],

@@ -9,15 +9,30 @@
   },
   "scripts": {
     "test": "playwright test",
-    "test:appium": "node --test tests/avalonia/e2e/appium/TC_AVA_E2E_ENV_001_AppiumEnvironment.spec.mjs tests/avalonia/e2e/appium/TC_AVA_E2E_001_RealLogImport.spec.mjs"
+    "test:appium": "node --test tests/avalonia/e2e/appium/TC_AVA_E2E_ENV_001_AppiumEnvironment.spec.mjs tests/avalonia/e2e/appium/TC_AVA_E2E_001_RealLogImport.spec.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.platform.json",
+    "typecheck:negative": "node scripts/platform/verify-negative-types.mjs",
+    "lint": "eslint \"scripts/platform/**/*.ts\" \"tests/acceptance/**/*.ts\" \"tests/api/synthetic/**/*.ts\" \"tests/types/**/*.ts\" tests/web/platform-contract-validator.spec.ts tests/web/synthetic-product-runtime.spec.ts --config eslint.config.mjs",
+    "test:web": "node scripts/platform/run-platform-tests.mjs web",
+    "test:api": "node scripts/platform/run-platform-tests.mjs api",
+    "test:skills": "node scripts/platform/run-skill-tests.mjs",
+    "test:contracts": "node scripts/platform/run-platform-tests.mjs contracts",
+    "test:synthetic": "node scripts/platform/run-platform-tests.mjs synthetic",
+    "validate": "node scripts/platform/run-platform-validation.mjs",
+    "test:platform": "node scripts/platform/run-platform-quality.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
     "appium": "3.6.0",
-    "appium-windows-driver": "6.1.1"
+    "appium-windows-driver": "6.1.1",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0"
   }
 }

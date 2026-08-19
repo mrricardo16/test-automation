@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-let createAgentAcceptanceProcedure;
+let createAgentAcceptanceProcedure: typeof import('./helpers/agent-acceptance-procedure.mjs')['createAgentAcceptanceProcedure'];
 
 test.beforeAll(async () => {
   ({ createAgentAcceptanceProcedure } = await import('./helpers/agent-acceptance-procedure.mjs'));
