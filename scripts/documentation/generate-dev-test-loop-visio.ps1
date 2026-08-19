@@ -32,16 +32,17 @@ function Set-ShapeStyle {
     Set-CellFormula $Shape 'FillPattern' '1'
     Set-CellFormula $Shape 'LineColor' $Line
     Set-CellFormula $Shape 'LineWeight' '1.2 pt'
-    Set-CellFormula $Shape 'Char.Size' "$FontSize pt"
+    $effectiveFontSize = [Math]::Round($FontSize * 1.22, 1)
+    Set-CellFormula $Shape 'Char.Size' "$effectiveFontSize pt"
     Set-CellFormula $Shape 'Char.Font' ('FONTNAME("' + $Font + '")')
     Set-CellFormula $Shape 'Para.HorzAlign' '1'
     Set-CellFormula $Shape 'Para.VertAlign' '1'
-    Set-CellFormula $Shape 'TxtWidth' 'GUARD(Width-0.18 in)'
-    Set-CellFormula $Shape 'TxtHeight' 'GUARD(Height-0.12 in)'
-    Set-CellFormula $Shape 'LeftMargin' '0.06 in'
-    Set-CellFormula $Shape 'RightMargin' '0.06 in'
-    Set-CellFormula $Shape 'TopMargin' '0.04 in'
-    Set-CellFormula $Shape 'BottomMargin' '0.04 in'
+    Set-CellFormula $Shape 'TxtWidth' 'GUARD(Width-0.10 in)'
+    Set-CellFormula $Shape 'TxtHeight' 'GUARD(Height-0.08 in)'
+    Set-CellFormula $Shape 'LeftMargin' '0.04 in'
+    Set-CellFormula $Shape 'RightMargin' '0.04 in'
+    Set-CellFormula $Shape 'TopMargin' '0.03 in'
+    Set-CellFormula $Shape 'BottomMargin' '0.03 in'
     if ($Dashed) { Set-CellFormula $Shape 'LinePattern' '2' }
 }
 
@@ -85,7 +86,8 @@ function New-PlainText {
     Set-CellFormula $shape 'FillPattern' '0'
     Set-CellFormula $shape 'LinePattern' '0'
     Set-CellFormula $shape 'Char.Color' $Color
-    Set-CellFormula $shape 'Char.Size' "$FontSize pt"
+    $effectiveFontSize = [Math]::Round($FontSize * 1.22, 1)
+    Set-CellFormula $shape 'Char.Size' "$effectiveFontSize pt"
     Set-CellFormula $shape 'Char.Font' 'FONTNAME("微软雅黑")'
     Set-CellFormula $shape 'Para.HorzAlign' '1'
     Set-CellFormula $shape 'Para.VertAlign' '1'
