@@ -1,0 +1,4 @@
+interface:
+  display_name: "Whitebox Test Execution"
+  short_description: "Drive source-based tests with safety gates and traceability"
+  default_prompt: "Use $whitebox-test-execution to derive and execute test-owned white-box tests from readable but read-only product source; Test Handoff is optional."

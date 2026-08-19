@@ -1,0 +1,3 @@
+# Source analysis and risk
+
+Use seven passes: Structure, Entry/API, Module/Feature, Behavior, frontend-backend mapping, Testability, Completeness. Assign stable `MOD-`, `FEAT-`, `RULE-`, `FLOW-`, `API-`, `VALID-`, `STATE-`, and `TC-` IDs. Every fact has one confidence: `CONFIRMED_FROM_CODE`, `CONFIRMED_FROM_RUNTIME`, `INFERRED`, `UNKNOWN`. Record relative `SourceEvidence` (path plus symbol/route/branch), not source dumps. Track branch, validation, state, permission, error, data/external-dependency risks. An unmatched frontend/backend item is `UNMATCHED`, not a defect; literal business semantics remain `UNKNOWN`.
