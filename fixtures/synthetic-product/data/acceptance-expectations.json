@@ -1,0 +1,9 @@
+{
+  "scenarios": [
+    { "id": "SYN-HEALTH", "expectation": "EXPECT_PASS" },
+    { "id": "SYN-KNOWN-BUG", "expectation": "EXPECT_PRODUCT_FAIL" },
+    { "id": "SYN-MANUAL-BOUNDARY", "expectation": "EXPECT_MANUAL" },
+    { "id": "SYN-LIMITED-BASELINE", "expectation": "EXPECT_BASELINE_LIMITED" },
+    { "id": "SYN-MISSING-CAPABILITY", "expectation": "EXPECT_BLOCKED" }
+  ]
+}

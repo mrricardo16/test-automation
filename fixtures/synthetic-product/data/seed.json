@@ -1,0 +1,13 @@
+{
+  "items": [
+    { "id": "item-001", "name": "Seed Item", "status": "draft" }
+  ],
+  "features": {
+    "newDashboard": false
+  },
+  "knownBug": {
+    "bugId": "SYN-BUG-001",
+    "expected": "enabled",
+    "actual": "disabled"
+  }
+}
