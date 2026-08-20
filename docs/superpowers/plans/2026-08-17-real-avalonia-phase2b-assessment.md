@@ -24,7 +24,7 @@
 ### Task 1: Capture source and automation repository baselines
 
 **Files:**
-- Modify: `reports/real-avalonia-phase2b-report.md`
+- Modify: `projects/test-workflow/reports/real-avalonia-phase2b-report.md`
 
 - [ ] Record automation repository branch, status, recent commits, remote, and `origin/main...HEAD` before analysis.
 - [ ] Record the specified source root Git result. If it is not a Git repository, record that fact and inspect the nested project directory without inventing a commit.
@@ -33,7 +33,7 @@
 ### Task 2: Analyze the real project from source evidence
 
 **Files:**
-- Modify: `reports/real-avalonia-phase2b-report.md`
+- Modify: `projects/test-workflow/reports/real-avalonia-phase2b-report.md`
 
 - [ ] Record `HZ.LogClient.csproj` TargetFramework, Avalonia packages, Newtonsoft.Json, Semi.Avalonia, Ursa, resource includes, and existing `InternalsVisibleTo`.
 - [ ] Record `Program.cs` and `App.axaml.cs` startup behavior.
@@ -45,7 +45,7 @@
 ### Task 3: Create the automation assessment matrix
 
 **Files:**
-- Create: `reports/real-avalonia-automation-assessment.md`
+- Create: `projects/test-workflow/reports/real-avalonia-automation-assessment.md`
 
 - [ ] Add one evidence-backed row for each major module or behavior: pure models/services, AnalysisView, ReplayView/map canvas, MainWindow/App, and file/dialog/export flows.
 - [ ] Use only `AUTO_UNIT`, `AUTO_HEADLESS`, `AUTO_HEADLESS_WITH_MOCK`, `NEEDS_APPIUM`, `MANUAL`, `BLOCKED`, and `PRODUCT_CHANGE_RECOMMENDED`.
@@ -68,7 +68,7 @@
 **Files:**
 - Modify: `AGENTS.md`
 - Modify: `README.md`
-- Create: `reports/real-avalonia-phase2b-report.md`
+- Create: `projects/test-workflow/reports/real-avalonia-phase2b-report.md`
 
 - [ ] Add explicit real-project read-only rules, source integrity rules, mock/fake preference, and product-change recommendation behavior.
 - [ ] Document the actual conclusion for direct Headless, Mock, Appium, Manual, first business Case, and implementation status.

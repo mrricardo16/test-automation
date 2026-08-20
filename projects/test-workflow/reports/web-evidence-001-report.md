@@ -8,7 +8,7 @@ The source-tree hash before the work was `fc51ed641ed79de24674e9a9f10d84ff0448f0
 
 ## Implemented evidence policy
 
-`tests/web/helpers/evidence.ts` provides the shared Playwright `test`, `expect`, and `evidence` fixture. It creates a UTC/PID/worker/retry RunId directory at `artifacts/web/<TestCaseId>/<RunId>/` when a checkpoint or failure bundle is needed.
+`tests/web/helpers/evidence.ts` provides the shared Playwright `test`, `expect`, and `evidence` fixture. It creates a UTC/PID/worker/retry RunId directory at `projects/test-workflow/artifacts/web/<TestCaseId>/<RunId>/` when a checkpoint or failure bundle is needed.
 
 The fixture automatically finalizes a bundle for `FAIL`, `ERROR`, and explicit `BLOCKED` runs. The bundle contains the safe screenshot result, current URL, current step, locator context, console records, page errors, failed requests, HTTP 4xx/5xx records, and a Markdown failure summary. Screenshot collection attempts full-page capture first, falls back to viewport capture, and skips capture when a sensitive-looking non-password input is present. Capture errors do not replace the original case status.
 
@@ -28,7 +28,7 @@ Default Web regression after removing the temporary self-test: `npm test -- --re
 
 ## Infrastructure self-test
 
-The temporary `INFRASTRUCTURE_SELF_TEST` was first run before the helper existed and correctly failed discovery with `Cannot find module './evidence'`. After implementation it intentionally failed its heading assertion, as designed (exit code 1), and created `artifacts/web/INFRASTRUCTURE_SELF_TEST/20260818-033103Z-pid16040-w0-r0/`.
+The temporary `INFRASTRUCTURE_SELF_TEST` was first run before the helper existed and correctly failed discovery with `Cannot find module './evidence'`. After implementation it intentionally failed its heading assertion, as designed (exit code 1), and created `projects/test-workflow/artifacts/web/INFRASTRUCTURE_SELF_TEST/20260818-033103Z-pid16040-w0-r0/`.
 
 The inspected bundle contained non-empty `failure.png`, `console-errors.json`, `page-errors.json`, `network-errors.json`, `locator-context.json`, and `failure-summary.md`. Console evidence contained the self-test marker; network evidence contained only `GET /` and its failure text. The serialized text/JSON passed the credential-redaction check and did not retain the data-URL HTML payload. Playwright produced a trace in its test-result output; the helper summary documented that the trace was unavailable at fixture finalization, which is permitted because Playwright writes the retained trace after fixture teardown. The temporary self-test source was deleted before the normal regression.
 

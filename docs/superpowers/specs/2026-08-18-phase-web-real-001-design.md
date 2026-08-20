@@ -45,8 +45,8 @@
 
 - `test-cases/web/TC-WEB-LOGIN-001.md`：沿用既有 TestCase 表格风格，包含 TestCaseId、前置条件、数据来源、步骤、定位策略、证据、限制和清理。
 - `tests/web/real-project/TC_WEB_LOGIN_001.spec.ts`：可独立通过 `npx playwright test tests/web/real-project/TC_WEB_LOGIN_001.spec.ts` 执行，方法名和报告保留 `TC-WEB-LOGIN-001`。
-- `reports/web-real-001-report.md`：包含起始 Git 状态、源码 hash/count 前后值、技术栈、路由/API、locator mapping、Network/Console、Dashboard 断言、最终状态和安全检查。
-- `reports/future-web-candidates.md`：只记录后续候选，不执行。
+- `projects/test-workflow/reports/web-real-001-report.md`：包含起始 Git 状态、源码 hash/count 前后值、技术栈、路由/API、locator mapping、Network/Console、Dashboard 断言、最终状态和安全检查。
+- `projects/test-workflow/reports/future-web-candidates.md`：只记录后续候选，不执行。
 - `artifacts/web-real-001/`：运行生成的截图、失败 trace 或其他脱敏证据；目录保持 Git ignored。
 
 ## Execution And Classification

@@ -368,7 +368,7 @@ internal static class SelectFilePoc
         if (!int.TryParse(values.GetValueOrDefault("pid"), out var pid)) throw new ArgumentException("--pid is required.");
         return new Options(
             pid,
-            values.GetValueOrDefault("evidence-dir") ?? Path.Combine("artifacts", "phase3b-flaui-selectfile-poc"),
+            values.GetValueOrDefault("evidence-dir") ?? Path.Combine("projects", "test-workflow", "artifacts", "phase3b-flaui-selectfile-poc"),
             values.GetValueOrDefault("file-path") ?? throw new ArgumentException("--file-path is required."),
             long.TryParse(values.GetValueOrDefault("dialog-hwnd"), out var dialogHwnd) ? dialogHwnd : null,
             values.GetValueOrDefault("appium-click-status") ?? "UNKNOWN");

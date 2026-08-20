@@ -15,7 +15,7 @@
 
 ```text
 M  config/local-projects.example.json
-M  reports/real-avalonia-phase3b-report.md
+M  projects/test-workflow/reports/real-avalonia-phase3b-report.md
 M  test-cases/avalonia/TC-AVA-E2E-001.md
 M  test-cases/avalonia/TC-AVA-E2E-ENV-001.md
 M  tests/avalonia/e2e/README.md
@@ -24,13 +24,13 @@ M  tests/avalonia/e2e/helpers/appium-session.mjs
 M  tests/avalonia/e2e/helpers/evidence.mjs
 M  tests/avalonia/e2e/helpers/project-config.mjs
 M  tests/avalonia/e2e/helpers/real-app-process.mjs
-?? reports/future-e2e-candidates.md
-?? reports/logclient-test-input-mapping.md
+?? projects/test-workflow/reports/future-e2e-candidates.md
+?? projects/test-workflow/reports/logclient-test-input-mapping.md
 ?? tests/avalonia/e2e/helpers/real-import-session.mjs
 ```
 
 本 POC runner 和所有运行证据均位于已被 Git 忽略的：
-`artifacts/phase3b-filedialog-poc/`。
+`projects/test-workflow/artifacts/phase3b-filedialog-poc/`。
 
 ## 2. winapp CLI 来源、安装和校验
 
@@ -179,23 +179,23 @@ POC-NATIVE-FILEDIALOG-002 = NOT EXECUTED
 TC-AVA-E2E-001 = NOT EXECUTED
 ```
 
-Runner 原始结果保存在 `artifacts/phase3b-filedialog-poc/poc-result.json`；其超时点是“目标 ZIP 未出现在实际 Dialog UI 状态”，按 Case 状态规则归类为 FAIL，而不是把命令返回成功误判为 PASS。
+Runner 原始结果保存在 `projects/test-workflow/artifacts/phase3b-filedialog-poc/poc-result.json`；其超时点是“目标 ZIP 未出现在实际 Dialog UI 状态”，按 Case 状态规则归类为 FAIL，而不是把命令返回成功误判为 PASS。
 
 ## 8. Evidence
 
 已生成：
 
 ```text
-artifacts/phase3b-filedialog-poc/file-dialog-windows.json
-artifacts/phase3b-filedialog-poc/file-dialog-inspect-before.txt
-artifacts/phase3b-filedialog-poc/file-dialog-inspect-before-deep.txt
-artifacts/phase3b-filedialog-poc/file-dialog-inspect-after-address-set.txt
-artifacts/phase3b-filedialog-poc/file-dialog-inspect-target-directory.txt
-artifacts/phase3b-filedialog-poc/dialog-before-navigation.png
-artifacts/phase3b-filedialog-poc/dialog-target-directory.png
-artifacts/phase3b-filedialog-poc/selection-state.json
-artifacts/phase3b-filedialog-poc/winappdriver.log
-artifacts/phase3b-filedialog-poc/appium-server.log
+projects/test-workflow/artifacts/phase3b-filedialog-poc/file-dialog-windows.json
+projects/test-workflow/artifacts/phase3b-filedialog-poc/file-dialog-inspect-before.txt
+projects/test-workflow/artifacts/phase3b-filedialog-poc/file-dialog-inspect-before-deep.txt
+projects/test-workflow/artifacts/phase3b-filedialog-poc/file-dialog-inspect-after-address-set.txt
+projects/test-workflow/artifacts/phase3b-filedialog-poc/file-dialog-inspect-target-directory.txt
+projects/test-workflow/artifacts/phase3b-filedialog-poc/dialog-before-navigation.png
+projects/test-workflow/artifacts/phase3b-filedialog-poc/dialog-target-directory.png
+projects/test-workflow/artifacts/phase3b-filedialog-poc/selection-state.json
+projects/test-workflow/artifacts/phase3b-filedialog-poc/winappdriver.log
+projects/test-workflow/artifacts/phase3b-filedialog-poc/appium-server.log
 ```
 
 `dialog-three-files-selected.png` 未生成，因为多选前的目录导航已经失败；`selection-state.json` 为空数组，表示没有伪造选择结果。
@@ -336,4 +336,4 @@ Hash 一致：YES
 是否 push：No
 ```
 
-本轮证据保存在被 Git 忽略的 `artifacts/phase3b-filedialog-poc2/`，包括 `poc3-result.json`、`main-before-dialog.xml`、`analysis-import-buttons.json`、Appium/WAD 日志和 POC runner；未提交安装包或运行产物。
+本轮证据保存在被 Git 忽略的 `projects/test-workflow/artifacts/phase3b-filedialog-poc2/`，包括 `poc3-result.json`、`main-before-dialog.xml`、`analysis-import-buttons.json`、Appium/WAD 日志和 POC runner；未提交安装包或运行产物。

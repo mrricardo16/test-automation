@@ -7,13 +7,13 @@ import { buildSingleFileSelection } from './select-file-contract.mjs';
 
 const execFileAsync = promisify(execFile);
 const root = path.resolve(import.meta.dirname, '../../../..');
-const evidence = path.join(root, 'artifacts', 'phase3b-flaui-selectfile-poc');
+const evidence = path.join(root, 'projects', 'test-workflow', 'artifacts', 'phase3b-flaui-selectfile-poc');
 const config = JSON.parse(fs.readFileSync(path.join(root, 'config', 'local-projects.example.json'), 'utf8'));
 const executablePath = path.join(config.runtimeDirectory, 'HZ.LogClient.exe');
 const filePath = buildSingleFileSelection(String.raw`E:\测试项目部署\测试项目部署\RSS\log\hz.carlog_20260717160532098_20260717162532098.zip`).filePath;
 const appiumPort = 4725;
 const appiumUrl = `http://127.0.0.1:${appiumPort}`;
-const winappPath = path.join(root, 'artifacts', 'phase3b-filedialog-poc', 'tooling', 'winapp.exe');
+const winappPath = path.join(root, 'projects', 'test-workflow', 'artifacts', 'phase3b-filedialog-poc', 'tooling', 'winapp.exe');
 
 fs.mkdirSync(evidence, { recursive: true });
 

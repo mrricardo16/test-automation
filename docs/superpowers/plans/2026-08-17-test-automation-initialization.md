@@ -66,7 +66,7 @@ Interfaces:
 
 - [ ] Step 4: Commit the evidence.
 
-    git add reports/environment-check.md
+    git add projects/test-workflow/reports/environment-check.md
     git diff --cached --check
     git commit -m "docs: record pre-install environment check"
 
@@ -266,7 +266,7 @@ Interfaces:
     $p='E:\automated-testing\reports\initialization-report.md'
     $utf8=[Text.UTF8Encoding]::new($false,$true)
     [void]$utf8.GetString([IO.File]::ReadAllBytes($p))
-    git add reports/initialization-report.md
+    git add projects/test-workflow/reports/initialization-report.md
     git diff --cached --check
     git commit -m "docs: record automation workspace initialization"
 

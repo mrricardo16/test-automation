@@ -2,8 +2,16 @@ node_modules/
 playwright-report/
 test-results/
 reports/playwright-report/
+reports/generated/
 artifacts/
 *.log
+
+# Project-scoped runtime products. Durable reports and outputs remain reviewable;
+# runtime evidence and runner state stay local.
+projects/*/artifacts/
+projects/*/test-results/
+projects/*/scratch/
+projects/*/reports/playwright-report/
 
 .env
 .env.*

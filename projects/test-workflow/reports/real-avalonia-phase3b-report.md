@@ -44,7 +44,7 @@ Evidence:
 - The project-local Appium Server 3.6.0 started and returned `ready=true` from `/status`; its Windows Driver 6.1.1 matched the request and spawned the installed WinAppDriver backend.
 - Appium session `0fe72f99-9ad3-415c-8941-2302fc9e0548` was created against the real executable.
 - The session returned one MainWindow handle (`0x00110460`) and Page Source containing `ClassName="MainWindow"`, `FrameworkId="Avalonia"`, `AutomationId="AnalysisPage"`, and `AutomationId="LogFileTextBox"`.
-- Evidence: `artifacts/phase3b/appium-status.json`, `artifacts/phase3b/environment-probe.json`, `artifacts/phase3b/appium-page-source-initial.xml`, and `artifacts/phase3b/appium-server.log` (ignored, local only).
+- Evidence: `projects/test-workflow/artifacts/phase3b/appium-status.json`, `projects/test-workflow/artifacts/phase3b/environment-probe.json`, `projects/test-workflow/artifacts/phase3b/appium-page-source-initial.xml`, and `projects/test-workflow/artifacts/phase3b/appium-server.log` (ignored, local only).
 
 This is an environment/backend block, not a product failure and not a locator failure.
 

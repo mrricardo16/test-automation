@@ -9,7 +9,7 @@ The current API harness uses Playwright `APIRequestContext` and executes only ag
 - Lifecycle: `ownedProcess=true`, health check before tests, reset between cases, verified shutdown after tests
 - TestCase-first: every formal API spec has a corresponding `TC-SYN-API-*` record
 - Canonical results: PLATFORM-01 `ExecutionStatus`, `ApplicabilityStatus`, `CoverageStatus`, `ExpectedBasis`, `EvidenceIds`, and `GateStatus`
-- Evidence: sanitized summaries under ignored `artifacts/api/<TestCaseId>/<RunId>/`
+- Evidence: sanitized summaries under ignored `projects/<project-slug>/artifacts/api/<TestCaseId>/<RunId>/`
 
 ## Current Coverage
 

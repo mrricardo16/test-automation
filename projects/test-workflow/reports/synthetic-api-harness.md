@@ -24,7 +24,7 @@ Only PLATFORM-04 was implemented. PLATFORM-05 and later stages were not started.
 18. Boundary: PASS for state transition and disabled feature flag boundaries
 19. Data consistency: PASS for create/list, update/list, delete/list, and reset
 20. State transition: PASS for rejected invalid transition; existing valid transitions remain covered by PLATFORM-02
-21. Evidence implementation: request summary, response summary, execution result, and evidence index under ignored `artifacts/api/<TestCaseId>/<RunId>/`
+21. Evidence implementation: request summary, response summary, execution result, and evidence index under ignored `projects/test-workflow/artifacts/api/<TestCaseId>/<RunId>/`
 22. Evidence redaction: PASS; credentials and sensitive header/body values are omitted
 23. Canonical contract: PASS; execution results use PLATFORM-01 canonical fields and `validateExecutionResult`
 24. TestCaseId traceability: PASS through request, response, execution, and evidence-index records

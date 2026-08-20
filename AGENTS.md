@@ -23,8 +23,10 @@
 21. Real Avalonia business projects are read-only by default; do not change product code, AutomationId, or testability interfaces to make tests pass.
 22. Never commit keys, passwords, tokens, secrets, or sensitive configuration.
 23. Keep all Markdown, TypeScript, JSON, and text files encoded as UTF-8.
-24. Keep generated reports in reports and generated evidence in artifacts.
-25. Keep node_modules and browser binaries out of Git.
+24. Keep each test project's durable products under `projects/<project-slug>/`; use its `reports/` and `outputs/` subdirectories, and keep runtime evidence under its ignored `artifacts/` subdirectory.
+25. Every independent test task must create one project folder first, using a stable ASCII slug such as `dispatch`, `wms`, or `test-workflow`; record the Chinese/display name in that project's `README.md`.
+26. Do not write new test products directly to repository-root `artifacts/`, `outputs/`, `scratch/`, `test-results/`, or `reports/playwright-report/`.
+27. Keep node_modules and browser binaries out of Git.
 
 ## Real Project Safety Rules
 
@@ -68,5 +70,5 @@
 5. Accessibility id, Name, ControlType, role, stable visible text, and parent/child structure are preferred in that order. Index and screen coordinates are diagnostic only and cannot be the formal locator strategy.
 6. If WinAppDriver, desktop session, approved test package, or other prerequisite is absent, classify `BLOCKED`. If the test automation itself cannot create a session or locate a control after prerequisites are present, classify `ERROR`; do not call either a product `FAIL`.
 7. If a real interaction completes but the product result contradicts Expected Result, classify `FAIL` and preserve evidence without modifying the product.
-8. Page source, screenshots, Appium logs, product packages, binaries, and private local configuration belong in ignored `artifacts/` or ignored local paths. Review page source for sensitive content before retaining it.
+8. Page source, screenshots, Appium logs, product packages, binaries, and private local configuration belong in the current project's ignored `projects/<project-slug>/artifacts/` or ignored local paths. Review page source for sensitive content before retaining it.
 9. Before completion, run the Phase 3A and Web regression, recompute source hash before/after with `*.tmp`/`*.temp` excluded as temp files, run `git diff --check`, verify no forbidden artifacts are staged, and confirm `origin/main...HEAD = 0 0`.

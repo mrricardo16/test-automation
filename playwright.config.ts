@@ -9,9 +9,9 @@ export default defineConfig({
   fullyParallel: false,
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'reports/playwright-report', open: 'never' }],
+    ['html', { outputFolder: 'projects/test-workflow/reports/playwright-report', open: 'never' }],
   ],
-  outputDir: 'artifacts/test-results',
+  outputDir: 'projects/test-workflow/artifacts/test-results',
   use: {
     browserName: 'chromium',
     screenshot: 'only-on-failure',

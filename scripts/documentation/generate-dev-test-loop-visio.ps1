@@ -7,7 +7,7 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
-    $OutputDirectory = Join-Path (Split-Path $PSScriptRoot -Parent | Split-Path -Parent) 'outputs\process'
+    $OutputDirectory = Join-Path (Split-Path $PSScriptRoot -Parent | Split-Path -Parent) 'projects\test-workflow\outputs\process'
 }
 
 function Set-CellFormula {

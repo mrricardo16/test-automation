@@ -25,7 +25,7 @@
 
 **Files:**
 - Create: `docs/superpowers/plans/2026-08-17-real-avalonia-phase3b-appium-e2e.md`
-- Inspect only: `config/local-projects.example.json`, `reports/real-avalonia-phase3a-report.md`, `reports/real-avalonia-automation-assessment.md`
+- Inspect only: `config/local-projects.example.json`, `projects/test-workflow/reports/real-avalonia-phase3a-report.md`, `projects/test-workflow/reports/real-avalonia-automation-assessment.md`
 - Evidence: `artifacts/phase3b/` (ignored runtime evidence only)
 
 - [ ] **Step 1: Record Git and source-tree baseline**
@@ -145,8 +145,8 @@ Use `PASS` only when the full path and Expected Result are observed; `FAIL` only
 ### Task 6: Report, regress, hash, commit, and stop
 
 **Files:**
-- Create: `reports/real-avalonia-phase3b-report.md`
-- Modify: `reports/real-avalonia-automation-assessment.md`, `README.md`, `AGENTS.md`, `test-data/logclient/README.md`
+- Create: `projects/test-workflow/reports/real-avalonia-phase3b-report.md`
+- Modify: `projects/test-workflow/reports/real-avalonia-automation-assessment.md`, `README.md`, `AGENTS.md`, `test-data/logclient/README.md`
 - Do not commit: `artifacts/`, local packages, binaries, screenshots, raw page sources, logs, or private configuration
 
 - [ ] **Step 1: Write the report and recommendations**

@@ -5,14 +5,14 @@ import { promisify } from 'node:util';
 
 const execFileAsync = promisify(execFile);
 const root = path.resolve(import.meta.dirname, '../../../..');
-const evidence = path.join(root, 'artifacts', 'phase3b-flaui-poc');
+const evidence = path.join(root, 'projects', 'test-workflow', 'artifacts', 'phase3b-flaui-poc');
 const config = JSON.parse(fs.readFileSync(path.join(root, 'config', 'local-projects.example.json'), 'utf8'));
 const executablePath = path.join(config.runtimeDirectory, 'HZ.LogClient.exe');
 const wadPath = process.env.APPIUM_WAD_PATH ?? 'C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe';
 const appiumPort = 4725;
 const wadPort = 4723;
 const appiumUrl = `http://127.0.0.1:${appiumPort}`;
-const winappPath = path.join(root, 'artifacts', 'phase3b-filedialog-poc', 'tooling', 'winapp.exe');
+const winappPath = path.join(root, 'projects', 'test-workflow', 'artifacts', 'phase3b-filedialog-poc', 'tooling', 'winapp.exe');
 
 fs.mkdirSync(evidence, { recursive: true });
 

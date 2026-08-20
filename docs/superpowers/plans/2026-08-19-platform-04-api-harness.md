@@ -76,7 +76,7 @@
 
 **Files:**
 - Modify: `tests/api/README.md`
-- Create: `reports/synthetic-api-harness.md`
+- Create: `projects/test-workflow/reports/synthetic-api-harness.md`
 
 - [ ] Document Playwright APIRequestContext, Synthetic-only scope, dynamic runtime ownership, TestCase-first rule, canonical results, and ignored evidence paths.
 - [ ] State that real project APIs are not configured or executed and that this is not real product API acceptance.

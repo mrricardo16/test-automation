@@ -205,7 +205,7 @@ Delete the Appium session and stop the runner-owned product, Appium and WinAppDr
 ### Task 4: Report and final verification
 
 **Files:**
-- Create: `reports/flaui-selectfile-assessment.md`
+- Create: `projects/test-workflow/reports/flaui-selectfile-assessment.md`
 - Modify: none of the formal TestCase files
 
 **Interfaces:**

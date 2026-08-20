@@ -34,8 +34,8 @@
 
 ### Task 5: Update Phase 3A documentation and boundaries
 
-- Expand `reports/real-avalonia-automation-assessment.md` into behavior-level AnalysisView/ReplayView coverage and classification matrices.
-- Add `reports/appium-e2e-candidate-list.md`, `reports/real-avalonia-phase3a-report.md`, and a safe `test-data/logclient/README.md`.
+- Expand `projects/test-workflow/reports/real-avalonia-automation-assessment.md` into behavior-level AnalysisView/ReplayView coverage and classification matrices.
+- Add `projects/test-workflow/reports/appium-e2e-candidate-list.md`, `projects/test-workflow/reports/real-avalonia-phase3a-report.md`, and a safe `test-data/logclient/README.md`.
 - Update `README.md` and `AGENTS.md` with the Phase 3A status and business automation rules, including the read-only source/runtime boundary and `PRODUCT_CHANGE_RECOMMENDED` policy.
 
 ### Task 6: Verify, commit, and publish only the automation repository

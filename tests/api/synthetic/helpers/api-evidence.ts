@@ -64,7 +64,7 @@ function safePath(path: string): string {
 export function writeApiEvidence(input: ApiEvidenceInput): ApiEvidenceOutput {
   const runId = `RUN-${Date.now()}-${randomUUID().slice(0, 8)}`;
   const sanitizedPath = safePath(input.path);
-  const evidenceDirectory = join(repoRoot, 'artifacts', 'api', input.testCaseId, runId);
+  const evidenceDirectory = join(repoRoot, 'projects', 'test-workflow', 'artifacts', 'api', input.testCaseId, runId);
   mkdirSync(evidenceDirectory, { recursive: true });
   const timestamp = new Date().toISOString();
   const requestEvidenceId = `EVID-${input.testCaseId}-${runId}-REQUEST`;

@@ -348,7 +348,7 @@ Interfaces:
 Files:
 - Modify: AGENTS.md
 - Modify: README.md
-- Create: reports/avalonia-headless-initialization.md
+- Create: projects/test-workflow/reports/avalonia-headless-initialization.md
 
 Interfaces:
 - AGENTS.md keeps all Phase 1 Playwright and status rules and adds the approved Avalonia rules.
@@ -384,7 +384,7 @@ Interfaces:
     git status -sb
     dotnet list tests/avalonia/headless/AutomatedTesting.Avalonia.Headless.csproj package
 
-- [ ] Step 4: Write reports/avalonia-headless-initialization.md.
+- [ ] Step 4: Write projects/test-workflow/reports/avalonia-headless-initialization.md.
 
     Include:
     Environment: actual .NET SDK, TargetFramework, Avalonia.Headless.XUnit, Avalonia.Themes.Fluent, xunit.v3, Microsoft.NET.Test.Sdk.
@@ -398,10 +398,10 @@ Interfaces:
 - [ ] Step 5: Validate UTF-8 and commit documentation.
 
     $utf8=[Text.UTF8Encoding]::new($false,$true)
-    foreach ($file in @('AGENTS.md','README.md','reports/avalonia-headless-initialization.md')) {
+    foreach ($file in @('AGENTS.md','README.md','projects/test-workflow/reports/avalonia-headless-initialization.md')) {
       [void]$utf8.GetString([IO.File]::ReadAllBytes((Join-Path 'E:\automated-testing' $file)))
     }
-    git add AGENTS.md README.md reports/avalonia-headless-initialization.md
+    git add AGENTS.md README.md projects/test-workflow/reports/avalonia-headless-initialization.md
     git diff --cached --check
     git commit -m "docs: record Avalonia headless phase 2 baseline"
 

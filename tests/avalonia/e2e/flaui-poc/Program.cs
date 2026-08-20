@@ -415,7 +415,7 @@ internal static class Program
         if (!int.TryParse(values.GetValueOrDefault("pid"), out var pid)) throw new ArgumentException("--pid is required.");
         return new Options(
             pid,
-            values.GetValueOrDefault("evidence-dir") ?? Path.Combine("artifacts", "phase3b-flaui-poc"),
+            values.GetValueOrDefault("evidence-dir") ?? Path.Combine("projects", "test-workflow", "artifacts", "phase3b-flaui-poc"),
             values.GetValueOrDefault("target-directory") ?? throw new ArgumentException("--target-directory is required."),
             values.GetValueOrDefault("appium-click-status") ?? "UNKNOWN");
     }

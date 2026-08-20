@@ -226,7 +226,7 @@ Expected: both existing Cases execute with the same business assertions; PASS pr
 
 **Files:**
 - Modify: README.md
-- Create: reports/web-evidence-001-report.md
+- Create: projects/test-workflow/reports/web-evidence-001-report.md
 - Read: .gitignore, playwright.config.ts, docs/superpowers/specs/2026-08-18-web-evidence-design.md
 
 **Interfaces:**
@@ -244,7 +244,7 @@ Add a concise Web UI Evidence section stating:
 - artifacts are local ignored evidence and never committed;
 - any missing evidence must state why capture was unavailable.
 
-- [ ] Step 2: Write reports/web-evidence-001-report.md
+- [ ] Step 2: Write projects/test-workflow/reports/web-evidence-001-report.md
 
 Record:
 - starting Git state and preserved unrelated changes;
@@ -330,7 +330,7 @@ Run:
 ~~~powershell
 git diff --check
 git status --short --branch
-git add -- playwright.config.ts tests/web/helpers/evidence.ts tests/web/environment.spec.ts tests/web/real-project/TC_WEB_LOGIN_001.spec.ts README.md reports/web-evidence-001-report.md
+git add -- playwright.config.ts tests/web/helpers/evidence.ts tests/web/environment.spec.ts tests/web/real-project/TC_WEB_LOGIN_001.spec.ts README.md projects/test-workflow/reports/web-evidence-001-report.md
 git diff --cached --check
 git diff --cached --name-only
 git grep --cached -n -I -E "Authorization:|Bearer |Cookie:|WEB_TEST_PASSWORD=|storageState|eyJ[A-Za-z0-9_-]{10,}" -- .

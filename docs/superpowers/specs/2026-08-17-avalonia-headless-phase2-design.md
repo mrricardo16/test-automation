@@ -17,7 +17,7 @@ This phase includes:
 - Assembly-level Avalonia Headless test initialization.
 - A real headless test using AvaloniaFact, Window.Show, control lookup, headless text input, command/button interaction, and explicit state assertions.
 - A reserved tests/avalonia/e2e directory with a boundary README only.
-- AGENTS.md, README.md, .gitignore, and reports/avalonia-headless-initialization.md updates.
+- AGENTS.md, README.md, .gitignore, and projects/test-workflow/reports/avalonia-headless-initialization.md updates.
 - Regression of npm ci, TC-WEB-ENV-001, and final Git synchronization.
 
 This phase explicitly excludes:
@@ -100,7 +100,7 @@ The test method name will contain TC_AVA_ENV_001 so the record and executable te
 
 A normal assertion mismatch is FAIL. Avalonia initialization failure, package restore failure, Dispatcher failure, or inability to create the Window is ERROR because the infrastructure did not complete. Missing SDK or unavailable package prerequisites are BLOCKED. The test will not catch and suppress exceptions, remove assertions, or mark itself skipped.
 
-The dotnet test result and error output will be recorded in reports/avalonia-headless-initialization.md. bin, obj, TestResults, and other generated outputs remain ignored. No product failure is claimed because no product project is under test.
+The dotnet test result and error output will be recorded in projects/test-workflow/reports/avalonia-headless-initialization.md. bin, obj, TestResults, and other generated outputs remain ignored. No product failure is claimed because no product project is under test.
 
 ## Verification and Acceptance
 

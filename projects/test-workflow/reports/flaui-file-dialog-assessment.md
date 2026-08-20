@@ -222,18 +222,18 @@ Hash 一致：YES
 Evidence：
 
 ```text
-artifacts/phase3b-flaui-poc/flaui-poc-result.json
-artifacts/phase3b-flaui-poc/flaui-orchestration.json
-artifacts/phase3b-flaui-poc/environment.json
-artifacts/phase3b-flaui-poc/appium-session.json
-artifacts/phase3b-flaui-poc/flaui-mainwindow.json
-artifacts/phase3b-flaui-poc/winapp-after-appium-click.json
-artifacts/phase3b-flaui-poc/flaui-console.json
-artifacts/phase3b-flaui-poc/appium-server.log
-artifacts/phase3b-flaui-poc/winappdriver.log
-artifacts/phase3b/environment-probe.json
-artifacts/phase3b/appium-status.json
-artifacts/phase3b/appium-page-source-initial.xml
+projects/test-workflow/artifacts/phase3b-flaui-poc/flaui-poc-result.json
+projects/test-workflow/artifacts/phase3b-flaui-poc/flaui-orchestration.json
+projects/test-workflow/artifacts/phase3b-flaui-poc/environment.json
+projects/test-workflow/artifacts/phase3b-flaui-poc/appium-session.json
+projects/test-workflow/artifacts/phase3b-flaui-poc/flaui-mainwindow.json
+projects/test-workflow/artifacts/phase3b-flaui-poc/winapp-after-appium-click.json
+projects/test-workflow/artifacts/phase3b-flaui-poc/flaui-console.json
+projects/test-workflow/artifacts/phase3b-flaui-poc/appium-server.log
+projects/test-workflow/artifacts/phase3b-flaui-poc/winappdriver.log
+projects/test-workflow/artifacts/phase3b/environment-probe.json
+projects/test-workflow/artifacts/phase3b/appium-status.json
+projects/test-workflow/artifacts/phase3b/appium-page-source-initial.xml
 ```
 
 由于 Dialog 入口未成功，本轮没有生成 `flaui-dialog-tree.json`、`flaui-dialog-edits.json`、`flaui-dialog-buttons.json`、`flaui-dialog-listitems.json`、`flaui-dialog-patterns.json`、`before-navigation.png`、`target-directory.png`、`three-files-selected.png` 或 `selection-state.json`；不存在成功状态时不生成伪证据。

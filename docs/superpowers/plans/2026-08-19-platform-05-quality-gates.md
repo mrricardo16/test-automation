@@ -70,7 +70,7 @@
 ### Task 5: GREEN validation and regression
 
 **Files:**
-- Modify: `reports/platform-quality-gates.md`
+- Modify: `projects/test-workflow/reports/platform-quality-gates.md`
 
 - [ ] Run the negative type verifier, `npm run typecheck`, `npm run lint`, all unified commands, and the three Skill self-test/validator groups.
 - [ ] Run PLATFORM-01 8/8, PLATFORM-02 10/10, PLATFORM-03 12/12, and PLATFORM-04 API tests.

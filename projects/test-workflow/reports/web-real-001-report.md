@@ -7,7 +7,7 @@
 | Source path | `D:\HZ_RSS40\03_trunk\src_m_ui` (read-only) |
 | Runtime URL | `http://localhost:8223/#/login?redirect=/dashboard` |
 | GitStatusBefore | `main...origin/main`; existing Phase 3B work was modified/untracked and preserved |
-| ExistingUncommittedChanges | Preserved: `config/local-projects.example.json`, `reports/real-avalonia-phase3b-report.md`, `test-cases/avalonia/TC-AVA-E2E-001.md`, `test-cases/avalonia/TC-AVA-E2E-ENV-001.md`, `tests/avalonia/e2e/README.md`, `tests/avalonia/e2e/appium/TC_AVA_E2E_001_RealLogImport.spec.mjs`, `tests/avalonia/e2e/helpers/appium-session.mjs`, `tests/avalonia/e2e/helpers/evidence.mjs`, `tests/avalonia/e2e/helpers/project-config.mjs`, `tests/avalonia/e2e/helpers/real-app-process.mjs`, plus existing Phase 3B untracked files |
+| ExistingUncommittedChanges | Preserved: `config/local-projects.example.json`, `projects/test-workflow/reports/real-avalonia-phase3b-report.md`, `test-cases/avalonia/TC-AVA-E2E-001.md`, `test-cases/avalonia/TC-AVA-E2E-ENV-001.md`, `tests/avalonia/e2e/README.md`, `tests/avalonia/e2e/appium/TC_AVA_E2E_001_RealLogImport.spec.mjs`, `tests/avalonia/e2e/helpers/appium-session.mjs`, `tests/avalonia/e2e/helpers/evidence.mjs`, `tests/avalonia/e2e/helpers/project-config.mjs`, `tests/avalonia/e2e/helpers/real-app-process.mjs`, plus existing Phase 3B untracked files |
 | origin/main...HEAD before phase | `0 0` |
 | WebSourceTreeHashBefore | `9852bd9fbe148f0e8585974989f557cae7498849dde535eec355d175ffff6c18` |
 | WebSourceFileCountBefore | `643` |
@@ -80,7 +80,7 @@ The initial role-only name locator was corrected after inspecting the real DOM: 
 | HTTP 5xx | No |
 | Auth Token | Yes, presence only; value withheld |
 | TC-WEB-LOGIN-001 | PASS for valid login and Dashboard Entry; see the separate Dashboard page-error observation above |
-| Screenshot | Yes: `artifacts/web-real-001/login-page.png`, `dashboard-after-login.png`; initial locator-failure evidence is also retained |
+| Screenshot | Yes: `projects/test-workflow/artifacts/web-real-001/login-page.png`, `dashboard-after-login.png`; initial locator-failure evidence is also retained |
 | Trace | Yes, retained by existing `trace: retain-on-failure` from the initial locator diagnosis; final successful run required no failure trace |
 | Other Dashboard modules entered | No |
 
@@ -88,7 +88,7 @@ The first implementation run produced a locator `ERROR` because the runtime butt
 
 ## Future Web candidates (not executed)
 
-See `reports/future-web-candidates.md`. This phase stopped at Dashboard Entry and did not execute any further business module.
+See `projects/test-workflow/reports/future-web-candidates.md`. This phase stopped at Dashboard Entry and did not execute any further business module.
 
 ## Integrity and safety
 
@@ -98,7 +98,7 @@ See `reports/future-web-candidates.md`. This phase stopped at Dashboard Entry an
 | Username written to Git | No; read from `WEB_TEST_USERNAME` |
 | Password written to Git | No; read from `WEB_TEST_PASSWORD` |
 | Token/Cookie/Authorization leakage | No observed in tracked phase files or sanitized runtime observation |
-| Evidence location | `artifacts/web-real-001/` and Playwright test results; ignored by repository `.gitignore` |
+| Evidence location | `projects/test-workflow/artifacts/web-real-001/` and Playwright test results; ignored by repository `.gitignore` |
 | Commit hash | Recorded in the final handoff after publication |
 | Commit message | Result-appropriate Web phase commit, recorded in the final handoff |
 | Push | Recorded in the final handoff after publication |

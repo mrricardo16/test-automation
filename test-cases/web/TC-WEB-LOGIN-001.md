@@ -16,7 +16,7 @@
 | LocatorStrategy | Role and placeholder first, then stable source-defined CSS only if required; no coordinate clicks, direct DOM value assignment, or injected test ids |
 | RequirementSource | Phase WEB-REAL-001 approved design and attached phase request |
 | SourceCodeReference | `src/views/login/index.vue`; `src/views/dashboard/index.vue`; `src/router/index.ts`; `src/api/auth/index.ts`; `src/utils/request.ts`; `src/utils/auth.ts`; `src/store/modules/user.ts`; `src/plugins/permission.ts` in the read-only real source |
-| Evidence | `artifacts/web-real-001/login-page.png`; `artifacts/web-real-001/dashboard-after-login.png`; failure screenshot/trace only when generated; sanitized runtime details in `reports/web-real-001-report.md` |
+| Evidence | `projects/test-workflow/artifacts/web-real-001/login-page.png`; `projects/test-workflow/artifacts/web-real-001/dashboard-after-login.png`; failure screenshot/trace only when generated; sanitized runtime details in `projects/test-workflow/reports/web-real-001-report.md` |
 | Cleanup | Close the test BrowserContext; do not persist cookies, storage state, tokens, or credentials |
 | Limitations | Valid login only; no invalid credentials, logout, permissions, menu navigation, map, AGV, orders, dispatching, settings, or pixel-level visual acceptance |
 | Notes | Executable mapping: `tests/web/real-project/TC_WEB_LOGIN_001.spec.ts` |

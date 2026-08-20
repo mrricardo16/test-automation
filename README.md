@@ -75,7 +75,7 @@ Current conclusion:
 - Native file pickers, dialogs, shell opening, and OS window behavior are `NEEDS_APPIUM`; map/canvas visual acceptance is currently `MANUAL`.
 - No real-project Headless test has been created or executed. The first business candidate is `TC-AVA-LOG-001`, classified `AUTO_UNIT` but currently `BLOCKED` for safe assembly execution.
 
-See `reports/real-avalonia-automation-assessment.md` and `reports/real-avalonia-phase2b-report.md` for evidence and the full matrix.
+See `projects/test-workflow/reports/real-avalonia-automation-assessment.md` and `projects/test-workflow/reports/real-avalonia-phase2b-report.md` for evidence and the full matrix.
 
 ## Phase 2C real-project Harness
 
@@ -89,7 +89,7 @@ The real project is tested through a separate Avalonia `11.3.14` / `net8.0` Harn
 
 Machine-specific paths are documented in `config/local-projects.example.json`; copy it to ignored `config/local-projects.json` only when local overrides are needed. The submitted repository contains no real DLL.
 
-See `reports/real-avalonia-phase2c-report.md` for package versions, DLL/reference decisions, source integrity, test output, and the remaining boundary.
+See `projects/test-workflow/reports/real-avalonia-phase2c-report.md` for package versions, DLL/reference decisions, source integrity, test output, and the remaining boundary.
 
 ## Phase 3A real business Headless / Mock extension
 
@@ -101,16 +101,17 @@ Phase 3A uses the read-only compiled `HZ.LogClient.dll` from the configured runt
 
 No ProjectReference, source copy, Mock/Fake product object, Appium installation, or product-side AutomationId change is used. Full package/session loading remains a test-double boundary; native picker/export/window behavior is `NEEDS_APPIUM`; map pixels remain `MANUAL`; missing stable AutomationIds and direct storage/session coupling are `PRODUCT_CHANGE_RECOMMENDED` recommendations only.
 
-See `reports/real-avalonia-phase3a-report.md`, `reports/real-avalonia-automation-assessment.md`, and `reports/appium-e2e-candidate-list.md`.
+See `projects/test-workflow/reports/real-avalonia-phase3a-report.md`, `projects/test-workflow/reports/real-avalonia-automation-assessment.md`, and `projects/test-workflow/reports/appium-e2e-candidate-list.md`.
 
 ## Phase 3B real HZ.LogClient.exe Appium E2E
 
 Phase 3B added project-local Appium 3.6.0 and Appium Windows Driver 6.1.1. The Appium server itself started and returned ready, but the official Microsoft WinAppDriver 1.2.1 backend was not discoverable after installation attempts, so `TC-AVA-E2E-ENV-001` is `BLOCKED`. `TC-AVA-E2E-001` is also `BLOCKED` because no approved non-sensitive parser-valid package is configured; the real executable was not falsely reported as launched or connected.
 
-The E2E scripts, lifecycle helpers, and ignored evidence boundary are under `tests/avalonia/e2e/` and `artifacts/phase3b/`. No Android SDK, Android Studio, unrelated driver, product source, runtime file, AutomationId, or coordinate-based formal locator was added. See [real-avalonia-phase3b-report.md](<E:/automated-testing/reports/real-avalonia-phase3b-report.md>) for the exact blocker and next prerequisites.
+The E2E scripts, lifecycle helpers, and ignored evidence boundary are under `tests/avalonia/e2e/` and `projects/test-workflow/artifacts/phase3b/`. No Android SDK, Android Studio, unrelated driver, product source, runtime file, AutomationId, or coordinate-based formal locator was added. See [real-avalonia-phase3b-report.md](projects/test-workflow/reports/real-avalonia-phase3b-report.md) for the exact blocker and next prerequisites.
 
 ## Directory guide
 
+- projects/<project-slug>: project-scoped reports, durable outputs, and ignored runtime evidence; see `projects/README.md`
 - docs/requirements: requirement source and analysis
 - docs/designs: test and system design documents
 - docs/flows: user and test flows
@@ -124,8 +125,8 @@ The E2E scripts, lifecycle helpers, and ignored evidence boundary are under `tes
 - tests/manual: manual-only test records
 - config: future non-secret configuration templates
 - scripts: repeatable local setup helpers
-- reports: committed audit reports and the generated HTML report location
-- artifacts: ignored screenshots, traces, and test results
+- reports: committed repository audit history; new project reports belong under `projects/<project-slug>/reports`
+- artifacts: legacy root location; new runtime evidence belongs under the current project's ignored `projects/<project-slug>/artifacts`
 
 ## Commands
 
@@ -133,7 +134,7 @@ The E2E scripts, lifecycle helpers, and ignored evidence boundary are under `tes
 
 Every automated Web UI `FAIL` or `ERROR` records machine-generated evidence when a browser page is available. The minimum evidence is a safe screenshot, current URL, failed step, expected versus actual result, and the Playwright error; the recommended bundle also includes trace, console, page-error, and failed/4xx/5xx network records.
 
-`BLOCKED` records its reason and captures the page screenshot and URL when a page exists. The Playwright defaults remain `screenshot: "only-on-failure"`, `trace: "retain-on-failure"`, and `video: "off"`. Evidence is written locally under ignored `artifacts/web/<TestCaseId>/<RunId>/` and is never committed. If evidence cannot be captured, the summary records why. URLs omit query strings, and evidence never writes request or response bodies, headers, cookies, browser-storage snapshots, passwords, tokens, or arbitrary full DOM content.
+`BLOCKED` records its reason and captures the page screenshot and URL when a page exists. The Playwright defaults remain `screenshot: "only-on-failure"`, `trace: "retain-on-failure"`, and `video: "off"`. Evidence is written locally under ignored `projects/<project-slug>/artifacts/web/<TestCaseId>/<RunId>/` and is never committed. If evidence cannot be captured, the summary records why. URLs omit query strings, and evidence never writes request or response bodies, headers, cookies, browser-storage snapshots, passwords, tokens, or arbitrary full DOM content.
 
 Run the Web environment test:
 

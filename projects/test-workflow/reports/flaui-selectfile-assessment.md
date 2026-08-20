@@ -61,7 +61,7 @@ POC：`POC-FLAUI-SELECTFILE-001`
 53. 是否产生 commit：`No`。
 54. 是否 push：`No`。
 55. 是否清理本轮进程和端口：`YES`；本轮产品、Appium、WinAppDriver 均已清理，4723/4724/4725 无本轮残留监听；未关闭其他用户进程。
-56. Evidence 位置：[artifacts/phase3b-flaui-selectfile-poc](../artifacts/phase3b-flaui-selectfile-poc/)。关键证据包括 `poc4-result.json`、`poc4-orchestration.json`、`dialog-before-input.png`、`filename-focused.png`、`filename-after-input.json`、`after-input.png`、`open-button.json`、`dialog-tree.json`、`analysis-after-select.xml`、`analysis-after-select.png`、`processes.json`。
+56. Evidence 位置：[projects/test-workflow/artifacts/phase3b-flaui-selectfile-poc](../projects/test-workflow/artifacts/phase3b-flaui-selectfile-poc/)。关键证据包括 `poc4-result.json`、`poc4-orchestration.json`、`dialog-before-input.png`、`filename-focused.png`、`filename-after-input.json`、`after-input.png`、`open-button.json`、`dialog-tree.json`、`analysis-after-select.xml`、`analysis-after-select.png`、`processes.json`。
 57. 下一步建议：停止本轮；如后续单独立项，进入 `POC5 - same-directory multi-file basename selection`，不要自动扩展为完整业务 E2E。
 
 ## 关键结论

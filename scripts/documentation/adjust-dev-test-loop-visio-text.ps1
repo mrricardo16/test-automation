@@ -9,7 +9,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
-    $OutputDirectory = Join-Path (Split-Path $PSScriptRoot -Parent | Split-Path -Parent) 'outputs\process'
+    $OutputDirectory = Join-Path (Split-Path $PSScriptRoot -Parent | Split-Path -Parent) 'projects\test-workflow\outputs\process'
 }
 if ([string]::IsNullOrWhiteSpace($InputVsdxPath)) {
     $InputVsdxPath = Join-Path $OutputDirectory '开发测试闭环流程图.vsdx'

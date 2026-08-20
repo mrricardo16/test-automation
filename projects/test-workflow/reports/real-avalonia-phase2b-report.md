@@ -110,7 +110,7 @@ No production service, database, hardware, or device-command dependency was foun
 | `BLOCKED` | 1 | Current App/MainWindow direct integration path |
 | `PRODUCT_CHANGE_RECOMMENDED` | 1 | Missing ViewModel/DI/service seams |
 
-Full field-level matrix: `reports/real-avalonia-automation-assessment.md`.
+Full field-level matrix: `projects/test-workflow/reports/real-avalonia-automation-assessment.md`.
 
 ## First Business Case
 

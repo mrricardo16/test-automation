@@ -171,8 +171,8 @@ Expected: both cases execute in one run with no prior login cache.
 ### Task 4: Generate the phase reports and future candidate record
 
 **Files:**
-- Create: reports/web-real-001-report.md
-- Create: reports/future-web-candidates.md
+- Create: projects/test-workflow/reports/web-real-001-report.md
+- Create: projects/test-workflow/reports/future-web-candidates.md
 - Read: TestCase, execution output, and ignored evidence
 
 **Interfaces:**
@@ -248,7 +248,7 @@ Expected: no diff under the real product path, no whitespace errors, and only in
 Run with explicit paths, never git add .:
 
 ~~~powershell
-git add -- test-cases/web/TC-WEB-LOGIN-001.md tests/web/real-project/TC_WEB_LOGIN_001.spec.ts reports/web-real-001-report.md reports/future-web-candidates.md
+git add -- test-cases/web/TC-WEB-LOGIN-001.md tests/web/real-project/TC_WEB_LOGIN_001.spec.ts projects/test-workflow/reports/web-real-001-report.md projects/test-workflow/reports/future-web-candidates.md
 git diff --cached --check
 git diff --cached --name-only
 ~~~

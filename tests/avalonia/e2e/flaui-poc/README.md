@@ -18,7 +18,7 @@ POC 在三个文件选中并保存证据后停止，不调用最终 Open，不�
 由仓库根目录的 `run-poc3.mjs` 负责启动 WinAppDriver、Appium 和真实产品，然后调用：
 
 ```powershell
-dotnet run --project tests/avalonia/e2e/flaui-poc/FlaUI.FileDialog.Poc.csproj --no-restore -- --pid <HZ.LogClient PID> --evidence-dir artifacts/phase3b-flaui-poc --target-directory <directory> --appium-click-status HTTP_500
+dotnet run --project tests/avalonia/e2e/flaui-poc/FlaUI.FileDialog.Poc.csproj --no-restore -- --pid <HZ.LogClient PID> --evidence-dir projects/test-workflow/artifacts/phase3b-flaui-poc --target-directory <directory> --appium-click-status HTTP_500
 ```
 
 依赖仅来自官方 NuGet：`FlaUI.Core` 和 `FlaUI.UIA3`，当前锁定 `5.0.0`。

@@ -6,7 +6,7 @@ export default defineConfig({
   fullyParallel: false,
   workers: 1,
   reporter: [['line']],
-  outputDir: 'artifacts/api/playwright',
+  outputDir: 'projects/test-workflow/artifacts/api/playwright',
   use: {
     screenshot: 'off',
     trace: 'off',

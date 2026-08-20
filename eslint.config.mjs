@@ -8,6 +8,7 @@ const platformTypeScript = [
   'tests/types/**/*.ts',
   'tests/web/platform-contract-validator.spec.ts',
   'tests/web/synthetic-product-runtime.spec.ts',
+  'tests/platform/**/*.ts',
 ];
 
 export default tseslint.config(
@@ -15,6 +16,8 @@ export default tseslint.config(
     ignores: [
       'node_modules/**',
       'artifacts/**',
+      'projects/**/artifacts/**',
+      'projects/**/reports/playwright-report/**',
       'reports/**',
       'test-results/**',
       'tests/avalonia/**',

@@ -17,7 +17,7 @@
 - 浏览器：仅安装 Chromium，使用 `npx playwright install --with-deps chromium`
 - 权限：`contents: read`
 - 并发：同一工作流和 ref 取消旧运行
-- 产物：仅尝试上传 `artifacts/`、`playwright-report/`、`test-results/`，缺失路径忽略，保留 7 天
+- 产物：仅尝试上传 `projects/test-workflow/artifacts/`、`playwright-report/`、`test-results/`，缺失路径忽略，保留 7 天
 - 未使用 Secrets，也未配置写权限
 
 CI 只调用 `npm run test:ci`；该命令依次执行 `ci:safety`、`validate`、`test:platform`，不直接连接真实业务 Runtime。
