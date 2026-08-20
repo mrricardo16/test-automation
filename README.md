@@ -1,5 +1,84 @@
 # Agent-Driven Test Automation
 
+## Platform Overview
+
+This repository is a test-owned Agent-Driven Test Platform. Canonical contracts in `contracts/` define status, TestCase, coverage, evidence, confidence, and stable-ID semantics; historical records remain readable through `LegacyFieldAdapter` and are not batch-rewritten.
+
+### Architecture
+
+```text
+Developer source
+  └─ dev-test-handoff: Source → As-Built → Design Gate → Sanitized Handoff → STOP
+       └─ test-execution: Handoff → Coverage → TestCase → Evidence → Feedback
+Developer source (optional direct read)
+  └─ whitebox-test-execution: Source → Baseline → Gates → TestCase → Evidence → Regression
+```
+
+### Skill Modes
+
+- Mode A: `dev-test-handoff` prepares the Expected Handoff; `test-execution` performs black-box Web/API/Manual execution.
+- Mode B: `whitebox-test-execution` performs direct-source white-box analysis and execution; product source remains read-only.
+- `dev-test-handoff` never creates formal TestCases or executes tests. Every formal test is TestCase-first and links `TestCaseId` to its result and evidence.
+
+### Safe Commands
+
+Run from the repository root:
+
+```text
+npm run typecheck
+npm run lint
+npm run test:contracts
+npm run test:skills
+npm run test:synthetic
+npm run test:web
+npm run test:api
+npm run test:profiles
+npm run test:aggregation
+npm run governance
+npm run test:ci
+```
+
+These commands use test-owned Synthetic Product/runtime paths for platform acceptance. They do not grant permission to access a real business localhost, product source, DLL, database, or credential.
+
+### CI Scope
+
+The GitHub Actions workflow is synthetic/platform-safe only and consumes commands already validated locally. `LOCAL_CI_GATE = PASS`; `GITHUB_HOSTED_RUN = NOT_EXECUTED` because this task does not authorize push. Real Project CI and Windows Self-hosted Desktop CI are not implemented.
+
+### Directory Guide
+
+- `contracts/`: canonical contracts and schemas.
+- `skills/`: the three reusable Skills and their active references, templates, validators, and self-tests.
+- `test-cases/`: TestCase-first records, including platform and historical project cases.
+- `scripts/platform/`: deterministic local quality gates, Synthetic Runtime helpers, aggregation, and governance checks.
+- `tests/platform/`, `tests/api/synthetic/`, and `tests/web/`: executable platform acceptance and Synthetic Product coverage.
+- `config/*.example.json`: committed examples only; machine-specific real-project values belong in ignored local configuration.
+- `reports/`: committed audit/design/acceptance reports; generated runtime evidence belongs in ignored `artifacts/` or generated report paths.
+
+### Current Capability Status
+
+| Capability | Status | Boundary |
+|---|---|---|
+| Canonical Contracts | IMPLEMENTED / VERIFIED_LOCALLY | Contract schemas and compatibility adapter |
+| Synthetic Runtime | IMPLEMENTED / VERIFIED_LOCALLY | Test-owned dynamic localhost only |
+| Synthetic Web | VERIFIED_LOCALLY | Synthetic Product only |
+| Synthetic API | VERIFIED_LOCALLY | Synthetic Product only |
+| Contract Acceptance | VERIFIED_LOCALLY | Deterministic contract checks |
+| Agent Acceptance | BLOCKED | `MissingAgentInvocationCapability`; no Agent Invocation was claimed |
+| GitHub Actions workflow | IMPLEMENTED | `LOCAL_CI_GATE = PASS`; hosted run `NOT_EXECUTED` |
+| Real Project CI | NOT IMPLEMENTED | Outside current safe platform scope |
+| Windows Self-hosted Desktop CI | NOT IMPLEMENTED | Requires separately approved environment |
+
+### Known Limitations
+
+- `AGENT_ACCEPTANCE = BLOCKED` is an environment capability boundary, not a product PASS or FAIL.
+- A Synthetic Product known bug remains a product `ExecutionStatus = FAIL`; acceptance may pass only when it verifies that the expected defect was found.
+- `NOT_APPLICABLE` is not an `ExecutionStatus`; use `ApplicabilityStatus` or `CoverageStatus`.
+- Runtime observations are Actual/Observation Evidence, never `ExpectedBasis`. `CODE_BEHAVIOR` means characterization or implementation regression only.
+
+### Historical
+
+The phase-history sections below are preserved for traceability. They may describe earlier repository states and should not override the current Platform Overview or canonical contracts.
+
 ## Project goal
 
 This repository is an Agent-driven automation-testing workspace. Its required flow is:
@@ -20,7 +99,7 @@ This repository is an Agent-driven automation-testing workspace. Its required fl
 
 Formal automation starts with a TestCase record and keeps the TestCaseId linked to the executable test.
 
-## Current phase
+## Historical phase context (preserved)
 
 Implemented:
 

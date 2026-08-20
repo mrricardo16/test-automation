@@ -1,11 +1,11 @@
 # Coverage Matrix
 
-| Handoff ID | ModuleId | FeatureId | Priority | Suggested Layer | TestCaseId | Status | Reconciliation | Evidence | Limitation / Feedback |
-|---|---|---|---|---|---|---|---|---|---|
-|  |  |  |  |  |  |  |  |  |  |
+| Handoff ID | ModuleId | FeatureId | Priority | Suggested Layer | TestCaseId | ExecutionStatus | ApplicabilityStatus | CoverageStatus | GateStatus | Evidence | Limitation / Feedback |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Rules
 
 - Preserve every Handoff ID.
-- Use only the approved final statuses and reconciliation states.
-- P0 `NOT_COVERED` prevents a regression-complete claim.
+- Use canonical `ExecutionStatus` and `CoverageStatus` separately. Historical values are interpreted through `LegacyFieldAdapter`.
+- P0 `UNTESTED`/`PARTIAL` prevents a regression-complete claim.

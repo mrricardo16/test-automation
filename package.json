@@ -20,6 +20,7 @@
     "test:synthetic": "node scripts/platform/run-platform-tests.mjs synthetic",
     "test:profiles": "node scripts/platform/run-platform-tests.mjs profiles",
     "test:aggregation": "node scripts/platform/run-platform-tests.mjs aggregation",
+    "governance": "node --test tests/platform/governance-check.spec.mjs && node scripts/platform/governance-check.mjs",
     "validate": "node scripts/platform/run-platform-validation.mjs",
     "test:platform": "node scripts/platform/run-platform-quality.mjs",
     "ci:safety": "node --test tests/ci/ci-safety-check.spec.mjs && node scripts/platform/ci-safety-check.mjs",

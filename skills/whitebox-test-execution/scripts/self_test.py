@@ -9,12 +9,9 @@ from pathlib import Path
 
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
-FINAL_STATUSES = {"PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "NOT_APPLICABLE", "SKIPPED"}
-COVERAGE_STATES = {
-    "COVERED_PASS", "COVERED_FAIL", "COVERED_ERROR", "BLOCKED",
-    "MANUAL_PENDING", "NOT_APPLICABLE", "NOT_COVERED",
-}
-EXPECTED_BASES = {"CONFIRMED_FROM_CODE", "CONFIRMED_FROM_RUNTIME", "INFERRED", "UNKNOWN"}
+FINAL_STATUSES = {"PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "SKIPPED"}
+COVERAGE_STATES = {"COVERED", "PARTIAL", "UNTESTED", "MANUAL", "NOT_APPLICABLE"}
+EXPECTED_BASES = {"REQUIREMENT", "DESIGN", "APPROVED_BASELINE", "HANDOFF_BASELINE", "CODE_BEHAVIOR", "UNKNOWN"}
 
 
 def require(condition: bool, message: str) -> None:
@@ -63,7 +60,7 @@ def main() -> int:
         inventory = {"frontend": "PRESENT", "backend": "PRESENT", "solutions": ["mock-frontend", "mock-backend"]}
         require(all(path.exists() for path in (source / "frontend", source / "backend", runtime)), "fixture intake")
         require(len(inventory["solutions"]) == 2, "multi-solution inventory")
-        fact = {"RuleId": "RULE-ORDER-001", "ExpectedBasis": "CONFIRMED_FROM_CODE", "SourceEvidence": "backend/OrderHandler.mock:rule"}
+        fact = {"RuleId": "RULE-ORDER-001", "ExpectedBasis": "CODE_BEHAVIOR", "Confidence": "CONFIRMED_FROM_CODE", "SourceEvidence": "backend/OrderHandler.mock:rule"}
         require(fact["ExpectedBasis"] in EXPECTED_BASES, "ExpectedBasis vocabulary")
         require(fact["RuleId"].startswith("RULE-"), "stable rule ID")
         baseline_gate = {"Status": "BASELINE_VALIDATED", "Missing": "NONE", "Reason": "NONE", "Impact": "NONE"}
@@ -84,10 +81,10 @@ def main() -> int:
         require(evidence["TestCaseId"] == testcase["TestCaseId"], "evidence mapping")
         diagnosis = {"Confidence": "ROOT_CAUSE_PROBABLE", "CallChain": "Handler -> FakeShipping"}
         require(diagnosis["Confidence"] in {"ROOT_CAUSE_CONFIRMED", "ROOT_CAUSE_PROBABLE", "ROOT_CAUSE_UNKNOWN"}, "root cause confidence")
-        coverage = {"State": "NOT_COVERED", "Priority": "P0", "CodeCoverage": "100%"}
-        require(coverage["State"] in COVERAGE_STATES, "coverage reconciliation")
-        require(coverage["Priority"] == "P0" and coverage["State"] == "NOT_COVERED", "P0 gate")
-        require(coverage["CodeCoverage"] == "100%" and coverage["State"] != "COVERED_PASS", "non-invasive code coverage is not business coverage")
+        coverage = {"CoverageStatus": "UNTESTED", "ExecutionStatus": "BLOCKED", "Priority": "P0", "CodeCoverage": "100%"}
+        require(coverage["CoverageStatus"] in COVERAGE_STATES, "coverage status")
+        require(coverage["Priority"] == "P0" and coverage["CoverageStatus"] == "UNTESTED", "P0 gate")
+        require(coverage["CodeCoverage"] == "100%" and coverage["CoverageStatus"] != "COVERED", "non-invasive code coverage is not business coverage")
         require(output.parent == root and output.exists(), "test-owned output only")
 
     print(json.dumps({

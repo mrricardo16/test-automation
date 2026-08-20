@@ -3,14 +3,23 @@
 - Scope / RunId:
 - ExpectedBasis:
 
-| Reconciliation | Count |
+| CoverageStatus | Count |
 |---|---:|
-| COVERED_PASS | 0 |
-| COVERED_FAIL | 0 |
-| COVERED_ERROR | 0 |
-| BLOCKED | 0 |
-| MANUAL_PENDING | 0 |
+| COVERED | 0 |
+| PARTIAL | 0 |
+| UNTESTED | 0 |
+| MANUAL | 0 |
 | NOT_APPLICABLE | 0 |
-| NOT_COVERED | 0 |
 
-P0 NOT_COVERED blocks White-box Regression Complete. Code Coverage is separate, optional, and non-invasive.
+## ExecutionStatus summary
+
+| ExecutionStatus | Count |
+|---|---:|
+| PASS | 0 |
+| FAIL | 0 |
+| ERROR | 0 |
+| BLOCKED | 0 |
+| MANUAL | 0 |
+| SKIPPED | 0 |
+
+P0 UNTESTED/PARTIAL blocks White-box Regression Complete. Historical values are mapped through `LegacyFieldAdapter`. Code Coverage is separate, optional, and non-invasive.

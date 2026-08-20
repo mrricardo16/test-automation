@@ -1,5 +1,16 @@
 # TestCase Convention
 
+## Canonical TestCase-first contract
+
+Every formal test starts with a stable TestCase record before automation code is written. The canonical fields and `ExpectedBasis` vocabulary are defined in [`contracts/testcase-contract.md`](../contracts/testcase-contract.md) and [`contracts/schemas/testcase.schema.json`](../contracts/schemas/testcase.schema.json).
+
+- `TestCaseId` is unique and remains linked through the executable test, `ExecutionStatus`, `ApplicabilityStatus`, `CoverageStatus`, evidence, and report.
+- Canonical execution statuses are `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, and `SKIPPED`. `NOT_APPLICABLE` belongs to applicability or coverage, not execution.
+- `ExpectedBasis` is `REQUIREMENT`, `DESIGN`, `APPROVED_BASELINE`, `HANDOFF_BASELINE`, `CODE_BEHAVIOR`, or `UNKNOWN`. Runtime observations belong to Actual/Observation Evidence.
+- Legacy fields such as `Module`, `RequirementSource`, and old `Status` values remain readable through `LegacyFieldAdapter`; historical TestCases and IDs are not renumbered or batch-rewritten.
+
+The platform TestCase `TC-PLATFORM-08-GOV-001` verifies that active Skill governance stays aligned with these contracts.
+
 Every formal test starts with a TestCase record before automation code is written.
 
 ## Required fields

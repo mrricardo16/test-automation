@@ -10,10 +10,12 @@ Track Module, Feature, Business Rule, Business Flow, Validation, Boundary, Permi
 
 Keep source IDs such as `MOD-*`, `FEAT-*`, `RULE-*`, `FLOW-*`, `API-*`, `VALID-*`, and `STATE-*`. Assign stable TestCase IDs in the form `TC-WEB-*`, `TC-API-*`, or `TC-MANUAL-*`. Reuse existing TestCases when their Expected and scope still match; update them explicitly, create a new version, or mark an obsolete candidate. Never silently delete one.
 
-## Reconciliation states
+## Canonical execution and coverage
 
-Use only these coverage states: `COVERED_PASS`, `COVERED_FAIL`, `COVERED_ERROR`, `BLOCKED`, `MANUAL_PENDING`, `NOT_APPLICABLE`, and `NOT_COVERED`. A P0 `NOT_COVERED` row prevents a regression-complete claim. `COVERED_FAIL` is still covered and must retain product evidence.
+Keep `ExecutionStatus` and `CoverageStatus` separate. `ExecutionStatus` is one of `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, or `SKIPPED`; `CoverageStatus` is one of `COVERED`, `PARTIAL`, `UNTESTED`, `MANUAL`, or `NOT_APPLICABLE`. A P0 `UNTESTED`/`PARTIAL` row prevents a regression-complete claim. A `FAIL` remains a product failure and must retain product evidence.
+
+Legacy values such as `COVERED_PASS`, `COVERED_FAIL`, `COVERED_ERROR`, `MANUAL_PENDING`, and `NOT_COVERED` are accepted only through `LegacyFieldAdapter` and are not active canonical vocabulary.
 
 ## Minimum row
 
-Each row includes Handoff ID, ModuleId, FeatureId, Priority, Suggested Test Layer, TestCaseId, current TestCase status, reconciliation state, evidence path, limitation/reason, and feedback action.
+Each row includes Handoff ID, ModuleId, FeatureId, Priority, Suggested Test Layer, TestCaseId, current `ExecutionStatus`, `ApplicabilityStatus`, `CoverageStatus`, `GateStatus`, evidence path, limitation/reason, and feedback action.

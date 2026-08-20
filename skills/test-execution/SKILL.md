@@ -19,6 +19,14 @@ Optional inputs are credentials, existing TestCases, existing reports, existing 
 
 Do not modify the Handoff Expected baseline, product code, product test hooks, or product data to make a test pass. Do not fix product bugs, silently delete old TestCases, generate Word documents, or use source code to guess an Expected Result. A runtime mismatch is reported as `DESIGN_RUNTIME_MISMATCH`; it is not converted into PASS.
 
+## Canonical Contracts and compatibility
+
+Use the repository Canonical Contracts as the source of truth: [status](../../contracts/status-contract.md), [TestCase](../../contracts/testcase-contract.md), [coverage](../../contracts/coverage-contract.md), [evidence](../../contracts/evidence-contract.md), [confidence](../../contracts/confidence-contract.md), and [stable IDs](../../contracts/id-contract.md). `LegacyFieldAdapter` maps old field names and reconciliation values into the canonical model without rewriting historical TestCases or reports.
+
+Keep `ExecutionStatus`, `ApplicabilityStatus`, and `CoverageStatus` separate. Runtime observation is Actual/Evidence, never `ExpectedBasis`; `CODE_BEHAVIOR` is only for characterization or implementation-regression claims.
+
+Use `GateStatus`, `BaselineStatus`, `SourceRuntimeAlignment`, and `Confidence` as separate fields when those dimensions apply.
+
 ## Required workflow
 
 1. **Handoff Intake:** Read `00-TEST-WORKFLOW.md` first, then all related Handoff documents. Missing scope, Expected Result, prerequisite, or stable Handoff ID means `HANDOFF_INCOMPLETE`; block only the affected case or run and never guess.
@@ -28,13 +36,13 @@ Do not modify the Handoff Expected baseline, product code, product test hooks, o
 5. **Execution Planning:** Choose `WEB_UI`, `API`, `BOTH`, or `MANUAL`. Prefer the smallest scope requested: full regression, module regression, P0, failed rerun, or a single TestCase. Run a Runtime Health Check before formal execution.
 6. **Automation or Manual Execution:** Prefer existing harnesses. For Web UI use Playwright and real user-visible interactions; for API use the Handoff API contracts; retain unsupported cases as `MANUAL`. Do not bypass the UI with hidden state, injected tokens, direct business-state JavaScript, or coordinate clicks.
 7. **Evidence Collection:** Reuse the repository Web Evidence Helper. Capture failure screenshot, URL, failed step, Expected, Actual, and error stack; retain trace on failure when available. Sanitize passwords, auth headers, cookies, tokens, secrets, API keys, and sensitive network payloads.
-8. **Coverage Reconciliation:** Reconcile each Handoff ID to `COVERED_PASS`, `COVERED_FAIL`, `COVERED_ERROR`, `BLOCKED`, `MANUAL_PENDING`, `NOT_APPLICABLE`, or `NOT_COVERED`. A FAIL is covered and remains a product failure. Any P0 `NOT_COVERED` prevents announcing regression complete.
+8. **Coverage Reconciliation:** Record canonical `CoverageStatus` (`COVERED`, `PARTIAL`, `UNTESTED`, `MANUAL`, or `NOT_APPLICABLE`) separately from `ExecutionStatus`. A FAIL is covered and remains a product failure. Any P0 `UNTESTED`/`PARTIAL` row prevents announcing regression complete. Interpret legacy values through `LegacyFieldAdapter` only.
 9. **Regression Reporting:** Produce the reports and evidence index listed below. Keep original TestCase status when cleanup or evidence capture fails; add the secondary `ERROR_*` reason.
 10. **Development Feedback Pack:** Make tested, passed, failed, blocked, manual, not covered, mismatch, evidence, and next action understandable without opening the full test repository.
 
 ## Status and classification contract
 
-Use only `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, `NOT_APPLICABLE`, and `SKIPPED` as final TestCase execution statuses. Use `BLOCKED_EXPECTATION` and `BLOCKED_TEST_DATA` as blocker reasons, not statuses. `PRODUCT_CHANGE_RECOMMENDED` is diagnostic only. Use `DESIGN_RUNTIME_MISMATCH` for a conflict between runtime behavior and the read-only Handoff Expected baseline.
+Use only `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, and `SKIPPED` as final TestCase `ExecutionStatus` values. `NOT_APPLICABLE` belongs to `ApplicabilityStatus` or `CoverageStatus`, not execution. Use `BLOCKED_EXPECTATION` and `BLOCKED_TEST_DATA` as blocker reasons, not statuses. `PRODUCT_CHANGE_RECOMMENDED` is diagnostic only. Use `DESIGN_RUNTIME_MISMATCH` for a conflict between runtime behavior and the read-only Handoff Expected baseline.
 
 Only an actually executed, evidence-backed result can be PASS or FAIL. Classify setup and infrastructure issues separately: `ERROR_LOCATOR`, `ERROR_TIMEOUT`, `ERROR_NAVIGATION`, `ERROR_BROWSER`, `ERROR_PLAYWRIGHT`, `ERROR_API_HARNESS`, `ERROR_TEST_DATA_SETUP`, `ERROR_CLEANUP`, and `ERROR_EVIDENCE_CAPTURE`. A missing browser, credential, service, endpoint, or safe test data is BLOCKED, not a product FAIL.
 

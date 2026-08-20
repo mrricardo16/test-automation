@@ -32,7 +32,7 @@ REQUIRED_TEMPLATES = [
     "evidence-index.md",
     "environment-issues.md",
 ]
-STATUSES = ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "NOT_APPLICABLE", "SKIPPED"]
+STATUSES = ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "SKIPPED"]
 
 
 def fail(message: str) -> None:
@@ -64,6 +64,11 @@ def main() -> int:
         "evidence-index.md",
         "feedback",
         "credentials",
+        "contracts/status-contract.md",
+        "contracts/testcase-contract.md",
+        "LegacyFieldAdapter",
+        "ApplicabilityStatus",
+        "CoverageStatus",
     ]
     for phrase in required_phrases:
         if phrase not in content:
@@ -71,7 +76,9 @@ def main() -> int:
     for status in STATUSES:
         if status not in content:
             fail(f"required final status missing: {status}")
-    if "NOT_COVERED" not in content or "P0" not in content:
+    if "NOT_APPLICABLE" not in content or "CoverageStatus" not in content:
+        fail("NOT_APPLICABLE must remain a separate applicability/coverage value")
+    if "P0" not in content or not ("UNTESTED" in content or "NOT_COVERED" in content):
         fail("P0 coverage gate missing")
 
     for folder, names in (("references", REQUIRED_REFERENCES), ("templates", REQUIRED_TEMPLATES)):

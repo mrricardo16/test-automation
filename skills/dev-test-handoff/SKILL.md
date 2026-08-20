@@ -20,6 +20,20 @@ Source → As-Built → Design Validation Gate → Sanitized Test Handoff
 
 Do not use it to execute tests, create formal TestCases, modify product code, build or run a product, connect to production data, generate Word manuals, or repair defects.
 
+## Canonical Contracts and boundary
+
+The repository-level contracts under `contracts/` are authoritative for vocabulary and traceability:
+
+- [status contract](../../contracts/status-contract.md): `ExecutionStatus`, `ApplicabilityStatus`, `CoverageStatus`, `GateStatus`, and `BaselineStatus`;
+- [TestCase contract](../../contracts/testcase-contract.md): `ExpectedBasis` is `REQUIREMENT`, `DESIGN`, `APPROVED_BASELINE`, `HANDOFF_BASELINE`, `CODE_BEHAVIOR`, or `UNKNOWN`;
+- [coverage](../../contracts/coverage-contract.md), [evidence](../../contracts/evidence-contract.md), [confidence](../../contracts/confidence-contract.md), and [ID](../../contracts/id-contract.md) contracts.
+
+Runtime observations belong to Actual/Observation Evidence and `ObservationEvidenceIds`; they are never an `ExpectedBasis`. `CODE_BEHAVIOR` is limited to characterization or implementation-regression claims and does not assert requirements compliance. Legacy fields are interpreted through `LegacyFieldAdapter` without rewriting historical records.
+
+The active handoff vocabulary also records `SourceRuntimeAlignment`, `Confidence`, and `GateStatus` when applicable; `BaselineStatus` describes the design baseline gate.
+
+This Skill owns source inspection, As-Built reconstruction, the Design Validation Gate, and sanitized Handoff projection only. It does not create formal TestCases or execute tests; downstream Skills own those actions.
+
 ## Inputs
 
 Require `output_root` and at least one non-empty source scope:

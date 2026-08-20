@@ -22,4 +22,6 @@ Perform real user-visible interactions. Use Playwright auto-waiting and conditio
 
 ## API and statuses
 
-API tests use `06-api-contracts.md`. PASS and FAIL require actual execution and evidence. Setup/infrastructure problems are ERROR or BLOCKED; missing Expected or safe data is not a product FAIL. Final statuses are `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, `NOT_APPLICABLE`, and `SKIPPED`.
+Final `ExecutionStatus` values are `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, and `SKIPPED`. `NOT_APPLICABLE` is an `ApplicabilityStatus`/`CoverageStatus` value, not an execution status. `LegacyFieldAdapter` maps historical values without rewriting them.
+
+API tests use `06-api-contracts.md`. PASS and FAIL require actual execution and evidence. Setup/infrastructure problems are ERROR or BLOCKED; missing Expected or safe data is not a product FAIL.

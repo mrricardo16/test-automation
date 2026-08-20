@@ -7,9 +7,9 @@ from pathlib import Path
 
 REFERENCES = ["whitebox-contract.md", "source-analysis-and-risk.md", "baseline-validation-gate.md", "source-runtime-alignment-gate.md", "coverage-and-traceability.md", "test-layer-selection.md", "testcase-design.md", "harness-safety.md", "evidence-rules.md", "root-cause-analysis.md", "test-data-and-cleanup.md", "regression-contract.md", "security-sanitization.md"]
 TEMPLATES = ["whitebox-baseline.md", "coverage-matrix.md", "unit-testcase.md", "integration-testcase.md", "api-testcase.md", "web-testcase.md", "desktop-testcase.md", "manual-testcase.md", "whitebox-regression-report.md", "coverage-report.md", "defect-list.md", "root-cause-analysis.md", "execution-summary.md", "evidence-index.md", "environment-issues.md", "manual-boundaries.md"]
-REQUIRED = ["Source Intake", "White-box Analysis", "Test Baseline", "Coverage", "TestCase", "Review Gate", "Layer Selection", "Harness", "Runtime Health", "Execution", "Evidence", "Failure Diagnosis", "Reconciliation", "Reporting", "ExpectedBasis", "CONFIRMED_FROM_CODE", "CONFIRMED_FROM_RUNTIME", "INFERRED", "UNKNOWN", "BASELINE_VALIDATED", "BASELINE_INCOMPLETE", "SOURCE_RUNTIME_ALIGNMENT", "DESIGN_RUNTIME_MISMATCH", "SOURCE_RUNTIME_MISMATCH", "CODE_COVERAGE_NON_INVASIVE", "dev-test-handoff", "test-execution", "product source", "read-only"]
-STATUSES = ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "NOT_APPLICABLE", "SKIPPED"]
-COVERAGE = ["COVERED_PASS", "COVERED_FAIL", "COVERED_ERROR", "MANUAL_PENDING", "NOT_COVERED"]
+REQUIRED = ["Source Intake", "White-box Analysis", "Test Baseline", "Coverage", "TestCase", "Review Gate", "Layer Selection", "Harness", "Runtime Health", "Execution", "Evidence", "Failure Diagnosis", "Reconciliation", "Reporting", "ExpectedBasis", "REQUIREMENT", "DESIGN", "APPROVED_BASELINE", "HANDOFF_BASELINE", "CODE_BEHAVIOR", "UNKNOWN", "CONFIRMED_FROM_CODE", "CONFIRMED_FROM_RUNTIME", "INFERRED", "BASELINE_VALIDATED", "BASELINE_LIMITED", "BASELINE_INCOMPLETE", "SOURCE_RUNTIME_ALIGNMENT", "DESIGN_RUNTIME_MISMATCH", "SOURCE_RUNTIME_MISMATCH", "CODE_COVERAGE_NON_INVASIVE", "LegacyFieldAdapter", "contracts/status-contract.md", "contracts/testcase-contract.md", "dev-test-handoff", "test-execution", "product source", "read-only"]
+STATUSES = ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "SKIPPED"]
+COVERAGE = ["COVERED", "PARTIAL", "UNTESTED", "MANUAL", "NOT_APPLICABLE"]
 
 def require(condition: bool, message: str) -> None:
     if not condition:
@@ -31,6 +31,7 @@ def main() -> int:
     require((root / "agents" / "openai.yaml").is_file(), "missing agents/openai.yaml")
     require((root / "scripts" / "self_test.py").is_file(), "missing self_test.py")
     all_text = reference_text + "\n" + content
+    require("ApplicabilityStatus" in all_text and "GateStatus" in all_text and "SourceRuntimeAlignment" in all_text and "Confidence" in all_text, "canonical status vocabulary")
     for folder, names in (("references", REFERENCES), ("templates", TEMPLATES)):
         for name in names:
             path = root / folder / name

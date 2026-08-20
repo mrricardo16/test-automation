@@ -11,17 +11,27 @@ Create source-driven, TestCase-first regression work while keeping product sourc
 
 Require `output_root` in the test repository and at least one of `frontend_source` or `backend_source`; mark the absent side `NOT_PROVIDED`. Support frontend-only, backend-only, multi-solution, changed-file/commit, and optional Runtime inputs. Read product source only; write adapters, reports, evidence, and coverage configuration only under test-owned output. Never modify product source, configuration, AutomationId, data-testid, DI, test hooks, InternalsVisibleTo, database, API, or mock switches.
 
+## Canonical Contracts and compatibility
+
+Use the repository Canonical Contracts as the source of truth: [status](../../contracts/status-contract.md), [TestCase](../../contracts/testcase-contract.md), [coverage](../../contracts/coverage-contract.md), [evidence](../../contracts/evidence-contract.md), [confidence](../../contracts/confidence-contract.md), and [stable IDs](../../contracts/id-contract.md). `LegacyFieldAdapter` maps old field names and reconciliation values into the canonical model without rewriting historical TestCases or reports.
+
+`ExpectedBasis` is one of `REQUIREMENT`, `DESIGN`, `APPROVED_BASELINE`, `HANDOFF_BASELINE`, `CODE_BEHAVIOR`, or `UNKNOWN`. Runtime observations belong to Actual/Observation Evidence, never `ExpectedBasis`. `CODE_BEHAVIOR` is limited to characterization or implementation-regression claims and cannot automatically assert requirements compliance. Keep `ExecutionStatus`, `ApplicabilityStatus`, `CoverageStatus`, `GateStatus`, `BaselineStatus`, `SourceRuntimeAlignment`, and `Confidence` separate.
+
+PRODUCT SOURCE is read-only, and `CODE_COVERAGE_NON_INVASIVE` never replaces business coverage.
+
 ## Required workflow
 
 Follow this exact order: **Source Intake → White-box Analysis → Test Baseline → Coverage → TestCase → Review Gate → Layer Selection → Harness → Runtime Health → Execution → Evidence → Failure Diagnosis → Reconciliation → Reporting**.
 
-Every Baseline, Coverage row, TestCase, and report carries `ExpectedBasis`: `CONFIRMED_FROM_CODE`, `CONFIRMED_FROM_RUNTIME`, `INFERRED`, or `UNKNOWN`. Source Expected and Runtime Actual remain distinct. Missing semantics are `UNKNOWN`/`UNKNOWN_EXPECTATION`, `BLOCKED`, or `PRODUCT_CHANGE_RECOMMENDED`, never guessed.
+Every Baseline, Coverage row, TestCase, and report carries a canonical `ExpectedBasis`.
 
-Before Coverage/TestCase creation, run the Baseline Validation Gate. Record `BASELINE_VALIDATED` or `BASELINE_INCOMPLETE` with Missing, Reason, Impact, and affected scope. Before aggregating PASS/FAIL, run `SOURCE_RUNTIME_ALIGNMENT`; retain `DESIGN_RUNTIME_MISMATCH` or `SOURCE_RUNTIME_MISMATCH` and never rewrite Expected.
+Evidence confidence is recorded separately as `CONFIRMED_FROM_CODE`, `CONFIRMED_FROM_RUNTIME`, `INFERRED`, or `UNKNOWN`. Source Expected and Runtime Actual remain distinct. Missing semantics are `UNKNOWN`/`UNKNOWN_EXPECTATION`, `BLOCKED`, or `PRODUCT_CHANGE_RECOMMENDED`, never guessed.
 
-Formal TestCases precede automation. Review Gate checks Expected, SourceEvidence, coverage mapping, layer, safe data, Cleanup, Destructive Operation, runtime prerequisites, and evidence. Select only `UNIT`, `INTEGRATION`, `API`, `WEB_UI`, `DESKTOP_HEADLESS`, `DESKTOP_E2E`, or `MANUAL`. Only real execution with evidence may be `PASS` or `FAIL`; final statuses are `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, `NOT_APPLICABLE`, `SKIPPED`.
+Before Coverage/TestCase creation, run the Baseline Validation Gate. Record `BASELINE_VALIDATED`, `BASELINE_LIMITED`, or `BASELINE_INCOMPLETE` with Missing, Reason, Impact, and affected scope. Before aggregating PASS/FAIL, run `SOURCE_RUNTIME_ALIGNMENT`; retain `DESIGN_RUNTIME_MISMATCH` or `SOURCE_RUNTIME_MISMATCH` and never rewrite Expected.
 
-Use separate reconciliation states: `COVERED_PASS`, `COVERED_FAIL`, `COVERED_ERROR`, `BLOCKED`, `MANUAL_PENDING`, `NOT_APPLICABLE`, `NOT_COVERED`. P0 `NOT_COVERED` prevents a regression-complete claim. Code coverage is optional and `CODE_COVERAGE_NON_INVASIVE`: read an existing report or write only test-owned output/configuration; it never replaces business coverage.
+Formal TestCases precede automation. Review Gate checks Expected, SourceEvidence, coverage mapping, layer, safe data, Cleanup, Destructive Operation, runtime prerequisites, and evidence. Select only `UNIT`, `INTEGRATION`, `API`, `WEB_UI`, `DESKTOP_HEADLESS`, `DESKTOP_E2E`, or `MANUAL`. Only real execution with evidence may be `PASS` or `FAIL`; final `ExecutionStatus` values are `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, or `SKIPPED`. `NOT_APPLICABLE` is not an execution status.
+
+Use canonical `CoverageStatus`: `COVERED`, `PARTIAL`, `UNTESTED`, `MANUAL`, or `NOT_APPLICABLE`, separately from `ExecutionStatus`; P0 `UNTESTED`/`PARTIAL` prevents a regression-complete claim. Legacy reconciliation values are accepted only through `LegacyFieldAdapter`. Code coverage is optional and `CODE_COVERAGE_NON_INVASIVE`: read an existing report or write only test-owned output/configuration; it never replaces business coverage.
 
 ## Resource routing
 
