@@ -12,6 +12,7 @@ const commands = [
   ['test:profiles', process.execPath, [resolve(repoRoot, 'scripts/platform/run-platform-tests.mjs'), 'profiles']],
   ['test:aggregation', process.execPath, [resolve(repoRoot, 'scripts/platform/run-platform-tests.mjs'), 'aggregation']],
   ['governance', process.execPath, [resolve(repoRoot, 'scripts/platform/governance-check.mjs')]],
+  ['report-governance', process.execPath, [resolve(repoRoot, 'scripts/platform/report-governance.mjs')]],
 ];
 for (const [label, command, args] of commands) {
   const result = spawnSync(command, args, { cwd: repoRoot, stdio: 'inherit' });

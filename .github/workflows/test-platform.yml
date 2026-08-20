@@ -34,7 +34,7 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Run CI-safe platform tests
+      - name: Run CI-safe platform tests and report governance
         run: npm run test:ci
 
       - name: Upload safe platform artifacts
