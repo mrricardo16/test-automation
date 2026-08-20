@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://automated-testing.local/contracts/environment-profile.schema.json",
+  "title": "Environment Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["EnvironmentId", "EnvironmentType", "Runtime", "WebBaseUrl", "ApiBaseUrl", "DesktopRuntime", "Capabilities", "DestructiveAllowed", "DataPolicy", "EvidencePolicy"],
+  "properties": {
+    "EnvironmentId": { "type": "string", "minLength": 1 },
+    "EnvironmentType": { "enum": ["SYNTHETIC", "LOCAL_REAL", "STAGING", "CI_SYNTHETIC", "DESKTOP_LOCAL"] },
+    "Runtime": { "type": "string", "minLength": 1 },
+    "WebBaseUrl": { "type": "string", "minLength": 1 },
+    "ApiBaseUrl": { "type": "string", "minLength": 1 },
+    "DesktopRuntime": { "type": "boolean" },
+    "Capabilities": { "type": "array", "items": { "enum": ["WEB", "API", "UNIT", "INTEGRATION", "DESKTOP_HEADLESS", "DESKTOP_E2E", "MANUAL"] }, "uniqueItems": true },
+    "DestructiveAllowed": { "type": "boolean" },
+    "DataPolicy": { "enum": ["TEST_OWNED_ONLY", "EXTERNAL_APPROVED_ONLY", "MANUAL_ONLY"] },
+    "EvidencePolicy": { "enum": ["SANITIZED", "RESTRICTED", "MANUAL_ONLY"] },
+    "IsCI": { "type": "boolean" },
+    "Owner": { "type": "string" },
+    "Description": { "type": "string" },
+    "SourceRuntimeAlignmentPolicy": { "enum": ["REQUIRE_ALIGNED", "REPORT_ONLY", "NOT_APPLICABLE"] }
+  }
+}

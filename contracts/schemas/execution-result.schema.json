@@ -20,7 +20,24 @@
     "BaselineStatus": { "enum": ["BASELINE_VALIDATED", "BASELINE_LIMITED", "BASELINE_INCOMPLETE"] },
     "SourceRuntimeAlignment": { "enum": ["ALIGNED", "MISMATCH", "UNKNOWN", "NOT_APPLICABLE"] },
     "AcceptanceExpectation": { "enum": ["EXPECT_PASS", "EXPECT_PRODUCT_FAIL", "EXPECT_BLOCKED", "EXPECT_MANUAL", "EXPECT_BASELINE_LIMITED"] },
-    "ClaimType": { "enum": ["CHARACTERIZATION", "IMPLEMENTATION_REGRESSION", "REQUIREMENTS_COMPLIANCE"] }
+    "ClaimType": { "enum": ["CHARACTERIZATION", "IMPLEMENTATION_REGRESSION", "REQUIREMENTS_COMPLIANCE"] },
+    "attemptCount": { "type": "integer", "minimum": 1 },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["attempt", "ExecutionStatus", "EvidenceIds"],
+        "properties": {
+          "attempt": { "type": "integer", "minimum": 1 },
+          "ExecutionStatus": { "enum": ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "SKIPPED"] },
+          "EvidenceIds": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "firstFailureEvidence": { "type": "array", "items": { "type": "string" } },
+    "retryResult": { "enum": ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "SKIPPED"] },
+    "FlakyClassification": { "enum": ["NOT_FLAKY", "FLAKY_PASS", "FLAKY_FAIL", "RETRY_NOT_APPLICABLE", "UNKNOWN"] }
   },
   "allOf": [
     {

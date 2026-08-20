@@ -18,7 +18,8 @@
     "tests/api/synthetic/**/*.ts",
     "tests/types/**/*.ts",
     "tests/web/platform-contract-validator.spec.ts",
-    "tests/web/synthetic-product-runtime.spec.ts"
+    "tests/web/synthetic-product-runtime.spec.ts",
+    "tests/platform/**/*.ts"
   ],
   "exclude": [
     "node_modules",

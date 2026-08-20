@@ -9,6 +9,8 @@ const commands = [
   ['test:contracts', process.execPath, [resolve(repoRoot, 'scripts/platform/run-platform-tests.mjs'), 'contracts']],
   ['test:skills', process.execPath, [resolve(repoRoot, 'scripts/platform/run-skill-tests.mjs')]],
   ['test:synthetic', process.execPath, [resolve(repoRoot, 'scripts/platform/run-platform-tests.mjs'), 'synthetic']],
+  ['test:profiles', process.execPath, [resolve(repoRoot, 'scripts/platform/run-platform-tests.mjs'), 'profiles']],
+  ['test:aggregation', process.execPath, [resolve(repoRoot, 'scripts/platform/run-platform-tests.mjs'), 'aggregation']],
 ];
 for (const [label, command, args] of commands) {
   const result = spawnSync(command, args, { cwd: repoRoot, stdio: 'inherit' });

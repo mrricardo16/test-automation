@@ -10,6 +10,8 @@ const suites = {
   web: [['test', 'tests/web/synthetic-product-runtime.spec.ts', ...reporter]],
   api: [['test', '--config=tests/api/synthetic/playwright.config.ts', ...reporter]],
   contracts: [['test', 'tests/web/platform-contract-validator.spec.ts', ...reporter]],
+  profiles: [['test', '--config=tests/platform/playwright.config.ts', 'environment-profile.spec.ts', ...reporter]],
+  aggregation: [['test', '--config=tests/platform/playwright.config.ts', 'platform-aggregation.spec.ts', ...reporter]],
   synthetic: [
     ['test', 'tests/web/synthetic-product-runtime.spec.ts', ...reporter],
     ['test', '--config=tests/api/synthetic/playwright.config.ts', ...reporter],

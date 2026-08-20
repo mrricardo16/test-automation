@@ -46,6 +46,14 @@ export const EXPECTED_BASES = [
 
 export const GATE_STATUSES = ['PASS', 'LIMITED', 'FAIL'] as const;
 
+export const FLAKY_CLASSIFICATIONS = [
+  'NOT_FLAKY',
+  'FLAKY_PASS',
+  'FLAKY_FAIL',
+  'RETRY_NOT_APPLICABLE',
+  'UNKNOWN',
+] as const;
+
 export const ACCEPTANCE_EXPECTATIONS = [
   'EXPECT_PASS',
   'EXPECT_PRODUCT_FAIL',
@@ -61,6 +69,7 @@ export type BaselineStatus = (typeof BASELINE_STATUSES)[number];
 export type SourceRuntimeAlignment = (typeof SOURCE_RUNTIME_ALIGNMENTS)[number];
 export type ExpectedBasis = (typeof EXPECTED_BASES)[number];
 export type GateStatus = (typeof GATE_STATUSES)[number];
+export type FlakyClassification = (typeof FLAKY_CLASSIFICATIONS)[number];
 export type AcceptanceExpectation = (typeof ACCEPTANCE_EXPECTATIONS)[number];
 export type ClaimType =
   | 'CHARACTERIZATION'
@@ -97,6 +106,17 @@ export interface ContractExecutionResult {
   SourceRuntimeAlignment?: SourceRuntimeAlignment;
   AcceptanceExpectation?: AcceptanceExpectation;
   ClaimType?: ClaimType;
+  attemptCount?: number;
+  attempts?: RetryAttempt[];
+  firstFailureEvidence?: string[];
+  retryResult?: ExecutionStatus;
+  FlakyClassification?: FlakyClassification;
+}
+
+export interface RetryAttempt {
+  attempt: number;
+  ExecutionStatus: ExecutionStatus;
+  EvidenceIds: string[];
 }
 
 export interface ContractTestCase {

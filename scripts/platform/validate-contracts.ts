@@ -5,6 +5,7 @@ import {
   COVERAGE_STATUSES,
   EXECUTION_STATUSES,
   EXPECTED_BASES,
+  FLAKY_CLASSIFICATIONS,
   GATE_STATUSES,
   SOURCE_RUNTIME_ALIGNMENTS,
   type ContractExecutionResult,
@@ -105,6 +106,30 @@ export function validateExecutionResult(input: unknown): ValidationIssue[] {
   if (input.AcceptanceExpectation !== undefined) {
     requireEnum(input, 'AcceptanceExpectation', ACCEPTANCE_EXPECTATIONS, issues);
   }
+
+  if (input.FlakyClassification !== undefined) {
+    requireEnum(input, 'FlakyClassification', FLAKY_CLASSIFICATIONS, issues);
+  }
+  if (input.attemptCount !== undefined && (!Number.isInteger(input.attemptCount) || Number(input.attemptCount) < 1)) {
+    issues.push(issue('INVALID_ATTEMPT_COUNT', 'attemptCount', 'attemptCount must be a positive integer.'));
+  }
+  if (input.attempts !== undefined) {
+    if (!Array.isArray(input.attempts)) {
+      issues.push(issue('INVALID_ATTEMPTS', 'attempts', 'attempts must be an array.'));
+    } else {
+      for (const attempt of input.attempts) {
+        if (!isRecord(attempt) || !Number.isInteger(attempt.attempt) || !EXECUTION_STATUSES.includes(String(attempt.ExecutionStatus) as typeof EXECUTION_STATUSES[number]) || !Array.isArray(attempt.EvidenceIds) || attempt.EvidenceIds.some((value) => typeof value !== 'string')) {
+          issues.push(issue('INVALID_ATTEMPT', 'attempts', 'Each attempt must contain attempt, ExecutionStatus, and EvidenceIds.'));
+          break;
+        }
+      }
+    }
+  }
+  if (typeof input.attemptCount === 'number' && Array.isArray(input.attempts) && input.attemptCount !== input.attempts.length) {
+    issues.push(issue('ATTEMPT_COUNT_MISMATCH', 'attemptCount', 'attemptCount must match attempts.length.'));
+  }
+  if (input.firstFailureEvidence !== undefined) requireStringArray(input, 'firstFailureEvidence', issues);
+  if (input.retryResult !== undefined) requireEnum(input, 'retryResult', EXECUTION_STATUSES, issues);
 
   if (input.ExpectedBasis === 'CODE_BEHAVIOR' && input.ClaimType === 'REQUIREMENTS_COMPLIANCE') {
     issues.push(issue('CODE_BEHAVIOR_COMPLIANCE_CLAIM', 'ClaimType', 'CODE_BEHAVIOR is limited to characterization or implementation regression.'));

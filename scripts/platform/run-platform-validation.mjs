@@ -9,6 +9,8 @@ const requiredFiles = [
   'eslint.config.mjs',
   'contracts/schemas/execution-result.schema.json',
   'contracts/schemas/evidence-index.schema.json',
+  'contracts/schemas/environment-profile.schema.json',
+  'config/environments.example.json',
   'scripts/platform/contract-types.ts',
   'scripts/platform/validate-contracts.ts',
   'tests/api/synthetic/api-fixtures.ts',
@@ -27,12 +29,20 @@ const utf8Paths = [
   'scripts/platform/run-platform-validation.mjs',
   'scripts/platform/run-platform-tests.mjs',
   'scripts/platform/run-platform-quality.mjs',
+  'scripts/platform/load-environment.ts',
+  'scripts/platform/flaky-policy.ts',
+  'scripts/platform/aggregate-results.ts',
 ];
 const strictUtf8 = new TextDecoder('utf-8', { fatal: true });
 for (const relativePath of utf8Paths) strictUtf8.decode(readFileSync(resolve(repoRoot, relativePath)));
 console.log('UTF8_SCAN=PASS');
 
-for (const relativePath of ['contracts/schemas/execution-result.schema.json', 'contracts/schemas/evidence-index.schema.json']) {
+for (const relativePath of [
+  'contracts/schemas/execution-result.schema.json',
+  'contracts/schemas/evidence-index.schema.json',
+  'contracts/schemas/environment-profile.schema.json',
+  'config/environments.example.json',
+]) {
   JSON.parse(readFileSync(resolve(repoRoot, relativePath), 'utf8'));
 }
 console.log('SCHEMA_PARSE=PASS');

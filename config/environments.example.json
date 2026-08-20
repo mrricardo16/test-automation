@@ -1,0 +1,34 @@
+[
+  {
+    "EnvironmentId": "synthetic-ci",
+    "EnvironmentType": "CI_SYNTHETIC",
+    "Runtime": "synthetic",
+    "WebBaseUrl": "dynamic",
+    "ApiBaseUrl": "dynamic",
+    "DesktopRuntime": false,
+    "Capabilities": ["WEB", "API"],
+    "DestructiveAllowed": true,
+    "DataPolicy": "TEST_OWNED_ONLY",
+    "EvidencePolicy": "SANITIZED",
+    "IsCI": true,
+    "Owner": "test-repository",
+    "Description": "Test-owned dynamic localhost Synthetic Product Runtime.",
+    "SourceRuntimeAlignmentPolicy": "REPORT_ONLY"
+  },
+  {
+    "EnvironmentId": "real-project.example",
+    "EnvironmentType": "LOCAL_REAL",
+    "Runtime": "real-project",
+    "WebBaseUrl": "<web_base_url>",
+    "ApiBaseUrl": "<api_base_url>",
+    "DesktopRuntime": false,
+    "Capabilities": ["WEB", "API", "MANUAL"],
+    "DestructiveAllowed": false,
+    "DataPolicy": "EXTERNAL_APPROVED_ONLY",
+    "EvidencePolicy": "SANITIZED",
+    "IsCI": false,
+    "Owner": "<owner>",
+    "Description": "Placeholder-only example for a separately approved local real project.",
+    "SourceRuntimeAlignmentPolicy": "REQUIRE_ALIGNED"
+  }
+]
