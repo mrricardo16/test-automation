@@ -19,7 +19,9 @@
     "test:contracts": "node scripts/platform/run-platform-tests.mjs contracts",
     "test:synthetic": "node scripts/platform/run-platform-tests.mjs synthetic",
     "validate": "node scripts/platform/run-platform-validation.mjs",
-    "test:platform": "node scripts/platform/run-platform-quality.mjs"
+    "test:platform": "node scripts/platform/run-platform-quality.mjs",
+    "ci:safety": "node --test tests/ci/ci-safety-check.spec.mjs && node scripts/platform/ci-safety-check.mjs",
+    "test:ci": "npm run ci:safety && npm run validate && npm run test:platform"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +35,7 @@
     "appium-windows-driver": "6.1.1",
     "eslint": "^10.8.1",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.67.0"
+    "typescript-eslint": "^8.67.0",
+    "yaml": "^2.9.0"
   }
 }
