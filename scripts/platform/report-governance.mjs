@@ -1,66 +1,117 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const TEST_CASE_ID = 'TC-DOC-GOV-001';
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const reportsRoot = resolve(repoRoot, 'projects/test-workflow/reports');
-const namingRulePath = join(reportsRoot, '测试文档命名规则.md');
-const strictUtf8 = new TextDecoder('utf-8', { fatal: true });
+const reportsDir = resolve(repoRoot, 'projects/test-workflow/reports');
+const validStatuses = new Set(['PASS', 'FAIL', 'ERROR', 'BLOCKED', 'MANUAL', 'SKIPPED']);
+const feedbackStatuses = new Set(['FAIL', 'ERROR', 'BLOCKED', 'MANUAL', 'SKIPPED']);
+const reportDefinitions = [
+  {
+    file: '功能_02_Web管理端_系统管理_完整测试用例报告.md',
+    kind: 'complete',
+    required: ['TestCaseId', '实际验证', '图片示例', '测试结论'],
+  },
+  {
+    file: '功能_02_Web管理端_系统管理_问题反馈报告.md',
+    kind: 'feedback',
+    required: ['TestCaseId', '实际', '分类', '严重程度', '预期', '证据', '图片示例'],
+  },
+  {
+    file: '流程_01_权限与登录_完整测试用例报告.md',
+    kind: 'complete',
+    required: ['TestCaseId', '实际验证', '图片示例', '流程结论'],
+  },
+  {
+    file: '流程_01_权限与登录_问题反馈报告.md',
+    kind: 'feedback',
+    required: ['TestCaseId', '实际', '分类', '严重程度', '预期', '证据', '图片示例'],
+  },
+];
+const legacySuffixes = [
+  '_功能测试用例报告.md',
+  '_功能问题反馈报告.md',
+  '_流程测试用例报告.md',
+  '_流程问题反馈报告.md',
+];
+const completeCoverageTerms = [
+  '空条件', '精确', '模糊', '无匹配', '前后空格', '特殊字符', '非法字符', '长度', '分页', '重置',
+  '必填', '格式', '重复', '修改', '删除', '权限', '状态恢复', '跨步骤',
+];
 
 function fail(message) {
-  throw new Error(`[${TEST_CASE_ID}] ${message}`);
+  throw new Error(`REPORT_GOVERNANCE=FAIL: ${message}`);
 }
 
-function readUtf8(path, label) {
+function readUtf8(filePath) {
+  const bytes = readFileSync(filePath);
+  return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+}
+
+function assertReportLocalImage(reportPath, target) {
+  const cleanTarget = target.split('#', 1)[0].split('?', 1)[0].trim();
+  if (!cleanTarget || !/\.(png|jpe?g|gif|webp)$/i.test(cleanTarget)) return;
+  if (/^(?:https?:|file:|data:|\\\\|\/\/)/i.test(cleanTarget) || /^\.{1,2}[\\/]/.test(cleanTarget) || /^[A-Za-z]:[\\/]/.test(cleanTarget)) {
+    fail(`${relative(repoRoot, reportPath)} contains non-local image path: ${target}`);
+  }
+  const imagePath = resolve(dirname(reportPath), cleanTarget);
+  const reportRoot = resolve(reportsDir);
+  const outside = relative(reportRoot, imagePath).startsWith('..');
+  if (outside || !existsSync(imagePath)) {
+    fail(`${relative(repoRoot, reportPath)} image does not resolve within reports: ${target}`);
+  }
+}
+
+function checkImages(reportPath, content) {
+  const htmlImages = [...content.matchAll(/<img\s+[^>]*src=["']([^"']+)["'][^>]*>/gi)];
+  for (const match of htmlImages) assertReportLocalImage(reportPath, match[1]);
+  const htmlLinks = [...content.matchAll(/<a\s+[^>]*href=["']([^"']+)["'][^>]*>\s*<img\b/gi)];
+  for (const match of htmlLinks) assertReportLocalImage(reportPath, match[1]);
+  const markdownImages = [...content.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)];
+  for (const match of markdownImages) assertReportLocalImage(reportPath, match[1]);
+  const markdownLinks = [...content.matchAll(/\[[^\]]*\]\(([^)]+\.(?:png|jpe?g|gif|webp)(?:#[^)]*)?)\)/gi)];
+  for (const match of markdownLinks) assertReportLocalImage(reportPath, match[1]);
+}
+
+function tableStatuses(content) {
+  return content
+    .split(/\r?\n/)
+    .filter((line) => line.trim().startsWith('|') && line.trim().endsWith('|'))
+    .flatMap((line) => line.split('|').map((cell) => cell.trim()).filter((cell) => validStatuses.has(cell)));
+}
+
+if (!existsSync(reportsDir)) fail(`reports directory is missing: ${reportsDir}`);
+
+const rootFiles = readdirSync(reportsDir, { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => entry.name);
+for (const suffix of legacySuffixes) {
+  const legacy = rootFiles.filter((file) => file.endsWith(suffix));
+  if (legacy.length > 0) fail(`legacy report suffix remains: ${legacy.join(', ')}`);
+}
+
+for (const definition of reportDefinitions) {
+  const reportPath = join(reportsDir, definition.file);
+  if (!existsSync(reportPath)) fail(`required report is missing: ${definition.file}`);
+  let content;
   try {
-    return strictUtf8.decode(readFileSync(path));
+    content = readUtf8(reportPath);
   } catch (error) {
-    fail(`${label} is missing or not valid UTF-8: ${error.message}`);
+    fail(`${definition.file} is not strict UTF-8: ${error.message}`);
+  }
+  for (const required of definition.required) if (!content.includes(required)) fail(`${definition.file} is missing required field: ${required}`);
+  if (/\b[A-Za-z]:[\\/]/.test(content)) fail(`${definition.file} contains an absolute Windows path`);
+  if (/^\s*###?\s+人工复审图片证据/m.test(content)) fail(`${definition.file} contains a standalone image-review section`);
+  checkImages(reportPath, content);
+
+  const statuses = tableStatuses(content);
+  if (statuses.length === 0) fail(`${definition.file} has no executable result status`);
+  if (definition.kind === 'complete') {
+    const missingTerms = completeCoverageTerms.filter((term) => !content.includes(term));
+    if (missingTerms.length > 0) fail(`${definition.file} is missing coverage terms: ${missingTerms.join(', ')}`);
+  } else {
+    const issueStatuses = statuses.filter((status) => feedbackStatuses.has(status));
+    if (issueStatuses.length === 0) fail(`${definition.file} has no feedback-worthy result row`);
+    if (statuses.includes('PASS')) fail(`${definition.file} contains PASS in a feedback row`);
   }
 }
 
-if (!existsSync(reportsRoot)) fail(`reports directory is missing: ${reportsRoot}`);
-
-const namingRule = readUtf8(namingRulePath, '测试文档命名规则.md');
-for (const requiredText of [
-  '测试依据原文件名（去掉 .md）_测试类型报告.md',
-  '功能_02_Web管理端_系统管理(4)_功能测试报告.md',
-  '流程_01_权限与登录(3)_流程测试报告.md',
-  '图片示例',
-]) {
-  if (!namingRule.includes(requiredText)) fail(`naming rule is missing: ${requiredText}`);
-}
-
-const reportNames = readdirSync(reportsRoot, { withFileTypes: true })
-  .filter((entry) => entry.isFile() && /^(功能|流程)_.+_(功能|流程)测试报告\.md$/.test(entry.name))
-  .map((entry) => entry.name);
-
-if (reportNames.length < 2) fail('at least one functional and one flow report are required');
-
-for (const name of reportNames) {
-  const reportPath = join(reportsRoot, name);
-  const content = readUtf8(reportPath, name);
-  const isFunctional = name.startsWith('功能_');
-  const expectedSuffix = isFunctional ? '_功能测试报告.md' : '_流程测试报告.md';
-
-  if (!name.endsWith(expectedSuffix)) fail(`${name} has an inconsistent report suffix`);
-  if (!content.includes('| 图片示例 |')) fail(`${name} must include the right-side 图片示例 table column`);
-  if (/^#{1,6}\s+.*人工复审图片证据/m.test(content)) fail(`${name} must not create a standalone image-review module`);
-  if (/\b[A-Za-z]:[\\/]/.test(content)) fail(`${name} contains a local-machine absolute path`);
-
-  const imageReferences = [...content.matchAll(/(?:src|href)="([^"]+\.(?:png|jpg|jpeg))"/gi)]
-    .map((match) => match[1]);
-  if (imageReferences.length === 0) fail(`${name} has no image evidence reference`);
-
-  for (const relativeImage of imageReferences) {
-    if (relativeImage.includes('..')) fail(`${name} image reference escapes the report directory: ${relativeImage}`);
-    const imagePath = resolve(reportsRoot, relativeImage);
-    if (!imagePath.startsWith(`${reportsRoot}${process.platform === 'win32' ? '\\' : '/'}`)) {
-      fail(`${name} image reference resolves outside the report directory: ${relativeImage}`);
-    }
-    if (!existsSync(imagePath)) fail(`${name} image reference does not exist: ${relativeImage}`);
-  }
-}
-
-console.log(`REPORT_GOVERNANCE=${TEST_CASE_ID}:PASS`);
+console.log('REPORT_GOVERNANCE=TC-DOC-GOV-001:PASS');
