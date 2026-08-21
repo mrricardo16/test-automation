@@ -14,6 +14,10 @@ projects/*/test-results/
 projects/*/scratch/
 projects/*/reports/playwright-report/
 
+# Project-level test products remain local-only; keep the policy README tracked.
+projects/*/
+!projects/README.md
+
 .env
 .env.*
 !.env.example
