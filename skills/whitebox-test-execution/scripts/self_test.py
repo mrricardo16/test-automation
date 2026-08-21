@@ -33,6 +33,9 @@ def main() -> int:
     ]
     for relative in required:
         require((SKILL_ROOT / relative).is_file(), f"missing required contract resource: {relative}")
+    defect_template = text("templates/defect-feedback.md")
+    for field in ("DefectId", "SourceEvidence", "Reproduction", "Evidence", "Regression scope", "Next action"):
+        require(field in defect_template, f"per-defect feedback field missing: {field}")
 
     with tempfile.TemporaryDirectory(prefix="whitebox-test-execution-self-test-") as temporary:
         root = Path(temporary)
@@ -81,6 +84,9 @@ def main() -> int:
         require(evidence["TestCaseId"] == testcase["TestCaseId"], "evidence mapping")
         diagnosis = {"Confidence": "ROOT_CAUSE_PROBABLE", "CallChain": "Handler -> FakeShipping"}
         require(diagnosis["Confidence"] in {"ROOT_CAUSE_CONFIRMED", "ROOT_CAUSE_PROBABLE", "ROOT_CAUSE_UNKNOWN"}, "root cause confidence")
+        defect = {"DefectId": "DEF-UNIT-ORDER-001", "TestCaseId": testcase["TestCaseId"], "SourceEvidence": fact["SourceEvidence"], "Reproduction": "run mock unit case", "Evidence": "artifacts/unit/TC-UNIT-ORDER-001/MOCK-RUN/result.txt", "RegressionScope": "TC-UNIT-ORDER-001", "NextAction": "development investigation"}
+        require(defect["DefectId"].startswith("DEF-"), "defect index ID")
+        require(all(defect[key] for key in ("SourceEvidence", "Reproduction", "Evidence", "RegressionScope", "NextAction")), "per-defect feedback completeness")
         coverage = {"CoverageStatus": "UNTESTED", "ExecutionStatus": "BLOCKED", "Priority": "P0", "CodeCoverage": "100%"}
         require(coverage["CoverageStatus"] in COVERAGE_STATES, "coverage status")
         require(coverage["Priority"] == "P0" and coverage["CoverageStatus"] == "UNTESTED", "P0 gate")
@@ -92,6 +98,7 @@ def main() -> int:
             "source_intake", "stable_ids", "ExpectedBasis", "baseline_validation_gate",
             "source_runtime_alignment", "seven_layers", "testcase_review_gate",
             "status_compatibility", "evidence", "root_cause_confidence",
+            "per_defect_feedback",
             "coverage_reconciliation", "p0_gate", "non_invasive_code_coverage",
         ], "real_business_test_executed": False,
     }, ensure_ascii=False, indent=2))

@@ -28,6 +28,14 @@
 26. Do not write new test products directly to repository-root `artifacts/`, `outputs/`, `scratch/`, `test-results/`, or `reports/playwright-report/`.
 27. Keep node_modules and browser binaries out of Git.
 
+## Test Data Rules
+
+1. Testers may create synthetic test data independently according to the business scenario and acceptance criteria; test data need not already exist in the environment.
+2. Self-created data must satisfy the product's real business constraints, field formats, relationships, lifecycle rules, permission boundaries, and valid/invalid-value requirements. Do not use arbitrary placeholder values that bypass business validation.
+3. Missing test data is not, by itself, a product defect or execution blocker. First construct the required data through the approved UI/API/test-double path, using an isolated test prefix and a documented cleanup plan.
+4. Only report `FAIL`, `ERROR`, or `BLOCKED` when a valid business-conforming data setup is rejected, cannot be safely created, produces an incorrect product result, or cannot be cleaned up under the permitted test scope. Preserve the creation request and response/evidence.
+5. When a super-admin or fixture account is needed to prepare data, use it only for setup/cleanup when the scenario requires a normal-user workflow; execute the business assertions with the designated normal account.
+
 ## Real Project Safety Rules
 
 1. `D:\HZ_RSS40\03_trunk\src_m_logclient` is read-only source evidence for Phase 2B / Phase 2.5.

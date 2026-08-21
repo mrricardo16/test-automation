@@ -9,6 +9,9 @@ import tempfile
 from pathlib import Path
 
 
+SKILL_ROOT = Path(__file__).resolve().parents[1]
+
+
 FINAL_STATUSES = {
     "PASS",
     "FAIL",
@@ -35,6 +38,12 @@ def require(condition: bool, message: str) -> None:
 
 
 def main() -> int:
+    defect_template = SKILL_ROOT / "templates" / "defect-feedback.md"
+    require(defect_template.is_file(), "per-defect feedback template is required")
+    defect_template_text = defect_template.read_text(encoding="utf-8")
+    for field in ("DefectId", "Reproduction", "Evidence", "Regression scope", "Next action"):
+        require(field in defect_template_text, f"per-defect feedback field missing: {field}")
+
     with tempfile.TemporaryDirectory(prefix="test-execution-self-test-") as temp:
         root = Path(temp)
         handoff = root / "test-handoff"
@@ -90,6 +99,18 @@ def main() -> int:
         coverage = {"HandoffId": "FLOW-LOGIN-001", "TestCaseId": testcase_id, "Reconciliation": "BLOCKED"}
         require(coverage["Reconciliation"] in RECONCILIATION, "reconciliation vocabulary")
 
+        defect = {
+            "DefectId": "DEF-WEB-AUTH-001",
+            "TestCaseId": testcase_id,
+            "Classification": "PRODUCT_FAIL",
+            "Reproduction": "open login and submit valid credentials",
+            "Evidence": "artifacts/web/TC-WEB-AUTH-001/MOCK-RUN/failure.png",
+            "RegressionScope": "TC-WEB-AUTH-001",
+            "NextAction": "development investigation",
+        }
+        require(defect["DefectId"].startswith("DEF-"), "defect index ID")
+        require(all(defect[key] for key in ("Reproduction", "Evidence", "RegressionScope", "NextAction")), "per-defect feedback completeness")
+
         evidence_dir = output / "artifacts" / "web" / testcase_id / "MOCK-RUN"
         evidence_dir.mkdir(parents=True)
         (evidence_dir / "evidence-index.md").write_text(
@@ -120,6 +141,7 @@ def main() -> int:
                 "evidence_mapping",
                 "design_runtime_mismatch",
                 "coverage_reconciliation",
+                "per_defect_feedback",
                 "feedback_outputs",
             ],
             "real_business_test_executed": False,

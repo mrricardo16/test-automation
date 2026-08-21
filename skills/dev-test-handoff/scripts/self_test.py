@@ -17,6 +17,9 @@ def _write(path: Path, content: str) -> None:
 
 
 def run() -> None:
+    skill_text = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+    if "does not generate defect feedback" not in skill_text or "downstream execution Skills" not in skill_text:
+        raise AssertionError("handoff must exclude defect feedback ownership and route it downstream")
     for relative in AS_BUILT_FILES:
         if not (SKILL_ROOT / "templates" / "as-built" / relative).is_file():
             raise AssertionError(f"missing As-Built template: {relative}")

@@ -33,11 +33,15 @@ Formal TestCases precede automation. Review Gate checks Expected, SourceEvidence
 
 Use canonical `CoverageStatus`: `COVERED`, `PARTIAL`, `UNTESTED`, `MANUAL`, or `NOT_APPLICABLE`, separately from `ExecutionStatus`; P0 `UNTESTED`/`PARTIAL` prevents a regression-complete claim. Legacy reconciliation values are accepted only through `LegacyFieldAdapter`. Code coverage is optional and `CODE_COVERAGE_NON_INVASIVE`: read an existing report or write only test-owned output/configuration; it never replaces business coverage.
 
+## Defect feedback
+
+Use `defect-list.md` as an index only. For every executed product FAIL, assign a stable `DefectId` and create exactly one `defect-feedback/<DefectId>.md` record. Link the index row to that record and include TestCaseId, SourceEvidence, ExpectedBasis, `ExecutionStatus`, `CoverageStatus`, `GateStatus`, classification, impact, Preconditions, `Reproduction`, Expected, Actual, Evidence, runtime and source evidence, root-cause confidence, evidence-backed affected scope, `Next action`, and `Regression scope`. Keep script `ERROR`, environment `BLOCKED`, `MANUAL`, `SKIPPED`, and source/runtime mismatch outcomes out of the defect list; they remain in their dedicated reports. Do not claim a root cause or repaired PASS without evidence.
+
 ## Resource routing
 
 - Start with [whitebox contract](references/whitebox-contract.md), [source analysis](references/source-analysis-and-risk.md), and [baseline gate](references/baseline-validation-gate.md).
 - For runtime comparisons read [alignment](references/source-runtime-alignment-gate.md); for scope and reconciliation read [coverage](references/coverage-and-traceability.md) and [regression](references/regression-contract.md).
 - Before TestCases/Harness read [TestCase design](references/testcase-design.md), [layer selection](references/test-layer-selection.md), [harness safety](references/harness-safety.md), and [test data](references/test-data-and-cleanup.md).
-- For execution output read [evidence](references/evidence-rules.md), [root cause](references/root-cause-analysis.md), and [sanitization](references/security-sanitization.md), then use `templates/`.
+- For execution output read [evidence](references/evidence-rules.md), [root cause](references/root-cause-analysis.md), and [sanitization](references/security-sanitization.md), then use [defect list index](templates/defect-list.md), [per-defect feedback](templates/defect-feedback.md), and the remaining `templates/`.
 
 Run `scripts/validate_contract.py` and `scripts/self_test.py`; they use only Mock Source + Fake Runtime and never execute a real business test.

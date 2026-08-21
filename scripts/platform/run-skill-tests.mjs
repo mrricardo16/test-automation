@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const python = spawnSync('python', ['--version'], { cwd: repoRoot, stdio: 'ignore' }).status === 0 ? 'python' : 'python3';
+const testCaseId = 'TC-SYN-CONTRACT-004';
 
 function run(command, args) {
   const result = spawnSync(command, args, { cwd: repoRoot, stdio: 'inherit' });
@@ -48,6 +49,7 @@ function runDevValidator() {
   }
 }
 
+console.log(`TESTCASE=${testCaseId}`);
 run(python, ['skills/dev-test-handoff/scripts/self_test.py']);
 runDevValidator();
 run(python, ['skills/test-execution/scripts/self_test.py']);

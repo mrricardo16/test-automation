@@ -38,7 +38,7 @@ Use `GateStatus`, `BaselineStatus`, `SourceRuntimeAlignment`, and `Confidence` a
 7. **Evidence Collection:** Reuse the repository Web Evidence Helper. Capture failure screenshot, URL, failed step, Expected, Actual, and error stack; retain trace on failure when available. Sanitize passwords, auth headers, cookies, tokens, secrets, API keys, and sensitive network payloads.
 8. **Coverage Reconciliation:** Record canonical `CoverageStatus` (`COVERED`, `PARTIAL`, `UNTESTED`, `MANUAL`, or `NOT_APPLICABLE`) separately from `ExecutionStatus`. A FAIL is covered and remains a product failure. Any P0 `UNTESTED`/`PARTIAL` row prevents announcing regression complete. Interpret legacy values through `LegacyFieldAdapter` only.
 9. **Regression Reporting:** Produce the reports and evidence index listed below. Keep original TestCase status when cleanup or evidence capture fails; add the secondary `ERROR_*` reason.
-10. **Development Feedback Pack:** Make tested, passed, failed, blocked, manual, not covered, mismatch, evidence, and next action understandable without opening the full test repository.
+10. **Development Feedback Pack:** Make tested, passed, failed, blocked, manual, not covered, mismatch, evidence, and next action understandable without opening the full test repository. Use `defect-list.md` only as the defect index, then create one `defect-feedback/<DefectId>.md` record for every product defect. Each detail record carries `DefectId`, `ExecutionStatus`, `CoverageStatus`, `GateStatus`, `Reproduction`, Expected, Actual, Evidence, Next action, and Regression scope.
 
 ## Status and classification contract
 
@@ -57,7 +57,7 @@ Only an actually executed, evidence-backed result can be PASS or FAIL. Classify 
 
 ## Required outputs
 
-Under `output_root`, create or update the following as applicable: `regression-report.md`, `coverage-report.md`, `defect-list.md`, `execution-summary.md`, `design-runtime-mismatch.md`, `manual-boundaries.md`, `evidence-index.md`, and `environment-issues.md`. Store evidence under `artifacts/web/<TestCaseId>/<RunId>/` or the corresponding API/manual directory. Keep a development feedback pack that summarizes the same results.
+Under `output_root`, create or update the following as applicable: `regression-report.md`, `coverage-report.md`, `defect-list.md`, `defect-feedback/<DefectId>.md`, `execution-summary.md`, `design-runtime-mismatch.md`, `manual-boundaries.md`, `evidence-index.md`, and `environment-issues.md`. `defect-list.md` is the index: every row must link to exactly one detailed defect feedback record. Store evidence under `artifacts/web/<TestCaseId>/<RunId>/` or the corresponding API/manual directory. Keep a development feedback pack that summarizes the same results.
 
 Use the templates in [`templates/`](templates/) and the detailed rules in [`references/`](references/). Run [`scripts/validate_contract.py`](scripts/validate_contract.py) for static contract checks and [`scripts/self_test.py`](scripts/self_test.py) for the Mock Handoff/Fake Runtime self-test. These scripts do not execute a real business test.
 
@@ -76,6 +76,6 @@ Use the templates in [`templates/`](templates/) and the detailed rules in [`refe
 
 - [Coverage matrix](templates/coverage-matrix.md)
 - [Web TestCase](templates/web-testcase.md), [API TestCase](templates/api-testcase.md), [Manual TestCase](templates/manual-testcase.md)
-- [Regression report](templates/regression-report.md), [Coverage report](templates/coverage-report.md), [Defect list](templates/defect-list.md)
+- [Regression report](templates/regression-report.md), [Coverage report](templates/coverage-report.md), [Defect list index](templates/defect-list.md), [Per-defect feedback](templates/defect-feedback.md)
 - [Design-runtime mismatch](templates/design-runtime-mismatch.md), [Execution summary](templates/execution-summary.md), [Manual boundaries](templates/manual-boundaries.md)
 - [Evidence index](templates/evidence-index.md), [Environment issues](templates/environment-issues.md)

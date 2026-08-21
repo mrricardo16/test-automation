@@ -5,6 +5,7 @@ reports/playwright-report/
 reports/generated/
 artifacts/
 *.log
+**/Typora_Hook_Log.txt
 
 # Project-scoped runtime products. Durable reports and outputs remain reviewable;
 # runtime evidence and runner state stay local.

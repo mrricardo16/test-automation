@@ -32,7 +32,7 @@ Runtime observations belong to Actual/Observation Evidence and `ObservationEvide
 
 The active handoff vocabulary also records `SourceRuntimeAlignment`, `Confidence`, and `GateStatus` when applicable; `BaselineStatus` describes the design baseline gate.
 
-This Skill owns source inspection, As-Built reconstruction, the Design Validation Gate, and sanitized Handoff projection only. It does not create formal TestCases or execute tests; downstream Skills own those actions.
+This Skill owns source inspection, As-Built reconstruction, the Design Validation Gate, and sanitized Handoff projection only. It does not create formal TestCases or execute tests. It does not generate defect feedback or a defect list: downstream execution Skills own defect classification, evidence collection, defect feedback, and regression reporting after real execution.
 
 ## Inputs
 
@@ -106,7 +106,7 @@ Use the bundled read-only helper when available:
 python <skill-root>/scripts/validate_contract.py <output_root>
 ```
 
-Stop after Markdown Handoff and validation artifacts are complete. The downstream test workflow owns Coverage Matrix, TestCase design, execution, evidence, and regression reporting.
+Stop after Markdown Handoff and validation artifacts are complete. The downstream test workflow owns Coverage Matrix, TestCase design, execution, evidence, defect feedback, and regression reporting.
 
 ## Abstract invocation
 
