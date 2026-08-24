@@ -1,6 +1,6 @@
 {
-  "TestCaseId": "TC-BB-REAL-009", "Status": "DRAFT", "Reason": "BLOCKED_BY_HANDOFF_INTEGRITY", "Active": 0,
+  "TestCaseId": "TC-BB-REAL-009", "Status": "DRAFT", "Reason": "BLOCKED_BY_EXECUTION_GATE", "Active": 0,
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-MONITOR-VIEW", "FeatureId": "FEAT-MONITOR-REALTIME", "Priority": "P0", "TestType": "MANUAL", "TestLayer": "MANUAL",
   "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "显示地图、任务、车辆和充电状态；依赖不可用时保留可诊断空态或错误。",
-  "Preconditions": "Runtime、当前地图和实时数据源可用", "Steps": ["打开监控看板", "等待数据加载"], "AutomationFramework": "Human observation", "ExecutionStatus": "BLOCKED", "BlockerReason": "HASH_CONTRACT_AMBIGUOUS"
+  "Preconditions": "Runtime、当前地图和实时数据源可用", "Steps": ["打开监控看板", "等待数据加载"], "AutomationFramework": "Human observation", "ExecutionStatus": "BLOCKED", "BlockerReason": "EXECUTION_NOT_AUTHORIZED"
 }

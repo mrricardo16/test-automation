@@ -23,6 +23,8 @@ Do not modify the Handoff Expected baseline, product code, product test hooks, o
 
 Use the repository Canonical Contracts as the source of truth: [status](../../contracts/status-contract.md), [TestCase](../../contracts/testcase-contract.md), [coverage](../../contracts/coverage-contract.md), [evidence](../../contracts/evidence-contract.md), [confidence](../../contracts/confidence-contract.md), and [stable IDs](../../contracts/id-contract.md). `LegacyFieldAdapter` maps old field names and reconciliation values into the canonical model without rewriting historical TestCases or reports.
 
+Before Handoff intake, verify [handoff integrity](../../contracts/handoff-integrity-contract.md) with the shared Consumer helper in `scripts/platform/handoff-integrity.mjs`. Missing `ContractVersion` is legacy `BLOCKED`, a supported-version mismatch is `FAIL`, and neither outcome may be converted into a business-test result.
+
 Keep `ExecutionStatus`, `ApplicabilityStatus`, and `CoverageStatus` separate. Runtime observation is Actual/Evidence, never `ExpectedBasis`; `CODE_BEHAVIOR` is only for characterization or implementation-regression claims.
 
 Use `GateStatus`, `BaselineStatus`, `SourceRuntimeAlignment`, and `Confidence` as separate fields when those dimensions apply.

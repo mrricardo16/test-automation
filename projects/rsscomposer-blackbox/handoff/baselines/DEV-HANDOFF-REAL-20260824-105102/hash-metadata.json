@@ -1,9 +1,15 @@
 {
+  "ContractVersion": "HANDOFF-SHA256-V1",
+  "IntegrityContractVersion": "HANDOFF-SHA256-V1",
   "Algorithm": "SHA-256",
-  "ExpectedHash": "f945fc19c810b33b54231d3ccb86dbb89a0cc40933dae4677922f62a172240fc",
-  "DeclaredObject": "handoff-package-excluding-manifest-and-hash",
+  "OldHash": "f945fc19c810b33b54231d3ccb86dbb89a0cc40933dae4677922f62a172240fc",
+  "ExpectedHash": "d0e4c9ee346187cf3e0bb2723efa8925436263e535ba5924076ab019c5cb37e3",
+  "DeclaredObject": "HANDOFF-SHA256-V1 canonical manifest",
   "ExcludedFiles": ["00-handoff-manifest.md", "handoff.sha256"],
-  "ActualHash": "UNDETERMINED",
-  "Integrity": "BLOCKED",
-  "Reason": "HASH_CONTRACT_AMBIGUOUS"
+  "ActualHash": "d0e4c9ee346187cf3e0bb2723efa8925436263e535ba5924076ab019c5cb37e3",
+  "Integrity": "PASS",
+  "Reason": "HANDOFF_HASH_MATCH",
+  "HashChangeReason": "INTEGRITY_CONTRACT_STANDARDIZATION",
+  "BUSINESS_HANDOFF_CONTENT_CHANGED": "NO",
+  "INTEGRITY_METADATA_CHANGED": "YES"
 }

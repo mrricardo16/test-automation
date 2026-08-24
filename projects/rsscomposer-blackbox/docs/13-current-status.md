@@ -1,3 +1,3 @@
 # Current status
 
-`READY_WITH_BLOCKER`; `HandoffIntegrity=BLOCKED`; `BaselineStatus=BASELINE_LIMITED`; `SourceRuntimeAlignment=UNKNOWN`; `RuntimeConfig=LOCAL_IGNORED`.
+`READY`; `HandoffIntegrity=PASS(HANDOFF_HASH_MATCH)`; `ExecutionReadiness=READY`; `BaselineStatus=BASELINE_LIMITED`; `SourceRuntimeAlignment=UNKNOWN`; `RuntimeConfig=LOCAL_IGNORED`; business TestCases remain draft/inactive until a separately authorized run.

@@ -1,6 +1,6 @@
 {
   "Status": "DRAFT",
-  "Reason": "BLOCKED_BY_HANDOFF_INTEGRITY",
+  "Reason": "BLOCKED_BY_EXECUTION_GATE",
   "Active": 0,
   "ImportedFromRun": "BB-REAL-20260824-115939",
   "ExpectedAuthority": "DEV-HANDOFF-REAL-20260824-105102",

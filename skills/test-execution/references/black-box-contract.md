@@ -12,6 +12,10 @@ Optional: credentials from environment variables/ignored local configuration/sec
 
 Missing Handoff documents, IDs, scope, Preconditions, Test Data, or Expected Result create `HANDOFF_INCOMPLETE`. Block the affected case or run and record the missing item. Never infer a business rule from product source or from a convenient runtime result.
 
+## Handoff integrity
+
+Apply repository `HANDOFF-SHA256-V1` through `scripts/platform/handoff-integrity.mjs` before using the package as Expected. Missing or unsupported `ContractVersion` is an integrity `BLOCKED`; a valid V1 mismatch is integrity `FAIL`. Do not execute business tests from either state.
+
 ## Immutable baseline
 
 Every runtime conflict is recorded in `design-runtime-mismatch.md` with Handoff ID, Expected, Actual, evidence, and classification `DESIGN_RUNTIME_MISMATCH`. Do not edit Handoff Expected to obtain PASS.

@@ -1,6 +1,6 @@
 {
-  "TestCaseId": "TC-BB-REAL-001", "Status": "DRAFT", "Reason": "BLOCKED_BY_HANDOFF_INTEGRITY", "Active": 0,
+  "TestCaseId": "TC-BB-REAL-001", "Status": "DRAFT", "Reason": "BLOCKED_BY_EXECUTION_GATE", "Active": 0,
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-AUTH-LOGIN", "FeatureId": "FEAT-AUTH-LOGIN", "Priority": "P0", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
   "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "合法身份进入首页并加载菜单；非法身份停留登录页并显示错误。",
-  "Preconditions": "Runtime 可访问；有效或无效测试账户", "Steps": ["打开登录页", "输入用户名和密码", "提交"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "HASH_CONTRACT_AMBIGUOUS"
+  "Preconditions": "Runtime 可访问；有效或无效测试账户", "Steps": ["打开登录页", "输入用户名和密码", "提交"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "EXECUTION_NOT_AUTHORIZED"
 }

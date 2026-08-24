@@ -1,5 +1,6 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { CONTRACT_VERSION, verifyHandoffIntegrity } from '../../../scripts/platform/handoff-integrity.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 const repositoryRoot = resolve(projectRoot, '..', '..');
@@ -11,6 +12,8 @@ const requiredPaths = [
   `handoff/baselines/${handoffRunId}/manifest-summary.json`,
   `handoff/baselines/${handoffRunId}/hash-metadata.json`,
   `handoff/baselines/${handoffRunId}/validation-summary.md`,
+  'test-cases/contract/handoff-integrity-contract.md',
+  'tests/contract/handoff-integrity.test.mjs',
   'test-cases/README.md', 'tests/README.md', 'runs/README.md', 'runs/index.json',
   'reports/README.md', 'reports/current-status.md', 'scripts/new-run.mjs', 'scripts/validate-project.mjs',
   'docs/00-project-charter.md', 'docs/01-permission-boundary.md', 'docs/02-handoff-baseline.md',
@@ -18,12 +21,14 @@ const requiredPaths = [
   'docs/06-test-data-policy.md', 'docs/07-execution-policy.md', 'docs/08-evidence-policy.md',
   'docs/09-defect-policy.md', 'docs/10-regression-policy.md', 'docs/11-environment-policy.md',
   'docs/12-known-limitations.md', 'docs/13-current-status.md',
+  'docs/14-handoff-integrity-contract-fix-plan.md', 'docs/15-handoff-integrity-diagnosis.md',
 ];
 
 const readJson = (relativePath) => JSON.parse(readFileSync(resolve(projectRoot, relativePath), 'utf8'));
 const missing = requiredPaths.filter((entry) => !existsSync(resolve(projectRoot, entry)));
 const project = readJson('project.json');
 const handoff = readJson('handoff/current.json');
+const hashMetadata = readJson(`handoff/baselines/${handoffRunId}/hash-metadata.json`);
 const runRegistry = readJson('runs/index.json');
 const draftDirectory = resolve(projectRoot, 'test-cases', 'draft');
 const caseFiles = readdirSync(draftDirectory).filter((name) => /^TC-BB-REAL-\d{3}\.json$/.test(name));
@@ -31,7 +36,8 @@ const cases = caseFiles.map((name) => JSON.parse(readFileSync(resolve(draftDirec
 const uniqueIds = new Set(cases.map((testCase) => testCase.TestCaseId));
 const invalidCases = cases.filter((testCase) =>
   testCase.Status !== 'DRAFT' ||
-  testCase.Reason !== 'BLOCKED_BY_HANDOFF_INTEGRITY' ||
+  testCase.Reason !== 'BLOCKED_BY_EXECUTION_GATE' ||
+  testCase.BlockerReason !== 'EXECUTION_NOT_AUTHORIZED' ||
   testCase.Active !== 0 ||
   testCase.ExpectedBasis !== 'HANDOFF_BASELINE' ||
   !Array.isArray(testCase.ExpectedSource) ||
@@ -64,22 +70,34 @@ const workflowText = existsSync(resolve(repositoryRoot, '.github')) ? readdirSyn
 const syntheticCiIsolated = !`${rootPackage}\n${workflowText}`.includes('projects/rsscomposer-blackbox');
 const registryFields = ['RunId', 'RunType', 'StartedAt', 'SourcePath', 'HandoffRunId', 'HandoffHash', 'HandoffIntegrity', 'BlackboxIntegrity', 'RuntimeStatus', 'TestCaseTotal', 'Pass', 'Fail', 'Error', 'Blocked', 'Manual', 'Skipped', 'DefectCount', 'MismatchCount', 'RunStatus', 'FinalReport'];
 const invalidRegistryRows = runRegistry.Runs.filter((run) => registryFields.some((field) => !Object.hasOwn(run, field)));
+const expectedPackageRoot = resolve(repositoryRoot, 'outputs', 'real-project', 'handoff', handoffRunId, 'handoff-package');
+const integrity = await verifyHandoffIntegrity(expectedPackageRoot);
 const structurePass = missing.length === 0 && cases.length === 12 && uniqueIds.size === 12 && invalidCases.length === 0 &&
   project.ProjectId === 'REAL-RSSCOMPOSER-BLACKBOX' && project.ProjectMode === 'BLACKBOX' &&
-  handoff.HandoffRunId === handoffRunId && handoff.IntegrityStatus === 'BLOCKED' &&
-  handoff.IntegrityReason === 'HASH_CONTRACT_AMBIGUOUS' && invalidUtf8.length === 0 &&
+  handoff.HandoffRunId === handoffRunId && handoff.SourcePath === expectedPackageRoot &&
+  handoff.IntegrityStatus === 'PASS' && handoff.IntegrityReason === 'HANDOFF_HASH_MATCH' &&
+  handoff.ContractVersion === CONTRACT_VERSION && handoff.ProducerDeclaredHash === integrity.expectedHash &&
+  project.HandoffIntegrity === 'PASS' && project.HandoffIntegrityReason === 'HANDOFF_HASH_MATCH' &&
+  hashMetadata.ContractVersion === CONTRACT_VERSION && hashMetadata.ExpectedHash === integrity.expectedHash &&
+  hashMetadata.ActualHash === integrity.actualHash && integrity.status === 'PASS' && invalidUtf8.length === 0 &&
   forbiddenProductPathHits.length === 0 && credentialValueHits.length === 0 &&
   invalidRegistryRows.length === 0 && syntheticCiIsolated;
+const executionReadiness = structurePass ? 'READY' : 'BLOCKED';
+const readinessReason = structurePass ? 'NONE' : (integrity.reason ?? 'PROJECT_STRUCTURE_INVALID');
 
 console.log(`PROJECT_STRUCTURE = ${structurePass ? 'PASS' : 'FAIL'}`);
-console.log(`EXECUTION_READINESS = BLOCKED`);
-console.log(`Reason = ${handoff.IntegrityReason}`);
+console.log(`HANDOFF_INTEGRITY = ${integrity.status}`);
+console.log(`ContractVersion = ${integrity.contractVersion ?? 'UNAVAILABLE'}`);
+console.log(`ExpectedHash = ${integrity.expectedHash ?? 'UNAVAILABLE'}`);
+console.log(`ActualHash = ${integrity.actualHash ?? 'UNAVAILABLE'}`);
+console.log(`EXECUTION_READINESS = ${executionReadiness}`);
+console.log(`Reason = ${readinessReason}`);
 console.log(`TestCaseDraft = ${cases.length}`);
 console.log(`TestCaseActive = ${cases.filter((testCase) => testCase.Active === 1).length}`);
 console.log(`UTF8 = ${invalidUtf8.length === 0 ? 'PASS' : 'FAIL'}`);
 console.log(`SyntheticCIIsolation = ${syntheticCiIsolated ? 'PASS' : 'FAIL'}`);
 
 if (!structurePass) {
-  console.error(JSON.stringify({ missing, caseCount: cases.length, uniqueIds: uniqueIds.size, invalidCases, invalidUtf8, forbiddenProductPathHits, credentialValueHits, invalidRegistryRows, syntheticCiIsolated }, null, 2));
+  console.error(JSON.stringify({ missing, caseCount: cases.length, uniqueIds: uniqueIds.size, invalidCases, integrity, invalidUtf8, forbiddenProductPathHits, credentialValueHits, invalidRegistryRows, syntheticCiIsolated }, null, 2));
   process.exitCode = 1;
 }

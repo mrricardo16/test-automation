@@ -1,3 +1,3 @@
 # Integrity gate
 
-Gate: `BLOCKED`. Reason: `HASH_CONTRACT_AMBIGUOUS`. The package declares scope but not deterministic serialization details needed to establish an actual comparable hash.
+Gate: `PASS`. Reason: `HANDOFF_HASH_MATCH`. Producer and Consumer share `scripts/platform/handoff-integrity.mjs` and conform to `HANDOFF-SHA256-V1` in `contracts/handoff-integrity-contract.md`.

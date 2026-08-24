@@ -27,6 +27,7 @@ The repository-level contracts under `contracts/` are authoritative for vocabula
 - [status contract](../../contracts/status-contract.md): `ExecutionStatus`, `ApplicabilityStatus`, `CoverageStatus`, `GateStatus`, and `BaselineStatus`;
 - [TestCase contract](../../contracts/testcase-contract.md): `ExpectedBasis` is `REQUIREMENT`, `DESIGN`, `APPROVED_BASELINE`, `HANDOFF_BASELINE`, `CODE_BEHAVIOR`, or `UNKNOWN`;
 - [coverage](../../contracts/coverage-contract.md), [evidence](../../contracts/evidence-contract.md), [confidence](../../contracts/confidence-contract.md), and [ID](../../contracts/id-contract.md) contracts.
+- [handoff integrity](../../contracts/handoff-integrity-contract.md): version every hash envelope and use the shared Producer helper in `scripts/platform/handoff-integrity.mjs`; do not publish an independently implemented package hash.
 
 Runtime observations belong to Actual/Observation Evidence and `ObservationEvidenceIds`; they are never an `ExpectedBasis`. `CODE_BEHAVIOR` is limited to characterization or implementation-regression claims and does not assert requirements compliance. Legacy fields are interpreted through `LegacyFieldAdapter` without rewriting historical records.
 

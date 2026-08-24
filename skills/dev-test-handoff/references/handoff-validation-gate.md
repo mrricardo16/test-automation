@@ -2,6 +2,10 @@
 
 Run this gate after Stage B has been rendered from the validated As-Built baseline.
 
+## Integrity contract
+
+Freeze the completed package with repository `HANDOFF-SHA256-V1` from `contracts/handoff-integrity-contract.md`. The Producer must use `scripts/platform/handoff-integrity.mjs`. Exclude only the two contract envelope files; do not rewrite protected content during hashing.
+
 ## Feature completeness
 
 For every P0/P1 feature, record an explicit value for each applicable dimension:

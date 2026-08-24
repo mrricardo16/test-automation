@@ -1,6 +1,6 @@
 {
-  "TestCaseId": "TC-BB-REAL-006", "Status": "DRAFT", "Reason": "BLOCKED_BY_HANDOFF_INTEGRITY", "Active": 0,
+  "TestCaseId": "TC-BB-REAL-006", "Status": "DRAFT", "Reason": "BLOCKED_BY_EXECUTION_GATE", "Active": 0,
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-TASK-RESEND", "FeatureId": "FEAT-TASK-CONTROL", "Priority": "P0", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
   "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "允许状态重发成功；禁止状态返回任务不能重发。",
-  "Preconditions": "测试任务处于允许重发的状态", "Steps": ["选择任务", "重发", "确认"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "HASH_CONTRACT_AMBIGUOUS"
+  "Preconditions": "测试任务处于允许重发的状态", "Steps": ["选择任务", "重发", "确认"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "EXECUTION_NOT_AUTHORIZED"
 }

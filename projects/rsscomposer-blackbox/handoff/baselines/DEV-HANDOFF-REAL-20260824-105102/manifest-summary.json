@@ -4,6 +4,9 @@
   "BaselineStatus": "BASELINE_LIMITED",
   "GateStatus": "HANDOFF_LIMITED_BY_DESIGN_GAPS",
   "RuntimeAlignmentStatus": "UNKNOWN",
+  "IntegrityContractVersion": "HANDOFF-SHA256-V1",
+  "HandoffHash": "d0e4c9ee346187cf3e0bb2723efa8925436263e535ba5924076ab019c5cb37e3",
+  "HandoffIntegrity": "PASS",
   "Counts": { "Modules": 12, "Features": 26, "Rules": 16, "Flows": 12, "Apis": 164, "Validations": 15, "States": 11 },
   "FormalTestCasesGenerated": false
 }

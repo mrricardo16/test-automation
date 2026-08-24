@@ -1,6 +1,6 @@
 {
-  "TestCaseId": "TC-BB-REAL-012", "Status": "DRAFT", "Reason": "BLOCKED_BY_HANDOFF_INTEGRITY", "Active": 0,
+  "TestCaseId": "TC-BB-REAL-012", "Status": "DRAFT", "Reason": "BLOCKED_BY_EXECUTION_GATE", "Active": 0,
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-AUTH-EXPIRE", "FeatureId": "FEAT-AUTH-SESSION", "Priority": "P0", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
   "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "显示重新登录提示、清理会话并返回登录页。",
-  "Preconditions": "已登录会话变为无效", "Steps": ["访问受保护页面或接口"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "HASH_CONTRACT_AMBIGUOUS"
+  "Preconditions": "已登录会话变为无效", "Steps": ["访问受保护页面或接口"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "EXECUTION_NOT_AUTHORIZED"
 }
