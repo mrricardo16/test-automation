@@ -18,6 +18,11 @@ projects/*/reports/playwright-report/
 projects/*/
 !projects/README.md
 
+# Durable governance workspace; runtime evidence remains ignored.
+!projects/rsscomposer-blackbox/
+!projects/rsscomposer-blackbox/**
+projects/rsscomposer-blackbox/artifacts/
+
 .env
 .env.*
 !.env.example

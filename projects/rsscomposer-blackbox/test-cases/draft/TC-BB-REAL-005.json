@@ -1,0 +1,6 @@
+{
+  "TestCaseId": "TC-BB-REAL-005", "Status": "DRAFT", "Reason": "BLOCKED_BY_HANDOFF_INTEGRITY", "Active": 0,
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-TASK-CANCEL", "FeatureId": "FEAT-TASK-CONTROL", "Priority": "P0", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
+  "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "操作成功后列表状态更新；终态任务入口不可用。",
+  "Preconditions": "测试任务处于允许取消的状态", "Steps": ["选择任务", "取消", "确认"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "HASH_CONTRACT_AMBIGUOUS"
+}

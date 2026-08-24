@@ -1,0 +1,12 @@
+{
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+  "SourcePath": "E:\\automated-testing\\outputs\\real-project\\handoff\\DEV-HANDOFF-REAL-20260824-105102\\handoff-package",
+  "ProducerDeclaredHash": "f945fc19c810b33b54231d3ccb86dbb89a0cc40933dae4677922f62a172240fc",
+  "SanitizationStatus": "PASS",
+  "ValidationStatus": "PASS",
+  "Status": "FROZEN_REFERENCE",
+  "IntegrityStatus": "BLOCKED",
+  "IntegrityReason": "HASH_CONTRACT_AMBIGUOUS",
+  "BaselineStatus": "BASELINE_LIMITED",
+  "SourceRuntimeAlignment": "UNKNOWN"
+}

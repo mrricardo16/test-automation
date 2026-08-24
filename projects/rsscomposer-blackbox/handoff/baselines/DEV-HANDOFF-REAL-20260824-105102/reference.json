@@ -1,0 +1,7 @@
+{
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+  "PackageKind": "Frozen Handoff package",
+  "ExpectedPolicy": "Expected is frozen from this package; runtime is Actual/Evidence only.",
+  "Allowed": ["handoff-package", "current Runtime", "black-box execution evidence", "approved test-platform tools"],
+  "Forbidden": ["whitebox-internal", "frontend source", "backend source", "other source-derived documents"]
+}

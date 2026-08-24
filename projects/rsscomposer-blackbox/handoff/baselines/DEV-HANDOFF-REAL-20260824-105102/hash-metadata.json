@@ -1,0 +1,9 @@
+{
+  "Algorithm": "SHA-256",
+  "ExpectedHash": "f945fc19c810b33b54231d3ccb86dbb89a0cc40933dae4677922f62a172240fc",
+  "DeclaredObject": "handoff-package-excluding-manifest-and-hash",
+  "ExcludedFiles": ["00-handoff-manifest.md", "handoff.sha256"],
+  "ActualHash": "UNDETERMINED",
+  "Integrity": "BLOCKED",
+  "Reason": "HASH_CONTRACT_AMBIGUOUS"
+}

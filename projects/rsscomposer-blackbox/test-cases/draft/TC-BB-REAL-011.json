@@ -1,0 +1,6 @@
+{
+  "TestCaseId": "TC-BB-REAL-011", "Status": "DRAFT", "Reason": "BLOCKED_BY_HANDOFF_INTEGRITY", "Active": 0,
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-REPORT-QUERY", "FeatureId": "FEAT-REPORT-STATS", "Priority": "P1", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
+  "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "有数据时显示统计，无数据时显示空态，非法筛选被拒绝。",
+  "Preconditions": "合法时间范围；可为空的数据集", "Steps": ["进入统计页", "设置筛选", "查询"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "HASH_CONTRACT_AMBIGUOUS"
+}

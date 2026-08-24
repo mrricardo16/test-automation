@@ -1,0 +1,7 @@
+{
+  "runtimeBaseUrl": "<runtime_base_url>",
+  "environmentVariables": {
+    "username": "WEB_TEST_USERNAME",
+    "password": "WEB_TEST_PASSWORD"
+  }
+}

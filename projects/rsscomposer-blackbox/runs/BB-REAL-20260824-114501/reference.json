@@ -1,0 +1,7 @@
+{
+  "RunId": "BB-REAL-20260824-114501",
+  "Status": "BLOCKED",
+  "AccessPolicy": "USER_SUPPLIED_METADATA_ONLY",
+  "ReadHistoricalRunContent": false,
+  "ExpectedAuthority": "NOT_A_SOURCE"
+}

@@ -1,0 +1,9 @@
+{
+  "RunId": "BB-REAL-20260824-115939",
+  "Status": "BLOCKED",
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+  "HandoffIntegrity": "BLOCKED",
+  "HandoffIntegrityReason": "HASH_CONTRACT_AMBIGUOUS",
+  "TestCaseTotal": 12,
+  "ExpectedAuthority": "DEV-HANDOFF-REAL-20260824-105102"
+}

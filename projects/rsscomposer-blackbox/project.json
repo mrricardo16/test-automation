@@ -1,0 +1,16 @@
+{
+  "ProjectId": "REAL-RSSCOMPOSER-BLACKBOX",
+  "ProjectMode": "BLACKBOX",
+  "Status": "READY_WITH_BLOCKER",
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+  "HandoffIntegrity": "BLOCKED",
+  "HandoffIntegrityReason": "HASH_CONTRACT_AMBIGUOUS",
+  "BaselineStatus": "BASELINE_LIMITED",
+  "SourceRuntimeAlignment": "UNKNOWN",
+  "RuntimeConfig": "LOCAL_IGNORED",
+  "ProductSourceAccess": false,
+  "WhiteboxInternalAccess": false,
+  "TestFramework": "Playwright",
+  "ActiveTestCaseCount": 0,
+  "DraftTestCaseCount": 12
+}

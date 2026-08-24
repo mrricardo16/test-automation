@@ -1,0 +1,9 @@
+{
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+  "HandoffVersion": "1.0",
+  "BaselineStatus": "BASELINE_LIMITED",
+  "GateStatus": "HANDOFF_LIMITED_BY_DESIGN_GAPS",
+  "RuntimeAlignmentStatus": "UNKNOWN",
+  "Counts": { "Modules": 12, "Features": 26, "Rules": 16, "Flows": 12, "Apis": 164, "Validations": 15, "States": 11 },
+  "FormalTestCasesGenerated": false
+}
