@@ -1,10 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://automated-testing.local/contracts/testcase.schema.json",
-  "title": "Canonical TestCase",
+  "title": "Canonical TestCase V2 with legacy compatibility",
   "type": "object",
   "additionalProperties": false,
-  "required": ["TestCaseId", "ModuleId", "FeatureId", "Title", "Priority", "TestType", "TestLayer", "ApplicabilityStatus", "ExpectedBasis", "ExpectedResult", "AutomationType", "AutomationFramework"],
+  "required": ["TestCaseId", "ModuleId", "FeatureId", "Title", "Priority", "TestType", "TestLayer", "ApplicabilityStatus", "ExpectedBasis", "AutomationType", "AutomationFramework"],
   "properties": {
     "TestCaseId": { "type": "string", "pattern": "^(TC-[A-Z0-9]+-[A-Z0-9-]+|INFRASTRUCTURE_SELF_TEST)$" },
     "ModuleId": { "type": "string", "minLength": 1 },
@@ -17,6 +17,86 @@
     "ExpectedBasis": { "enum": ["REQUIREMENT", "DESIGN", "APPROVED_BASELINE", "HANDOFF_BASELINE", "CODE_BEHAVIOR", "UNKNOWN"] },
     "ExpectedResult": { "type": "string", "minLength": 1 },
     "AutomationType": { "enum": ["AUTO", "AUTO_PARTIAL", "MANUAL"] },
-    "AutomationFramework": { "type": "string", "minLength": 1 }
-  }
+    "AutomationFramework": { "type": "string", "minLength": 1 },
+    "CaseKind": { "enum": ["ATOMIC", "COMPOSITE"] },
+    "ScenarioSuiteId": { "type": "string", "pattern": "^SS-[A-Z0-9]+-[A-Z0-9-]+$" },
+    "Objective": { "type": "string", "minLength": 1 },
+    "PrimaryAssertion": { "type": "string", "minLength": 1 },
+    "SupportingAssertions": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "IntermediateAssertions": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "LifecycleStatus": { "enum": ["DRAFT", "ACTIVE", "RETIRED"] },
+    "ReviewGateStatus": { "enum": ["PASS", "LIMITED", "FAIL"] },
+    "RiskLevel": { "enum": ["RISK_LOW", "RISK_MEDIUM", "RISK_HIGH", "RISK_CRITICAL"] },
+    "SideEffects": { "enum": ["NONE", "TEST_DATA_CREATE", "TEST_DATA_UPDATE", "TEST_DATA_DELETE", "AUTH_CHANGE", "SESSION_CHANGE", "GLOBAL_CONFIG_CHANGE", "EXTERNAL_EFFECT"] },
+    "SideEffectScope": { "enum": ["TEST_OWNED", "PROJECT_SANDBOX", "SHARED_ENVIRONMENT", "UNKNOWN"] },
+    "Reversibility": { "enum": ["REVERSIBLE", "CLEANUP_REVERSIBLE", "IRREVERSIBLE", "UNKNOWN"] },
+    "DataOwnership": { "enum": ["TEST_OWNED", "PROJECT_SANDBOX", "SHARED_ENVIRONMENT", "UNKNOWN"] },
+    "InteractionMode": { "enum": ["UNATTENDED", "INTERACTIVE"] },
+    "AutomationEligibility": { "enum": ["AUTO_ALLOWED", "MANUAL_REQUIRED", "NOT_EXECUTABLE"] },
+    "InitialState": { "type": "string", "minLength": 1 },
+    "Preconditions": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "TestData": {},
+    "Steps": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "ExpectedPerStep": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/expectedStep" } },
+    "StateTransitions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/stateTransition" } },
+    "PostConditions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "CrossStepInvariants": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "Cleanup": { "type": "string", "minLength": 1 },
+    "CleanupVerification": { "type": "string", "minLength": 1 },
+    "ExpectationGapRefs": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^EG-[A-Z0-9]+-[A-Z0-9-]+$" } },
+    "CoverageTags": { "type": "array", "uniqueItems": true, "items": { "enum": ["HAPPY_PATH", "BUSINESS_RULE", "VALIDATION", "BOUNDARY", "NEGATIVE", "PERMISSION", "AUTHENTICATION", "STATE_TRANSITION", "POST_CONDITION", "DATA_CONSISTENCY", "REFERENTIAL_INTEGRITY", "IDEMPOTENCY", "DUPLICATE", "RECOVERY", "SESSION", "COMPOSITE_FLOW", "LIFECYCLE", "CONCURRENCY", "CLEANUP", "MANUAL_BOUNDARY"] } },
+    "Dependencies": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "DestructiveRisk": { "enum": ["NONE", "LOW", "MEDIUM", "HIGH", "CRITICAL", "UNKNOWN"] },
+    "EvidenceRequirement": { "type": ["string", "array"] },
+    "Environment": { "type": "string" },
+    "Status": { "type": "string" },
+    "Limitations": { "type": "string" },
+    "Covers": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "expectedStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Step", "Action", "Expected", "StateAfter"],
+      "properties": {
+        "Step": { "type": "integer", "minimum": 1 },
+        "Action": { "type": "string", "minLength": 1 },
+        "Expected": { "type": "string", "minLength": 1 },
+        "StateAfter": { "type": "string", "minLength": 1 }
+      }
+    },
+    "stateTransition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["From", "Action", "To"],
+      "properties": {
+        "From": { "type": "string", "minLength": 1 },
+        "Action": { "type": "string", "minLength": 1 },
+        "To": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "required": ["CaseKind"] },
+      "then": { "required": ["ScenarioSuiteId", "Objective", "PrimaryAssertion", "LifecycleStatus", "ReviewGateStatus", "RiskLevel", "SideEffects", "SideEffectScope", "Reversibility", "DataOwnership", "InteractionMode", "AutomationEligibility", "CoverageTags"] },
+      "else": { "required": ["ExpectedResult"] }
+    },
+    {
+      "if": { "required": ["CaseKind"], "properties": { "CaseKind": { "const": "COMPOSITE" } } },
+      "then": { "required": ["InitialState", "Preconditions", "TestData", "Steps", "ExpectedPerStep", "IntermediateAssertions", "StateTransitions", "PostConditions", "CrossStepInvariants", "Cleanup", "CleanupVerification"] }
+    },
+    {
+      "if": { "required": ["ExpectedBasis"], "properties": { "ExpectedBasis": { "const": "UNKNOWN" } } },
+      "then": { "required": ["ExpectationGapRefs"], "properties": { "ExpectedResult": false, "ReviewGateStatus": { "enum": ["LIMITED", "FAIL"] }, "AutomationEligibility": { "const": "NOT_EXECUTABLE" } } }
+    },
+    {
+      "if": { "required": ["CaseKind"], "properties": { "CaseKind": { "const": "COMPOSITE" } } },
+      "then": { "not": { "properties": { "AutomationType": { "const": "AUTO_PARTIAL" } } } }
+    },
+    {
+      "if": { "required": ["AutomationEligibility"], "properties": { "AutomationEligibility": { "const": "AUTO_ALLOWED" } } },
+      "then": { "properties": { "AutomationType": { "const": "AUTO" }, "LifecycleStatus": { "const": "ACTIVE" }, "ReviewGateStatus": { "const": "PASS" }, "RiskLevel": { "enum": ["RISK_LOW", "RISK_MEDIUM"] }, "SideEffectScope": { "enum": ["TEST_OWNED", "PROJECT_SANDBOX"] }, "Reversibility": { "enum": ["REVERSIBLE", "CLEANUP_REVERSIBLE"] }, "InteractionMode": { "const": "UNATTENDED" } } }
+    }
+  ]
 }

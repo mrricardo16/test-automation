@@ -1,21 +1,35 @@
 # Web TestCase
 
 - TestCaseId: `TC-WEB-`
+- CaseKind: ATOMIC
 - ModuleId:
 - FeatureId:
 - Title:
 - Priority: P0 / P1 / P2 / P3
 - TestType: functional / boundary / permission / error-path / regression
+- Objective:
+- PrimaryAssertion:
 - Covers: Handoff IDs
 - Preconditions:
 - TestData: `AUTO_TEST_<FEATURE>_<RunId>` or approved fixture
 - Steps:
   1. Open the approved runtime entry point and perform the documented user action.
 - ExpectedResult:
-- AutomationType: Playwright
+- LifecycleStatus: DRAFT / ACTIVE / RETIRED
+- ReviewGateStatus: PASS / LIMITED / FAIL
+- RiskLevel: RISK_LOW / RISK_MEDIUM / RISK_HIGH / RISK_CRITICAL
+- SideEffects: NONE / TEST_DATA_CREATE / TEST_DATA_UPDATE / TEST_DATA_DELETE / AUTH_CHANGE / SESSION_CHANGE / GLOBAL_CONFIG_CHANGE / EXTERNAL_EFFECT
+- SideEffectScope: TEST_OWNED / PROJECT_SANDBOX / SHARED_ENVIRONMENT / UNKNOWN
+- Reversibility: REVERSIBLE / CLEANUP_REVERSIBLE / IRREVERSIBLE / UNKNOWN
+- DataOwnership: TEST_OWNED / PROJECT_SANDBOX / SHARED_ENVIRONMENT / UNKNOWN
+- InteractionMode: UNATTENDED / INTERACTIVE
+- AutomationType: AUTO / MANUAL
+- AutomationEligibility: AUTO_ALLOWED / MANUAL_REQUIRED / NOT_EXECUTABLE
+- AutomationFramework: Playwright
 - Environment:
 - EvidenceRequirement: screenshot/trace on failure; URL, step, Expected, Actual, error
 - Cleanup:
+- CleanupVerification:
 - Status: BLOCKED
 - Limitations:
 - LocatorStability: strong / weak

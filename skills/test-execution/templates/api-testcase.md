@@ -1,20 +1,34 @@
 # API TestCase
 
 - TestCaseId: `TC-API-`
+- CaseKind: ATOMIC
 - ModuleId:
 - FeatureId:
 - Title:
 - Priority: P0 / P1 / P2 / P3
 - TestType: contract / functional / boundary / error-path
+- Objective:
+- PrimaryAssertion:
 - Covers: Handoff IDs and API contract section
 - Preconditions:
 - TestData: `AUTO_TEST_<FEATURE>_<RunId>` or approved fixture
 - Steps:
   1. Method and path from `06-api-contracts.md`
 - ExpectedResult: status, response contract, and side effects
-- AutomationType: existing API/HTTP harness
+- LifecycleStatus: DRAFT / ACTIVE / RETIRED
+- ReviewGateStatus: PASS / LIMITED / FAIL
+- RiskLevel: RISK_LOW / RISK_MEDIUM / RISK_HIGH / RISK_CRITICAL
+- SideEffects: NONE / TEST_DATA_CREATE / TEST_DATA_UPDATE / TEST_DATA_DELETE / AUTH_CHANGE / SESSION_CHANGE / GLOBAL_CONFIG_CHANGE / EXTERNAL_EFFECT
+- SideEffectScope: TEST_OWNED / PROJECT_SANDBOX / SHARED_ENVIRONMENT / UNKNOWN
+- Reversibility: REVERSIBLE / CLEANUP_REVERSIBLE / IRREVERSIBLE / UNKNOWN
+- DataOwnership: TEST_OWNED / PROJECT_SANDBOX / SHARED_ENVIRONMENT / UNKNOWN
+- InteractionMode: UNATTENDED / INTERACTIVE
+- AutomationType: AUTO / MANUAL
+- AutomationEligibility: AUTO_ALLOWED / MANUAL_REQUIRED / NOT_EXECUTABLE
+- AutomationFramework: existing API/HTTP harness
 - Environment:
 - EvidenceRequirement: method, path, status, duration, sanitized response summary
 - Cleanup:
+- CleanupVerification:
 - Status: BLOCKED
 - Limitations:

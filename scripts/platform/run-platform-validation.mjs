@@ -10,11 +10,18 @@ const requiredFiles = [
   'contracts/schemas/execution-result.schema.json',
   'contracts/schemas/evidence-index.schema.json',
   'contracts/schemas/environment-profile.schema.json',
+  'contracts/schemas/testcase.schema.json',
+  'contracts/schemas/scenario-suite.schema.json',
+  'contracts/schemas/expectation-gap.schema.json',
+  'contracts/testcase-contract.md',
+  'contracts/testcase-generation-standard.md',
+  'contracts/composite-testcase-standard.md',
   'config/environments.example.json',
   'scripts/platform/contract-types.ts',
   'scripts/platform/validate-contracts.ts',
   'tests/api/synthetic/api-fixtures.ts',
   'docs/web-test-report-template.md',
+  'test-cases/README.md',
 ];
 
 for (const relativePath of requiredFiles) {
@@ -43,6 +50,9 @@ for (const relativePath of [
   'contracts/schemas/execution-result.schema.json',
   'contracts/schemas/evidence-index.schema.json',
   'contracts/schemas/environment-profile.schema.json',
+  'contracts/schemas/testcase.schema.json',
+  'contracts/schemas/scenario-suite.schema.json',
+  'contracts/schemas/expectation-gap.schema.json',
   'config/environments.example.json',
 ]) {
   JSON.parse(readFileSync(resolve(repoRoot, relativePath), 'utf8'));

@@ -21,7 +21,7 @@ Do not modify the Handoff Expected baseline, product code, product test hooks, o
 
 ## Canonical Contracts and compatibility
 
-Use the repository Canonical Contracts as the source of truth: [status](../../contracts/status-contract.md), [TestCase](../../contracts/testcase-contract.md), [coverage](../../contracts/coverage-contract.md), [evidence](../../contracts/evidence-contract.md), [confidence](../../contracts/confidence-contract.md), and [stable IDs](../../contracts/id-contract.md). `LegacyFieldAdapter` maps old field names and reconciliation values into the canonical model without rewriting historical TestCases or reports.
+Use the repository Canonical Contracts as the source of truth: [TestCase generation V2](../../contracts/testcase-generation-standard.md), [Composite TestCase](../../contracts/composite-testcase-standard.md), [TestCase](../../contracts/testcase-contract.md), [status](../../contracts/status-contract.md), [coverage](../../contracts/coverage-contract.md), [evidence](../../contracts/evidence-contract.md), [confidence](../../contracts/confidence-contract.md), and [stable IDs](../../contracts/id-contract.md). Apply the shared V2 generation and unattended routing rules by reference; do not restate a divergent local version. `LegacyFieldAdapter` maps old field names and reconciliation values into the canonical model without rewriting historical TestCases or reports.
 
 Before Handoff intake, verify [handoff integrity](../../contracts/handoff-integrity-contract.md) with the shared Consumer helper in `scripts/platform/handoff-integrity.mjs`. Missing `ContractVersion` is legacy `BLOCKED`, a supported-version mismatch is `FAIL`, and neither outcome may be converted into a business-test result.
 
@@ -33,7 +33,7 @@ Use `GateStatus`, `BaselineStatus`, `SourceRuntimeAlignment`, and `Confidence` a
 
 1. **Handoff Intake:** Read `00-TEST-WORKFLOW.md` first, then all related Handoff documents. Missing scope, Expected Result, prerequisite, or stable Handoff ID means `HANDOFF_INCOMPLETE`; block only the affected case or run and never guess.
 2. **Coverage Analysis:** Preserve every Handoff ID and map Module, Feature, Business Rule, Business Flow, Validation, Boundary, Permission, State, API, Error Path, Data Consistency, UI Observable Result, Priority, Suggested Test Layer, TestCase, and Execution Status.
-3. **TestCase Design:** Create or reuse a stable TestCase before automation. Use `TC-WEB-*`, `TC-API-*`, or `TC-MANUAL-*`; include ModuleId, FeatureId, Title, Priority, TestType, Covers, Preconditions, TestData, Steps, ExpectedResult, AutomationType, Environment, EvidenceRequirement, Cleanup, Status, and Limitations. Never write a formal test without its TestCaseId.
+3. **TestCase Design:** Create or reuse a stable TestCase before automation. Use `TC-WEB-*`, `TC-API-*`, or `TC-MANUAL-*`; new cases declare `CaseKind`, `ScenarioSuiteId`, `Objective`, `PrimaryAssertion`, coverage tags, risk, side effects, reversibility, and `AutomationEligibility`. Composite fields and ScenarioSuite aggregation come from the shared V2 contracts. Never write a formal test without its TestCaseId.
 4. **TestCase Review Gate:** Before execution, verify P0/P1 coverage, explicit Expected Result, preconditions, safe test data, cleanup, destructive-operation safety, automation layer, and evidence requirements. Missing gates are blockers, not assumptions.
 5. **Execution Planning:** Choose `WEB_UI`, `API`, `BOTH`, or `MANUAL`. Prefer the smallest scope requested: full regression, module regression, P0, failed rerun, or a single TestCase. Run a Runtime Health Check before formal execution.
 6. **Automation or Manual Execution:** Prefer existing harnesses. For Web UI use Playwright and real user-visible interactions; for API use the Handoff API contracts; retain unsupported cases as `MANUAL`. Do not bypass the UI with hidden state, injected tokens, direct business-state JavaScript, or coordinate clicks.
@@ -78,6 +78,7 @@ Use the templates in [`templates/`](templates/) and the detailed rules in [`refe
 
 - [Coverage matrix](templates/coverage-matrix.md)
 - [Web TestCase](templates/web-testcase.md), [API TestCase](templates/api-testcase.md), [Manual TestCase](templates/manual-testcase.md)
+- [Composite TestCase](templates/composite-testcase.md), [ScenarioSuite](templates/scenario-suite.md)
 - [Regression report](templates/regression-report.md), [Coverage report](templates/coverage-report.md), [Defect list index](templates/defect-list.md), [Per-defect feedback](templates/defect-feedback.md)
 - [Design-runtime mismatch](templates/design-runtime-mismatch.md), [Execution summary](templates/execution-summary.md), [Manual boundaries](templates/manual-boundaries.md)
 - [Evidence index](templates/evidence-index.md), [Environment issues](templates/environment-issues.md)

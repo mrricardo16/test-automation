@@ -1,20 +1,34 @@
 # Manual TestCase
 
 - TestCaseId: `TC-MANUAL-`
+- CaseKind: ATOMIC
 - ModuleId:
 - FeatureId:
 - Title:
 - Priority: P0 / P1 / P2 / P3
 - TestType:
+- Objective:
+- PrimaryAssertion:
 - Covers: Handoff IDs
 - Preconditions:
 - TestData:
 - Steps:
   1. Perform the documented manual action in the approved environment.
 - ExpectedResult:
-- AutomationType: Manual
+- LifecycleStatus: DRAFT / ACTIVE / RETIRED
+- ReviewGateStatus: PASS / LIMITED / FAIL
+- RiskLevel: RISK_LOW / RISK_MEDIUM / RISK_HIGH / RISK_CRITICAL
+- SideEffects: NONE / TEST_DATA_CREATE / TEST_DATA_UPDATE / TEST_DATA_DELETE / AUTH_CHANGE / SESSION_CHANGE / GLOBAL_CONFIG_CHANGE / EXTERNAL_EFFECT
+- SideEffectScope: TEST_OWNED / PROJECT_SANDBOX / SHARED_ENVIRONMENT / UNKNOWN
+- Reversibility: REVERSIBLE / CLEANUP_REVERSIBLE / IRREVERSIBLE / UNKNOWN
+- DataOwnership: TEST_OWNED / PROJECT_SANDBOX / SHARED_ENVIRONMENT / UNKNOWN
+- InteractionMode: INTERACTIVE
+- AutomationType: MANUAL
+- AutomationEligibility: MANUAL_REQUIRED / NOT_EXECUTABLE
+- AutomationFramework: None
 - Environment:
 - EvidenceRequirement:
 - Cleanup:
+- CleanupVerification:
 - Status: MANUAL
 - Limitations: reason automation is not approved

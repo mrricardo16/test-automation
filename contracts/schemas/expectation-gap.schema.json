@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://automated-testing.local/contracts/expectation-gap.schema.json",
+  "title": "ExpectationGap",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ExpectationGapId", "GapType", "ModuleId", "FeatureId", "CandidateScenario", "MissingExpectation", "Risk", "RequiredClarification", "RelatedCoverageTags", "ResolutionStatus"],
+  "properties": {
+    "ExpectationGapId": { "type": "string", "pattern": "^EG-[A-Z0-9]+-[A-Z0-9-]+$" },
+    "GapType": { "enum": ["MISSING_EXPECTED", "AMBIGUOUS_RULE", "UNDEFINED_STATE", "UNDEFINED_RELATIONSHIP"] },
+    "ModuleId": { "type": "string", "minLength": 1 },
+    "FeatureId": { "type": "string", "minLength": 1 },
+    "CandidateScenario": { "type": "string", "minLength": 1 },
+    "MissingExpectation": { "type": "string", "minLength": 1 },
+    "Risk": { "enum": ["RISK_LOW", "RISK_MEDIUM", "RISK_HIGH", "RISK_CRITICAL"] },
+    "RequiredClarification": { "type": "string", "minLength": 1 },
+    "RelatedCoverageTags": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "ResolutionStatus": { "enum": ["OPEN", "RESOLVED", "REJECTED"] },
+    "ApprovedExpected": { "type": "string", "minLength": 1 },
+    "ApprovedExpectedBasis": { "enum": ["REQUIREMENT", "DESIGN", "APPROVED_BASELINE", "HANDOFF_BASELINE", "CODE_BEHAVIOR"] },
+    "ResolutionEvidence": { "type": "string", "minLength": 1 },
+    "RuntimeObservationEvidenceIds": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "ResolutionStatus": { "const": "RESOLVED" } } },
+      "then": { "required": ["ApprovedExpected", "ApprovedExpectedBasis", "ResolutionEvidence"] }
+    }
+  ]
+}

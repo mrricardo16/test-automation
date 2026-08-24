@@ -62,6 +62,18 @@ export const ACCEPTANCE_EXPECTATIONS = [
   'EXPECT_BASELINE_LIMITED',
 ] as const;
 
+export const CASE_KINDS = ['ATOMIC', 'COMPOSITE'] as const;
+export const AUTOMATION_ELIGIBILITIES = ['AUTO_ALLOWED', 'MANUAL_REQUIRED', 'NOT_EXECUTABLE'] as const;
+export const LIFECYCLE_STATUSES = ['DRAFT', 'ACTIVE', 'RETIRED'] as const;
+export const REVIEW_GATE_STATUSES = ['PASS', 'LIMITED', 'FAIL'] as const;
+export const RISK_LEVELS = ['RISK_LOW', 'RISK_MEDIUM', 'RISK_HIGH', 'RISK_CRITICAL'] as const;
+export const SIDE_EFFECTS = ['NONE', 'TEST_DATA_CREATE', 'TEST_DATA_UPDATE', 'TEST_DATA_DELETE', 'AUTH_CHANGE', 'SESSION_CHANGE', 'GLOBAL_CONFIG_CHANGE', 'EXTERNAL_EFFECT'] as const;
+export const SIDE_EFFECT_SCOPES = ['TEST_OWNED', 'PROJECT_SANDBOX', 'SHARED_ENVIRONMENT', 'UNKNOWN'] as const;
+export const REVERSIBILITIES = ['REVERSIBLE', 'CLEANUP_REVERSIBLE', 'IRREVERSIBLE', 'UNKNOWN'] as const;
+export const DATA_OWNERSHIP_VALUES = ['TEST_OWNED', 'PROJECT_SANDBOX', 'SHARED_ENVIRONMENT', 'UNKNOWN'] as const;
+export const INTERACTION_MODES = ['UNATTENDED', 'INTERACTIVE'] as const;
+export const COVERAGE_TAGS = ['HAPPY_PATH', 'BUSINESS_RULE', 'VALIDATION', 'BOUNDARY', 'NEGATIVE', 'PERMISSION', 'AUTHENTICATION', 'STATE_TRANSITION', 'POST_CONDITION', 'DATA_CONSISTENCY', 'REFERENTIAL_INTEGRITY', 'IDEMPOTENCY', 'DUPLICATE', 'RECOVERY', 'SESSION', 'COMPOSITE_FLOW', 'LIFECYCLE', 'CONCURRENCY', 'CLEANUP', 'MANUAL_BOUNDARY'] as const;
+
 export type ExecutionStatus = (typeof EXECUTION_STATUSES)[number];
 export type ApplicabilityStatus = (typeof APPLICABILITY_STATUSES)[number];
 export type CoverageStatus = (typeof COVERAGE_STATUSES)[number];
@@ -71,6 +83,8 @@ export type ExpectedBasis = (typeof EXPECTED_BASES)[number];
 export type GateStatus = (typeof GATE_STATUSES)[number];
 export type FlakyClassification = (typeof FLAKY_CLASSIFICATIONS)[number];
 export type AcceptanceExpectation = (typeof ACCEPTANCE_EXPECTATIONS)[number];
+export type CaseKind = (typeof CASE_KINDS)[number];
+export type AutomationEligibility = (typeof AUTOMATION_ELIGIBILITIES)[number];
 export type ClaimType =
   | 'CHARACTERIZATION'
   | 'IMPLEMENTATION_REGRESSION'
@@ -129,9 +143,22 @@ export interface ContractTestCase {
   TestLayer: string;
   ApplicabilityStatus: ApplicabilityStatus;
   ExpectedBasis: ExpectedBasis;
-  ExpectedResult: string;
+  ExpectedResult?: string;
   AutomationType: 'AUTO' | 'AUTO_PARTIAL' | 'MANUAL';
   AutomationFramework: string;
+  CaseKind?: CaseKind;
+  Objective?: string;
+  PrimaryAssertion?: string;
+  AutomationEligibility?: AutomationEligibility;
+  LifecycleStatus?: (typeof LIFECYCLE_STATUSES)[number];
+  ReviewGateStatus?: (typeof REVIEW_GATE_STATUSES)[number];
+  RiskLevel?: (typeof RISK_LEVELS)[number];
+  SideEffects?: (typeof SIDE_EFFECTS)[number];
+  SideEffectScope?: (typeof SIDE_EFFECT_SCOPES)[number];
+  Reversibility?: (typeof REVERSIBILITIES)[number];
+  DataOwnership?: (typeof DATA_OWNERSHIP_VALUES)[number];
+  InteractionMode?: (typeof INTERACTION_MODES)[number];
+  ExpectationGapRefs?: string[];
 }
 
 export type LegacyCoverageValue =

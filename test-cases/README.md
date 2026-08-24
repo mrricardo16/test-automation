@@ -2,12 +2,14 @@
 
 ## Canonical TestCase-first contract
 
-Every formal test starts with a stable TestCase record before automation code is written. The canonical fields and `ExpectedBasis` vocabulary are defined in [`contracts/testcase-contract.md`](../contracts/testcase-contract.md) and [`contracts/schemas/testcase.schema.json`](../contracts/schemas/testcase.schema.json).
+Every formal test starts with a stable TestCase record before automation code is written. New and substantially redesigned cases follow [`contracts/testcase-generation-standard.md`](../contracts/testcase-generation-standard.md), [`contracts/composite-testcase-standard.md`](../contracts/composite-testcase-standard.md), [`contracts/testcase-contract.md`](../contracts/testcase-contract.md), and [`contracts/schemas/testcase.schema.json`](../contracts/schemas/testcase.schema.json).
 
 - `TestCaseId` is unique and remains linked through the executable test, `ExecutionStatus`, `ApplicabilityStatus`, `CoverageStatus`, evidence, and report.
 - Canonical execution statuses are `PASS`, `FAIL`, `ERROR`, `BLOCKED`, `MANUAL`, and `SKIPPED`. `NOT_APPLICABLE` belongs to applicability or coverage, not execution.
 - `ExpectedBasis` is `REQUIREMENT`, `DESIGN`, `APPROVED_BASELINE`, `HANDOFF_BASELINE`, `CODE_BEHAVIOR`, or `UNKNOWN`. Runtime observations belong to Actual/Observation Evidence.
 - Legacy fields such as `Module`, `RequirementSource`, and old `Status` values remain readable through `LegacyFieldAdapter`; historical TestCases and IDs are not renumbered or batch-rewritten.
+- `ScenarioSuite` aggregates coverage and lifecycle but has no `ExecutionStatus`; see [`scenario-suite.schema.json`](../contracts/schemas/scenario-suite.schema.json).
+- Missing authoritative Expected creates an `ExpectationGap`; see [`expectation-gap.schema.json`](../contracts/schemas/expectation-gap.schema.json). Runtime Observation remains Actual/Evidence and cannot supply Expected.
 
 The platform TestCase `TC-PLATFORM-08-GOV-001` verifies that active Skill governance stays aligned with these contracts.
 
@@ -28,6 +30,16 @@ Every formal test starts with a TestCase record before automation code is writte
 - RequirementSource: source requirement, design, issue, or phase
 - Notes: evidence, limitations, and mapping notes
 
+## V2 generation fields
+
+- `CaseKind`: `ATOMIC` or `COMPOSITE`.
+- `Objective` and `PrimaryAssertion`: exactly one primary objective and assertion per TestCaseId.
+- `LifecycleStatus`, `ReviewGateStatus`, `RiskLevel`, `SideEffects`, `SideEffectScope`, `Reversibility`, `DataOwnership`, and `InteractionMode` control execution eligibility.
+- `AutomationEligibility`: `AUTO_ALLOWED`, `MANUAL_REQUIRED`, or `NOT_EXECUTABLE`.
+- A Composite additionally records `InitialState`, `Preconditions`, `TestData`, `ExpectedPerStep`, `IntermediateAssertions`, `StateTransitions`, `PostConditions`, `CrossStepInvariants`, `Cleanup`, and `CleanupVerification`.
+
+Independently executable, assertable, and evidence-capable scenarios receive independent TestCaseIds. Do not create Mega Cases. Equivalent data variants may remain one parameterized case when they preserve the same Objective and PrimaryAssertion.
+
 ## Required workflow
 
     Requirement / design / flow
@@ -47,6 +59,8 @@ Every formal test starts with a TestCase record before automation code is writte
 - AUTO: reliably automated end to end.
 - AUTO_PARTIAL: part of the flow is automated and the remaining part is explicitly documented.
 - MANUAL: reliable automation is unsuitable and a person must execute it.
+
+For new V2 cases, `AutomationEligibility=AUTO_ALLOWED` is strictly unattended. It cannot pause for confirmation, file selection, CAPTCHA, visual judgment, or a MANUAL queue. Split mixed flows into separate AUTO and MANUAL TestCases and aggregate them with a ScenarioSuite. Historical `AUTO_PARTIAL` remains readable but is not a V2 routing choice.
 
 ## Execution statuses
 
