@@ -14,6 +14,7 @@ const requiredFiles = [
   'scripts/platform/contract-types.ts',
   'scripts/platform/validate-contracts.ts',
   'tests/api/synthetic/api-fixtures.ts',
+  'docs/web-test-report-template.md',
 ];
 
 for (const relativePath of requiredFiles) {

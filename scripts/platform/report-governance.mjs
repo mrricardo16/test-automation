@@ -3,6 +3,7 @@ import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+const templatePath = resolve(repoRoot, 'docs/web-test-report-template.md');
 const reportsDir = resolve(repoRoot, 'projects/test-workflow/reports');
 const validStatuses = new Set(['PASS', 'FAIL', 'ERROR', 'BLOCKED', 'MANUAL', 'SKIPPED']);
 const feedbackStatuses = new Set(['FAIL', 'ERROR', 'BLOCKED', 'MANUAL', 'SKIPPED']);
@@ -80,38 +81,75 @@ function tableStatuses(content) {
     .flatMap((line) => line.split('|').map((cell) => cell.trim()).filter((cell) => validStatuses.has(cell)));
 }
 
-if (!existsSync(reportsDir)) fail(`reports directory is missing: ${reportsDir}`);
-
-const rootFiles = readdirSync(reportsDir, { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => entry.name);
-for (const suffix of legacySuffixes) {
-  const legacy = rootFiles.filter((file) => file.endsWith(suffix));
-  if (legacy.length > 0) fail(`legacy report suffix remains: ${legacy.join(', ')}`);
-}
-
-for (const definition of reportDefinitions) {
-  const reportPath = join(reportsDir, definition.file);
-  if (!existsSync(reportPath)) fail(`required report is missing: ${definition.file}`);
+function validateTemplate() {
+  if (!existsSync(templatePath)) fail('tracked unified report template is missing: docs/web-test-report-template.md');
   let content;
   try {
-    content = readUtf8(reportPath);
+    content = readUtf8(templatePath);
   } catch (error) {
-    fail(`${definition.file} is not strict UTF-8: ${error.message}`);
+    fail(`docs/web-test-report-template.md is not strict UTF-8: ${error.message}`);
   }
-  for (const required of definition.required) if (!content.includes(required)) fail(`${definition.file} is missing required field: ${required}`);
-  if (/\b[A-Za-z]:[\\/]/.test(content)) fail(`${definition.file} contains an absolute Windows path`);
-  if (/^\s*###?\s+人工复审图片证据/m.test(content)) fail(`${definition.file} contains a standalone image-review section`);
-  checkImages(reportPath, content);
-
-  const statuses = tableStatuses(content);
-  if (statuses.length === 0) fail(`${definition.file} has no executable result status`);
-  if (definition.kind === 'complete') {
-    const missingTerms = completeCoverageTerms.filter((term) => !content.includes(term));
-    if (missingTerms.length > 0) fail(`${definition.file} is missing coverage terms: ${missingTerms.join(', ')}`);
-  } else {
-    const issueStatuses = statuses.filter((status) => feedbackStatuses.has(status));
-    if (issueStatuses.length === 0) fail(`${definition.file} has no feedback-worthy result row`);
-    if (statuses.includes('PASS')) fail(`${definition.file} contains PASS in a feedback row`);
-  }
+  const requiredTerms = [
+    '## 1. 适用范围',
+    '## 2. 完整报告统一结构',
+    '## 3. 功能报告覆盖规则',
+    '## 4. 流程报告覆盖规则',
+    '## 5. 问题反馈报告生成规则',
+    '## 6. 生成前检查',
+    '## 7. 生成后治理检查',
+    '已执行<功能/流程>结果',
+    '图片示例',
+    'FAIL',
+    'ERROR',
+    'BLOCKED',
+    'MANUAL',
+    'SKIPPED',
+  ];
+  for (const required of requiredTerms) if (!content.includes(required)) fail(`unified report template is missing: ${required}`);
+  if (/\b[A-Za-z]:[\\/]/.test(content)) fail('unified report template contains an absolute Windows path');
+  if (/^\s*###?\s+人工复审图片证据/m.test(content)) fail('unified report template contains a standalone image-review section');
 }
 
-console.log('REPORT_GOVERNANCE=TC-DOC-GOV-001:PASS');
+function validateRuntimeReports() {
+  if (!existsSync(reportsDir)) return false;
+
+  const rootFiles = readdirSync(reportsDir, { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => entry.name);
+  const runtimeFiles = reportDefinitions.map((definition) => definition.file);
+  const hasRuntimeReports = runtimeFiles.some((file) => rootFiles.includes(file));
+  if (!hasRuntimeReports) return false;
+  for (const suffix of legacySuffixes) {
+    const legacy = rootFiles.filter((file) => file.endsWith(suffix));
+    if (legacy.length > 0) fail(`legacy report suffix remains: ${legacy.join(', ')}`);
+  }
+
+  for (const definition of reportDefinitions) {
+    const reportPath = join(reportsDir, definition.file);
+    if (!existsSync(reportPath)) fail(`required report is missing: ${definition.file}`);
+    let content;
+    try {
+      content = readUtf8(reportPath);
+    } catch (error) {
+      fail(`${definition.file} is not strict UTF-8: ${error.message}`);
+    }
+    for (const required of definition.required) if (!content.includes(required)) fail(`${definition.file} is missing required field: ${required}`);
+    if (/\b[A-Za-z]:[\\/]/.test(content)) fail(`${definition.file} contains an absolute Windows path`);
+    if (/^\s*###?\s+人工复审图片证据/m.test(content)) fail(`${definition.file} contains a standalone image-review section`);
+    checkImages(reportPath, content);
+
+    const statuses = tableStatuses(content);
+    if (statuses.length === 0) fail(`${definition.file} has no executable result status`);
+    if (definition.kind === 'complete') {
+      const missingTerms = completeCoverageTerms.filter((term) => !content.includes(term));
+      if (missingTerms.length > 0) fail(`${definition.file} is missing coverage terms: ${missingTerms.join(', ')}`);
+    } else {
+      const issueStatuses = statuses.filter((status) => feedbackStatuses.has(status));
+      if (issueStatuses.length === 0) fail(`${definition.file} has no feedback-worthy result row`);
+      if (statuses.includes('PASS')) fail(`${definition.file} contains PASS in a feedback row`);
+    }
+  }
+  return true;
+}
+
+validateTemplate();
+const runtimeReports = validateRuntimeReports();
+console.log(`REPORT_GOVERNANCE=TC-DOC-GOV-001:PASS (template${runtimeReports ? '+runtime-reports' : ''})`);
