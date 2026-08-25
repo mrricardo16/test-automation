@@ -1,6 +1,6 @@
 {
-  "TestCaseId": "TC-BB-REAL-008", "Status": "DRAFT", "Reason": "BLOCKED_BY_EXECUTION_GATE", "Active": 0,
+  "TestCaseId": "TC-BB-REAL-008", "Status": "ACTIVE", "Reason": "REVIEW_GATE_PASS", "Active": 1,
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-VEHICLE-CREATE", "FeatureId": "FEAT-VEHICLE-MANAGE", "Priority": "P0", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
   "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "有效车辆出现在列表；重复或无效数据被拒绝。",
-  "Preconditions": "唯一车辆编号及所需类型配置", "Steps": ["车辆管理", "新增", "填写", "保存"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "EXECUTION_NOT_AUTHORIZED"
+  "Preconditions": "唯一车辆编号及所需类型配置", "Steps": ["车辆管理", "新增", "填写", "保存"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "MissingCredentialAndSafeOwnedData"
 }

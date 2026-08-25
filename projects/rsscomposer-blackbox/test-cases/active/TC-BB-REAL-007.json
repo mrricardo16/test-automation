@@ -1,6 +1,6 @@
 {
-  "TestCaseId": "TC-BB-REAL-007", "Status": "DRAFT", "Reason": "BLOCKED_BY_EXECUTION_GATE", "Active": 0,
+  "TestCaseId": "TC-BB-REAL-007", "Status": "ACTIVE", "Reason": "REVIEW_GATE_PASS", "Active": 1,
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-MAP-PUBLISH", "FeatureId": "FEAT-MAP-PUBLISH", "Priority": "P0", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
   "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "发布成功且重新读取内容一致；不得覆盖业务地图。",
-  "Preconditions": "隔离测试地图与合法地图数据", "Steps": ["编辑地图", "保存", "发布", "重新读取"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "EXECUTION_NOT_AUTHORIZED"
+  "Preconditions": "隔离测试地图与合法地图数据", "Steps": ["编辑地图", "保存", "发布", "重新读取"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "MissingCredentialAndSafeOwnedData"
 }

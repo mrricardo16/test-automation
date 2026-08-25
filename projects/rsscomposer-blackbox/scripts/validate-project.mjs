@@ -31,14 +31,18 @@ const handoff = readJson('handoff/current.json');
 const hashMetadata = readJson(`handoff/baselines/${handoffRunId}/hash-metadata.json`);
 const runRegistry = readJson('runs/index.json');
 const draftDirectory = resolve(projectRoot, 'test-cases', 'draft');
-const caseFiles = readdirSync(draftDirectory).filter((name) => /^TC-BB-REAL-\d{3}\.json$/.test(name));
-const cases = caseFiles.map((name) => JSON.parse(readFileSync(resolve(draftDirectory, name), 'utf8')));
+const activeDirectory = resolve(projectRoot, 'test-cases', 'active');
+const draftCaseFiles = readdirSync(draftDirectory).filter((name) => /^TC-BB-REAL-\d{3}\.json$/.test(name));
+const activeCaseFiles = readdirSync(activeDirectory).filter((name) => /^TC-BB-REAL-\d{3}\.json$/.test(name));
+const draftCases = draftCaseFiles.map((name) => JSON.parse(readFileSync(resolve(draftDirectory, name), 'utf8')));
+const activeCases = activeCaseFiles.map((name) => JSON.parse(readFileSync(resolve(activeDirectory, name), 'utf8')));
+const cases = [...draftCases, ...activeCases];
 const uniqueIds = new Set(cases.map((testCase) => testCase.TestCaseId));
 const invalidCases = cases.filter((testCase) =>
-  testCase.Status !== 'DRAFT' ||
-  testCase.Reason !== 'BLOCKED_BY_EXECUTION_GATE' ||
-  testCase.BlockerReason !== 'EXECUTION_NOT_AUTHORIZED' ||
-  testCase.Active !== 0 ||
+  !(
+    (testCase.Status === 'DRAFT' && testCase.Reason === 'BLOCKED_BY_EXECUTION_GATE' && testCase.BlockerReason === 'EXECUTION_NOT_AUTHORIZED' && testCase.Active === 0) ||
+    (testCase.Status === 'ACTIVE' && testCase.Reason === 'REVIEW_GATE_PASS' && ['BLOCKED', 'MANUAL'].includes(testCase.ExecutionStatus) && testCase.Active === 1)
+  ) ||
   testCase.ExpectedBasis !== 'HANDOFF_BASELINE' ||
   !Array.isArray(testCase.ExpectedSource) ||
   !testCase.ExpectedSource.every((source) => source.startsWith('handoff-package/')),
@@ -92,8 +96,8 @@ console.log(`ExpectedHash = ${integrity.expectedHash ?? 'UNAVAILABLE'}`);
 console.log(`ActualHash = ${integrity.actualHash ?? 'UNAVAILABLE'}`);
 console.log(`EXECUTION_READINESS = ${executionReadiness}`);
 console.log(`Reason = ${readinessReason}`);
-console.log(`TestCaseDraft = ${cases.length}`);
-console.log(`TestCaseActive = ${cases.filter((testCase) => testCase.Active === 1).length}`);
+console.log(`TestCaseDraft = ${draftCases.length}`);
+console.log(`TestCaseActive = ${activeCases.length}`);
 console.log(`UTF8 = ${invalidUtf8.length === 0 ? 'PASS' : 'FAIL'}`);
 console.log(`SyntheticCIIsolation = ${syntheticCiIsolated ? 'PASS' : 'FAIL'}`);
 

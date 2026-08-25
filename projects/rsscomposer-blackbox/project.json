@@ -1,7 +1,7 @@
 {
   "ProjectId": "REAL-RSSCOMPOSER-BLACKBOX",
   "ProjectMode": "BLACKBOX",
-  "Status": "READY",
+  "Status": "FORMAL_RUN_RECORDED_WITH_BLOCKERS",
   "IntegrityContractVersion": "HANDOFF-SHA256-V1",
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
   "HandoffIntegrity": "PASS",
@@ -12,6 +12,8 @@
   "ProductSourceAccess": false,
   "WhiteboxInternalAccess": false,
   "TestFramework": "Playwright",
-  "ActiveTestCaseCount": 0,
-  "DraftTestCaseCount": 12
+  "ActiveTestCaseCount": 12,
+  "DraftTestCaseCount": 0,
+  "LatestRunId": "BB-REAL-20260824-143008",
+  "LatestRunStatus": "COMPLETED_WITH_BLOCKERS"
 }

@@ -1,6 +1,6 @@
 {
-  "TestCaseId": "TC-BB-REAL-010", "Status": "DRAFT", "Reason": "BLOCKED_BY_EXECUTION_GATE", "Active": 0,
+  "TestCaseId": "TC-BB-REAL-010", "Status": "ACTIVE", "Reason": "REVIEW_GATE_PASS", "Active": 1,
   "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102", "SeedId": "SEED-LOG-PACKAGE-DOWNLOAD", "FeatureId": "FEAT-LOG-PACKAGE", "Priority": "P1", "TestType": "BLACKBOX_ACCEPTANCE", "TestLayer": "WEB_UI_AND_API",
   "ExpectedBasis": "HANDOFF_BASELINE", "ExpectedSource": ["handoff-package/12-test-scenario-seeds.md", "handoff-package/04-user-flows.md"], "ExpectedResult": "返回下载内容或明确不可用结果，不接受任意文件路径。",
-  "Preconditions": "列表中存在非敏感测试日志包", "Steps": ["查询包", "选择列表项", "下载"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "EXECUTION_NOT_AUTHORIZED"
+  "Preconditions": "列表中存在非敏感测试日志包", "Steps": ["查询包", "选择列表项", "下载"], "AutomationFramework": "Playwright", "ExecutionStatus": "BLOCKED", "BlockerReason": "MissingCredentialAndApprovedNonSensitivePackage"
 }

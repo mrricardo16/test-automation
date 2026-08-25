@@ -1,6 +1,0 @@
-{
-  "RunId": "BB-REAL-20260824-115939",
-  "ImportedTestCaseIds": ["TC-BB-REAL-001", "TC-BB-REAL-002", "TC-BB-REAL-003", "TC-BB-REAL-004", "TC-BB-REAL-005", "TC-BB-REAL-006", "TC-BB-REAL-007", "TC-BB-REAL-008", "TC-BB-REAL-009", "TC-BB-REAL-010", "TC-BB-REAL-011", "TC-BB-REAL-012"],
-  "ExecutionCounts": { "PASS": 0, "FAIL": 0, "ERROR": 0, "BLOCKED": 12, "MANUAL": 0, "SKIPPED": 0 },
-  "ArtifactsCopied": false
-}
