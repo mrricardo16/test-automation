@@ -1,0 +1,232 @@
+{
+  "AuditType": "GAP_RESOLUTION_AUDIT",
+  "CurrentGapCountBefore": 29,
+  "ResolvedGapCount": 1,
+  "RemainingGapCount": 28,
+  "Resolved": [
+    {
+      "GapId": "GAP-GEN-TASK-LIFECYCLE-CANCEL-001",
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "RESOLVED_BY_FLOW_DESIGN",
+      "Reason": "流程册 FL-TASK-05 明确了未执行/执行中取消两条路径、状态和车辆释放观察点。"
+    }
+  ],
+  "Remaining": [
+    {
+      "GapId": "GAP-GEN-USER-UPDATE-DUPLICATE-001",
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "唯一字段修改后的重复值处理规则和失败后原值保持规则未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-USER-DELETE-REPEAT-001",
+      "TestCaseId": "TC-USER-DELETE-002",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "重复删除的幂等成功、对象不存在提示或业务错误规则未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-USER-DELETE-RECREATE-001",
+      "TestCaseId": "TC-USER-CREATE-006",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "删除后是否允许使用原唯一键重新创建对象的规则未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-ROLE-RELATION-REMOVE-001",
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "解除关联后的权限刷新和在线会话生效时机未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-ROLE-RELATION-DUPLICATE-001",
+      "TestCaseId": "TC-URB-BIND-002",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "重复绑定应拒绝、幂等成功或产生错误的规则未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-ROLE-RELATION-EFFECTIVE-001",
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "关联权限变化对菜单、页面、按钮和在线会话的生效时机未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-PERMISSION-1",
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "菜单层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-PERMISSION-2",
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "页面层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-PERMISSION-3",
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "按钮层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-PERMISSION-4",
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "直接 URL层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-TASK-QUERY-SORT-001",
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "排序字段、方向和相同值时的稳定顺序未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-TASK-DUPLICATE-001",
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "重复任务应拒绝、幂等成功或新建任务的规则未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-TASK-REQUIRED-001",
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "缺少该依赖时的拒绝提示和是否产生任务的业务合同未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-TASK-STATE-001",
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "任务状态与取消操作的允许矩阵未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-VEHICLE-REQUIRED-ID-001",
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "车辆编号为空时的必填校验合同未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-VEHICLE-REQUIRED-NAME-001",
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "车辆名称为空时的必填校验合同未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-VEHICLE-LENGTH-001",
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "车辆编号长度边界和越界处理合同未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-VEHICLE-CHARSET-001",
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "车辆编号允许字符集合和拒绝行为未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-VEHICLE-UPDATE-INVALID-001",
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "车辆字段可修改范围和非法值处理合同未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-STATS-SORT-001",
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "统计结果排序字段、方向和稳定顺序未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-STATS-RANGE-001",
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "时间范围边界是否合法以及无效时的拒绝合同未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-STATS-MISSING-001",
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "缺少时间字段时的校验合同未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-STATS-OVER-001",
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "超出允许时间范围时的拒绝或裁剪行为未获批准。"
+    },
+    {
+      "GapId": "GAP-GEN-STATS-FORMAT-001",
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "非法筛选格式和拒绝提示合同未获批准。"
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-007",
+      "TestCaseId": "TC-USER-CREATE-007",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "未提供显示名最大长度和超长拒绝 Expected。"
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-008",
+      "TestCaseId": "TC-USER-CREATE-008",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "未提供用户名最小/最大长度，不能猜测 min/max。"
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-009",
+      "TestCaseId": "TC-USER-CREATE-009",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "未提供允许字符集合和错误提示合同。"
+    },
+    {
+      "GapId": "GAP-FG-USER-STATE-011",
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "Classification": "TRUE_AMBIGUITY",
+      "Status": "STILL_PENDING",
+      "Reason": "未定义禁用、启用、在线会话和重新登录的完整状态矩阵。"
+    }
+  ],
+  "SourceDiscoveredNeedsAuthority": [
+    {
+      "RuleId": "RULE-TASK-PENDING-CAP",
+      "Status": "OPEN",
+      "RequiredAuthority": "业务/需求批准或安全夹具证明"
+    },
+    {
+      "RuleId": "RULE-DUMMYCAR",
+      "Status": "OPEN",
+      "RequiredAuthority": "业务/需求批准或安全夹具证明"
+    },
+    {
+      "RuleId": "RULE-WCS-INTERACTION",
+      "Status": "OPEN",
+      "RequiredAuthority": "业务/需求批准或安全夹具证明"
+    }
+  ],
+  "RuntimeNeverResolvesGap": true,
+  "Status": "PARTIAL_WITH_TRUE_GAPS_RETAINED"
+}

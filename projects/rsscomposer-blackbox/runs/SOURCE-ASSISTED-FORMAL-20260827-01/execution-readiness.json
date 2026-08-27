@@ -1,0 +1,48 @@
+{
+  "ReadinessType": "FORMAL_SYSTEM_RUN_READINESS_GATE",
+  "Checks": {
+    "RuntimeReachable": true,
+    "WebAuthentication": true,
+    "FixedControlToken": false,
+    "DatabaseReachable": false,
+    "RedisObservable": false,
+    "LicenseObservable": false,
+    "ActiveMapReady": false,
+    "RequiredProcessesRunning": false,
+    "DummyCarAvailable": false,
+    "CarInitialized": false,
+    "TemplateFixtureReady": false,
+    "MockPortAvailable": false,
+    "CleanupCapability": true,
+    "TestOwnedPrefixCollision": false,
+    "FormalAutomationLinked": false
+  },
+  "RequiredChecks": [
+    "RuntimeReachable",
+    "WebAuthentication",
+    "FixedControlToken",
+    "DatabaseReachable",
+    "ActiveMapReady",
+    "RequiredProcessesRunning",
+    "DummyCarAvailable",
+    "CarInitialized",
+    "TemplateFixtureReady",
+    "MockPortAvailable",
+    "CleanupCapability",
+    "FormalAutomationLinked"
+  ],
+  "MissingChecks": [
+    "FixedControlToken",
+    "DatabaseReachable",
+    "ActiveMapReady",
+    "RequiredProcessesRunning",
+    "DummyCarAvailable",
+    "CarInitialized",
+    "TemplateFixtureReady",
+    "MockPortAvailable",
+    "FormalAutomationLinked"
+  ],
+  "FormalFlowExecutionGate": "BLOCKED",
+  "Reason": "Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+  "Status": "BLOCKED"
+}

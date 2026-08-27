@@ -1,0 +1,74 @@
+{
+  "FormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-01",
+  "FormalSystemRunStatus": "BLOCKED",
+  "FormalBusinessCasesExecuted": false,
+  "ExecutedResults": [],
+  "BlockedFlowResults": [
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Readiness Gate blocked: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+      "Evidence": []
+    }
+  ],
+  "FormalPassCount": 0,
+  "FormalFailCount": 0,
+  "FormalErrorCount": 0,
+  "FormalBlockedCount": 10,
+  "CleanupResidualCount": 0,
+  "Note": "No business Runtime was started because the Formal Run Gate was not ready."
+}

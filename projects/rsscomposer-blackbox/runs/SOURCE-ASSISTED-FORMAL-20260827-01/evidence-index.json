@@ -1,0 +1,11 @@
+{
+  "EvidenceIndexType": "SOURCE_ASSISTED_FORMAL_RUN",
+  "FormalBusinessEvidenceCount": 0,
+  "DesignAuditEvidence": [
+    "source-capability-inventory.json",
+    "source-design-audit.json",
+    "flow-coverage-matrix.json"
+  ],
+  "RuntimeEvidence": [],
+  "Sanitization": "No credentials, tokens, cookies or secrets recorded."
+}

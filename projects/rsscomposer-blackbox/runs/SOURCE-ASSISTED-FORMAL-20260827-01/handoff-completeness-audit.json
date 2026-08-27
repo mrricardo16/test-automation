@@ -1,0 +1,12 @@
+{
+  "Status": "PASS_WITH_MISSING_CAPABILITIES",
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+  "MissingCapabilityCount": 4,
+  "MissingCapabilities": [
+    "动态菜单完整角色矩阵",
+    "任务反馈/外部路由全链路",
+    "DummyCar运行时可用性",
+    "数据库/Redis/进程环境证明"
+  ],
+  "SourceAuditReference": "source-design-audit.json"
+}

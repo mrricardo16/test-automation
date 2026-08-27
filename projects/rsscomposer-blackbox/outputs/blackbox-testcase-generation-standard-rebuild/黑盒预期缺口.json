@@ -1,0 +1,569 @@
+{
+  "GapType": "BLACKBOX_EXPECTATION_GAPS",
+  "ExpectationGaps": [
+    {
+      "GapId": "GAP-FG-USER-QUERY-001",
+      "AffectedTestCaseIds": [
+        "TC-USER-QUERY-004"
+      ],
+      "MissingBusinessRule": "Handoff 未定义默认查询条件、默认排序和初始分页。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义默认查询条件、默认排序和初始分页。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-002",
+      "AffectedTestCaseIds": [
+        "TC-USER-QUERY-005"
+      ],
+      "MissingBusinessRule": "Handoff 未定义精确匹配、大小写和前后空格规则。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义精确匹配、大小写和前后空格规则。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-003",
+      "AffectedTestCaseIds": [
+        "TC-USER-QUERY-006"
+      ],
+      "MissingBusinessRule": "Handoff 未定义模糊匹配范围和特殊字符规则。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义模糊匹配范围和特殊字符规则。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-004",
+      "AffectedTestCaseIds": [
+        "TC-USER-QUERY-002"
+      ],
+      "MissingBusinessRule": "Handoff 未定义无匹配结果的空态和分页语义。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义无匹配结果的空态和分页语义。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-005",
+      "AffectedTestCaseIds": [
+        "TC-USER-RESET-001"
+      ],
+      "MissingBusinessRule": "Handoff 未定义重置后的默认条件和结果。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义重置后的默认条件和结果。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-006",
+      "AffectedTestCaseIds": [
+        "TC-USER-QUERY-007"
+      ],
+      "MissingBusinessRule": "Handoff 未定义分页、切页和条件保持规则。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义分页、切页和条件保持规则。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-007",
+      "AffectedTestCaseIds": [
+        "TC-USER-CREATE-007"
+      ],
+      "MissingBusinessRule": "未提供显示名最大长度和超长拒绝 Expected。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未提供显示名最大长度和超长拒绝 Expected。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-008",
+      "AffectedTestCaseIds": [
+        "TC-USER-CREATE-008"
+      ],
+      "MissingBusinessRule": "未提供用户名最小/最大长度，不能猜测 min/max。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未提供用户名最小/最大长度，不能猜测 min/max。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-009",
+      "AffectedTestCaseIds": [
+        "TC-USER-CREATE-009"
+      ],
+      "MissingBusinessRule": "未提供允许字符集合和错误提示合同。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未提供允许字符集合和错误提示合同。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-UPDATE-010",
+      "AffectedTestCaseIds": [
+        "TC-USER-UPDATE-004"
+      ],
+      "MissingBusinessRule": "未定义可修改字段、唯一字段修改和失败后原值保持。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义可修改字段、唯一字段修改和失败后原值保持。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-STATE-011",
+      "AffectedTestCaseIds": [
+        "TC-USER-UPDATE-003"
+      ],
+      "MissingBusinessRule": "未定义禁用、启用、在线会话和重新登录的完整状态矩阵。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义禁用、启用、在线会话和重新登录的完整状态矩阵。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-USER-DELETE-012",
+      "AffectedTestCaseIds": [
+        "TC-USER-DELETE-003"
+      ],
+      "MissingBusinessRule": "未定义删除后查询、重复删除和唯一键复用语义。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义删除后查询、重复删除和唯一键复用语义。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-ROLE-013",
+      "AffectedTestCaseIds": [
+        "TC-ROLE-QUERY-002"
+      ],
+      "MissingBusinessRule": "Handoff 未定义角色查询、新增、空值和重复名称规则。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义角色查询、新增、空值和重复名称规则。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-ROLE-014",
+      "AffectedTestCaseIds": [
+        "TC-URB-UNBIND-002"
+      ],
+      "MissingBusinessRule": "未定义解除、重复绑定、刷新、重新登录和在线 Session 生效时机。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义解除、重复绑定、刷新、重新登录和在线 Session 生效时机。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-ROLE-015",
+      "AffectedTestCaseIds": [
+        "TC-ROLE-PERMISSION-005"
+      ],
+      "MissingBusinessRule": "未定义不同权限层级的拒绝合同。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义不同权限层级的拒绝合同。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-TASK-QUERY-016",
+      "AffectedTestCaseIds": [
+        "TC-TQUERY-QUERY-004"
+      ],
+      "MissingBusinessRule": "Handoff 未定义任务查询矩阵。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义任务查询矩阵。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-TASK-017",
+      "AffectedTestCaseIds": [
+        "TC-TNEW-CREATE-006"
+      ],
+      "MissingBusinessRule": "未定义重复有效依赖的幂等键、拒绝或新建规则。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义重复有效依赖的幂等键、拒绝或新建规则。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-TASK-018",
+      "AffectedTestCaseIds": [
+        "TC-TNEW-CREATE-007"
+      ],
+      "MissingBusinessRule": "未定义缺少模板、车辆、站点或楼层时的具体拒绝合同。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义缺少模板、车辆、站点或楼层时的具体拒绝合同。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-TASK-019",
+      "AffectedTestCaseIds": [
+        "TC-TLIFE-CANCEL-002"
+      ],
+      "MissingBusinessRule": "未定义跨操作状态、查询可见性和清理终态。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义跨操作状态、查询可见性和清理终态。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-TASK-020",
+      "AffectedTestCaseIds": [
+        "TC-TCANCEL-CANCEL-004"
+      ],
+      "MissingBusinessRule": "需要任务状态×归属×派发状态×权限决策表。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "需要任务状态×归属×派发状态×权限决策表。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-021",
+      "AffectedTestCaseIds": [
+        "TC-VEH-QUERY-003"
+      ],
+      "MissingBusinessRule": "Handoff 未定义车辆查询匹配和空态规则。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "Handoff 未定义车辆查询匹配和空态规则。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-022",
+      "AffectedTestCaseIds": [
+        "TC-VEH-CREATE-008"
+      ],
+      "MissingBusinessRule": "未提供必填字段和编号边界规则。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未提供必填字段和编号边界规则。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-023",
+      "AffectedTestCaseIds": [
+        "TC-VEH-CREATE-007"
+      ],
+      "MissingBusinessRule": "未提供车辆编号允许字符集合。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未提供车辆编号允许字符集合。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-024",
+      "AffectedTestCaseIds": [
+        "TC-VEH-UPDATE-003"
+      ],
+      "MissingBusinessRule": "未定义车辆可修改字段和失败后原值保持。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义车辆可修改字段和失败后原值保持。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-025",
+      "AffectedTestCaseIds": [
+        "TC-VEH-DELETE-002"
+      ],
+      "MissingBusinessRule": "未定义车辆删除及真实设备关联约束。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义车辆删除及真实设备关联约束。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-026",
+      "AffectedTestCaseIds": [
+        "TC-STAT-QUERY-006"
+      ],
+      "MissingBusinessRule": "未定义默认时间范围、默认筛选和默认排序。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义默认时间范围、默认筛选和默认排序。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-027",
+      "AffectedTestCaseIds": [
+        "TC-STAT-QUERY-007"
+      ],
+      "MissingBusinessRule": "未定义单月、跨月的统计时间语义。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义单月、跨月的统计时间语义。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-028",
+      "AffectedTestCaseIds": [
+        "TC-STAT-VALIDATE-005"
+      ],
+      "MissingBusinessRule": "未定义时间边界合法性和拒绝提示。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义时间边界合法性和拒绝提示。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-029",
+      "AffectedTestCaseIds": [
+        "TC-STAT-VALIDATE-006"
+      ],
+      "MissingBusinessRule": "未定义缺失筛选字段的校验合同。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义缺失筛选字段的校验合同。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-030",
+      "AffectedTestCaseIds": [
+        "TC-STAT-VALIDATE-007"
+      ],
+      "MissingBusinessRule": "未定义允许范围和越界行为。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义允许范围和越界行为。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-031",
+      "AffectedTestCaseIds": [
+        "TC-STAT-QUERY-008"
+      ],
+      "MissingBusinessRule": "未定义组合条件、重置和结果刷新语义。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义组合条件、重置和结果刷新语义。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-032",
+      "AffectedTestCaseIds": [
+        "TC-STAT-QUERY-009"
+      ],
+      "MissingBusinessRule": "未定义分页、排序、筛选后分页和切页保持。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "未定义分页、排序、筛选后分页和切页保持。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    },
+    {
+      "GapId": "GAP-FG-STAT-033",
+      "AffectedTestCaseIds": [
+        "TC-STAT-VALIDATE-004"
+      ],
+      "MissingBusinessRule": "缺少批准的 deterministic 非法筛选数据和精确拒绝 Expected。",
+      "AuthoritySourcesSearched": [
+        "Frozen Sanitized Handoff",
+        "Handoff Requirement / Design sections",
+        "Approved black-box test design assets"
+      ],
+      "MissingExpectedComponent": "缺少批准的 deterministic 非法筛选数据和精确拒绝 Expected。",
+      "ExecutionImpact": "NOT_EXECUTABLE：PrimaryAssertion 需要批准的业务语义后才能进行 PASS/FAIL 判定。",
+      "RequiredAuthority": "产品负责人、需求/设计批准人或批准基线",
+      "Status": "OPEN"
+    }
+  ],
+  "TrueGaps": [
+    "GAP-FG-USER-QUERY-001",
+    "GAP-FG-USER-QUERY-002",
+    "GAP-FG-USER-QUERY-003",
+    "GAP-FG-USER-QUERY-004",
+    "GAP-FG-USER-QUERY-005",
+    "GAP-FG-USER-QUERY-006",
+    "GAP-FG-USER-VALIDATION-007",
+    "GAP-FG-USER-VALIDATION-008",
+    "GAP-FG-USER-VALIDATION-009",
+    "GAP-FG-USER-UPDATE-010",
+    "GAP-FG-USER-STATE-011",
+    "GAP-FG-USER-DELETE-012",
+    "GAP-FG-ROLE-013",
+    "GAP-FG-ROLE-014",
+    "GAP-FG-ROLE-015",
+    "GAP-FG-TASK-QUERY-016",
+    "GAP-FG-TASK-017",
+    "GAP-FG-TASK-018",
+    "GAP-FG-TASK-019",
+    "GAP-FG-TASK-020",
+    "GAP-FG-VEHICLE-021",
+    "GAP-FG-VEHICLE-022",
+    "GAP-FG-VEHICLE-023",
+    "GAP-FG-VEHICLE-024",
+    "GAP-FG-VEHICLE-025",
+    "GAP-FG-STAT-026",
+    "GAP-FG-STAT-027",
+    "GAP-FG-STAT-028",
+    "GAP-FG-STAT-029",
+    "GAP-FG-STAT-030",
+    "GAP-FG-STAT-031",
+    "GAP-FG-STAT-032",
+    "GAP-FG-STAT-033"
+  ],
+  "ExpectedExtractionMisses": []
+}

@@ -1,4 +1,4 @@
-# RSSComposer 调度系统测试报告
+# RSSComposer 调度系统测试报告（Source-Assisted System Test）
 
 > 本报告由通用黑盒测试用例规范和 RSSComposer 项目适配器生成。本次只材料化测试设计资产并重生成报告，没有执行 Formal Run、FAST、Regression、Runtime 或业务测试。
 
@@ -13,7 +13,7 @@
 | Handoff Hash | d0e4c9ee346187cf3e0bb2723efa8925436263e535ba5924076ab019c5cb37e3 |
 | Generation Standard | GENERIC-BLACKBOX-TESTCASE-GENERATION-STANDARD-V1 |
 | 材料化时间 | 2026-08-27T02:01:15.800Z |
-| 细粒度正式用例 | 72 条；确认预期 43 条，pending 29 条 |
+| 细粒度正式用例 | 当前原子用例 72 条；最终 Catalog 82 条；确认预期 54 条，pending 28 条 |
 | 报告范围 | 仅展示当前正式 Catalog 的完整细粒度测试用例；历史执行记录不进入本报告正文 |
 
 ## 2. 测试结果概览
@@ -23,13 +23,13 @@
 | 指标 | 结果 |
 | --- | --- |
 | 主 Catalog 用例总数 | 72 |
-| Expected 已确认 | 43 |
-| Expected Pending | 29 |
-| Expectation Gap | 29 |
+| Expected 已确认 | 54 |
+| Expected Pending | 28 |
+| Expectation Gap | 28 |
 | 新细粒度尚未执行 | 72 |
-| 可自动执行设计资格 | 26 |
-| 需人工执行设计资格 | 15 |
-| 当前不可执行 | 31 |
+| 可自动执行设计资格 | 35 |
+| 需人工执行设计资格 | 16 |
+| 当前不可执行 | 28 |
 
 ## 3. 细粒度正式 Catalog
 
@@ -300,51 +300,173 @@
 | 日志管理 | 1 | 1 | 0 | 1 |
 | 统计分析 | 11 | 6 | 5 | 11 |
 
-## 5. Current Effective State
 
-| 类别 | 数量 | 当前含义 |
+
+
+
+## 5. Current Effective State（Source-Assisted Final Catalog）
+
+| 指标 | 数值 |
+| --- | --- |
+| 原子 Catalog 用例 | 72 |
+| 最终 Catalog 用例 | 82 |
+| 确认 Expected | 54 |
+| Pending Expected | 28 |
+| AUTO_ALLOWED | 35 |
+| MANUAL_REQUIRED | 16 |
+| NOT_EXECUTABLE / Expected 未确认 | 28 |
+| Formal Manifest | 0 |
+| Formal Business Case 已执行 | 0 |
+
+## 6. Expectation Gap（Resolution Audit）
+
+本轮仅以流程册关闭有明确业务预期的生命周期 Gap；源码发现不会关闭 Gap。剩余 28 条 Gap 保留为 Expected 阻断。
+
+| GapId | TestCaseId | 分类 | 原因 | 状态 |
+| --- | --- | --- | --- | --- |
+| GAP-GEN-USER-UPDATE-DUPLICATE-001 | TC-USER-UPDATE-002 | TRUE_AMBIGUITY | 唯一字段修改后的重复值处理规则和失败后原值保持规则未获批准。 | STILL_PENDING |
+| GAP-GEN-USER-DELETE-REPEAT-001 | TC-USER-DELETE-002 | TRUE_AMBIGUITY | 重复删除的幂等成功、对象不存在提示或业务错误规则未获批准。 | STILL_PENDING |
+| GAP-GEN-USER-DELETE-RECREATE-001 | TC-USER-CREATE-006 | TRUE_AMBIGUITY | 删除后是否允许使用原唯一键重新创建对象的规则未获批准。 | STILL_PENDING |
+| GAP-GEN-ROLE-RELATION-REMOVE-001 | TC-URB-UNBIND-001 | TRUE_AMBIGUITY | 解除关联后的权限刷新和在线会话生效时机未获批准。 | STILL_PENDING |
+| GAP-GEN-ROLE-RELATION-DUPLICATE-001 | TC-URB-BIND-002 | TRUE_AMBIGUITY | 重复绑定应拒绝、幂等成功或产生错误的规则未获批准。 | STILL_PENDING |
+| GAP-GEN-ROLE-RELATION-EFFECTIVE-001 | TC-URB-PERMISSION-001 | TRUE_AMBIGUITY | 关联权限变化对菜单、页面、按钮和在线会话的生效时机未获批准。 | STILL_PENDING |
+| GAP-GEN-PERMISSION-1 | TC-ROLE-PERMISSION-001 | TRUE_AMBIGUITY | 菜单层级的拒绝合同和可观察结果未获批准。 | STILL_PENDING |
+| GAP-GEN-PERMISSION-2 | TC-ROLE-PERMISSION-002 | TRUE_AMBIGUITY | 页面层级的拒绝合同和可观察结果未获批准。 | STILL_PENDING |
+| GAP-GEN-PERMISSION-3 | TC-ROLE-PERMISSION-003 | TRUE_AMBIGUITY | 按钮层级的拒绝合同和可观察结果未获批准。 | STILL_PENDING |
+| GAP-GEN-PERMISSION-4 | TC-ROLE-PERMISSION-004 | TRUE_AMBIGUITY | 直接 URL层级的拒绝合同和可观察结果未获批准。 | STILL_PENDING |
+| GAP-GEN-TASK-QUERY-SORT-001 | TC-TQUERY-QUERY-003 | TRUE_AMBIGUITY | 排序字段、方向和相同值时的稳定顺序未获批准。 | STILL_PENDING |
+| GAP-GEN-TASK-DUPLICATE-001 | TC-TNEW-CREATE-006 | TRUE_AMBIGUITY | 重复任务应拒绝、幂等成功或新建任务的规则未获批准。 | STILL_PENDING |
+| GAP-GEN-TASK-REQUIRED-001 | TC-TNEW-CREATE-007 | TRUE_AMBIGUITY | 缺少该依赖时的拒绝提示和是否产生任务的业务合同未获批准。 | STILL_PENDING |
+| GAP-GEN-TASK-STATE-001 | TC-TCANCEL-CANCEL-003 | TRUE_AMBIGUITY | 任务状态与取消操作的允许矩阵未获批准。 | STILL_PENDING |
+| GAP-GEN-VEHICLE-REQUIRED-ID-001 | TC-VEH-CREATE-004 | TRUE_AMBIGUITY | 车辆编号为空时的必填校验合同未获批准。 | STILL_PENDING |
+| GAP-GEN-VEHICLE-REQUIRED-NAME-001 | TC-VEH-CREATE-005 | TRUE_AMBIGUITY | 车辆名称为空时的必填校验合同未获批准。 | STILL_PENDING |
+| GAP-GEN-VEHICLE-LENGTH-001 | TC-VEH-CREATE-006 | TRUE_AMBIGUITY | 车辆编号长度边界和越界处理合同未获批准。 | STILL_PENDING |
+| GAP-GEN-VEHICLE-CHARSET-001 | TC-VEH-CREATE-007 | TRUE_AMBIGUITY | 车辆编号允许字符集合和拒绝行为未获批准。 | STILL_PENDING |
+| GAP-GEN-VEHICLE-UPDATE-INVALID-001 | TC-VEH-UPDATE-002 | TRUE_AMBIGUITY | 车辆字段可修改范围和非法值处理合同未获批准。 | STILL_PENDING |
+| GAP-GEN-STATS-SORT-001 | TC-STAT-QUERY-005 | TRUE_AMBIGUITY | 统计结果排序字段、方向和稳定顺序未获批准。 | STILL_PENDING |
+| GAP-GEN-STATS-RANGE-001 | TC-STAT-VALIDATE-001 | TRUE_AMBIGUITY | 时间范围边界是否合法以及无效时的拒绝合同未获批准。 | STILL_PENDING |
+| GAP-GEN-STATS-MISSING-001 | TC-STAT-VALIDATE-002 | TRUE_AMBIGUITY | 缺少时间字段时的校验合同未获批准。 | STILL_PENDING |
+| GAP-GEN-STATS-OVER-001 | TC-STAT-VALIDATE-003 | TRUE_AMBIGUITY | 超出允许时间范围时的拒绝或裁剪行为未获批准。 | STILL_PENDING |
+| GAP-GEN-STATS-FORMAT-001 | TC-STAT-VALIDATE-004 | TRUE_AMBIGUITY | 非法筛选格式和拒绝提示合同未获批准。 | STILL_PENDING |
+| GAP-FG-USER-VALIDATION-007 | TC-USER-CREATE-007 | TRUE_AMBIGUITY | 未提供显示名最大长度和超长拒绝 Expected。 | STILL_PENDING |
+| GAP-FG-USER-VALIDATION-008 | TC-USER-CREATE-008 | TRUE_AMBIGUITY | 未提供用户名最小/最大长度，不能猜测 min/max。 | STILL_PENDING |
+| GAP-FG-USER-VALIDATION-009 | TC-USER-CREATE-009 | TRUE_AMBIGUITY | 未提供允许字符集合和错误提示合同。 | STILL_PENDING |
+| GAP-FG-USER-STATE-011 | TC-USER-UPDATE-003 | TRUE_AMBIGUITY | 未定义禁用、启用、在线会话和重新登录的完整状态矩阵。 | STILL_PENDING |
+
+## 7. 本轮阶段结果
+
+| 阶段 | 结果 | 说明 |
 | --- | --- | --- |
-| 可自动执行设计资格 | 26 | Expected 已确认且设计资格为 AUTO_ALLOWED；本次仍未执行 |
-| 需人工执行设计资格 | 15 | 保留人工控制或视觉判断；本次仍未执行 |
-| 当前不可执行 | 31 | Expected 权威缺口或既有设计边界未解决；不得进入执行队列 |
-| 尚未执行 | 72 | 全部细粒度 TestCase 均未继承历史执行结果 |
+| PHASE 1 AUTHORITY LOAD | PASS | 已加载报告、流程册、冻结 Handoff 及仓库测试依据。 |
+| PHASE 2 SOURCE AUDIT | PASS_WITH_GAPS | 后端/前端源码只读审计完成；Source 未被用作 Expected Oracle。 |
+| PHASE 3 GAP RESOLUTION | PARTIAL_WITH_TRUE_GAPS_RETAINED | 可由流程权威关闭的 Gap 已关闭，其余保留。 |
+| PHASE 4 COVERAGE / TESTCASE REBUILD | PASS_WITH_BLOCKED_EXECUTION | 新增 10 条 FL-TASK Composite 设计记录。 |
+| PHASE 5 READINESS | BLOCKED | Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked |
+| PHASE 6 FORMAL RUN | BLOCKED | Formal Manifest 为空；未启动业务 Runtime。 |
+| PHASE 7 REPORT | PASS | Markdown、HTML、审计与追踪产物已生成。 |
 
-## 6. Expectation Gap
+## 8. FL-TASK-01～10 Composite Catalog
 
-所有 pending TestCase 都保留非空 ExpectedResult，但其语义仅为权威缺口描述，不是业务判定 oracle。
+| 测试场景 | TestCaseId | 前置条件 | 测试数据 | 操作步骤 | 预期结果 | 状态 | 实际验证 | 图片示例 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 任务模板从零到可下单 | TC-TFLOW-COMPOSITE-001 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-01 顺序执行并观察 DB、API | 接口铺设 TEST_OWNED 模板及至少两步流转后可被建单引用。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 建单→派车→执行→完成→反馈 | TC-TFLOW-COMPOSITE-002 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-02 顺序执行并观察 API、DB、MOCK | 任务主表、每条明细、反馈队列和车辆释放形成闭环。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 第三方下发→状态反馈 | TC-TFLOW-COMPOSITE-003 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-03 顺序执行并观察 API、DB、MOCK | 外部来源保持来源字段，桩收到与队列对应的状态报文。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 取放货业务交互门控 | TC-TFLOW-COMPOSITE-004 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-04 顺序执行并观察 MOCK、DB、LOG | 放行前车辆不越过门控点，恢复后任务继续。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 取消任务两条路径与终态 | TC-TFLOW-COMPOSITE-005 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-05 顺序执行并观察 API、DB、MOCK | 取消结果以稳定终态、车辆行为和反馈为准，不只看接口提示。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 优先级与派单顺序 | TC-TFLOW-COMPOSITE-006 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-06 顺序执行并观察 API、DB | 派发顺序可由批准策略和优先级解释，执行中任务不被抢占。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 任务完成等待与链式接续 | TC-TFLOW-COMPOSITE-007 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-07 顺序执行并观察 MOCK、DB、LOG | 接续成功时车辆不空驶回位，窗口到期后资源恢复常规调度。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 任务异常结束与重发 | TC-TFLOW-COMPOSITE-008 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-08 顺序执行并观察 API、DB、LOG | 原任务保持异常终态，新任务独立生成且车辆资源释放。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 指定车任务与派不出去排查 | TC-TFLOW-COMPOSITE-009 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-09 顺序执行并观察 API、DB | 指定车约束不被绕过；恢复后由指定车完成。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
+| 任务状态反馈闭环 | TC-TFLOW-COMPOSITE-010 | 安全夹具、DummyCar、模板、进程、Mock、清理能力就绪 | AT_TFLOW_<RunId> | 按 FL-TASK-10 顺序执行并观察 DB、MOCK、LOG | 所有队列行最终销账；失败、超时、空响应和非约定响应可被区分。 | BLOCKED | 未执行；Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked | — |
 
-| GapId | TestCaseId | 所属模块 | 测试场景 | 待确认 Expected / Gap | 当前状态 |
-| --- | --- | --- | --- | --- | --- |
-| GAP-GEN-USER-UPDATE-DUPLICATE-001 | TC-USER-UPDATE-002 | 系统管理 | 用户修改-唯一字段重复校验 | 唯一字段修改后的重复值处理规则和失败后原值保持规则未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-USER-DELETE-REPEAT-001 | TC-USER-DELETE-002 | 系统管理 | 用户删除-重复删除 | 重复删除的幂等成功、对象不存在提示或业务错误规则未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-USER-DELETE-RECREATE-001 | TC-USER-CREATE-006 | 系统管理 | 用户删除-删除后同唯一键重建 | 删除后是否允许使用原唯一键重新创建对象的规则未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-ROLE-RELATION-REMOVE-001 | TC-URB-UNBIND-001 | 系统管理 | 角色关联-解除关联 | 解除关联后的权限刷新和在线会话生效时机未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-ROLE-RELATION-DUPLICATE-001 | TC-URB-BIND-002 | 系统管理 | 角色关联-重复绑定 | 重复绑定应拒绝、幂等成功或产生错误的规则未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-ROLE-RELATION-EFFECTIVE-001 | TC-URB-PERMISSION-001 | 系统管理 | 角色关联-权限变化生效 | 关联权限变化对菜单、页面、按钮和在线会话的生效时机未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-PERMISSION-1 | TC-ROLE-PERMISSION-001 | 系统管理 | 权限访问-菜单拒绝 | 菜单层级的拒绝合同和可观察结果未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-PERMISSION-2 | TC-ROLE-PERMISSION-002 | 系统管理 | 权限访问-页面拒绝 | 页面层级的拒绝合同和可观察结果未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-PERMISSION-3 | TC-ROLE-PERMISSION-003 | 系统管理 | 权限访问-按钮拒绝 | 按钮层级的拒绝合同和可观察结果未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-PERMISSION-4 | TC-ROLE-PERMISSION-004 | 系统管理 | 权限访问-直接 URL拒绝 | 直接 URL层级的拒绝合同和可观察结果未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-TASK-QUERY-SORT-001 | TC-TQUERY-QUERY-003 | 任务管理 | 任务查询-排序 | 排序字段、方向和相同值时的稳定顺序未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-TASK-DUPLICATE-001 | TC-TNEW-CREATE-006 | 任务管理 | 任务新增-重复任务 | 重复任务应拒绝、幂等成功或新建任务的规则未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-TASK-REQUIRED-001 | TC-TNEW-CREATE-007 | 任务管理 | 任务新增-缺少必填依赖 | 缺少该依赖时的拒绝提示和是否产生任务的业务合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-TASK-LIFECYCLE-CANCEL-001 | TC-TLIFE-CANCEL-001 | 任务管理 | 任务生命周期-取消后查询 | 取消后的状态、查询可见性和终态清理规则未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-TASK-STATE-001 | TC-TCANCEL-CANCEL-003 | 任务管理 | 任务状态-取消状态矩阵 | 任务状态与取消操作的允许矩阵未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-VEHICLE-REQUIRED-ID-001 | TC-VEH-CREATE-004 | 车辆管理 | 车辆新增-编号为空 | 车辆编号为空时的必填校验合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-VEHICLE-REQUIRED-NAME-001 | TC-VEH-CREATE-005 | 车辆管理 | 车辆新增-名称为空 | 车辆名称为空时的必填校验合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-VEHICLE-LENGTH-001 | TC-VEH-CREATE-006 | 车辆管理 | 车辆新增-编号长度边界 | 车辆编号长度边界和越界处理合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-VEHICLE-CHARSET-001 | TC-VEH-CREATE-007 | 车辆管理 | 车辆新增-非法字符 | 车辆编号允许字符集合和拒绝行为未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-VEHICLE-UPDATE-INVALID-001 | TC-VEH-UPDATE-002 | 车辆管理 | 车辆修改-非法字段 | 车辆字段可修改范围和非法值处理合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-STATS-SORT-001 | TC-STAT-QUERY-005 | 统计分析 | 统计查询-排序 | 统计结果排序字段、方向和稳定顺序未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-STATS-RANGE-001 | TC-STAT-VALIDATE-001 | 统计分析 | 统计查询-时间范围边界 | 时间范围边界是否合法以及无效时的拒绝合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-STATS-MISSING-001 | TC-STAT-VALIDATE-002 | 统计分析 | 统计查询-缺少时间条件 | 缺少时间字段时的校验合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-STATS-OVER-001 | TC-STAT-VALIDATE-003 | 统计分析 | 统计查询-超出允许范围 | 超出允许时间范围时的拒绝或裁剪行为未获批准。 | 当前不可执行；尚未执行 |
-| GAP-GEN-STATS-FORMAT-001 | TC-STAT-VALIDATE-004 | 统计分析 | 统计查询-非法格式 | 非法筛选格式和拒绝提示合同未获批准。 | 当前不可执行；尚未执行 |
-| GAP-FG-USER-VALIDATION-007 | TC-USER-CREATE-007 | 系统管理 | 用户新增-显示名超长 | 未提供显示名最大长度和超长拒绝 Expected。 | 当前不可执行；尚未执行 |
-| GAP-FG-USER-VALIDATION-008 | TC-USER-CREATE-008 | 系统管理 | 用户新增-用户名长度边界 | 未提供用户名最小/最大长度，不能猜测 min/max。 | 当前不可执行；尚未执行 |
-| GAP-FG-USER-VALIDATION-009 | TC-USER-CREATE-009 | 系统管理 | 用户新增-非法字符 | 未提供允许字符集合和错误提示合同。 | 当前不可执行；尚未执行 |
-| GAP-FG-USER-STATE-011 | TC-USER-UPDATE-003 | 系统管理 | 用户状态-禁用启用与登录影响 | 未定义禁用、启用、在线会话和重新登录的完整状态矩阵。 | 当前不可执行；尚未执行 |
+## 9. Coverage Summary
 
-## 7. 测试结论
+| 维度 | 结果 |
+| --- | --- |
+| Feature Coverage | COVERED_WITH_EXECUTION_BLOCKERS；82 条 Case 有设计记录 |
+| Rule Coverage | PARTIAL；12 条规则记录 |
+| State Coverage | DESIGNED_NOT_EXECUTED；状态 0/1/2/7/10 已设计 |
+| Flow Coverage | DESIGN_COVERED_EXECUTION_BLOCKED；FL-TASK-01～10 设计 10/10，执行 0/10 |
+| Gap Coverage | OPEN_GAPS_RETAINED；剩余真实 Gap 28 |
+| Formal Execution Coverage | BLOCKED；Manifest 0，Business Case 0 |
+| P0 Coverage | FORMAL_BLOCKED |
+| P1 Coverage | FORMAL_BLOCKED |
 
-正式 Fine-Grained Catalog 已材料化 72 条用例，其中 43 条 Expected 已确认，29 条保留真实权威缺口。本次仅生成测试设计报告，没有执行任何业务用例；完整测试用例均在第 3 节按模块、功能和操作连续展示。
+## 10. Execution Readiness / Formal Result
+
+- FULL_FLOW_EXECUTION_GATE = BLOCKED
+- FORMAL_SYSTEM_RUN_STATUS = BLOCKED
+- Missing checks: FixedControlToken、DatabaseReachable、ActiveMapReady、RequiredProcessesRunning、DummyCarAvailable、CarInitialized、TemplateFixtureReady、MockPortAvailable、FormalAutomationLinked
+- Formal business cases executed: No
+- Formal PASS/FAIL are both 0 because no business Case entered the Manifest.
+- FL-TASK flow records are BLOCKED at the gate, not product FAIL; no Runtime observation was collected.
+
+## 11. Required Statistics
+
+| Metric | Value |
+| --- | --- |
+| AuthorityDocumentsLoaded | 3 |
+| SourceProjectsAudited | 2 |
+| SourceCapabilitiesFound | 415 |
+| HandoffMissingCapabilityCount | 4 |
+| SourceDesignConflictCount | 0 |
+| CurrentGapCountBefore | 29 |
+| ResolvedGapCount | 1 |
+| RemainingGapCount | 28 |
+| ExistingCaseCountBefore | 72 |
+| FinalCaseCount | 82 |
+| AddedCaseCount | 10 |
+| SplitCaseCount | 0 |
+| DeprecatedCaseCount | 0 |
+| P0Coverage | FORMAL_BLOCKED |
+| P1Coverage | FORMAL_BLOCKED |
+| FLTaskMainFlowCoverage | DESIGN_COVERED_EXECUTION_BLOCKED |
+| ConfirmedExpectedCount | 54 |
+| PendingExpectedCount | 28 |
+| AutoAllowedCount | 35 |
+| ManualRequiredCount | 16 |
+| NotExecutableCount | 28 |
+| FormalManifestCaseCount | 0 |
+| FormalPassCount | 0 |
+| FormalFailCount | 0 |
+| FormalErrorCount | 0 |
+| FormalBlockedCount | 10 |
+| CleanupResidualCount | 0 |
+
+## 12. Final Gates
+
+| Gate | Status |
+| --- | --- |
+| SOURCE_AUDIT_STATUS | PASS_WITH_OPEN_AUTHORITY_AND_COVERAGE_GAPS |
+| HANDOFF_COMPLETENESS_STATUS | PASS_WITH_MISSING_CAPABILITIES |
+| DESIGN_SOURCE_ALIGNMENT_STATUS | PASS_WITH_OPEN_AUTHORITY_GAPS |
+| GAP_RESOLUTION_STATUS | PARTIAL_WITH_TRUE_GAPS_RETAINED |
+| TESTCASE_COVERAGE_STATUS | PASS_WITH_EXECUTION_BLOCKERS |
+| FL_TASK_01_10_COVERAGE_STATUS | DESIGN_COVERED_10_OF_10_EXECUTION_BLOCKED |
+| EXECUTION_READINESS_STATUS | BLOCKED |
+| FORMAL_SYSTEM_RUN_STATUS | BLOCKED |
+| CLEANUP_VERIFICATION_STATUS | NOT_REQUIRED_NO_MUTATION |
+| FINAL_REPORT_STATUS | PASS |
+| FINAL_SYSTEM_TEST_STATUS | BLOCKED_BY_ENVIRONMENT_AND_HARNESS_READINESS |
+
+## 13. Artifact Index
+
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/source-design-audit.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/source-design-audit.md
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/handoff-completeness-audit.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/gap-resolution-audit.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/coverage-matrix.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/flow-coverage-matrix.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/flow-coverage-matrix.md
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/final-testcase-catalog.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/execution-readiness.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/execution-readiness.md
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/formal-manifest.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/formal-result.json
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/formal-result.md
+- projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-01/evidence-index.json
+- projects/rsscomposer-blackbox/reports/RSSComposer调度系统测试报告.md
+- projects/rsscomposer-blackbox/reports/RSSComposer调度系统测试报告.html
+
+> Source locations and detailed alignment records are intentionally kept in standalone audit artifacts. Source behavior is observation only and never silently changes Expected.

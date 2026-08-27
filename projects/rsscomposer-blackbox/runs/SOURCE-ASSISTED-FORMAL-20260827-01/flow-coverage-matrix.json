@@ -1,0 +1,167 @@
+[
+  {
+    "FlowId": "FL-TASK-01",
+    "Title": "任务模板从零到可下单",
+    "Priority": "P0",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "接口铺设 TEST_OWNED 模板及至少两步流转后可被建单引用。",
+    "ObservationPoints": [
+      "DB",
+      "API"
+    ],
+    "ExistingTestCaseIds": [
+      "TC-TNEW-CREATE-001"
+    ],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-02",
+    "Title": "建单→派车→执行→完成→反馈",
+    "Priority": "P0",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "任务主表、每条明细、反馈队列和车辆释放形成闭环。",
+    "ObservationPoints": [
+      "API",
+      "DB",
+      "MOCK"
+    ],
+    "ExistingTestCaseIds": [
+      "TC-TNEW-CREATE-001"
+    ],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-03",
+    "Title": "第三方下发→状态反馈",
+    "Priority": "P0",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "外部来源保持来源字段，桩收到与队列对应的状态报文。",
+    "ObservationPoints": [
+      "API",
+      "DB",
+      "MOCK"
+    ],
+    "ExistingTestCaseIds": [],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-04",
+    "Title": "取放货业务交互门控",
+    "Priority": "P1",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "放行前车辆不越过门控点，恢复后任务继续。",
+    "ObservationPoints": [
+      "MOCK",
+      "DB",
+      "LOG"
+    ],
+    "ExistingTestCaseIds": [],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-05",
+    "Title": "取消任务两条路径与终态",
+    "Priority": "P0",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "取消结果以稳定终态、车辆行为和反馈为准，不只看接口提示。",
+    "ObservationPoints": [
+      "API",
+      "DB",
+      "MOCK"
+    ],
+    "ExistingTestCaseIds": [
+      "TC-TCANCEL-CANCEL-001"
+    ],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-06",
+    "Title": "优先级与派单顺序",
+    "Priority": "P1",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "派发顺序可由批准策略和优先级解释，执行中任务不被抢占。",
+    "ObservationPoints": [
+      "API",
+      "DB"
+    ],
+    "ExistingTestCaseIds": [],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-07",
+    "Title": "任务完成等待与链式接续",
+    "Priority": "P1",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "接续成功时车辆不空驶回位，窗口到期后资源恢复常规调度。",
+    "ObservationPoints": [
+      "MOCK",
+      "DB",
+      "LOG"
+    ],
+    "ExistingTestCaseIds": [],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-08",
+    "Title": "任务异常结束与重发",
+    "Priority": "P1",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "原任务保持异常终态，新任务独立生成且车辆资源释放。",
+    "ObservationPoints": [
+      "API",
+      "DB",
+      "LOG"
+    ],
+    "ExistingTestCaseIds": [
+      "TC-TRESEND-RESEND-001"
+    ],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "MANUAL_REQUIRED"
+  },
+  {
+    "FlowId": "FL-TASK-09",
+    "Title": "指定车任务与派不出去排查",
+    "Priority": "P1",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "指定车约束不被绕过；恢复后由指定车完成。",
+    "ObservationPoints": [
+      "API",
+      "DB"
+    ],
+    "ExistingTestCaseIds": [],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  },
+  {
+    "FlowId": "FL-TASK-10",
+    "Title": "任务状态反馈闭环",
+    "Priority": "P0",
+    "DesignCoverageStatus": "COVERED",
+    "ExecutionCoverageStatus": "BLOCKED",
+    "CoreAssertion": "所有队列行最终销账；失败、超时、空响应和非约定响应可被区分。",
+    "ObservationPoints": [
+      "DB",
+      "MOCK",
+      "LOG"
+    ],
+    "ExistingTestCaseIds": [],
+    "MissingTestCaseIds": [],
+    "AutomationFeasibility": "DESIGN_AUTO_ALLOWED_ENV_BLOCKED"
+  }
+]

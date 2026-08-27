@@ -1,0 +1,343 @@
+{
+  "ExecutionManifestId": "SOURCE-ASSISTED-SOURCE-ASSISTED-FORMAL-20260827-01",
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-01",
+  "FormalHarness": "PROJECT_PLAYWRIGHT",
+  "BrowserVisibility": "HEADED",
+  "InteractionMode": "UNATTENDED",
+  "HumanConfirmationDuringAutoRun": "FORBIDDEN",
+  "EnvironmentReadinessStatus": "BLOCKED",
+  "EnvironmentReadinessReason": "Missing required checks: FixedControlToken, DatabaseReachable, ActiveMapReady, RequiredProcessesRunning, DummyCarAvailable, CarInitialized, TemplateFixtureReady, MockPortAvailable, FormalAutomationLinked",
+  "ExecutionManifestCases": [],
+  "ExcludedCaseIds": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "Reason": "PENDING_EXPECTED_AUTHORITY"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "Reason": "READINESS_GATE_BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "Reason": "READINESS_GATE_BLOCKED"
+    }
+  ],
+  "ExecutionQueueStarted": false,
+  "FormalBusinessCasesExecuted": false
+}

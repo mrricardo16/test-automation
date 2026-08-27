@@ -1,0 +1,108 @@
+{
+  "QualityReportType": "BLACKBOX_GENERATION_QUALITY_REPORT",
+  "Status": "PASS",
+  "Checks": {
+    "UniqueTestCaseId": true,
+    "NonEmptyExpectedResult": true,
+    "ExpectedAuthorityComplete": true,
+    "AuthorityCompletenessComplete": true,
+    "PendingCasesNotExecutable": true,
+    "EveryPendingExpectedHasGap": true,
+    "EveryConfirmedExpectedHasSource": true,
+    "InventoryComplete": true,
+    "BidirectionalTraceabilityComplete": true,
+    "ExpectedGapClassificationComplete": true
+  },
+  "AuthoritySourcesUsed": [
+    "Frozen Sanitized Handoff",
+    "Handoff Requirement / Design sections",
+    "Approved black-box test design assets"
+  ],
+  "AuthoritySearchCompleteness": "COMPLETE",
+  "ModuleCount": 6,
+  "FeatureCount": 12,
+  "BusinessRuleCount": 55,
+  "HistoricalTestCaseCount": 22,
+  "GeneratedFineGrainedTestCaseCount": 55,
+  "AtomicTestCaseCount": 54,
+  "CompositeTestCaseCount": 1,
+  "ConfirmedExpectedCount": 22,
+  "PendingAuthorityExpectedCount": 33,
+  "ExpectationGapCount": 33,
+  "ExpectedExtractionMissCount": 0,
+  "GenerationDefectCount": 0,
+  "CoverageGapCount": 33,
+  "CoverageGapConvertedToTestCaseCount": 33,
+  "QueryTestCaseCount": 15,
+  "CreateTestCaseCount": 20,
+  "UpdateTestCaseCount": 2,
+  "DeleteTestCaseCount": 2,
+  "ValidationTestCaseCount": 4,
+  "BoundaryTestCaseCount": 10,
+  "StateTransitionTestCaseCount": 6,
+  "PermissionTestCaseCount": 1,
+  "RelationshipTestCaseCount": 2,
+  "CompositeLifecycleTestCaseCount": 1,
+  "CasesSplitFromOverbroadHistoricalCases": [
+    "TC-BB-REAL-002-B"
+  ],
+  "EveryTestCaseHasExpected": true,
+  "EveryPendingExpectedHasGap": true,
+  "EveryConfirmedExpectedHasSource": true,
+  "RuntimeUsedAsExpected": "No",
+  "ProductSourceRead": "No",
+  "HistoricalExpectedChanged": "No",
+  "HistoricalExecutionStatusChanged": "No",
+  "FormalBusinessCasesExecuted": "No",
+  "Examples": {
+    "ExpectedExtracted": [
+      "TC-USER-CREATE-001",
+      "TC-USER-CREATE-002",
+      "TC-USER-CREATE-003"
+    ],
+    "TrueExpectationGaps": [
+      "GAP-FG-USER-QUERY-001",
+      "GAP-FG-USER-QUERY-002",
+      "GAP-FG-USER-QUERY-003"
+    ],
+    "ExpectedExtractionMisses": [],
+    "CoverageGapConvertedToTestCases": [
+      "TC-USER-QUERY-004",
+      "TC-USER-QUERY-005",
+      "TC-USER-QUERY-006"
+    ],
+    "HistoricalCasesToSplit": [
+      "TC-BB-REAL-002-B"
+    ]
+  },
+  "Statuses": {
+    "BLACKBOX_AUTHORITY_EXTRACTION_STATUS": "PASS",
+    "BLACKBOX_FINE_GRAINED_TESTCASE_GENERATION_STATUS": "PASS",
+    "BLACKBOX_EXPECTED_GENERATION_STATUS": "PASS_WITH_PENDING_AUTHORITY",
+    "BLACKBOX_EXPECTATION_GAP_GOVERNANCE_STATUS": "PASS",
+    "BLACKBOX_TESTCASE_TRACEABILITY_STATUS": "PASS",
+    "BLACKBOX_TESTCASE_GENERATION_QUALITY_STATUS": "PASS"
+  },
+  "Manifest": {
+    "Standard": "BLACKBOX TESTCASE GENERATION STANDARD REBUILD",
+    "Mode": "DESIGN_ONLY",
+    "ArtifactCount": 8,
+    "ArtifactFiles": [
+      "黑盒模块清单.json",
+      "黑盒业务规则清单.json",
+      "黑盒测试设计模型.json",
+      "黑盒细粒度测试用例.json",
+      "黑盒预期追踪.json",
+      "黑盒预期缺口.json",
+      "黑盒权威覆盖报告.json",
+      "黑盒生成质量报告.json"
+    ],
+    "SourceCounts": {
+      "HistoricalConfirmedCases": 22,
+      "PendingAuthorityCases": 33,
+      "TotalScenariosAndTestCases": 55
+    },
+    "ProhibitedInputsUsed": [],
+    "FrozenHandoffModified": false
+  }
+}

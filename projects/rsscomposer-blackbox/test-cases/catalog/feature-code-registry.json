@@ -56,6 +56,12 @@
       "Active": true
     },
     {
+      "ModuleName": "任务管理",
+      "FeatureName": "任务全流程",
+      "FeatureCode": "TFLOW",
+      "Active": true
+    },
+    {
       "ModuleName": "车辆管理",
       "FeatureName": "车辆管理",
       "FeatureCode": "VEH",

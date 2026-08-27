@@ -1,0 +1,94 @@
+{
+  "FeatureCoverage": {
+    "CatalogCaseCount": 82,
+    "CoveredByDesign": 82,
+    "Status": "COVERED_WITH_EXECUTION_BLOCKERS"
+  },
+  "RuleCoverage": {
+    "SourceDesignRules": 12,
+    "CasesWithRuleOrFlowRef": 82,
+    "Status": "PARTIAL"
+  },
+  "StateCoverage": {
+    "RequiredStates": [
+      0,
+      1,
+      2,
+      7,
+      10
+    ],
+    "FlowCases": [
+      "TC-TFLOW-COMPOSITE-001",
+      "TC-TFLOW-COMPOSITE-002",
+      "TC-TFLOW-COMPOSITE-003",
+      "TC-TFLOW-COMPOSITE-004",
+      "TC-TFLOW-COMPOSITE-005",
+      "TC-TFLOW-COMPOSITE-006",
+      "TC-TFLOW-COMPOSITE-007",
+      "TC-TFLOW-COMPOSITE-008",
+      "TC-TFLOW-COMPOSITE-009",
+      "TC-TFLOW-COMPOSITE-010"
+    ],
+    "Status": "DESIGNED_NOT_EXECUTED"
+  },
+  "FlowCoverage": {
+    "MainFlowCaseCount": 10,
+    "DesignCovered": 10,
+    "ExecutionCovered": 0,
+    "Status": "DESIGN_COVERED_EXECUTION_BLOCKED"
+  },
+  "GapCoverage": {
+    "ConfirmedExpectedCount": 54,
+    "PendingExpectedCount": 28,
+    "Status": "OPEN_GAPS_RETAINED"
+  },
+  "FormalExecutionCoverage": {
+    "ManifestCaseCount": 0,
+    "ExecutedCaseCount": 0,
+    "Status": "BLOCKED_BY_READINESS_GATE"
+  },
+  "P0Coverage": {
+    "Total": 6,
+    "DesignCovered": 6,
+    "FormalExecuted": 0,
+    "Status": "FORMAL_BLOCKED"
+  },
+  "P1Coverage": {
+    "Total": 74,
+    "DesignCovered": 74,
+    "FormalExecuted": 0,
+    "Status": "FORMAL_BLOCKED"
+  },
+  "ModuleResult": [
+    {
+      "Module": "系统管理",
+      "Cases": 29,
+      "Execution": "BLOCKED_OR_UNEXECUTED"
+    },
+    {
+      "Module": "任务管理",
+      "Cases": 28,
+      "Execution": "BLOCKED_OR_UNEXECUTED"
+    },
+    {
+      "Module": "车辆管理",
+      "Cases": 12,
+      "Execution": "BLOCKED_OR_UNEXECUTED"
+    },
+    {
+      "Module": "监控管理",
+      "Cases": 1,
+      "Execution": "BLOCKED_OR_UNEXECUTED"
+    },
+    {
+      "Module": "日志管理",
+      "Cases": 1,
+      "Execution": "BLOCKED_OR_UNEXECUTED"
+    },
+    {
+      "Module": "统计分析",
+      "Cases": 11,
+      "Execution": "BLOCKED_OR_UNEXECUTED"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "AuditType": "SOURCE_ASSISTED_SYSTEM_TEST_DESIGN_AUDIT",
+  "ExpectedAuthorityHierarchy": [
+    "REQUIREMENT",
+    "APPROVED_DESIGN",
+    "HANDOFF",
+    "FLOW_DESIGN",
+    "INTERFACE_CONTRACT",
+    "DESIGN_DEFAULT"
+  ],
+  "SourceIsExpectedOracle": false,
+  "authorityExpectedIsNeverSourceObservation": true,
+  "SourceProjectsAudited": 2,
+  "BackendRoot": "D:/HZ_RSS40/03_trunk/src_m_rsscomposer",
+  "FrontendRoot": "D:/HZ_RSS40/03_trunk/src_m_ui",
+  "SourceInventorySummary": {
+    "BackendEndpointCount": 164,
+    "FrontendApiCount": 251,
+    "FrontendRouteCount": 14,
+    "BackendUnmatchedEndpointCount": 44
+  },
+  "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+  "HandoffIntegrity": "PASS",
+  "CurrentCatalogCount": 72,
+  "RuleMatrix": [
+    {
+      "RuleId": "RULE-USER-REQUIRED",
+      "Module": "系统管理",
+      "Feature": "用户",
+      "Operation": "CREATE",
+      "DesignAuthorityRef": "handoff-package/05-validation-rules.md",
+      "FlowAuthorityRef": null,
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "UserController.cs",
+      "SourceObservedBehavior": "Controller rejects missing login/display fields before service write.",
+      "AuthorityExpected": "Approved handoff requires valid user data to save.",
+      "AlignmentStatus": "SOURCE_CONFIRMS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-USER-CREATE-001",
+        "TC-USER-CREATE-004",
+        "TC-USER-CREATE-005"
+      ],
+      "CoverageStatus": "COVERED",
+      "GapStatus": "CLOSED"
+    },
+    {
+      "RuleId": "RULE-USER-DUPLICATE",
+      "Module": "系统管理",
+      "Feature": "用户",
+      "Operation": "CREATE",
+      "DesignAuthorityRef": "handoff-package/05-validation-rules.md",
+      "FlowAuthorityRef": null,
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "UserController.cs",
+      "SourceObservedBehavior": "User creation checks an existing login before insertion.",
+      "AuthorityExpected": "A duplicate approved baseline user must not create a second record.",
+      "AlignmentStatus": "SOURCE_CONFIRMS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-USER-CREATE-002"
+      ],
+      "CoverageStatus": "COVERED",
+      "GapStatus": "CLOSED"
+    },
+    {
+      "RuleId": "RULE-TASK-PRIORITY-99",
+      "Module": "任务管理",
+      "Feature": "任务",
+      "Operation": "CREATE",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "Controller/taskController.cs:83",
+      "SourceObservedBehavior": "PushTask rejects a priority above 99.",
+      "AuthorityExpected": "The flow requires a valid priority boundary and deterministic rejection.",
+      "AlignmentStatus": "SOURCE_DISCOVERED",
+      "ExistingTestCaseIds": [
+        "TC-TNEW-CREATE-001"
+      ],
+      "CoverageStatus": "PARTIAL",
+      "GapStatus": "OPEN_COVERAGE_OR_EXECUTION"
+    },
+    {
+      "RuleId": "RULE-TASK-PENDING-CAP",
+      "Module": "任务管理",
+      "Feature": "任务",
+      "Operation": "CREATE",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "Interfaces/Service/Task/TaskService.cs:42",
+      "SourceObservedBehavior": "External task intake counts unexecuted tasks before accepting another.",
+      "AuthorityExpected": "The flow requires bounded queue preparation; the exact operational limit remains a source observation.",
+      "AlignmentStatus": "SOURCE_DISCOVERED_NEEDS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-TNEW-CREATE-006"
+      ],
+      "CoverageStatus": "UNTESTED",
+      "GapStatus": "OPEN_AUTHORITY_GAP"
+    },
+    {
+      "RuleId": "RULE-TASK-STATES",
+      "Module": "任务管理",
+      "Feature": "任务生命周期",
+      "Operation": "STATE_TRANSITION",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "Interfaces/Service/Task/TaskService.cs:253-340",
+      "SourceObservedBehavior": "Service writes main and detail state rows and enqueues feedback state records.",
+      "AuthorityExpected": "Flow expects 0, 1, 2, 7 and 10 lifecycle outcomes plus detail/queue observations.",
+      "AlignmentStatus": "SOURCE_CONFIRMS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-TFLOW-COMPOSITE-002",
+        "TC-TFLOW-COMPOSITE-003",
+        "TC-TFLOW-COMPOSITE-004",
+        "TC-TFLOW-COMPOSITE-005"
+      ],
+      "CoverageStatus": "BLOCKED",
+      "GapStatus": "OPEN_COVERAGE_OR_EXECUTION"
+    },
+    {
+      "RuleId": "RULE-TASK-CANCEL",
+      "Module": "任务管理",
+      "Feature": "任务取消",
+      "Operation": "CANCEL",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "Controller/taskController.cs:213-359",
+      "SourceObservedBehavior": "Cancel handling branches on task state, car identity and force-stop capability.",
+      "AuthorityExpected": "The flow distinguishes unexecuted cancellation from executing cancellation.",
+      "AlignmentStatus": "SOURCE_DISCOVERED",
+      "ExistingTestCaseIds": [
+        "TC-TCANCEL-CANCEL-001",
+        "TC-TCANCEL-CANCEL-002",
+        "TC-TFLOW-COMPOSITE-005"
+      ],
+      "CoverageStatus": "BLOCKED",
+      "GapStatus": "OPEN_COVERAGE_OR_EXECUTION"
+    },
+    {
+      "RuleId": "RULE-TASK-RESEND",
+      "Module": "任务管理",
+      "Feature": "任务重发",
+      "Operation": "RESEND",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "Areas/Task/TaskController.cs:ResendTask",
+      "SourceObservedBehavior": "Resend rejects selected states and delegates creation of a new task.",
+      "AuthorityExpected": "The flow requires a new task code while the original record remains unchanged.",
+      "AlignmentStatus": "SOURCE_CONFIRMS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-TRESEND-RESEND-001",
+        "TC-TRESEND-RESEND-002",
+        "TC-TFLOW-COMPOSITE-008"
+      ],
+      "CoverageStatus": "BLOCKED",
+      "GapStatus": "OPEN_COVERAGE_OR_EXECUTION"
+    },
+    {
+      "RuleId": "RULE-FEEDBACK-QUEUE",
+      "Module": "任务管理",
+      "Feature": "状态反馈",
+      "Operation": "EXTERNAL_INTEGRATION",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "Interfaces/Service/Task/TaskStatueDetailService.cs:27-58",
+      "SourceObservedBehavior": "Unsuccessful queue rows remain pending; successful rows are marked with a result time and a third-party log is written.",
+      "AuthorityExpected": "The flow requires queue drain, retry, and log evidence from DB/MOCK/LOG.",
+      "AlignmentStatus": "SOURCE_CONFIRMS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-TFLOW-COMPOSITE-002",
+        "TC-TFLOW-COMPOSITE-003",
+        "TC-TFLOW-COMPOSITE-010"
+      ],
+      "CoverageStatus": "BLOCKED",
+      "GapStatus": "OPEN_COVERAGE_OR_EXECUTION"
+    },
+    {
+      "RuleId": "RULE-FEEDBACK-MONTH-TABLE",
+      "Module": "日志管理",
+      "Feature": "第三方交互日志",
+      "Operation": "QUERY",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "Interfaces/Service/Log/MsgSendThirdService.cs:151-175",
+      "SourceObservedBehavior": "Third-party log table is selected from message creation month.",
+      "AuthorityExpected": "The flow calls for creation-month log lookup for cross-month tasks.",
+      "AlignmentStatus": "SOURCE_DISCOVERED",
+      "ExistingTestCaseIds": [
+        "TC-TFLOW-COMPOSITE-010"
+      ],
+      "CoverageStatus": "BLOCKED",
+      "GapStatus": "OPEN_COVERAGE_OR_EXECUTION"
+    },
+    {
+      "RuleId": "RULE-DUMMYCAR",
+      "Module": "车辆管理",
+      "Feature": "安全测试车辆",
+      "Operation": "OTHER",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "RCS/DummyCar.cs",
+      "SourceObservedBehavior": "A DummyCar implementation exists in source, but runtime availability and initialization are not proven.",
+      "AuthorityExpected": "DummyCar is preferred for safe task execution.",
+      "AlignmentStatus": "SOURCE_DISCOVERED_NEEDS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-TFLOW-COMPOSITE-001",
+        "TC-TFLOW-COMPOSITE-002",
+        "TC-TFLOW-COMPOSITE-003",
+        "TC-TFLOW-COMPOSITE-004",
+        "TC-TFLOW-COMPOSITE-005",
+        "TC-TFLOW-COMPOSITE-006",
+        "TC-TFLOW-COMPOSITE-007",
+        "TC-TFLOW-COMPOSITE-008",
+        "TC-TFLOW-COMPOSITE-009",
+        "TC-TFLOW-COMPOSITE-010"
+      ],
+      "CoverageStatus": "BLOCKED",
+      "GapStatus": "OPEN_AUTHORITY_GAP"
+    },
+    {
+      "RuleId": "RULE-WCS-INTERACTION",
+      "Module": "任务管理",
+      "Feature": "WCS交互",
+      "Operation": "STATE_TRANSITION",
+      "DesignAuthorityRef": "流程_02_任务全流程.md",
+      "FlowAuthorityRef": "流程_02_任务全流程.md",
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "RCS/Missions/ChainedDeliveryMission*.cs",
+      "SourceObservedBehavior": "Mission code contains interaction/retry paths for task execution.",
+      "AuthorityExpected": "WCS reject/allow and retry behavior requires an approved mock or safe fixture.",
+      "AlignmentStatus": "SOURCE_DISCOVERED_NEEDS_AUTHORITY",
+      "ExistingTestCaseIds": [
+        "TC-TFLOW-COMPOSITE-004",
+        "TC-TFLOW-COMPOSITE-005"
+      ],
+      "CoverageStatus": "BLOCKED",
+      "GapStatus": "OPEN_AUTHORITY_GAP"
+    },
+    {
+      "RuleId": "RULE-FRONTEND-DYNAMIC-MENU",
+      "Module": "系统管理",
+      "Feature": "权限菜单",
+      "Operation": "PERMISSION",
+      "DesignAuthorityRef": "handoff-package/06-permission-model.md",
+      "FlowAuthorityRef": null,
+      "InterfaceAuthorityRef": null,
+      "SourceLocation": "src/plugins/permission.ts; src/router/index.ts",
+      "SourceObservedBehavior": "The menu is resolved dynamically from permission data; static routes do not represent the full reachable menu.",
+      "AuthorityExpected": "Handoff requires menu/page/button/direct-URL permission coverage.",
+      "AlignmentStatus": "SOURCE_DISCOVERED",
+      "ExistingTestCaseIds": [
+        "TC-ROLE-PERMISSION-001",
+        "TC-ROLE-PERMISSION-002",
+        "TC-ROLE-PERMISSION-003",
+        "TC-ROLE-PERMISSION-004"
+      ],
+      "CoverageStatus": "PARTIAL",
+      "GapStatus": "OPEN_COVERAGE_OR_EXECUTION"
+    }
+  ],
+  "FindingClassifications": [
+    "SOURCE_CONFIRMS_AUTHORITY",
+    "SOURCE_DISCOVERED",
+    "SOURCE_DISCOVERED_NEEDS_AUTHORITY"
+  ],
+  "HandoffMissingCapabilityCount": 4,
+  "SourceDesignConflictCount": 0,
+  "SourceDiscoveredNeedsAuthorityCount": 3,
+  "AuditStatus": "PASS_WITH_OPEN_AUTHORITY_AND_COVERAGE_GAPS",
+  "Note": "Source observations support traceability and test-point selection only; they do not rewrite Expected or close business gaps."
+}

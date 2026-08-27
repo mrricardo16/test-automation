@@ -1,0 +1,695 @@
+{
+  "ModuleInventory": [
+    {
+      "ModuleId": "MOD-1HDWIAC",
+      "ModuleName": "系统管理"
+    },
+    {
+      "ModuleId": "MOD-1HB9SC2",
+      "ModuleName": "任务管理"
+    },
+    {
+      "ModuleId": "MOD-023CTUU",
+      "ModuleName": "车辆管理"
+    },
+    {
+      "ModuleId": "MOD-1NMWAFM",
+      "ModuleName": "监控管理"
+    },
+    {
+      "ModuleId": "MOD-08XOCKU",
+      "ModuleName": "日志管理"
+    },
+    {
+      "ModuleId": "MOD-0HB5ERN",
+      "ModuleName": "统计分析"
+    }
+  ],
+  "FeatureInventory": [
+    {
+      "FeatureId": "FEAT-1AI16X1",
+      "ModuleId": "MOD-1HDWIAC",
+      "FeatureName": "用户管理"
+    },
+    {
+      "FeatureId": "FEAT-1VYNQ1W",
+      "ModuleId": "MOD-1HDWIAC",
+      "FeatureName": "用户角色关系"
+    },
+    {
+      "FeatureId": "FEAT-0SCHAQ7",
+      "ModuleId": "MOD-1HB9SC2",
+      "FeatureName": "任务新增"
+    },
+    {
+      "FeatureId": "FEAT-1KB8D73",
+      "ModuleId": "MOD-1HB9SC2",
+      "FeatureName": "任务取消"
+    },
+    {
+      "FeatureId": "FEAT-1QQ2IS7",
+      "ModuleId": "MOD-1HB9SC2",
+      "FeatureName": "任务重发"
+    },
+    {
+      "FeatureId": "FEAT-1CBOF0A",
+      "ModuleId": "MOD-023CTUU",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "FeatureId": "FEAT-1AKJTKR",
+      "ModuleId": "MOD-1NMWAFM",
+      "FeatureName": "监控看板"
+    },
+    {
+      "FeatureId": "FEAT-1T4PM6P",
+      "ModuleId": "MOD-08XOCKU",
+      "FeatureName": "日志下载"
+    },
+    {
+      "FeatureId": "FEAT-140O3WT",
+      "ModuleId": "MOD-0HB5ERN",
+      "FeatureName": "统计查询"
+    },
+    {
+      "FeatureId": "FEAT-1M6AKZC",
+      "ModuleId": "MOD-1HDWIAC",
+      "FeatureName": "角色管理"
+    },
+    {
+      "FeatureId": "FEAT-1NGMR1E",
+      "ModuleId": "MOD-1HB9SC2",
+      "FeatureName": "任务查询"
+    },
+    {
+      "FeatureId": "FEAT-12RSCGG",
+      "ModuleId": "MOD-1HB9SC2",
+      "FeatureName": "任务生命周期"
+    }
+  ],
+  "OperationInventory": [
+    {
+      "OperationId": "OP-17DTJBW",
+      "FeatureId": "FEAT-1AI16X1",
+      "Operation": "CREATE"
+    },
+    {
+      "OperationId": "OP-1YL4YUH",
+      "FeatureId": "FEAT-1VYNQ1W",
+      "Operation": "RELATIONSHIP"
+    },
+    {
+      "OperationId": "OP-08ZDN6Q",
+      "FeatureId": "FEAT-0SCHAQ7",
+      "Operation": "CREATE"
+    },
+    {
+      "OperationId": "OP-0IWY2C7",
+      "FeatureId": "FEAT-1KB8D73",
+      "Operation": "STATE_TRANSITION"
+    },
+    {
+      "OperationId": "OP-0WTE2HR",
+      "FeatureId": "FEAT-1QQ2IS7",
+      "Operation": "STATE_TRANSITION"
+    },
+    {
+      "OperationId": "OP-11EX11P",
+      "FeatureId": "FEAT-1CBOF0A",
+      "Operation": "CREATE"
+    },
+    {
+      "OperationId": "OP-10F6UR2",
+      "FeatureId": "FEAT-1AKJTKR",
+      "Operation": "VISUAL"
+    },
+    {
+      "OperationId": "OP-063MN30",
+      "FeatureId": "FEAT-1T4PM6P",
+      "Operation": "DOWNLOAD"
+    },
+    {
+      "OperationId": "OP-09RTJ0K",
+      "FeatureId": "FEAT-140O3WT",
+      "Operation": "QUERY"
+    },
+    {
+      "OperationId": "OP-1JEDKF0",
+      "FeatureId": "FEAT-1AI16X1",
+      "Operation": "QUERY"
+    },
+    {
+      "OperationId": "OP-09V061L",
+      "FeatureId": "FEAT-1AI16X1",
+      "Operation": "UPDATE"
+    },
+    {
+      "OperationId": "OP-0ST4UNX",
+      "FeatureId": "FEAT-1AI16X1",
+      "Operation": "STATE_TRANSITION"
+    },
+    {
+      "OperationId": "OP-11J7GIR",
+      "FeatureId": "FEAT-1AI16X1",
+      "Operation": "DELETE"
+    },
+    {
+      "OperationId": "OP-0J4U2YD",
+      "FeatureId": "FEAT-1M6AKZC",
+      "Operation": "QUERY"
+    },
+    {
+      "OperationId": "OP-0EMXGK0",
+      "FeatureId": "FEAT-1M6AKZC",
+      "Operation": "PERMISSION"
+    },
+    {
+      "OperationId": "OP-0644HCR",
+      "FeatureId": "FEAT-1NGMR1E",
+      "Operation": "QUERY"
+    },
+    {
+      "OperationId": "OP-0ED4ZF5",
+      "FeatureId": "FEAT-12RSCGG",
+      "Operation": "COMPOSITE_LIFECYCLE"
+    },
+    {
+      "OperationId": "OP-09UVBMB",
+      "FeatureId": "FEAT-1CBOF0A",
+      "Operation": "QUERY"
+    },
+    {
+      "OperationId": "OP-06576IS",
+      "FeatureId": "FEAT-1CBOF0A",
+      "Operation": "UPDATE"
+    },
+    {
+      "OperationId": "OP-18CY9WA",
+      "FeatureId": "FEAT-1CBOF0A",
+      "Operation": "DELETE"
+    },
+    {
+      "OperationId": "OP-1FDDNWZ",
+      "FeatureId": "FEAT-140O3WT",
+      "Operation": "VALIDATION"
+    }
+  ],
+  "BusinessRuleInventory": [
+    {
+      "BusinessRuleId": "BR-0Z1EPCP",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "验证合法且唯一的用户数据可以保存并出现在用户列表。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-USER-CREATE-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0Y7FW9S",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "验证已存在用户名不能创建第二个用户。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-USER-CREATE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0YHFHYR",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "验证新增用户时低于批准最小长度的密码被拒绝。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-USER-CREATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0ZVDIFM",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "验证用户名为空时不能创建用户。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-USER-CREATE-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-105D44L",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "验证显示名称为空时不能创建用户。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-USER-CREATE-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-039M0O0",
+      "OperationId": "OP-1YL4YUH",
+      "RuleStatement": "验证测试用户与测试角色的关联保存后可以重新查询到。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-URB-BIND-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0LWCL1A",
+      "OperationId": "OP-08ZDN6Q",
+      "RuleStatement": "验证有效模板、车辆、站点和楼层依赖可以生成唯一任务。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0LMCZCB",
+      "OperationId": "OP-08ZDN6Q",
+      "RuleStatement": "验证模板引用无效时任务创建被拒绝。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0LCDDNC",
+      "OperationId": "OP-08ZDN6Q",
+      "RuleStatement": "验证车辆引用无效时任务创建被拒绝。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NAALI5",
+      "OperationId": "OP-08ZDN6Q",
+      "RuleStatement": "验证站点引用无效时任务创建被拒绝。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0N0AZT6",
+      "OperationId": "OP-08ZDN6Q",
+      "RuleStatement": "验证楼层引用无效时任务创建被拒绝。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-102FVDI",
+      "OperationId": "OP-0IWY2C7",
+      "RuleStatement": "验证任务处于允许取消状态时执行对应操作的结果。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TCANCEL-CANCEL-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0ZSG9OJ",
+      "OperationId": "OP-0IWY2C7",
+      "RuleStatement": "验证任务处于禁止取消状态时执行对应操作的结果。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TCANCEL-CANCEL-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1E2VTAW",
+      "OperationId": "OP-0WTE2HR",
+      "RuleStatement": "验证任务处于允许重发状态时执行对应操作的结果。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TRESEND-RESEND-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1EWUMDT",
+      "OperationId": "OP-0WTE2HR",
+      "RuleStatement": "验证任务处于禁止重发状态时执行对应操作的结果。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-TRESEND-RESEND-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1VQ6K0N",
+      "OperationId": "OP-11EX11P",
+      "RuleStatement": "验证合法车辆数据可以保存并出现在车辆列表。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1W065PM",
+      "OperationId": "OP-11EX11P",
+      "RuleStatement": "验证已存在车辆编号不能创建第二辆车辆。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1WA5REL",
+      "OperationId": "OP-11EX11P",
+      "RuleStatement": "验证非法车辆类型不能创建车辆。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1SF5GHO",
+      "OperationId": "OP-10F6UR2",
+      "RuleStatement": "人工复核地图、任务、车辆和充电状态的可见性及空态/错误呈现。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-MON-VISUAL-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-17G2MJS",
+      "OperationId": "OP-063MN30",
+      "RuleStatement": "验证下载行为只处理列表中批准的非敏感日志包。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-LOG-DOWNLOAD-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0XB8RDI",
+      "OperationId": "OP-09RTJ0K",
+      "RuleStatement": "验证合法时间范围存在数据时显示统计结果。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0X195OJ",
+      "OperationId": "OP-09RTJ0K",
+      "RuleStatement": "验证合法但无数据的时间范围显示批准空态。",
+      "AuthorityState": "EXPECTED_CONFIRMED",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NDDMR4",
+      "OperationId": "OP-1JEDKF0",
+      "RuleStatement": "Handoff 未定义默认查询条件、默认排序和初始分页。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-QUERY-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0O7CFU1",
+      "OperationId": "OP-1JEDKF0",
+      "RuleStatement": "Handoff 未定义精确匹配、大小写和前后空格规则。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-QUERY-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NXCU52",
+      "OperationId": "OP-1JEDKF0",
+      "RuleStatement": "Handoff 未定义模糊匹配范围和特殊字符规则。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-QUERY-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0ORBN7Z",
+      "OperationId": "OP-1JEDKF0",
+      "RuleStatement": "Handoff 未定义无匹配结果的空态和分页语义。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-QUERY-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0OHC1J0",
+      "OperationId": "OP-1JEDKF0",
+      "RuleStatement": "Handoff 未定义重置后的默认条件和结果。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-RESET-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0PBAULX",
+      "OperationId": "OP-1JEDKF0",
+      "RuleStatement": "Handoff 未定义分页、切页和条件保持规则。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-QUERY-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1S36WNT",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "未提供显示名最大长度和超长拒绝 Expected。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-CREATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1UL3BWK",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "未提供用户名最小/最大长度，不能猜测 min/max。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-CREATE-008"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1UV2XLJ",
+      "OperationId": "OP-17DTJBW",
+      "RuleStatement": "未提供允许字符集合和错误提示合同。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-CREATE-009"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0G07ILR",
+      "OperationId": "OP-09V061L",
+      "RuleStatement": "未定义可修改字段、唯一字段修改和失败后原值保持。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-UPDATE-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1W4NVE8",
+      "OperationId": "OP-0ST4UNX",
+      "RuleStatement": "未定义禁用、启用、在线会话和重新登录的完整状态矩阵。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-UPDATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-08QFC1V",
+      "OperationId": "OP-11J7GIR",
+      "RuleStatement": "未定义删除后查询、重复删除和唯一键复用语义。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-USER-DELETE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0FTXDBP",
+      "OperationId": "OP-0J4U2YD",
+      "RuleStatement": "Handoff 未定义角色查询、新增、空值和重复名称规则。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-ROLE-QUERY-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0DW05GW",
+      "OperationId": "OP-1YL4YUH",
+      "RuleStatement": "未定义解除、重复绑定、刷新、重新登录和在线 Session 生效时机。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-URB-UNBIND-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0E5ZR5V",
+      "OperationId": "OP-0EMXGK0",
+      "RuleStatement": "未定义不同权限层级的拒绝合同。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-ROLE-PERMISSION-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0OUQHIA",
+      "OperationId": "OP-0644HCR",
+      "RuleStatement": "Handoff 未定义任务查询矩阵。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-TQUERY-QUERY-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-12WXOWS",
+      "OperationId": "OP-08ZDN6Q",
+      "RuleStatement": "未定义重复有效依赖的幂等键、拒绝或新建规则。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-14UUWRL",
+      "OperationId": "OP-08ZDN6Q",
+      "RuleStatement": "未定义缺少模板、车辆、站点或楼层时的具体拒绝合同。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-14KVB2M",
+      "OperationId": "OP-0ED4ZF5",
+      "RuleStatement": "未定义跨操作状态、查询可见性和清理终态。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-TLIFE-CANCEL-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-14AYUVM",
+      "OperationId": "OP-0IWY2C7",
+      "RuleStatement": "需要任务状态×归属×派发状态×权限决策表。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-TCANCEL-CANCEL-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1TL3GJO",
+      "OperationId": "OP-09UVBMB",
+      "RuleStatement": "Handoff 未定义车辆查询匹配和空态规则。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-VEH-QUERY-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1UF29ML",
+      "OperationId": "OP-11EX11P",
+      "RuleStatement": "未提供必填字段和编号边界规则。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-008"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1U52NXM",
+      "OperationId": "OP-11EX11P",
+      "RuleStatement": "未提供车辆编号允许字符集合。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1SR4NGR",
+      "OperationId": "OP-06576IS",
+      "RuleStatement": "未定义车辆可修改字段和失败后原值保持。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-VEH-UPDATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1SH51RS",
+      "OperationId": "OP-18CY9WA",
+      "RuleStatement": "未定义车辆删除及真实设备关联约束。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-VEH-DELETE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0MH6Q4J",
+      "OperationId": "OP-09RTJ0K",
+      "RuleStatement": "未定义默认时间范围、默认筛选和默认排序。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0M774FK",
+      "OperationId": "OP-09RTJ0K",
+      "RuleStatement": "未定义单月、跨月的统计时间语义。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0QD15U5",
+      "OperationId": "OP-1FDDNWZ",
+      "RuleStatement": "未定义时间边界合法性和拒绝提示。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0Q31K56",
+      "OperationId": "OP-1FDDNWZ",
+      "RuleStatement": "未定义缺失筛选字段的校验合同。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0MH3KMK",
+      "OperationId": "OP-1FDDNWZ",
+      "RuleStatement": "未定义允许范围和越界行为。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0MR36BJ",
+      "OperationId": "OP-09RTJ0K",
+      "RuleStatement": "未定义组合条件、重置和结果刷新语义。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-008"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0N12S0I",
+      "OperationId": "OP-09RTJ0K",
+      "RuleStatement": "未定义分页、排序、筛选后分页和切页保持。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-009"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NB2DPH",
+      "OperationId": "OP-1FDDNWZ",
+      "RuleStatement": "缺少批准的 deterministic 非法筛选数据和精确拒绝 Expected。",
+      "AuthorityState": "EXPECTED_PENDING_AUTHORITY",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-004"
+      ]
+    }
+  ],
+  "InventoryType": "BLACKBOX_MODULE_INVENTORY"
+}

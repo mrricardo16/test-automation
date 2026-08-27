@@ -1,0 +1,2350 @@
+{
+  "TraceabilityType": "BLACKBOX_EXPECTED_TRACEABILITY",
+  "BusinessRuleToTestCases": [
+    {
+      "BusinessRuleId": "BR-0Z1EPCP",
+      "TestCaseIds": [
+        "TC-USER-CREATE-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0Y7FW9S",
+      "TestCaseIds": [
+        "TC-USER-CREATE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0YHFHYR",
+      "TestCaseIds": [
+        "TC-USER-CREATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0ZVDIFM",
+      "TestCaseIds": [
+        "TC-USER-CREATE-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-105D44L",
+      "TestCaseIds": [
+        "TC-USER-CREATE-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-039M0O0",
+      "TestCaseIds": [
+        "TC-URB-BIND-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0LWCL1A",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0LMCZCB",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0LCDDNC",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NAALI5",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0N0AZT6",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-102FVDI",
+      "TestCaseIds": [
+        "TC-TCANCEL-CANCEL-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0ZSG9OJ",
+      "TestCaseIds": [
+        "TC-TCANCEL-CANCEL-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1E2VTAW",
+      "TestCaseIds": [
+        "TC-TRESEND-RESEND-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1EWUMDT",
+      "TestCaseIds": [
+        "TC-TRESEND-RESEND-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1VQ6K0N",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1W065PM",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1WA5REL",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1SF5GHO",
+      "TestCaseIds": [
+        "TC-MON-VISUAL-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-17G2MJS",
+      "TestCaseIds": [
+        "TC-LOG-DOWNLOAD-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0XB8RDI",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0X195OJ",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NDDMR4",
+      "TestCaseIds": [
+        "TC-USER-QUERY-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0O7CFU1",
+      "TestCaseIds": [
+        "TC-USER-QUERY-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NXCU52",
+      "TestCaseIds": [
+        "TC-USER-QUERY-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0ORBN7Z",
+      "TestCaseIds": [
+        "TC-USER-QUERY-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0OHC1J0",
+      "TestCaseIds": [
+        "TC-USER-RESET-001"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0PBAULX",
+      "TestCaseIds": [
+        "TC-USER-QUERY-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1S36WNT",
+      "TestCaseIds": [
+        "TC-USER-CREATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1UL3BWK",
+      "TestCaseIds": [
+        "TC-USER-CREATE-008"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1UV2XLJ",
+      "TestCaseIds": [
+        "TC-USER-CREATE-009"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0G07ILR",
+      "TestCaseIds": [
+        "TC-USER-UPDATE-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1W4NVE8",
+      "TestCaseIds": [
+        "TC-USER-UPDATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-08QFC1V",
+      "TestCaseIds": [
+        "TC-USER-DELETE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0FTXDBP",
+      "TestCaseIds": [
+        "TC-ROLE-QUERY-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0DW05GW",
+      "TestCaseIds": [
+        "TC-URB-UNBIND-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0E5ZR5V",
+      "TestCaseIds": [
+        "TC-ROLE-PERMISSION-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0OUQHIA",
+      "TestCaseIds": [
+        "TC-TQUERY-QUERY-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-12WXOWS",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-14UUWRL",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-14KVB2M",
+      "TestCaseIds": [
+        "TC-TLIFE-CANCEL-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-14AYUVM",
+      "TestCaseIds": [
+        "TC-TCANCEL-CANCEL-004"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1TL3GJO",
+      "TestCaseIds": [
+        "TC-VEH-QUERY-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1UF29ML",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-008"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1U52NXM",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1SR4NGR",
+      "TestCaseIds": [
+        "TC-VEH-UPDATE-003"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-1SH51RS",
+      "TestCaseIds": [
+        "TC-VEH-DELETE-002"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0MH6Q4J",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0M774FK",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0QD15U5",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-005"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0Q31K56",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-006"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0MH3KMK",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-007"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0MR36BJ",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-008"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0N12S0I",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-009"
+      ]
+    },
+    {
+      "BusinessRuleId": "BR-0NB2DPH",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-004"
+      ]
+    }
+  ],
+  "TestCaseToBusinessRule": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "BusinessRuleRefs": [
+        "BR-0Z1EPCP"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "BusinessRuleRefs": [
+        "BR-0Y7FW9S"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "BusinessRuleRefs": [
+        "BR-0YHFHYR"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "BusinessRuleRefs": [
+        "BR-0ZVDIFM"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "BusinessRuleRefs": [
+        "BR-105D44L"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "BusinessRuleRefs": [
+        "BR-039M0O0"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "BusinessRuleRefs": [
+        "BR-0LWCL1A"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "BusinessRuleRefs": [
+        "BR-0LMCZCB"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "BusinessRuleRefs": [
+        "BR-0LCDDNC"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "BusinessRuleRefs": [
+        "BR-0NAALI5"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "BusinessRuleRefs": [
+        "BR-0N0AZT6"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "BusinessRuleRefs": [
+        "BR-102FVDI"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "BusinessRuleRefs": [
+        "BR-0ZSG9OJ"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "BusinessRuleRefs": [
+        "BR-1E2VTAW"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "BusinessRuleRefs": [
+        "BR-1EWUMDT"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "BusinessRuleRefs": [
+        "BR-1VQ6K0N"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "BusinessRuleRefs": [
+        "BR-1W065PM"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "BusinessRuleRefs": [
+        "BR-1WA5REL"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "BusinessRuleRefs": [
+        "BR-1SF5GHO"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "BusinessRuleRefs": [
+        "BR-17G2MJS"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "BusinessRuleRefs": [
+        "BR-0XB8RDI"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "BusinessRuleRefs": [
+        "BR-0X195OJ"
+      ],
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-004",
+      "BusinessRuleRefs": [
+        "BR-0NDDMR4"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-005",
+      "BusinessRuleRefs": [
+        "BR-0O7CFU1"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-006",
+      "BusinessRuleRefs": [
+        "BR-0NXCU52"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "BusinessRuleRefs": [
+        "BR-0ORBN7Z"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "BusinessRuleRefs": [
+        "BR-0OHC1J0"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-007",
+      "BusinessRuleRefs": [
+        "BR-0PBAULX"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "BusinessRuleRefs": [
+        "BR-1S36WNT"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "BusinessRuleRefs": [
+        "BR-1UL3BWK"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "BusinessRuleRefs": [
+        "BR-1UV2XLJ"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-004",
+      "BusinessRuleRefs": [
+        "BR-0G07ILR"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "BusinessRuleRefs": [
+        "BR-1W4NVE8"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-003",
+      "BusinessRuleRefs": [
+        "BR-08QFC1V"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-002",
+      "BusinessRuleRefs": [
+        "BR-0FTXDBP"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-002",
+      "BusinessRuleRefs": [
+        "BR-0DW05GW"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-005",
+      "BusinessRuleRefs": [
+        "BR-0E5ZR5V"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-004",
+      "BusinessRuleRefs": [
+        "BR-0OUQHIA"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "BusinessRuleRefs": [
+        "BR-12WXOWS"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "BusinessRuleRefs": [
+        "BR-14UUWRL"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-002",
+      "BusinessRuleRefs": [
+        "BR-14KVB2M"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-004",
+      "BusinessRuleRefs": [
+        "BR-14AYUVM"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-003",
+      "BusinessRuleRefs": [
+        "BR-1TL3GJO"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-008",
+      "BusinessRuleRefs": [
+        "BR-1UF29ML"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "BusinessRuleRefs": [
+        "BR-1U52NXM"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-003",
+      "BusinessRuleRefs": [
+        "BR-1SR4NGR"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-002",
+      "BusinessRuleRefs": [
+        "BR-1SH51RS"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-006",
+      "BusinessRuleRefs": [
+        "BR-0MH6Q4J"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-007",
+      "BusinessRuleRefs": [
+        "BR-0M774FK"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-005",
+      "BusinessRuleRefs": [
+        "BR-0QD15U5"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-006",
+      "BusinessRuleRefs": [
+        "BR-0Q31K56"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-007",
+      "BusinessRuleRefs": [
+        "BR-0MH3KMK"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-008",
+      "BusinessRuleRefs": [
+        "BR-0MR36BJ"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-009",
+      "BusinessRuleRefs": [
+        "BR-0N12S0I"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "BusinessRuleRefs": [
+        "BR-0NB2DPH"
+      ],
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    }
+  ],
+  "GapToTestCases": [
+    {
+      "GapId": "GAP-FG-USER-QUERY-001",
+      "TestCaseIds": [
+        "TC-USER-QUERY-004"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-002",
+      "TestCaseIds": [
+        "TC-USER-QUERY-005"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-003",
+      "TestCaseIds": [
+        "TC-USER-QUERY-006"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-004",
+      "TestCaseIds": [
+        "TC-USER-QUERY-002"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-005",
+      "TestCaseIds": [
+        "TC-USER-RESET-001"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-QUERY-006",
+      "TestCaseIds": [
+        "TC-USER-QUERY-007"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-007",
+      "TestCaseIds": [
+        "TC-USER-CREATE-007"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-008",
+      "TestCaseIds": [
+        "TC-USER-CREATE-008"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-VALIDATION-009",
+      "TestCaseIds": [
+        "TC-USER-CREATE-009"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-UPDATE-010",
+      "TestCaseIds": [
+        "TC-USER-UPDATE-004"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-STATE-011",
+      "TestCaseIds": [
+        "TC-USER-UPDATE-003"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-USER-DELETE-012",
+      "TestCaseIds": [
+        "TC-USER-DELETE-003"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-ROLE-013",
+      "TestCaseIds": [
+        "TC-ROLE-QUERY-002"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-ROLE-014",
+      "TestCaseIds": [
+        "TC-URB-UNBIND-002"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-ROLE-015",
+      "TestCaseIds": [
+        "TC-ROLE-PERMISSION-005"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-TASK-QUERY-016",
+      "TestCaseIds": [
+        "TC-TQUERY-QUERY-004"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-TASK-017",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-006"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-TASK-018",
+      "TestCaseIds": [
+        "TC-TNEW-CREATE-007"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-TASK-019",
+      "TestCaseIds": [
+        "TC-TLIFE-CANCEL-002"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-TASK-020",
+      "TestCaseIds": [
+        "TC-TCANCEL-CANCEL-004"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-021",
+      "TestCaseIds": [
+        "TC-VEH-QUERY-003"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-022",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-008"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-023",
+      "TestCaseIds": [
+        "TC-VEH-CREATE-007"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-024",
+      "TestCaseIds": [
+        "TC-VEH-UPDATE-003"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-VEHICLE-025",
+      "TestCaseIds": [
+        "TC-VEH-DELETE-002"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-026",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-006"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-027",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-007"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-028",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-005"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-029",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-006"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-030",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-007"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-031",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-008"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-032",
+      "TestCaseIds": [
+        "TC-STAT-QUERY-009"
+      ]
+    },
+    {
+      "GapId": "GAP-FG-STAT-033",
+      "TestCaseIds": [
+        "TC-STAT-VALIDATE-004"
+      ]
+    }
+  ],
+  "Forward": [
+    {
+      "ScenarioId": "SC-0Z1EPCP",
+      "BusinessRuleId": "BR-0Z1EPCP",
+      "TestCaseId": "TC-USER-CREATE-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0Y7FW9S",
+      "BusinessRuleId": "BR-0Y7FW9S",
+      "TestCaseId": "TC-USER-CREATE-002",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0YHFHYR",
+      "BusinessRuleId": "BR-0YHFHYR",
+      "TestCaseId": "TC-USER-CREATE-003",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0ZVDIFM",
+      "BusinessRuleId": "BR-0ZVDIFM",
+      "TestCaseId": "TC-USER-CREATE-004",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-105D44L",
+      "BusinessRuleId": "BR-105D44L",
+      "TestCaseId": "TC-USER-CREATE-005",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-039M0O0",
+      "BusinessRuleId": "BR-039M0O0",
+      "TestCaseId": "TC-URB-BIND-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0LWCL1A",
+      "BusinessRuleId": "BR-0LWCL1A",
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0LMCZCB",
+      "BusinessRuleId": "BR-0LMCZCB",
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0LCDDNC",
+      "BusinessRuleId": "BR-0LCDDNC",
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0NAALI5",
+      "BusinessRuleId": "BR-0NAALI5",
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0N0AZT6",
+      "BusinessRuleId": "BR-0N0AZT6",
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-102FVDI",
+      "BusinessRuleId": "BR-102FVDI",
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0ZSG9OJ",
+      "BusinessRuleId": "BR-0ZSG9OJ",
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-1E2VTAW",
+      "BusinessRuleId": "BR-1E2VTAW",
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-1EWUMDT",
+      "BusinessRuleId": "BR-1EWUMDT",
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-1VQ6K0N",
+      "BusinessRuleId": "BR-1VQ6K0N",
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-1W065PM",
+      "BusinessRuleId": "BR-1W065PM",
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-1WA5REL",
+      "BusinessRuleId": "BR-1WA5REL",
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-1SF5GHO",
+      "BusinessRuleId": "BR-1SF5GHO",
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-17G2MJS",
+      "BusinessRuleId": "BR-17G2MJS",
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0XB8RDI",
+      "BusinessRuleId": "BR-0XB8RDI",
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0X195OJ",
+      "BusinessRuleId": "BR-0X195OJ",
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "ExpectedSourceRef": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ],
+      "ExpectationGapId": null
+    },
+    {
+      "ScenarioId": "SC-0NDDMR4",
+      "BusinessRuleId": "BR-0NDDMR4",
+      "TestCaseId": "TC-USER-QUERY-004",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-QUERY-001"
+    },
+    {
+      "ScenarioId": "SC-0O7CFU1",
+      "BusinessRuleId": "BR-0O7CFU1",
+      "TestCaseId": "TC-USER-QUERY-005",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-QUERY-002"
+    },
+    {
+      "ScenarioId": "SC-0NXCU52",
+      "BusinessRuleId": "BR-0NXCU52",
+      "TestCaseId": "TC-USER-QUERY-006",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-QUERY-003"
+    },
+    {
+      "ScenarioId": "SC-0ORBN7Z",
+      "BusinessRuleId": "BR-0ORBN7Z",
+      "TestCaseId": "TC-USER-QUERY-002",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-QUERY-004"
+    },
+    {
+      "ScenarioId": "SC-0OHC1J0",
+      "BusinessRuleId": "BR-0OHC1J0",
+      "TestCaseId": "TC-USER-RESET-001",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-QUERY-005"
+    },
+    {
+      "ScenarioId": "SC-0PBAULX",
+      "BusinessRuleId": "BR-0PBAULX",
+      "TestCaseId": "TC-USER-QUERY-007",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-QUERY-006"
+    },
+    {
+      "ScenarioId": "SC-1S36WNT",
+      "BusinessRuleId": "BR-1S36WNT",
+      "TestCaseId": "TC-USER-CREATE-007",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-VALIDATION-007"
+    },
+    {
+      "ScenarioId": "SC-1UL3BWK",
+      "BusinessRuleId": "BR-1UL3BWK",
+      "TestCaseId": "TC-USER-CREATE-008",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-VALIDATION-008"
+    },
+    {
+      "ScenarioId": "SC-1UV2XLJ",
+      "BusinessRuleId": "BR-1UV2XLJ",
+      "TestCaseId": "TC-USER-CREATE-009",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-VALIDATION-009"
+    },
+    {
+      "ScenarioId": "SC-0G07ILR",
+      "BusinessRuleId": "BR-0G07ILR",
+      "TestCaseId": "TC-USER-UPDATE-004",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-UPDATE-010"
+    },
+    {
+      "ScenarioId": "SC-1W4NVE8",
+      "BusinessRuleId": "BR-1W4NVE8",
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-STATE-011"
+    },
+    {
+      "ScenarioId": "SC-08QFC1V",
+      "BusinessRuleId": "BR-08QFC1V",
+      "TestCaseId": "TC-USER-DELETE-003",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-USER-DELETE-012"
+    },
+    {
+      "ScenarioId": "SC-0FTXDBP",
+      "BusinessRuleId": "BR-0FTXDBP",
+      "TestCaseId": "TC-ROLE-QUERY-002",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-ROLE-013"
+    },
+    {
+      "ScenarioId": "SC-0DW05GW",
+      "BusinessRuleId": "BR-0DW05GW",
+      "TestCaseId": "TC-URB-UNBIND-002",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-ROLE-014"
+    },
+    {
+      "ScenarioId": "SC-0E5ZR5V",
+      "BusinessRuleId": "BR-0E5ZR5V",
+      "TestCaseId": "TC-ROLE-PERMISSION-005",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-ROLE-015"
+    },
+    {
+      "ScenarioId": "SC-0OUQHIA",
+      "BusinessRuleId": "BR-0OUQHIA",
+      "TestCaseId": "TC-TQUERY-QUERY-004",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-TASK-QUERY-016"
+    },
+    {
+      "ScenarioId": "SC-12WXOWS",
+      "BusinessRuleId": "BR-12WXOWS",
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-TASK-017"
+    },
+    {
+      "ScenarioId": "SC-14UUWRL",
+      "BusinessRuleId": "BR-14UUWRL",
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-TASK-018"
+    },
+    {
+      "ScenarioId": "SC-14KVB2M",
+      "BusinessRuleId": "BR-14KVB2M",
+      "TestCaseId": "TC-TLIFE-CANCEL-002",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-TASK-019"
+    },
+    {
+      "ScenarioId": "SC-14AYUVM",
+      "BusinessRuleId": "BR-14AYUVM",
+      "TestCaseId": "TC-TCANCEL-CANCEL-004",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-TASK-020"
+    },
+    {
+      "ScenarioId": "SC-1TL3GJO",
+      "BusinessRuleId": "BR-1TL3GJO",
+      "TestCaseId": "TC-VEH-QUERY-003",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-VEHICLE-021"
+    },
+    {
+      "ScenarioId": "SC-1UF29ML",
+      "BusinessRuleId": "BR-1UF29ML",
+      "TestCaseId": "TC-VEH-CREATE-008",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-VEHICLE-022"
+    },
+    {
+      "ScenarioId": "SC-1U52NXM",
+      "BusinessRuleId": "BR-1U52NXM",
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-VEHICLE-023"
+    },
+    {
+      "ScenarioId": "SC-1SR4NGR",
+      "BusinessRuleId": "BR-1SR4NGR",
+      "TestCaseId": "TC-VEH-UPDATE-003",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-VEHICLE-024"
+    },
+    {
+      "ScenarioId": "SC-1SH51RS",
+      "BusinessRuleId": "BR-1SH51RS",
+      "TestCaseId": "TC-VEH-DELETE-002",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-VEHICLE-025"
+    },
+    {
+      "ScenarioId": "SC-0MH6Q4J",
+      "BusinessRuleId": "BR-0MH6Q4J",
+      "TestCaseId": "TC-STAT-QUERY-006",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-026"
+    },
+    {
+      "ScenarioId": "SC-0M774FK",
+      "BusinessRuleId": "BR-0M774FK",
+      "TestCaseId": "TC-STAT-QUERY-007",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-027"
+    },
+    {
+      "ScenarioId": "SC-0QD15U5",
+      "BusinessRuleId": "BR-0QD15U5",
+      "TestCaseId": "TC-STAT-VALIDATE-005",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-028"
+    },
+    {
+      "ScenarioId": "SC-0Q31K56",
+      "BusinessRuleId": "BR-0Q31K56",
+      "TestCaseId": "TC-STAT-VALIDATE-006",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-029"
+    },
+    {
+      "ScenarioId": "SC-0MH3KMK",
+      "BusinessRuleId": "BR-0MH3KMK",
+      "TestCaseId": "TC-STAT-VALIDATE-007",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-030"
+    },
+    {
+      "ScenarioId": "SC-0MR36BJ",
+      "BusinessRuleId": "BR-0MR36BJ",
+      "TestCaseId": "TC-STAT-QUERY-008",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-031"
+    },
+    {
+      "ScenarioId": "SC-0N12S0I",
+      "BusinessRuleId": "BR-0N12S0I",
+      "TestCaseId": "TC-STAT-QUERY-009",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-032"
+    },
+    {
+      "ScenarioId": "SC-0NB2DPH",
+      "BusinessRuleId": "BR-0NB2DPH",
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "ExpectedSourceRef": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ],
+      "ExpectationGapId": "GAP-FG-STAT-033"
+    }
+  ],
+  "Reverse": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "ScenarioIds": [
+        "SC-0Z1EPCP"
+      ],
+      "BusinessRuleIds": [
+        "BR-0Z1EPCP"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "ScenarioIds": [
+        "SC-0Y7FW9S"
+      ],
+      "BusinessRuleIds": [
+        "BR-0Y7FW9S"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "ScenarioIds": [
+        "SC-0YHFHYR"
+      ],
+      "BusinessRuleIds": [
+        "BR-0YHFHYR"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "ScenarioIds": [
+        "SC-0ZVDIFM"
+      ],
+      "BusinessRuleIds": [
+        "BR-0ZVDIFM"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "ScenarioIds": [
+        "SC-105D44L"
+      ],
+      "BusinessRuleIds": [
+        "BR-105D44L"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "ScenarioIds": [
+        "SC-039M0O0"
+      ],
+      "BusinessRuleIds": [
+        "BR-039M0O0"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "ScenarioIds": [
+        "SC-0LWCL1A"
+      ],
+      "BusinessRuleIds": [
+        "BR-0LWCL1A"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "ScenarioIds": [
+        "SC-0LMCZCB"
+      ],
+      "BusinessRuleIds": [
+        "BR-0LMCZCB"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "ScenarioIds": [
+        "SC-0LCDDNC"
+      ],
+      "BusinessRuleIds": [
+        "BR-0LCDDNC"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "ScenarioIds": [
+        "SC-0NAALI5"
+      ],
+      "BusinessRuleIds": [
+        "BR-0NAALI5"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "ScenarioIds": [
+        "SC-0N0AZT6"
+      ],
+      "BusinessRuleIds": [
+        "BR-0N0AZT6"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "ScenarioIds": [
+        "SC-102FVDI"
+      ],
+      "BusinessRuleIds": [
+        "BR-102FVDI"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "ScenarioIds": [
+        "SC-0ZSG9OJ"
+      ],
+      "BusinessRuleIds": [
+        "BR-0ZSG9OJ"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "ScenarioIds": [
+        "SC-1E2VTAW"
+      ],
+      "BusinessRuleIds": [
+        "BR-1E2VTAW"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "ScenarioIds": [
+        "SC-1EWUMDT"
+      ],
+      "BusinessRuleIds": [
+        "BR-1EWUMDT"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "ScenarioIds": [
+        "SC-1VQ6K0N"
+      ],
+      "BusinessRuleIds": [
+        "BR-1VQ6K0N"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "ScenarioIds": [
+        "SC-1W065PM"
+      ],
+      "BusinessRuleIds": [
+        "BR-1W065PM"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "ScenarioIds": [
+        "SC-1WA5REL"
+      ],
+      "BusinessRuleIds": [
+        "BR-1WA5REL"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/05-validation-rules.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "ScenarioIds": [
+        "SC-1SF5GHO"
+      ],
+      "BusinessRuleIds": [
+        "BR-1SF5GHO"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "ScenarioIds": [
+        "SC-17G2MJS"
+      ],
+      "BusinessRuleIds": [
+        "BR-17G2MJS"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "ScenarioIds": [
+        "SC-0XB8RDI"
+      ],
+      "BusinessRuleIds": [
+        "BR-0XB8RDI"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "ScenarioIds": [
+        "SC-0X195OJ"
+      ],
+      "BusinessRuleIds": [
+        "BR-0X195OJ"
+      ],
+      "AuthorityRefs": [
+        "handoff-package/04-user-flows.md",
+        "handoff-package/12-test-scenario-seeds.md"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-004",
+      "ScenarioIds": [
+        "SC-0NDDMR4"
+      ],
+      "BusinessRuleIds": [
+        "BR-0NDDMR4"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-005",
+      "ScenarioIds": [
+        "SC-0O7CFU1"
+      ],
+      "BusinessRuleIds": [
+        "BR-0O7CFU1"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-006",
+      "ScenarioIds": [
+        "SC-0NXCU52"
+      ],
+      "BusinessRuleIds": [
+        "BR-0NXCU52"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "ScenarioIds": [
+        "SC-0ORBN7Z"
+      ],
+      "BusinessRuleIds": [
+        "BR-0ORBN7Z"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "ScenarioIds": [
+        "SC-0OHC1J0"
+      ],
+      "BusinessRuleIds": [
+        "BR-0OHC1J0"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-007",
+      "ScenarioIds": [
+        "SC-0PBAULX"
+      ],
+      "BusinessRuleIds": [
+        "BR-0PBAULX"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "ScenarioIds": [
+        "SC-1S36WNT"
+      ],
+      "BusinessRuleIds": [
+        "BR-1S36WNT"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "ScenarioIds": [
+        "SC-1UL3BWK"
+      ],
+      "BusinessRuleIds": [
+        "BR-1UL3BWK"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "ScenarioIds": [
+        "SC-1UV2XLJ"
+      ],
+      "BusinessRuleIds": [
+        "BR-1UV2XLJ"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-004",
+      "ScenarioIds": [
+        "SC-0G07ILR"
+      ],
+      "BusinessRuleIds": [
+        "BR-0G07ILR"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "ScenarioIds": [
+        "SC-1W4NVE8"
+      ],
+      "BusinessRuleIds": [
+        "BR-1W4NVE8"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-003",
+      "ScenarioIds": [
+        "SC-08QFC1V"
+      ],
+      "BusinessRuleIds": [
+        "BR-08QFC1V"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-002",
+      "ScenarioIds": [
+        "SC-0FTXDBP"
+      ],
+      "BusinessRuleIds": [
+        "BR-0FTXDBP"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-002",
+      "ScenarioIds": [
+        "SC-0DW05GW"
+      ],
+      "BusinessRuleIds": [
+        "BR-0DW05GW"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-005",
+      "ScenarioIds": [
+        "SC-0E5ZR5V"
+      ],
+      "BusinessRuleIds": [
+        "BR-0E5ZR5V"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-004",
+      "ScenarioIds": [
+        "SC-0OUQHIA"
+      ],
+      "BusinessRuleIds": [
+        "BR-0OUQHIA"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "ScenarioIds": [
+        "SC-12WXOWS"
+      ],
+      "BusinessRuleIds": [
+        "BR-12WXOWS"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "ScenarioIds": [
+        "SC-14UUWRL"
+      ],
+      "BusinessRuleIds": [
+        "BR-14UUWRL"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-002",
+      "ScenarioIds": [
+        "SC-14KVB2M"
+      ],
+      "BusinessRuleIds": [
+        "BR-14KVB2M"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-004",
+      "ScenarioIds": [
+        "SC-14AYUVM"
+      ],
+      "BusinessRuleIds": [
+        "BR-14AYUVM"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-003",
+      "ScenarioIds": [
+        "SC-1TL3GJO"
+      ],
+      "BusinessRuleIds": [
+        "BR-1TL3GJO"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-008",
+      "ScenarioIds": [
+        "SC-1UF29ML"
+      ],
+      "BusinessRuleIds": [
+        "BR-1UF29ML"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "ScenarioIds": [
+        "SC-1U52NXM"
+      ],
+      "BusinessRuleIds": [
+        "BR-1U52NXM"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-003",
+      "ScenarioIds": [
+        "SC-1SR4NGR"
+      ],
+      "BusinessRuleIds": [
+        "BR-1SR4NGR"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-002",
+      "ScenarioIds": [
+        "SC-1SH51RS"
+      ],
+      "BusinessRuleIds": [
+        "BR-1SH51RS"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-006",
+      "ScenarioIds": [
+        "SC-0MH6Q4J"
+      ],
+      "BusinessRuleIds": [
+        "BR-0MH6Q4J"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-007",
+      "ScenarioIds": [
+        "SC-0M774FK"
+      ],
+      "BusinessRuleIds": [
+        "BR-0M774FK"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-005",
+      "ScenarioIds": [
+        "SC-0QD15U5"
+      ],
+      "BusinessRuleIds": [
+        "BR-0QD15U5"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-006",
+      "ScenarioIds": [
+        "SC-0Q31K56"
+      ],
+      "BusinessRuleIds": [
+        "BR-0Q31K56"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-007",
+      "ScenarioIds": [
+        "SC-0MH3KMK"
+      ],
+      "BusinessRuleIds": [
+        "BR-0MH3KMK"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-008",
+      "ScenarioIds": [
+        "SC-0MR36BJ"
+      ],
+      "BusinessRuleIds": [
+        "BR-0MR36BJ"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-009",
+      "ScenarioIds": [
+        "SC-0N12S0I"
+      ],
+      "BusinessRuleIds": [
+        "BR-0N12S0I"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "ScenarioIds": [
+        "SC-0NB2DPH"
+      ],
+      "BusinessRuleIds": [
+        "BR-0NB2DPH"
+      ],
+      "AuthorityRefs": [
+        "authority-search:frozen-sanitized-handoff",
+        "authority-search:approved-blackbox-assets"
+      ]
+    }
+  ]
+}
