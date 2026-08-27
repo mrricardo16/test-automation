@@ -54,6 +54,7 @@ run(python, ['skills/dev-test-handoff/scripts/self_test.py']);
 runDevValidator();
 run(python, ['skills/test-execution/scripts/self_test.py']);
 run(python, ['skills/test-execution/scripts/validate_contract.py']);
+run(python, ['skills/test-execution/scripts/orchestration_self_test.py']);
 run(python, ['skills/whitebox-test-execution/scripts/self_test.py']);
 run(python, ['skills/whitebox-test-execution/scripts/validate_contract.py']);
 console.log('SKILL_COMMANDS=PASS');

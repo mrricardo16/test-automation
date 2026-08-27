@@ -17,6 +17,11 @@ REQUIRED_REFERENCES = [
     "feedback-contract.md",
     "runtime-health-and-errors.md",
     "security-sanitization.md",
+    "multi-agent-orchestration.md",
+    "resource-lock-model.md",
+    "worker-contract.md",
+    "result-reconciliation.md",
+    "cleanup-ownership.md",
 ]
 REQUIRED_TEMPLATES = [
     "coverage-matrix.md",
@@ -34,6 +39,7 @@ REQUIRED_TEMPLATES = [
     "environment-issues.md",
 ]
 STATUSES = ["PASS", "FAIL", "ERROR", "BLOCKED", "MANUAL", "SKIPPED"]
+REQUIRED_SCRIPTS = ["self_test.py", "orchestrator.py", "orchestration_self_test.py"]
 
 
 def fail(message: str) -> None:
@@ -81,6 +87,22 @@ def main() -> int:
         "LegacyFieldAdapter",
         "ApplicabilityStatus",
         "CoverageStatus",
+        "TEST_ORCHESTRATOR",
+        "INDEPENDENT_TEST_WORKER",
+        "STATEFUL_TEST_WORKER",
+        "INDEPENDENT_PARALLEL",
+        "STATEFUL_SERIAL",
+        "SAFETY_BLOCKED",
+        "PARALLEL_PHASE_RECONCILIATION_GATE",
+        "Execution Snapshot",
+        "ResourceLocks",
+        "TestDataNamespace",
+        "ArtifactRoot",
+        "SAFE_STOP",
+        "RESULT_CONFLICT",
+        "single writer",
+        "GlobalReportWrites",
+        "deduplicate",
     ]
     for phrase in required_phrases:
         if phrase not in content:
@@ -111,8 +133,14 @@ def main() -> int:
 
     if not (skill / "agents" / "openai.yaml").exists():
         fail("agents/openai.yaml is missing")
-    if not (skill / "scripts" / "self_test.py").exists():
-        fail("scripts/self_test.py is missing")
+    for name in REQUIRED_SCRIPTS:
+        if not (skill / "scripts" / name).exists():
+            fail(f"scripts/{name} is missing")
+
+    if re.search(r"\b(max_subagents|max_workers|agent_concurrency|global_concurrency)\s*=", "\n".join(
+        path.read_text(encoding="utf-8") for path in [skill / "SKILL.md", *(skill / "scripts").glob("*.py")]
+    ), re.IGNORECASE):
+        fail("Skill must not define global agent capacity")
 
     print(f"PASS: {skill}")
     print(f"references={len(REQUIRED_REFERENCES)} templates={len(REQUIRED_TEMPLATES)} statuses={len(STATUSES)}")

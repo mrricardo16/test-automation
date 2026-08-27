@@ -1,4 +1,4 @@
 interface:
   display_name: "Test Execution"
-  short_description: "Execute black-box Web, API, or Manual tests from a handoff pack"
-  default_prompt: "Use $test-execution to consume a DEV-TEST-HANDOFF pack and execute or plan black-box tests against a supplied runtime without reading product source."
+  short_description: "Execute isolated black-box tests from a handoff pack"
+  default_prompt: "Use $test-execution to consume a DEV-TEST-HANDOFF pack and execute or plan black-box tests against a supplied runtime, including dependency-aware parallel and stateful serial execution without reading product source."
