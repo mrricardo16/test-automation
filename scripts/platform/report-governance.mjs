@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const templatePath = resolve(repoRoot, 'docs/web-test-report-template.md');
+const qualityStandardPath = resolve(repoRoot, 'contracts/testcase-design-quality-standard.md');
 const reportsDir = resolve(repoRoot, 'projects/test-workflow/reports');
 const validStatuses = new Set(['PASS', 'FAIL', 'ERROR', 'BLOCKED', 'MANUAL', 'SKIPPED']);
 const feedbackStatuses = new Set(['FAIL', 'ERROR', 'BLOCKED', 'MANUAL', 'SKIPPED']);
@@ -97,7 +98,10 @@ function validateTemplate() {
     '## 5. 问题反馈报告生成规则',
     '## 6. 生成前检查',
     '## 7. 生成后治理检查',
-    '已执行<功能/流程>结果',
+    '## 2. 测试执行摘要',
+    '## 4. 完整模块化测试用例',
+    'MODULE',
+    'FEATURE',
     '图片示例',
     'FAIL',
     'ERROR',
@@ -108,6 +112,14 @@ function validateTemplate() {
   for (const required of requiredTerms) if (!content.includes(required)) fail(`unified report template is missing: ${required}`);
   if (/\b[A-Za-z]:[\\/]/.test(content)) fail('unified report template contains an absolute Windows path');
   if (/^\s*###?\s+人工复审图片证据/m.test(content)) fail('unified report template contains a standalone image-review section');
+}
+
+function validateQualityStandard() {
+  if (!existsSync(qualityStandardPath)) fail('testcase design quality standard is missing');
+  const content = readUtf8(qualityStandardPath);
+  for (const required of ['用例粒度与独立性', '测试数据设计', '等价类、边界和参数化', '查询矩阵', 'CRUD 生命周期', '状态、决策、权限和关系模型', 'Expected 与成熟度', '中文报告展示', 'CATALOG_GENERATED_SKIPPED_INVALID']) {
+    if (!content.includes(required)) fail(`design quality standard is missing: ${required}`);
+  }
 }
 
 function validateRuntimeReports() {
@@ -151,5 +163,6 @@ function validateRuntimeReports() {
 }
 
 validateTemplate();
+validateQualityStandard();
 const runtimeReports = validateRuntimeReports();
 console.log(`REPORT_GOVERNANCE=TC-DOC-GOV-001:PASS (template${runtimeReports ? '+runtime-reports' : ''})`);

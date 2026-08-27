@@ -1,0 +1,42 @@
+{
+  "PrimaryGrouping": "MODULE",
+  "SecondaryGrouping": "FEATURE",
+  "StatusUsedForGrouping": false,
+  "modules": [
+    { "ModuleId": "AUTH", "ModuleName": "认证", "ModuleOrder": 10 },
+    { "ModuleId": "SYSTEM_MANAGEMENT", "ModuleName": "系统管理", "ModuleOrder": 20 },
+    { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "ModuleOrder": 30 },
+    { "ModuleId": "MAP_MANAGEMENT", "ModuleName": "地图管理", "ModuleOrder": 40 },
+    { "ModuleId": "VEHICLE_MANAGEMENT", "ModuleName": "车辆管理", "ModuleOrder": 50 },
+    { "ModuleId": "MONITORING", "ModuleName": "监控管理", "ModuleOrder": 60 },
+    { "ModuleId": "LOG_MANAGEMENT", "ModuleName": "日志管理", "ModuleOrder": 70 },
+    { "ModuleId": "STATISTICS", "ModuleName": "统计分析", "ModuleOrder": 80 }
+  ],
+  "cases": {
+    "TC-BB-REAL-001-A": { "ModuleId": "AUTH", "ModuleName": "认证", "FeatureId": "AUTH_LOGIN", "FeatureName": "登录", "FeatureOrder": 10, "Operation": "AUTHENTICATION", "OperationOrder": 10, "ScenarioGroup": "HAPPY_PATH", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-001-B": { "ModuleId": "AUTH", "ModuleName": "认证", "FeatureId": "AUTH_LOGIN", "FeatureName": "登录", "FeatureOrder": 10, "Operation": "AUTHENTICATION", "OperationOrder": 10, "ScenarioGroup": "NEGATIVE", "ScenarioOrder": 20, "CaseOrder": 1 },
+    "TC-BB-REAL-012-C": { "ModuleId": "AUTH", "ModuleName": "认证", "FeatureId": "AUTH_SESSION", "FeatureName": "会话", "FeatureOrder": 20, "Operation": "SESSION", "OperationOrder": 10, "ScenarioGroup": "COMPOSITE_FLOW", "ScenarioOrder": 10, "CaseOrder": 1 },
+
+    "TC-BB-REAL-002-A": { "ModuleId": "SYSTEM_MANAGEMENT", "ModuleName": "系统管理", "FeatureId": "USER_MANAGEMENT", "FeatureName": "用户管理", "FeatureOrder": 10, "Operation": "CREATE", "OperationOrder": 10, "ScenarioGroup": "HAPPY_PATH", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-002-B": { "ModuleId": "SYSTEM_MANAGEMENT", "ModuleName": "系统管理", "FeatureId": "USER_MANAGEMENT", "FeatureName": "用户管理", "FeatureOrder": 10, "Operation": "VALIDATION", "OperationOrder": 20, "ScenarioGroup": "VALIDATION", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-002-C": { "ModuleId": "SYSTEM_MANAGEMENT", "ModuleName": "系统管理", "FeatureId": "USER_MANAGEMENT", "FeatureName": "用户管理", "FeatureOrder": 10, "Operation": "COMPOSITE_LIFECYCLE", "OperationOrder": 30, "ScenarioGroup": "COMPOSITE_FLOW", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-003-C": { "ModuleId": "SYSTEM_MANAGEMENT", "ModuleName": "系统管理", "FeatureId": "ROLE_USER_RELATION", "FeatureName": "角色与用户关系", "FeatureOrder": 20, "Operation": "RELATIONSHIP", "OperationOrder": 10, "ScenarioGroup": "RELATIONSHIP", "ScenarioOrder": 10, "CaseOrder": 1 },
+
+    "TC-BB-REAL-004-A": { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "FeatureId": "TASK_CREATE", "FeatureName": "任务创建", "FeatureOrder": 10, "Operation": "CREATE", "OperationOrder": 10, "ScenarioGroup": "HAPPY_PATH", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-004-B": { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "FeatureId": "TASK_CREATE", "FeatureName": "任务创建", "FeatureOrder": 10, "Operation": "VALIDATION", "OperationOrder": 20, "ScenarioGroup": "VALIDATION", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-004-C": { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "FeatureId": "TASK_CREATE", "FeatureName": "任务创建", "FeatureOrder": 10, "Operation": "COMPOSITE_LIFECYCLE", "OperationOrder": 30, "ScenarioGroup": "COMPOSITE_FLOW", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-005-A": { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "FeatureId": "TASK_CANCEL", "FeatureName": "任务取消", "FeatureOrder": 20, "Operation": "STATE_TRANSITION", "OperationOrder": 10, "ScenarioGroup": "STATE", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-005-B": { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "FeatureId": "TASK_CANCEL", "FeatureName": "任务取消", "FeatureOrder": 20, "Operation": "STATE_TRANSITION", "OperationOrder": 10, "ScenarioGroup": "NEGATIVE", "ScenarioOrder": 20, "CaseOrder": 1 },
+    "TC-BB-REAL-006-A": { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "FeatureId": "TASK_RESEND", "FeatureName": "任务重发", "FeatureOrder": 30, "Operation": "STATE_TRANSITION", "OperationOrder": 10, "ScenarioGroup": "RECOVERY", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-006-B": { "ModuleId": "TASK_MANAGEMENT", "ModuleName": "任务管理", "FeatureId": "TASK_RESEND", "FeatureName": "任务重发", "FeatureOrder": 30, "Operation": "STATE_TRANSITION", "OperationOrder": 10, "ScenarioGroup": "NEGATIVE", "ScenarioOrder": 20, "CaseOrder": 1 },
+
+    "TC-BB-REAL-007-C": { "ModuleId": "MAP_MANAGEMENT", "ModuleName": "地图管理", "FeatureId": "MAP_PUBLISH", "FeatureName": "地图发布", "FeatureOrder": 10, "Operation": "COMPOSITE_LIFECYCLE", "OperationOrder": 10, "ScenarioGroup": "COMPOSITE_FLOW", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-008-A": { "ModuleId": "VEHICLE_MANAGEMENT", "ModuleName": "车辆管理", "FeatureId": "VEHICLE_MANAGEMENT", "FeatureName": "车辆管理", "FeatureOrder": 10, "Operation": "CREATE", "OperationOrder": 10, "ScenarioGroup": "HAPPY_PATH", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-008-B": { "ModuleId": "VEHICLE_MANAGEMENT", "ModuleName": "车辆管理", "FeatureId": "VEHICLE_MANAGEMENT", "FeatureName": "车辆管理", "FeatureOrder": 10, "Operation": "VALIDATION", "OperationOrder": 20, "ScenarioGroup": "VALIDATION", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-009-M": { "ModuleId": "MONITORING", "ModuleName": "监控管理", "FeatureId": "MONITORING_VISUAL", "FeatureName": "监控看板", "FeatureOrder": 10, "Operation": "VISUAL", "OperationOrder": 10, "ScenarioGroup": "MANUAL_BOUNDARY", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-010-M": { "ModuleId": "LOG_MANAGEMENT", "ModuleName": "日志管理", "FeatureId": "LOG_DOWNLOAD", "FeatureName": "日志下载", "FeatureOrder": 10, "Operation": "DOWNLOAD", "OperationOrder": 10, "ScenarioGroup": "MANUAL_BOUNDARY", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-011-A": { "ModuleId": "STATISTICS", "ModuleName": "统计分析", "FeatureId": "STATISTICS_QUERY", "FeatureName": "统计查询", "FeatureOrder": 10, "Operation": "QUERY", "OperationOrder": 10, "ScenarioGroup": "HAPPY_PATH", "ScenarioOrder": 10, "CaseOrder": 1 },
+    "TC-BB-REAL-011-B": { "ModuleId": "STATISTICS", "ModuleName": "统计分析", "FeatureId": "STATISTICS_QUERY", "FeatureName": "统计查询", "FeatureOrder": 10, "Operation": "QUERY", "OperationOrder": 10, "ScenarioGroup": "EMPTY_STATE", "ScenarioOrder": 20, "CaseOrder": 1 },
+    "TC-BB-REAL-011-C": { "ModuleId": "STATISTICS", "ModuleName": "统计分析", "FeatureId": "STATISTICS_QUERY", "FeatureName": "统计查询", "FeatureOrder": 10, "Operation": "QUERY", "OperationOrder": 10, "ScenarioGroup": "VALIDATION", "ScenarioOrder": 30, "CaseOrder": 1 }
+  }
+}

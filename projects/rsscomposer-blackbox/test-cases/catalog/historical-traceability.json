@@ -1,0 +1,1990 @@
+{
+  "CatalogVersion": "RSSCOMPOSER-BLACKBOX-FINE-GRAINED-CATALOG-V1",
+  "GeneratedFrom": "outputs/blackbox-testcase-generation-standard-rebuild/黑盒细粒度测试用例.json",
+  "AuthorityVersion": "DEV-HANDOFF-REAL-20260824-105102",
+  "HandoffHash": "d0e4c9ee346187cf3e0bb2723efa8925436263e535ba5924076ab019c5cb37e3",
+  "HandoffHashSource": [
+    "handoff/current.json",
+    "handoff/baselines/DEV-HANDOFF-REAL-20260824-105102/manifest-summary.json"
+  ],
+  "GenerationStandardVersion": "GENERIC-BLACKBOX-TESTCASE-GENERATION-STANDARD-V1",
+  "TestCaseIdStandardPath": "../../contracts/generic-stable-testcase-id-standard.md",
+  "FeatureCodeRegistryPath": "test-cases/catalog/feature-code-registry.json",
+  "TestCaseIdRegistryPath": "test-cases/catalog/testcase-id-registry.json",
+  "TestCaseIdMigrationMapPath": "test-cases/catalog/TESTCASE_ID_MIGRATION_MAP.json",
+  "TestCaseIdMigrationReconciliationPath": "test-cases/catalog/TESTCASE_ID_MIGRATION_RECONCILIATION.json",
+  "GenericStandardPath": "../../contracts/generic-blackbox-testcase-generation-standard.md",
+  "GenericReportTemplatePath": "../../docs/generic-blackbox-test-report-template.md",
+  "GenericTyporaStylePath": "../../docs/generic-typora-report.css",
+  "MaterializedAt": "2026-08-27T01:35:33.248Z",
+  "CatalogType": "HISTORICAL_TESTCASE_TRACEABILITY",
+  "HistoricalTestCaseCount": 22,
+  "HistoricalTestCases": [
+    {
+      "TestCaseId": "TC-BB-REAL-001-A",
+      "SourceActiveTestCaseId": "TC-BB-REAL-001",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-AUTH",
+      "ModuleId": "AUTH",
+      "FeatureId": "AUTH_LOGIN",
+      "Title": "合法身份登录",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证合法身份可以登录。",
+      "PrimaryAssertion": "合法身份进入首页并加载菜单。",
+      "ExpectedResult": "合法身份进入首页并加载菜单。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_LOW",
+      "SideEffects": "SESSION_CHANGE",
+      "SideEffectScope": "TEST_OWNED",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "TEST_OWNED",
+      "InteractionMode": "UNATTENDED",
+      "AutomationType": "AUTO",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "InitialState": "未建立登录会话；使用 Frozen Handoff 允许的合法测试账户。",
+      "Preconditions": [
+        "Runtime 地址和合法账户由 ignored local config 提供。"
+      ],
+      "Steps": [
+        "打开登录页。",
+        "输入合法账户并提交。"
+      ],
+      "PostConditions": [
+        "会话状态按 Expected 建立；不保留凭据。"
+      ],
+      "CoverageTags": [
+        "HAPPY_PATH",
+        "AUTHENTICATION",
+        "SESSION",
+        "POST_CONDITION"
+      ],
+      "EvidenceRequirement": [
+        "URL、页面可见文本、失败时截图和脱敏错误栈。"
+      ],
+      "DestructiveRisk": "NONE",
+      "Limitations": "当前没有可执行的 Runtime/credential 配置，因此本轮不执行。",
+      "ModuleName": "认证",
+      "FeatureName": "登录",
+      "Operation": "AUTHENTICATION",
+      "ScenarioGroup": "HAPPY_PATH",
+      "PresentationOrder": {
+        "ModuleOrder": 10,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "TestCaseId": "TC-BB-REAL-001-A",
+        "ExecutionStatus": "PASS",
+        "Expected": "合法身份进入首页并加载菜单。",
+        "Actual": "Authenticated Dashboard shell visible; FinalUrl=/",
+        "FinalUrl": "http://localhost:8223/",
+        "Evidence": [
+          "E:\\automated-testing\\projects\\rsscomposer-blackbox\\artifacts\\formal-execution\\FAST-BB-REAL-20260825-065833Z\\TC-BB-REAL-001-A\\20260825-065837Z-pid19260-w0-r0\\tc-bb-real-001-a-authenticated-dashboard.png"
+        ],
+        "ElapsedMs": 4890,
+        "Timestamp": "2026-08-25T06:58:42.099Z",
+        "Harness": "PROJECT_PLAYWRIGHT",
+        "BrowserVisibility": "HEADED",
+        "InteractionMode": "UNATTENDED",
+        "FormalRunId": "FAST-BB-REAL-20260825-065833Z",
+        "GeneratedFrom": "runs/FAST-BB-REAL-20260825-065833Z/case-results/TC-BB-REAL-001-A.json"
+      },
+      "RelatedFineGrainedTestCaseIds": [],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-001-B",
+      "SourceActiveTestCaseId": "TC-BB-REAL-001",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-AUTH",
+      "ModuleId": "AUTH",
+      "FeatureId": "AUTH_LOGIN",
+      "Title": "非法身份登录拒绝",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证非法身份不能登录。",
+      "PrimaryAssertion": "非法身份停留登录页并显示错误。",
+      "ExpectedResult": "非法身份停留登录页并显示错误。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_LOW",
+      "SideEffects": "NONE",
+      "SideEffectScope": "TEST_OWNED",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "TEST_OWNED",
+      "InteractionMode": "UNATTENDED",
+      "AutomationType": "AUTO",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "InitialState": "未建立登录会话；使用 Frozen Handoff 允许的非法测试身份。",
+      "Preconditions": [
+        "Runtime 地址由 ignored local config 提供。"
+      ],
+      "Steps": [
+        "打开登录页。",
+        "输入非法身份并提交。"
+      ],
+      "PostConditions": [
+        "仍处于未登录状态；不保留凭据。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "AUTHENTICATION",
+        "ERROR_MODEL",
+        "SESSION",
+        "POST_CONDITION"
+      ],
+      "EvidenceRequirement": [
+        "URL、登录页状态、错误文案、失败时截图。"
+      ],
+      "DestructiveRisk": "NONE",
+      "Limitations": "当前没有可执行的 Runtime 配置，因此本轮不执行。",
+      "ModuleName": "认证",
+      "FeatureName": "登录",
+      "Operation": "AUTHENTICATION",
+      "ScenarioGroup": "NEGATIVE",
+      "PresentationOrder": {
+        "ModuleOrder": 10,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 20,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "TestCaseId": "TC-BB-REAL-001-B",
+        "ExecutionStatus": "PASS",
+        "Expected": "非法身份停留登录页并显示错误。",
+        "Actual": "Login route remained; visible rejection message observed; FinalUrl=/",
+        "FinalUrl": "http://localhost:8223/",
+        "Evidence": [
+          "E:\\automated-testing\\projects\\rsscomposer-blackbox\\artifacts\\formal-execution\\FAST-BB-REAL-20260825-065833Z\\TC-BB-REAL-001-B\\20260825-065842Z-pid19260-w0-r0\\tc-bb-real-001-b-invalid-login-rejected.png"
+        ],
+        "ElapsedMs": 2910,
+        "Timestamp": "2026-08-25T06:58:45.498Z",
+        "Harness": "PROJECT_PLAYWRIGHT",
+        "BrowserVisibility": "HEADED",
+        "InteractionMode": "UNATTENDED",
+        "FormalRunId": "FAST-BB-REAL-20260825-065833Z",
+        "GeneratedFrom": "runs/FAST-BB-REAL-20260825-065833Z/case-results/TC-BB-REAL-001-B.json"
+      },
+      "RelatedFineGrainedTestCaseIds": [],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-012-C",
+      "SourceActiveTestCaseId": "TC-BB-REAL-012",
+      "CaseKind": "COMPOSITE",
+      "ScenarioSuiteId": "SS-BB-AUTH",
+      "ModuleId": "AUTH",
+      "FeatureId": "AUTH_SESSION",
+      "Title": "会话失效后的重新登录流程",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证已登录会话失效后被安全清理并返回登录页。",
+      "PrimaryAssertion": "显示重新登录提示、清理会话并返回登录页。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "ExpectedResult": "显示重新登录提示、清理会话并返回登录页。",
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_MEDIUM",
+      "SideEffects": "SESSION_CHANGE",
+      "SideEffectScope": "TEST_OWNED",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "TEST_OWNED",
+      "InteractionMode": "UNATTENDED",
+      "AutomationType": "AUTO",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "InitialState": "已登录的隔离测试会话随后变为无效。",
+      "Preconditions": [
+        "会话失效触发方式必须由批准的测试环境提供；不得从 Runtime 猜测语义。"
+      ],
+      "Steps": [
+        "访问受保护页面或接口。",
+        "观察重新登录提示。",
+        "检查会话清理并返回登录页。"
+      ],
+      "ExpectedPerStep": [
+        {
+          "Step": 1,
+          "Action": "访问受保护页面或接口",
+          "Expected": "触发 Handoff 定义的失效会话处理。",
+          "StateAfter": "会话被识别为无效。"
+        },
+        {
+          "Step": 2,
+          "Action": "观察提示",
+          "Expected": "显示重新登录提示。",
+          "StateAfter": "用户被要求重新登录。"
+        },
+        {
+          "Step": 3,
+          "Action": "检查清理和导航",
+          "Expected": "清理会话并返回登录页。",
+          "StateAfter": "无有效会话且处于登录页。"
+        }
+      ],
+      "StateTransitions": [
+        {
+          "From": "AUTHENTICATED",
+          "Action": "SESSION_INVALIDATE",
+          "To": "INVALID"
+        },
+        {
+          "From": "INVALID",
+          "Action": "PROTECTED_ACCESS",
+          "To": "LOGIN_REQUIRED"
+        }
+      ],
+      "PostConditions": [
+        "无有效会话残留。",
+        "页面返回登录页。"
+      ],
+      "CrossStepInvariants": [
+        "不得输出或保存凭据。",
+        "每步 Actual 与 Evidence 分开。"
+      ],
+      "Cleanup": "关闭测试会话并删除本地临时状态。",
+      "CleanupVerification": "重新访问受保护页面确认仍需登录。",
+      "CoverageTags": [
+        "COMPOSITE_FLOW",
+        "SESSION",
+        "STATE_TRANSITION",
+        "AUTHENTICATION",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "提示、URL、会话状态观察和清理验证；不得保留 cookie/token。"
+      ],
+      "DestructiveRisk": "LOW",
+      "Limitations": "当前环境未授权，因此暂不可执行 AUTO。",
+      "ModuleName": "认证",
+      "FeatureName": "会话",
+      "Operation": "SESSION",
+      "ScenarioGroup": "COMPOSITE_FLOW",
+      "PresentationOrder": {
+        "ModuleOrder": 10,
+        "FeatureOrder": 20,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-002-A",
+      "SourceActiveTestCaseId": "TC-BB-REAL-002",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-ACCESS",
+      "ModuleId": "SYSTEM_MANAGEMENT",
+      "FeatureId": "USER_MANAGEMENT",
+      "Title": "创建有效用户",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证有效用户数据可保存。",
+      "PrimaryAssertion": "有效数据保存。",
+      "ExpectedResult": "有效数据保存并出现在列表。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "管理员权限、唯一测试前缀和可清理用户数据均已批准。",
+      "Preconditions": [
+        "账号和唯一测试数据必须来自 ignored local config/approved setup。"
+      ],
+      "Steps": [
+        "进入用户管理。",
+        "填写有效必填项并保存。"
+      ],
+      "PostConditions": [
+        "新用户出现在列表；清理后重新查询确认不存在。"
+      ],
+      "CoverageTags": [
+        "HAPPY_PATH",
+        "BUSINESS_RULE",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "保存结果、前后列表、清理与清理验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "高风险写入在设计阶段路由 MANUAL_REQUIRED。",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理",
+      "Operation": "CREATE",
+      "ScenarioGroup": "HAPPY_PATH",
+      "PresentationOrder": {
+        "ModuleOrder": 20,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "TestCaseId": "TC-BB-REAL-002-A",
+        "ExecutionStatus": "PASS",
+        "Expected": "有效数据保存并出现在列表。",
+        "Actual": "Created TEST_OWNED user listed; CleanupVerification=absent; Fixture=BB25_TC_BB_REAL_002_A_081216U",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/artifacts/formal-execution/FAST-BB-REAL-20260825-081216Z-PENDING/TC-BB-REAL-002-A/20260825-081220Z-pid13936-w0-r0/tc-bb-real-002-a-created-user.png"
+        ],
+        "ElapsedMs": 8526,
+        "SourceResult": "runs/FAST-BB-REAL-20260825-081216Z-PENDING/case-results/TC-BB-REAL-002-A.json",
+        "FormalRunId": "FAST-BB-REAL-20260825-081216Z",
+        "GeneratedFrom": "runs/FAST-BB-REAL-20260825-081216Z/final-case-results.json"
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-USER-CREATE-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-002-B",
+      "SourceActiveTestCaseId": "TC-BB-REAL-002",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-ACCESS",
+      "ModuleId": "SYSTEM_MANAGEMENT",
+      "FeatureId": "USER_MANAGEMENT",
+      "Title": "拒绝重复或短凭据用户数据",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证重复或短凭据数据被拒绝。",
+      "PrimaryAssertion": "重复或短凭据被拒绝。",
+      "ExpectedResult": "重复或短凭据被拒绝。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "已批准的隔离用户数据和重复/边界输入数据可用。",
+      "Preconditions": [
+        "不得使用共享生产数据；失败提交后的残留必须可验证清理。"
+      ],
+      "Steps": [
+        "进入用户管理。",
+        "分别提交重复或短凭据数据。"
+      ],
+      "PostConditions": [
+        "非法数据未产生新用户；清理验证完成。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "VALIDATION",
+        "BOUNDARY",
+        "DUPLICATE",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "请求结果、字段错误、列表未新增、清理验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "高风险写入在设计阶段路由 MANUAL_REQUIRED。",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理",
+      "Operation": "VALIDATION",
+      "ScenarioGroup": "VALIDATION",
+      "PresentationOrder": {
+        "ModuleOrder": 20,
+        "FeatureOrder": 10,
+        "OperationOrder": 20,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "TestCaseId": "TC-BB-REAL-002-B",
+        "ExecutionStatus": "PASS",
+        "Expected": "重复或短凭据被拒绝。",
+        "Actual": "Duplicate and short redacted submissions rejected; CleanupVerification=all current-run user fixtures absent.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/artifacts/formal-execution/FAST-BB-REAL-20260825-081216Z-PENDING/TC-BB-REAL-002-B/20260825-081229Z-pid13936-w0-r0/tc-bb-real-002-b-validation-rejected.png"
+        ],
+        "ElapsedMs": 12044,
+        "SourceResult": "runs/FAST-BB-REAL-20260825-081216Z-PENDING/case-results/TC-BB-REAL-002-B.json",
+        "FormalRunId": "FAST-BB-REAL-20260825-081216Z",
+        "GeneratedFrom": "runs/FAST-BB-REAL-20260825-081216Z/final-case-results.json"
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-USER-CREATE-002",
+        "TC-USER-CREATE-003",
+        "TC-USER-CREATE-004",
+        "TC-USER-CREATE-005",
+        "TC-USER-DELETE-001",
+        "TC-USER-QUERY-003",
+        "TC-USER-DELETE-002",
+        "TC-USER-CREATE-006",
+        "TC-USER-UPDATE-003"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-002-C",
+      "SourceActiveTestCaseId": "TC-BB-REAL-002",
+      "CaseKind": "COMPOSITE",
+      "ScenarioSuiteId": "SS-BB-ACCESS",
+      "ModuleId": "SYSTEM_MANAGEMENT",
+      "FeatureId": "USER_MANAGEMENT",
+      "Title": "用户 CREATE→READ 持久化",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证创建的有效用户在后续查询中保持持久状态。",
+      "PrimaryAssertion": "创建后重新查询仍显示该用户。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "ExpectedResult": "有效数据保存并出现在列表。",
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "管理员权限、唯一测试用户不存在、隔离列表可查询。",
+      "Preconditions": [
+        "创建数据必须符合业务约束并可安全清理。"
+      ],
+      "Steps": [
+        "创建有效用户。",
+        "重新查询用户列表。",
+        "删除测试用户并重新查询。"
+      ],
+      "ExpectedPerStep": [
+        {
+          "Step": 1,
+          "Action": "创建有效用户",
+          "Expected": "有效数据保存。",
+          "StateAfter": "测试用户存在或保存失败。"
+        },
+        {
+          "Step": 2,
+          "Action": "重新查询列表",
+          "Expected": "有效数据出现在列表。",
+          "StateAfter": "测试用户可见。"
+        },
+        {
+          "Step": 3,
+          "Action": "清理并查询",
+          "Expected": "清理完成并可验证。",
+          "StateAfter": "测试用户不再出现在列表。"
+        }
+      ],
+      "StateTransitions": [
+        {
+          "From": "ABSENT",
+          "Action": "CREATE",
+          "To": "PRESENT"
+        },
+        {
+          "From": "PRESENT",
+          "Action": "READ",
+          "To": "PRESENT"
+        },
+        {
+          "From": "PRESENT",
+          "Action": "CLEANUP",
+          "To": "ABSENT"
+        }
+      ],
+      "PostConditions": [
+        "创建后的列表状态符合 Handoff Expected。",
+        "清理后对象不存在。"
+      ],
+      "CrossStepInvariants": [
+        "测试数据始终是隔离自有数据。",
+        "每一步 Actual 与 Evidence 单独记录。"
+      ],
+      "Cleanup": "删除本次创建且确认归属的用户。",
+      "CleanupVerification": "重新查询列表确认测试用户不存在。",
+      "CoverageTags": [
+        "COMPOSITE_FLOW",
+        "CRUD_LIFECYCLE",
+        "POST_CONDITION",
+        "CLEANUP",
+        "DATA_CONSISTENCY"
+      ],
+      "EvidenceRequirement": [
+        "每步 Actual/Evidence、创建结果、查询列表、清理验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "高风险写入设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "ScenarioGroup": "COMPOSITE_FLOW",
+      "PresentationOrder": {
+        "ModuleOrder": 20,
+        "FeatureOrder": 10,
+        "OperationOrder": 30,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "TestCaseId": "TC-BB-REAL-002-C",
+        "ExecutionStatus": "PASS",
+        "Expected": "有效数据保存并出现在列表。",
+        "Actual": "CREATE→READ verified for TEST_OWNED user; CleanupVerification=absent; Fixture=BB25_TC_BB_REAL_002_C_081216U",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/artifacts/formal-execution/FAST-BB-REAL-20260825-081216Z-PENDING/TC-BB-REAL-002-C/20260825-081242Z-pid13936-w0-r0/tc-bb-real-002-c-create-read.png"
+        ],
+        "ElapsedMs": 8578,
+        "SourceResult": "runs/FAST-BB-REAL-20260825-081216Z-PENDING/case-results/TC-BB-REAL-002-C.json",
+        "FormalRunId": "FAST-BB-REAL-20260825-081216Z",
+        "GeneratedFrom": "runs/FAST-BB-REAL-20260825-081216Z/final-case-results.json"
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-USER-CREATE-001",
+        "TC-USER-QUERY-001",
+        "TC-USER-QUERY-002",
+        "TC-USER-RESET-001",
+        "TC-USER-PAGE-001",
+        "TC-USER-UPDATE-001",
+        "TC-USER-UPDATE-002"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-003-C",
+      "SourceActiveTestCaseId": "TC-BB-REAL-003",
+      "CaseKind": "COMPOSITE",
+      "ScenarioSuiteId": "SS-BB-ACCESS",
+      "ModuleId": "SYSTEM_MANAGEMENT",
+      "FeatureId": "ROLE_USER_RELATION",
+      "Title": "角色关联 CREATE→READ 完整性",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证保存的角色与用户关联在重新查询时保持一致。",
+      "PrimaryAssertion": "重新查询时显示已保存关联。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "ExpectedResult": "重新查询时显示已保存关联。",
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_UPDATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "测试角色与测试用户已存在，关联不存在或已知。",
+      "Preconditions": [
+        "账号、角色、用户和恢复原关联方案已批准。"
+      ],
+      "Steps": [
+        "打开角色并选择用户。",
+        "保存关联。",
+        "重新查询角色关联。",
+        "恢复原关联并验证。"
+      ],
+      "ExpectedPerStep": [
+        {
+          "Step": 1,
+          "Action": "选择关联",
+          "Expected": "角色与用户可被选择。",
+          "StateAfter": "待保存关联已准备。"
+        },
+        {
+          "Step": 2,
+          "Action": "保存关联",
+          "Expected": "关联保存完成。",
+          "StateAfter": "关联已写入。"
+        },
+        {
+          "Step": 3,
+          "Action": "重新查询",
+          "Expected": "重新查询时显示已保存关联。",
+          "StateAfter": "关联可见。"
+        },
+        {
+          "Step": 4,
+          "Action": "恢复并验证",
+          "Expected": "原关联状态恢复。",
+          "StateAfter": "测试副作用已清理。"
+        }
+      ],
+      "StateTransitions": [
+        {
+          "From": "UNASSIGNED",
+          "Action": "ASSIGN",
+          "To": "ASSIGNED"
+        },
+        {
+          "From": "ASSIGNED",
+          "Action": "READ",
+          "To": "ASSIGNED"
+        },
+        {
+          "From": "ASSIGNED",
+          "Action": "CLEANUP",
+          "To": "UNASSIGNED"
+        }
+      ],
+      "PostConditions": [
+        "保存后的关联可重新查询。",
+        "测试关联恢复并完成验证。"
+      ],
+      "CrossStepInvariants": [
+        "不得改变非测试用户/角色关联。",
+        "每步 Actual 与 Evidence 分开。"
+      ],
+      "Cleanup": "删除本次新增关联或恢复原关联。",
+      "CleanupVerification": "重新查询确认原关联状态。",
+      "CoverageTags": [
+        "COMPOSITE_FLOW",
+        "CRUD_LIFECYCLE",
+        "REFERENTIAL_INTEGRITY",
+        "PERMISSION",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "关联前后、保存结果、重新查询、恢复验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "角色权限副作用设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色与用户关系",
+      "Operation": "RELATIONSHIP",
+      "ScenarioGroup": "RELATIONSHIP",
+      "PresentationOrder": {
+        "ModuleOrder": 20,
+        "FeatureOrder": 20,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "TestCaseId": "TC-BB-REAL-003-C",
+        "ExecutionStatus": "PASS",
+        "Expected": "重新查询时显示已保存关联。",
+        "Actual": "InitialBinding=false; Mutation=ASSIGN; ExpectedRelationship=ASSIGNED; ActualRelationship=ASSIGNED; Restoration/Cleanup=UNASSIGNED/false; UserAndRoleAbsent=verified",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/artifacts/formal-execution/FAST-BB-REAL-20260825-081216Z-PENDING/TC-BB-REAL-003-C/20260825-081251Z-pid13936-w0-r0/tc-bb-real-003-c-binding-persisted.png"
+        ],
+        "ElapsedMs": 22618,
+        "SourceResult": "runs/FAST-BB-REAL-20260825-081216Z-PENDING/case-results/TC-BB-REAL-003-C.json",
+        "FormalRunId": "FAST-BB-REAL-20260825-081216Z",
+        "GeneratedFrom": "runs/FAST-BB-REAL-20260825-081216Z/final-case-results.json"
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-URB-BIND-001",
+        "TC-URB-UNBIND-001",
+        "TC-URB-BIND-002",
+        "TC-URB-PERMISSION-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-004-A",
+      "SourceActiveTestCaseId": "TC-BB-REAL-004",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-TASK",
+      "ModuleId": "TASK_MANAGEMENT",
+      "FeatureId": "TASK_CREATE",
+      "Title": "创建有效任务",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证有效任务请求可生成任务。",
+      "PrimaryAssertion": "生成唯一任务。",
+      "ExpectedResult": "生成唯一任务并在列表显示。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离地图、模板、站点和可选车辆已获批准。",
+      "Preconditions": [
+        "所有依赖必须以业务约束有效的隔离数据准备。"
+      ],
+      "Steps": [
+        "打开任务页并选择新增。",
+        "选择模板/车辆/站点/楼层并确认。"
+      ],
+      "PostConditions": [
+        "任务唯一且可清理；清理后列表验证。"
+      ],
+      "CoverageTags": [
+        "HAPPY_PATH",
+        "BUSINESS_RULE",
+        "LIFECYCLE",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "请求结果、任务标识、列表状态、清理与验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "任务创建为副作用操作，设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务创建",
+      "Operation": "CREATE",
+      "ScenarioGroup": "HAPPY_PATH",
+      "PresentationOrder": {
+        "ModuleOrder": 30,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-TNEW-CREATE-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-004-B",
+      "SourceActiveTestCaseId": "TC-BB-REAL-004",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-TASK",
+      "ModuleId": "TASK_MANAGEMENT",
+      "FeatureId": "TASK_CREATE",
+      "Title": "无效任务依赖拒绝",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证无效依赖不会生成任务。",
+      "PrimaryAssertion": "无效依赖不产生任务。",
+      "ExpectedResult": "无效依赖不产生任务。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离任务依赖与无效依赖数据已批准。",
+      "Preconditions": [
+        "提交失败后必须验证无孤儿任务或副作用。"
+      ],
+      "Steps": [
+        "打开任务新增流程。",
+        "提交无效依赖组合。"
+      ],
+      "PostConditions": [
+        "没有新任务；无残留副作用。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "VALIDATION",
+        "REFERENTIAL_INTEGRITY",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "错误结果、任务列表前后对比、残留检查。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "高风险写入在设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务创建",
+      "Operation": "VALIDATION",
+      "ScenarioGroup": "VALIDATION",
+      "PresentationOrder": {
+        "ModuleOrder": 30,
+        "FeatureOrder": 10,
+        "OperationOrder": 20,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-TNEW-CREATE-002",
+        "TC-TNEW-CREATE-003",
+        "TC-TNEW-CREATE-004",
+        "TC-TNEW-CREATE-005",
+        "TC-TNEW-CREATE-006",
+        "TC-TNEW-CREATE-007"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-004-C",
+      "SourceActiveTestCaseId": "TC-BB-REAL-004",
+      "CaseKind": "COMPOSITE",
+      "ScenarioSuiteId": "SS-BB-TASK",
+      "ModuleId": "TASK_MANAGEMENT",
+      "FeatureId": "TASK_CREATE",
+      "Title": "任务 CREATE→READ 持久化",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证生成的唯一任务在列表查询中保持可见且可清理。",
+      "PrimaryAssertion": "生成唯一任务并在列表显示。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "ExpectedResult": "生成唯一任务并在列表显示。",
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "合法地图、模板、站点、楼层和可选车辆均为隔离数据。",
+      "Preconditions": [
+        "任务副作用、唯一性、清理和状态恢复必须已批准。"
+      ],
+      "Steps": [
+        "创建有效任务。",
+        "重新查询任务列表。",
+        "清理任务并查询。"
+      ],
+      "ExpectedPerStep": [
+        {
+          "Step": 1,
+          "Action": "CREATE",
+          "Expected": "生成唯一任务。",
+          "StateAfter": "任务已创建。"
+        },
+        {
+          "Step": 2,
+          "Action": "READ",
+          "Expected": "任务在列表显示。",
+          "StateAfter": "任务可见。"
+        },
+        {
+          "Step": 3,
+          "Action": "CLEANUP",
+          "Expected": "清理完成。",
+          "StateAfter": "任务不再可见或处于批准的清理终态。"
+        }
+      ],
+      "StateTransitions": [
+        {
+          "From": "ABSENT",
+          "Action": "CREATE",
+          "To": "PRESENT"
+        },
+        {
+          "From": "PRESENT",
+          "Action": "READ",
+          "To": "PRESENT"
+        },
+        {
+          "From": "PRESENT",
+          "Action": "CLEANUP",
+          "To": "CLEANED"
+        }
+      ],
+      "PostConditions": [
+        "任务唯一且列表可见。",
+        "清理或批准的清理终态可验证。"
+      ],
+      "CrossStepInvariants": [
+        "任务依赖关系保持有效。",
+        "每步 Actual 与 Evidence 分开。"
+      ],
+      "Cleanup": "删除或按批准方案终止本次任务。",
+      "CleanupVerification": "重新查询任务列表并记录清理状态。",
+      "CoverageTags": [
+        "COMPOSITE_FLOW",
+        "CRUD_LIFECYCLE",
+        "DATA_CONSISTENCY",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "每步结果、任务标识、列表、清理状态。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "任务副作用设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务创建",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "ScenarioGroup": "COMPOSITE_FLOW",
+      "PresentationOrder": {
+        "ModuleOrder": 30,
+        "FeatureOrder": 10,
+        "OperationOrder": 30,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-TNEW-CREATE-001",
+        "TC-TQUERY-QUERY-001",
+        "TC-TQUERY-QUERY-002",
+        "TC-TQUERY-PAGE-001",
+        "TC-TQUERY-QUERY-003",
+        "TC-TLIFE-QUERY-001",
+        "TC-TLIFE-CANCEL-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-005-A",
+      "SourceActiveTestCaseId": "TC-BB-REAL-005",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-TASK",
+      "ModuleId": "TASK_MANAGEMENT",
+      "FeatureId": "TASK_CANCEL",
+      "Title": "取消允许取消的任务",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证允许取消的任务可进入取消后状态。",
+      "PrimaryAssertion": "操作成功后列表状态更新。",
+      "ExpectedResult": "操作成功后列表状态更新。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_UPDATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "UNKNOWN",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离任务处于允许取消状态。",
+      "Preconditions": [
+        "任务归属和恢复/清理语义须由测试负责人批准。"
+      ],
+      "Steps": [
+        "选择允许取消的任务。",
+        "执行取消并确认。"
+      ],
+      "PostConditions": [
+        "列表状态按 Handoff Expected 更新；清理或状态恢复策略完成。"
+      ],
+      "CoverageTags": [
+        "STATE_TRANSITION",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "状态前后、操作结果、清理或恢复验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "取消是高风险副作用，设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务取消",
+      "Operation": "STATE_TRANSITION",
+      "ScenarioGroup": "STATE",
+      "PresentationOrder": {
+        "ModuleOrder": 30,
+        "FeatureOrder": 20,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-TCANCEL-CANCEL-001",
+        "TC-TCANCEL-CANCEL-003"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-005-B",
+      "SourceActiveTestCaseId": "TC-BB-REAL-005",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-TASK",
+      "ModuleId": "TASK_MANAGEMENT",
+      "FeatureId": "TASK_CANCEL",
+      "Title": "终态任务取消入口不可用",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证终态任务不能再次取消。",
+      "PrimaryAssertion": "终态任务入口不可用。",
+      "ExpectedResult": "终态任务入口不可用。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "NONE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离任务处于终态。",
+      "Preconditions": [
+        "终态数据必须是测试自有或获批准的隔离数据。"
+      ],
+      "Steps": [
+        "选择终态任务。",
+        "观察取消入口并尝试受控操作。"
+      ],
+      "PostConditions": [
+        "终态任务保持原状态。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "STATE_TRANSITION",
+        "PERMISSION",
+        "POST_CONDITION"
+      ],
+      "EvidenceRequirement": [
+        "状态、入口可用性、操作结果。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "涉及任务状态和潜在副作用，设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务取消",
+      "Operation": "STATE_TRANSITION",
+      "ScenarioGroup": "NEGATIVE",
+      "PresentationOrder": {
+        "ModuleOrder": 30,
+        "FeatureOrder": 20,
+        "OperationOrder": 10,
+        "ScenarioOrder": 20,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-TCANCEL-CANCEL-002"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-006-A",
+      "SourceActiveTestCaseId": "TC-BB-REAL-006",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-TASK",
+      "ModuleId": "TASK_MANAGEMENT",
+      "FeatureId": "TASK_RESEND",
+      "Title": "允许状态任务重发",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证允许状态的任务可以重发。",
+      "PrimaryAssertion": "允许状态重发成功。",
+      "ExpectedResult": "允许状态重发成功。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "EXTERNAL_EFFECT",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "UNKNOWN",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离任务处于允许重发状态。",
+      "Preconditions": [
+        "外部副作用和清理方案须在设计阶段批准。"
+      ],
+      "Steps": [
+        "选择允许重发的任务。",
+        "执行重发并确认。"
+      ],
+      "PostConditions": [
+        "重发结果按 Handoff Expected；副作用和清理已验证。"
+      ],
+      "CoverageTags": [
+        "STATE_TRANSITION",
+        "RECOVERY",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "任务状态、响应、外部效果边界、清理验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "重发存在外部副作用，设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务重发",
+      "Operation": "STATE_TRANSITION",
+      "ScenarioGroup": "RECOVERY",
+      "PresentationOrder": {
+        "ModuleOrder": 30,
+        "FeatureOrder": 30,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-TRESEND-RESEND-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-006-B",
+      "SourceActiveTestCaseId": "TC-BB-REAL-006",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-TASK",
+      "ModuleId": "TASK_MANAGEMENT",
+      "FeatureId": "TASK_RESEND",
+      "Title": "禁止状态任务重发拒绝",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证禁止状态的任务不能重发。",
+      "PrimaryAssertion": "禁止状态返回任务不能重发。",
+      "ExpectedResult": "禁止状态返回任务不能重发。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "NONE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离任务处于禁止重发状态。",
+      "Preconditions": [
+        "任务必须为测试自有或获批准隔离数据。"
+      ],
+      "Steps": [
+        "选择禁止重发的任务。",
+        "尝试重发。"
+      ],
+      "PostConditions": [
+        "任务不被重发且状态保持。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "STATE_TRANSITION",
+        "PERMISSION",
+        "POST_CONDITION"
+      ],
+      "EvidenceRequirement": [
+        "状态、入口、响应和状态不变证据。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "任务控制行为设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务重发",
+      "Operation": "STATE_TRANSITION",
+      "ScenarioGroup": "NEGATIVE",
+      "PresentationOrder": {
+        "ModuleOrder": 30,
+        "FeatureOrder": 30,
+        "OperationOrder": 10,
+        "ScenarioOrder": 20,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-TRESEND-RESEND-002"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-007-C",
+      "SourceActiveTestCaseId": "TC-BB-REAL-007",
+      "CaseKind": "COMPOSITE",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "MAP_MANAGEMENT",
+      "FeatureId": "MAP_PUBLISH",
+      "Title": "地图保存发布后重新读取",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证隔离地图保存、发布和重新读取的一致性且不覆盖业务地图。",
+      "PrimaryAssertion": "发布成功且重新读取内容一致；不得覆盖业务地图。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "ExpectedResult": "发布成功且重新读取内容一致；不得覆盖业务地图。",
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_CRITICAL",
+      "SideEffects": "GLOBAL_CONFIG_CHANGE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "UNKNOWN",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离测试地图存在，业务地图基线已记录并受保护。",
+      "Preconditions": [
+        "必须有批准的隔离地图和可验证的业务地图保护边界。"
+      ],
+      "Steps": [
+        "编辑隔离地图。",
+        "保存。",
+        "发布。",
+        "重新读取内容并与保存内容比较。",
+        "清理隔离地图并验证业务地图未改变。"
+      ],
+      "ExpectedPerStep": [
+        {
+          "Step": 1,
+          "Action": "EDIT",
+          "Expected": "隔离地图可编辑。",
+          "StateAfter": "待保存内容形成。"
+        },
+        {
+          "Step": 2,
+          "Action": "SAVE",
+          "Expected": "保存完成。",
+          "StateAfter": "隔离地图保存。"
+        },
+        {
+          "Step": 3,
+          "Action": "PUBLISH",
+          "Expected": "发布成功。",
+          "StateAfter": "隔离地图已发布。"
+        },
+        {
+          "Step": 4,
+          "Action": "READ",
+          "Expected": "重新读取内容一致。",
+          "StateAfter": "持久内容可比较。"
+        },
+        {
+          "Step": 5,
+          "Action": "CLEANUP",
+          "Expected": "不得覆盖业务地图。",
+          "StateAfter": "业务地图基线保持不变。"
+        }
+      ],
+      "StateTransitions": [
+        {
+          "From": "DRAFT",
+          "Action": "SAVE",
+          "To": "SAVED"
+        },
+        {
+          "From": "SAVED",
+          "Action": "PUBLISH",
+          "To": "PUBLISHED"
+        },
+        {
+          "From": "PUBLISHED",
+          "Action": "READ",
+          "To": "PUBLISHED"
+        },
+        {
+          "From": "PUBLISHED",
+          "Action": "CLEANUP",
+          "To": "CLEANED"
+        }
+      ],
+      "PostConditions": [
+        "发布后重新读取内容一致。",
+        "业务地图未被覆盖。",
+        "隔离数据完成清理或进入批准的清理终态。"
+      ],
+      "CrossStepInvariants": [
+        "只使用隔离测试地图。",
+        "业务地图保护证据独立记录。",
+        "每步 Actual 与 Evidence 分开。"
+      ],
+      "Cleanup": "删除或撤销隔离地图发布，并保留业务地图保护验证。",
+      "CleanupVerification": "重新读取业务地图基线并比较；确认隔离地图已清理。",
+      "CoverageTags": [
+        "COMPOSITE_FLOW",
+        "STATE_TRANSITION",
+        "DATA_CONSISTENCY",
+        "POST_CONDITION",
+        "CLEANUP",
+        "MANUAL_BOUNDARY"
+      ],
+      "EvidenceRequirement": [
+        "保存/发布/重读结果、内容比较、业务地图保护和清理证据。"
+      ],
+      "DestructiveRisk": "CRITICAL",
+      "Limitations": "高风险全局业务副作用设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "地图管理",
+      "FeatureName": "地图发布",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "ScenarioGroup": "COMPOSITE_FLOW",
+      "PresentationOrder": {
+        "ModuleOrder": 40,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-008-A",
+      "SourceActiveTestCaseId": "TC-BB-REAL-008",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "VEHICLE_MANAGEMENT",
+      "FeatureId": "VEHICLE_MANAGEMENT",
+      "Title": "创建有效车辆",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证有效车辆数据可保存。",
+      "PrimaryAssertion": "有效车辆出现在列表。",
+      "ExpectedResult": "有效车辆出现在列表。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "车辆编号唯一且类型配置有效。",
+      "Preconditions": [
+        "只能使用隔离测试车辆数据。"
+      ],
+      "Steps": [
+        "打开车辆管理。",
+        "填写有效车辆数据并保存。"
+      ],
+      "PostConditions": [
+        "车辆出现在列表；清理后重新查询验证。"
+      ],
+      "CoverageTags": [
+        "HAPPY_PATH",
+        "BUSINESS_RULE",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "保存结果、列表、清理与验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "高风险写入在设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理",
+      "Operation": "CREATE",
+      "ScenarioGroup": "HAPPY_PATH",
+      "PresentationOrder": {
+        "ModuleOrder": 50,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-VEH-CREATE-001",
+        "TC-VEH-QUERY-001",
+        "TC-VEH-QUERY-002",
+        "TC-VEH-UPDATE-001",
+        "TC-VEH-DELETE-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-008-B",
+      "SourceActiveTestCaseId": "TC-BB-REAL-008",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "VEHICLE_MANAGEMENT",
+      "FeatureId": "VEHICLE_MANAGEMENT",
+      "Title": "拒绝重复或无效车辆数据",
+      "Priority": "P0",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证重复或无效车辆数据被拒绝。",
+      "PrimaryAssertion": "重复或无效数据被拒绝。",
+      "ExpectedResult": "重复或无效数据被拒绝。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "TEST_DATA_CREATE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "CLEANUP_REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "隔离车辆数据和重复/无效输入已批准。",
+      "Preconditions": [
+        "失败提交后的无残留和清理验证必须可执行。"
+      ],
+      "Steps": [
+        "打开车辆管理。",
+        "分别提交重复或无效车辆数据。"
+      ],
+      "PostConditions": [
+        "没有非法新车辆；清理验证完成。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "VALIDATION",
+        "BOUNDARY",
+        "DUPLICATE",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "字段错误、列表未新增、请求结果、清理验证。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "高风险写入在设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理",
+      "Operation": "VALIDATION",
+      "ScenarioGroup": "VALIDATION",
+      "PresentationOrder": {
+        "ModuleOrder": 50,
+        "FeatureOrder": 10,
+        "OperationOrder": 20,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-VEH-CREATE-002",
+        "TC-VEH-CREATE-003",
+        "TC-VEH-CREATE-004",
+        "TC-VEH-CREATE-005",
+        "TC-VEH-CREATE-006",
+        "TC-VEH-CREATE-007",
+        "TC-VEH-UPDATE-002"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-009-M",
+      "SourceActiveTestCaseId": "TC-BB-REAL-009",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "MONITORING",
+      "FeatureId": "MONITORING_VISUAL",
+      "Title": "监控看板人工视觉检查",
+      "Priority": "P0",
+      "TestType": "MANUAL",
+      "TestLayer": "MANUAL",
+      "Objective": "验证监控看板呈现地图、任务、车辆和充电状态。",
+      "PrimaryAssertion": "显示地图、任务、车辆和充电状态；依赖不可用时保留可诊断空态或错误。",
+      "ExpectedResult": "显示地图、任务、车辆和充电状态；依赖不可用时保留可诊断空态或错误。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_MEDIUM",
+      "SideEffects": "NONE",
+      "SideEffectScope": "UNKNOWN",
+      "Reversibility": "UNKNOWN",
+      "DataOwnership": "UNKNOWN",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Human observation",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "Runtime 和批准的监控数据源可用。",
+      "Preconditions": [
+        "视觉/Canvas 结果不能由本 Review Package 声称 AUTO。"
+      ],
+      "Steps": [
+        "打开监控看板。",
+        "等待数据加载并由人工观察。"
+      ],
+      "PostConditions": [
+        "记录人工观察和截图；不把观察改写成 Expected。"
+      ],
+      "CoverageTags": [
+        "MANUAL_BOUNDARY",
+        "HAPPY_PATH",
+        "POST_CONDITION"
+      ],
+      "EvidenceRequirement": [
+        "人工观察记录、截图、可诊断错误/空态证据。"
+      ],
+      "DestructiveRisk": "NONE",
+      "Limitations": "Canvas 视觉保真度保持 MANUAL。",
+      "ModuleName": "监控管理",
+      "FeatureName": "监控看板",
+      "Operation": "VISUAL",
+      "ScenarioGroup": "MANUAL_BOUNDARY",
+      "PresentationOrder": {
+        "ModuleOrder": 60,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-MON-VISUAL-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-010-M",
+      "SourceActiveTestCaseId": "TC-BB-REAL-010",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "LOG_MANAGEMENT",
+      "FeatureId": "LOG_DOWNLOAD",
+      "Title": "安全下载批准的非敏感日志包",
+      "Priority": "P1",
+      "TestType": "MANUAL",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证下载行为只处理列表中批准的非敏感包。",
+      "PrimaryAssertion": "返回下载内容或明确不可用结果，不接受任意文件路径。",
+      "ExpectedResult": "返回下载内容或明确不可用结果，不接受任意文件路径。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_HIGH",
+      "SideEffects": "EXTERNAL_EFFECT",
+      "SideEffectScope": "UNKNOWN",
+      "Reversibility": "UNKNOWN",
+      "DataOwnership": "UNKNOWN",
+      "InteractionMode": "INTERACTIVE",
+      "AutomationType": "MANUAL",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "InitialState": "已批准的非敏感测试日志包出现在列表。",
+      "Preconditions": [
+        "禁止读取任意路径；下载内容不得进入 tracked artifacts。"
+      ],
+      "Steps": [
+        "查询日志包。",
+        "选择列表项并下载。"
+      ],
+      "PostConditions": [
+        "仅保留脱敏元数据和结果；不保留敏感内容。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "MANUAL_BOUNDARY",
+        "POST_CONDITION",
+        "CLEANUP"
+      ],
+      "EvidenceRequirement": [
+        "列表选择、响应元数据、下载安全结果；不保存敏感内容。"
+      ],
+      "DestructiveRisk": "HIGH",
+      "Limitations": "文件下载与敏感数据边界在设计阶段 MANUAL_REQUIRED。",
+      "ModuleName": "日志管理",
+      "FeatureName": "日志下载",
+      "Operation": "DOWNLOAD",
+      "ScenarioGroup": "MANUAL_BOUNDARY",
+      "PresentationOrder": {
+        "ModuleOrder": 70,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-LOG-DOWNLOAD-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-011-A",
+      "SourceActiveTestCaseId": "TC-BB-REAL-011",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "STATISTICS",
+      "FeatureId": "STATISTICS_QUERY",
+      "Title": "统计查询有数据",
+      "Priority": "P1",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证合法时间范围有数据时显示统计。",
+      "PrimaryAssertion": "有数据时显示统计。",
+      "ExpectedResult": "有数据时显示统计。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_LOW",
+      "SideEffects": "NONE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "UNATTENDED",
+      "AutomationType": "AUTO",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "InitialState": "合法时间范围和隔离统计数据已准备。",
+      "Preconditions": [
+        "账户、Runtime 和隔离数据必须由 ignored local config/approved setup 提供。"
+      ],
+      "Steps": [
+        "进入统计页。",
+        "设置合法时间范围并查询。"
+      ],
+      "PostConditions": [
+        "统计结果显示且不修改业务数据。"
+      ],
+      "CoverageTags": [
+        "HAPPY_PATH",
+        "BUSINESS_RULE",
+        "POST_CONDITION"
+      ],
+      "EvidenceRequirement": [
+        "筛选条件、结果摘要、可见状态。"
+      ],
+      "DestructiveRisk": "NONE",
+      "Limitations": "当前环境未授权，因此暂不可执行 AUTO。",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询",
+      "Operation": "QUERY",
+      "ScenarioGroup": "HAPPY_PATH",
+      "PresentationOrder": {
+        "ModuleOrder": 80,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 10,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-STAT-QUERY-001",
+        "TC-STAT-QUERY-003",
+        "TC-STAT-QUERY-004",
+        "TC-STAT-RESET-001",
+        "TC-STAT-PAGE-001",
+        "TC-STAT-QUERY-005",
+        "TC-STAT-VALIDATE-001"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-011-B",
+      "SourceActiveTestCaseId": "TC-BB-REAL-011",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "STATISTICS",
+      "FeatureId": "STATISTICS_QUERY",
+      "Title": "统计查询无数据空态",
+      "Priority": "P1",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证合法时间范围无数据时显示空态。",
+      "PrimaryAssertion": "无数据时显示空态。",
+      "ExpectedResult": "无数据时显示空态。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_LOW",
+      "SideEffects": "NONE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "UNATTENDED",
+      "AutomationType": "AUTO",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "InitialState": "合法但无数据的隔离时间范围已批准。",
+      "Preconditions": [
+        "不能用 Runtime 当前结果猜测空态语义。"
+      ],
+      "Steps": [
+        "进入统计页。",
+        "设置无数据的合法时间范围并查询。"
+      ],
+      "PostConditions": [
+        "显示 Handoff 定义的空态且不修改数据。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "BUSINESS_RULE",
+        "POST_CONDITION"
+      ],
+      "EvidenceRequirement": [
+        "筛选条件、空态文本/状态、失败截图。"
+      ],
+      "DestructiveRisk": "NONE",
+      "Limitations": "当前环境未授权，因此暂不可执行 AUTO。",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询",
+      "Operation": "QUERY",
+      "ScenarioGroup": "EMPTY_STATE",
+      "PresentationOrder": {
+        "ModuleOrder": 80,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 20,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "ExecutionStatus": "尚未执行",
+        "Actual": "历史正式执行记录中未找到该用例结果。",
+        "Evidence": []
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-STAT-QUERY-002"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    },
+    {
+      "TestCaseId": "TC-BB-REAL-011-C",
+      "SourceActiveTestCaseId": "TC-BB-REAL-011",
+      "CaseKind": "ATOMIC",
+      "ScenarioSuiteId": "SS-BB-OPS",
+      "ModuleId": "STATISTICS",
+      "FeatureId": "STATISTICS_QUERY",
+      "Title": "统计查询非法筛选拒绝",
+      "Priority": "P1",
+      "TestType": "BLACKBOX_ACCEPTANCE",
+      "TestLayer": "WEB_UI_AND_API",
+      "Objective": "验证非法筛选不能执行有效统计查询。",
+      "PrimaryAssertion": "非法筛选被拒绝。",
+      "ExpectedResult": "非法筛选被拒绝。",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "ExpectedSource": [
+        "handoff-package/12-test-scenario-seeds.md",
+        "handoff-package/04-user-flows.md"
+      ],
+      "LifecycleStatus": "DRAFT",
+      "ReviewGateStatus": "PASS",
+      "RiskLevel": "RISK_LOW",
+      "SideEffects": "NONE",
+      "SideEffectScope": "PROJECT_SANDBOX",
+      "Reversibility": "REVERSIBLE",
+      "DataOwnership": "PROJECT_SANDBOX",
+      "InteractionMode": "UNATTENDED",
+      "AutomationType": "AUTO",
+      "AutomationFramework": "Playwright",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "InitialState": "非法筛选数据由 Frozen Handoff 定义，未从 Runtime 推断。",
+      "Preconditions": [
+        "Runtime 和账号必须由 ignored local config 提供。"
+      ],
+      "Steps": [
+        "进入统计页。",
+        "提交非法筛选。"
+      ],
+      "PostConditions": [
+        "非法筛选被拒绝且不修改业务数据。"
+      ],
+      "CoverageTags": [
+        "NEGATIVE",
+        "VALIDATION",
+        "BOUNDARY",
+        "ERROR_MODEL"
+      ],
+      "EvidenceRequirement": [
+        "筛选输入、拒绝结果、无数据副作用证据。"
+      ],
+      "DestructiveRisk": "NONE",
+      "Limitations": "当前环境未授权，因此暂不可执行 AUTO。",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询",
+      "Operation": "QUERY",
+      "ScenarioGroup": "VALIDATION",
+      "PresentationOrder": {
+        "ModuleOrder": 80,
+        "FeatureOrder": 10,
+        "OperationOrder": 10,
+        "ScenarioOrder": 30,
+        "CaseOrder": 1
+      },
+      "HistoricalExecution": {
+        "TestCaseId": "TC-BB-REAL-011-C",
+        "ExecutionStatus": "ERROR",
+        "Expected": "非法筛选被拒绝。",
+        "Actual": "TESTCASE_DESIGN_ISSUE: the page submitted its prefilled valid year/month range; no approved invalid-filter fixture was applied, so the rejection assertion is not comparable to Expected. Empty state observed; FinalUrl=/",
+        "FinalUrl": "http://localhost:8223/",
+        "Evidence": [],
+        "ElapsedMs": 11307,
+        "Timestamp": "2026-08-25T06:58:57.551Z",
+        "Harness": "PROJECT_PLAYWRIGHT",
+        "BrowserVisibility": "HEADED",
+        "InteractionMode": "UNATTENDED",
+        "FormalRunId": "FAST-BB-REAL-20260825-065833Z",
+        "GeneratedFrom": "runs/FAST-BB-REAL-20260825-065833Z/case-results/TC-BB-REAL-011-C.json"
+      },
+      "RelatedFineGrainedTestCaseIds": [
+        "TC-STAT-VALIDATE-002",
+        "TC-STAT-VALIDATE-003",
+        "TC-STAT-VALIDATE-004"
+      ],
+      "ExecutionInheritancePolicy": "REFERENCE_ONLY_NO_STATUS_MIGRATION"
+    }
+  ]
+}

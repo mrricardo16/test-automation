@@ -1,0 +1,83 @@
+{
+  "RegistryVersion": "GENERIC-FEATURE-CODE-REGISTRY-V1",
+  "ProjectId": "rsscomposer-blackbox",
+  "CodeRules": {
+    "Pattern": "^[A-Z0-9]{2,10}$",
+    "Stable": true,
+    "StateTokensForbidden": true
+  },
+  "Features": [
+    {
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理",
+      "FeatureCode": "USER",
+      "Active": true
+    },
+    {
+      "ModuleName": "系统管理",
+      "FeatureName": "用户角色关系",
+      "FeatureCode": "URB",
+      "Active": true
+    },
+    {
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理",
+      "FeatureCode": "ROLE",
+      "Active": true
+    },
+    {
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增",
+      "FeatureCode": "TNEW",
+      "Active": true
+    },
+    {
+      "ModuleName": "任务管理",
+      "FeatureName": "任务取消",
+      "FeatureCode": "TCANCEL",
+      "Active": true
+    },
+    {
+      "ModuleName": "任务管理",
+      "FeatureName": "任务重发",
+      "FeatureCode": "TRESEND",
+      "Active": true
+    },
+    {
+      "ModuleName": "任务管理",
+      "FeatureName": "任务查询",
+      "FeatureCode": "TQUERY",
+      "Active": true
+    },
+    {
+      "ModuleName": "任务管理",
+      "FeatureName": "任务生命周期",
+      "FeatureCode": "TLIFE",
+      "Active": true
+    },
+    {
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理",
+      "FeatureCode": "VEH",
+      "Active": true
+    },
+    {
+      "ModuleName": "监控管理",
+      "FeatureName": "监控看板",
+      "FeatureCode": "MON",
+      "Active": true
+    },
+    {
+      "ModuleName": "日志管理",
+      "FeatureName": "日志下载",
+      "FeatureCode": "LOG",
+      "Active": true
+    },
+    {
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询",
+      "FeatureCode": "STAT",
+      "Active": true
+    }
+  ]
+}

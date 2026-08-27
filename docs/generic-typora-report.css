@@ -1,0 +1,125 @@
+/* Generic black-box report style for Typora. Markdown remains the source format. */
+
+html, body {
+  overflow-x: hidden;
+}
+
+#write {
+  width: calc(100% - 48px);
+  max-width: 1400px;
+  overflow-x: hidden;
+}
+
+/* Typora's current table DOM is figure.md-table-fig > table. The generic fallback
+   keeps any table figure local-scrollable without widening small summary tables. */
+#write figure.md-table-fig,
+#write .md-table-fig,
+#write .md-table-container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  box-sizing: border-box !important;
+  contain: none !important;
+  scrollbar-width: auto;
+}
+
+/* Only the nine-column TestCase table becomes wide. Small report tables remain normal. */
+#write figure.md-table-fig:has(table th:nth-child(9)) > table,
+#write .md-table-fig:has(table th:nth-child(9)) > table,
+#write .md-table-container:has(table th:nth-child(9)) > table,
+#write table:has(th:nth-child(9)) {
+  display: table !important;
+  width: max-content !important;
+  min-width: 2300px !important;
+  max-width: none !important;
+  table-layout: auto !important;
+  margin: 0 !important;
+}
+
+/* Headers remain horizontal; only body cells use natural wrapping. */
+#write table th {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 12px;
+}
+
+#write table td {
+  white-space: pre-line !important;
+  word-break: normal !important;
+  overflow-wrap: break-word;
+  vertical-align: top;
+  line-height: 1.55;
+  padding: 6px 8px;
+}
+
+/* Keep TestCaseId readable; it may scroll horizontally at very narrow widths. */
+#write table:has(th:nth-child(9)) th:nth-child(2),
+#write table:has(th:nth-child(9)) td:nth-child(2) {
+  min-width: 240px !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+#write table:has(th:nth-child(9)) th:nth-child(1), #write table:has(th:nth-child(9)) td:nth-child(1) { min-width: 180px !important; word-break: keep-all !important; overflow-wrap: normal !important; }
+#write table:has(th:nth-child(9)) th:nth-child(3), #write table:has(th:nth-child(9)) td:nth-child(3) { min-width: 260px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(4), #write table:has(th:nth-child(9)) td:nth-child(4) { min-width: 300px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(5), #write table:has(th:nth-child(9)) td:nth-child(5) { min-width: 440px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(6), #write table:has(th:nth-child(9)) td:nth-child(6) { min-width: 420px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(7), #write table:has(th:nth-child(9)) td:nth-child(7) { min-width: 180px !important; white-space: nowrap !important; }
+#write table:has(th:nth-child(9)) th:nth-child(8), #write table:has(th:nth-child(9)) td:nth-child(8) { min-width: 280px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(9), #write table:has(th:nth-child(9)) td:nth-child(9) { min-width: 300px !important; }
+
+/* Unicode line separators are used inside cells so the Markdown source never
+   exposes a literal HTML break tag. Steps are grouped by the renderer; the
+   browser only preserves the intentional visual rows here. */
+#write table:has(th:nth-child(9)) td:nth-child(5),
+#write table:has(th:nth-child(9)) td:nth-child(6) {
+  white-space: pre-line !important;
+}
+
+#write table td img {
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Report hierarchy: module → feature → operation. */
+#write h3, #write h4, #write h5 {
+  white-space: nowrap;
+}
+
+#write h3 {
+  margin-top: 30px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid currentColor;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#write h4 {
+  margin-top: 24px;
+  margin-bottom: 14px;
+  padding-left: 10px;
+  border-left: 4px solid currentColor;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+#write h5 {
+  display: inline-block;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  border-bottom: 1px solid currentColor;
+  font-size: 16px;
+  font-weight: 700;
+}

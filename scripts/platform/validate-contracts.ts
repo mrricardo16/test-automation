@@ -4,6 +4,11 @@ import {
   AUTOMATION_ELIGIBILITIES,
   BASELINE_STATUSES,
   CASE_KINDS,
+  DESIGN_MATURITIES,
+  DESIGN_TECHNIQUES,
+  OPERATIONS,
+  SCENARIO_GROUPS,
+  TEST_DATA_CATEGORIES,
   COVERAGE_STATUSES,
   DATA_OWNERSHIP_VALUES,
   EXECUTION_STATUSES,
@@ -91,6 +96,32 @@ function requireNonEmptyStringArray(
   if (!Array.isArray(value) || value.length === 0 || value.some((item) => typeof item !== 'string' || item.trim() === '')) {
     issues.push(issue('INVALID_STRING_ARRAY', field, `${field} must be a non-empty array of strings.`));
   }
+}
+
+function requirePositiveInteger(
+  input: Record<string, unknown>,
+  field: string,
+  issues: ValidationIssue[],
+): void {
+  if (!Number.isInteger(input[field]) || Number(input[field]) < 1) {
+    issues.push(issue('INVALID_PRESENTATION_ORDER', field, `${field} must be a positive integer.`));
+  }
+}
+
+function qualityIssue(code: string, field: string, message: string, severity: 'WARNING' | 'ERROR' = 'ERROR'): ValidationIssue {
+  return { code, field, message, severity };
+}
+
+function hasStringArray(input: Record<string, unknown>, field: string): boolean {
+  return Array.isArray(input[field]) && input[field].length > 0 && input[field].every((item) => typeof item === 'string' && item.trim() !== '');
+}
+
+function comparePresentationOrder(left: number[], right: number[]): number {
+  for (let index = 0; index < left.length; index += 1) {
+    if (left[index] < right[index]) return -1;
+    if (left[index] > right[index]) return 1;
+  }
+  return 0;
 }
 
 function containsInteractiveInstruction(input: Record<string, unknown>): boolean {
@@ -199,6 +230,9 @@ export function validateTestCase(input: unknown): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   const isV2 = input.CaseKind !== undefined;
   const isExpectationGap = isV2 && input.ExpectedBasis === 'UNKNOWN';
+  const isPendingAuthorityExpected = isExpectationGap
+    && input.ExpectedStatus === 'EXPECTED_PENDING_AUTHORITY'
+    && input.ExpectedResultSemantics === 'AUTHORITY_GAP_DESCRIPTION_NOT_BUSINESS_ORACLE';
   for (const field of [
     'TestCaseId',
     'ModuleId',
@@ -210,7 +244,7 @@ export function validateTestCase(input: unknown): ValidationIssue[] {
   ]) {
     requireString(input, field, issues);
   }
-  if (!isExpectationGap) requireString(input, 'ExpectedResult', issues);
+  if (!isExpectationGap || isPendingAuthorityExpected) requireString(input, 'ExpectedResult', issues);
   requireEnum(input, 'ApplicabilityStatus', APPLICABILITY_STATUSES, issues);
   requireEnum(input, 'ExpectedBasis', EXPECTED_BASES, issues);
 
@@ -226,6 +260,30 @@ export function validateTestCase(input: unknown): ValidationIssue[] {
 
   if (isV2) {
     requireEnum(input, 'CaseKind', CASE_KINDS, issues);
+    if (input.Priority === 'P3') issues.push(issue('INVALID_V2_PRIORITY', 'Priority', 'V2 TestCases must use P0, P1, or P2.'));
+    if (typeof input.ModuleName !== 'string' || input.ModuleName.trim() === '') {
+      issues.push(issue('MODULE_CLASSIFICATION_REQUIRED', 'ModuleName', 'ModuleName is required for V2 TestCases.'));
+    }
+    if (typeof input.FeatureName !== 'string' || input.FeatureName.trim() === '') {
+      issues.push(issue('FEATURE_CLASSIFICATION_REQUIRED', 'FeatureName', 'FeatureName is required for V2 TestCases.'));
+    }
+    if (input.Operation === undefined) {
+      issues.push(issue('OPERATION_CLASSIFICATION_REQUIRED', 'Operation', 'Operation is required for V2 TestCases.'));
+    } else {
+      requireEnum(input, 'Operation', OPERATIONS, issues, 'INVALID_OPERATION');
+    }
+    if (input.ScenarioGroup === undefined) {
+      issues.push(issue('SCENARIO_GROUP_CLASSIFICATION_REQUIRED', 'ScenarioGroup', 'ScenarioGroup is required for V2 TestCases.'));
+    } else {
+      requireEnum(input, 'ScenarioGroup', SCENARIO_GROUPS, issues, 'INVALID_SCENARIO_GROUP');
+    }
+    if (!isRecord(input.PresentationOrder)) {
+      issues.push(issue('PRESENTATION_ORDER_REQUIRED', 'PresentationOrder', 'PresentationOrder with five positive integer fields is required for V2 TestCases.'));
+    } else {
+      for (const field of ['ModuleOrder', 'FeatureOrder', 'OperationOrder', 'ScenarioOrder', 'CaseOrder']) {
+        requirePositiveInteger(input.PresentationOrder, field, issues);
+      }
+    }
     for (const field of ['Objective', 'PrimaryAssertion']) {
       if (typeof input[field] !== 'string' || input[field].trim() === '') {
         issues.push(issue('MISSING_V2_FIELD', field, `${field} is required for V2 TestCases.`));
@@ -241,6 +299,19 @@ export function validateTestCase(input: unknown): ValidationIssue[] {
     requireEnum(input, 'DataOwnership', DATA_OWNERSHIP_VALUES, issues);
     requireEnum(input, 'InteractionMode', INTERACTION_MODES, issues);
     requireNonEmptyStringArray(input, 'CoverageTags', issues);
+    if (!hasStringArray(input, 'BusinessRules')) issues.push(issue('MISSING_BUSINESS_RULE', 'BusinessRules', 'V2 TestCases must declare at least one business rule.'));
+    if (!isRecord(input.TestDataDesign)) issues.push(issue('MISSING_TEST_DATA', 'TestDataDesign', 'V2 TestCases must describe concrete test data.'));
+    const safetyConstraints = Array.isArray(input.SafetyConstraints) ? input.SafetyConstraints : [];
+    if (safetyConstraints.length === 0 || safetyConstraints.some((value) => typeof value !== 'string' || value.trim() === '')) issues.push(issue('MISSING_SAFETY_CONSTRAINTS', 'SafetyConstraints', 'V2 TestCases must declare safety constraints.'));
+    const designTechniques = Array.isArray(input.DesignTechniques) ? input.DesignTechniques : [];
+    if (designTechniques.length === 0 || designTechniques.some((value: unknown) => !DESIGN_TECHNIQUES.includes(String(value) as typeof DESIGN_TECHNIQUES[number]))) {
+      issues.push(issue('INVALID_DESIGN_TECHNIQUE', 'DesignTechniques', `DesignTechniques must use controlled values: ${DESIGN_TECHNIQUES.join(', ')}.`));
+    }
+    requireEnum(input, 'DesignMaturity', DESIGN_MATURITIES, issues);
+    requireNonEmptyStringArray(input, 'PostConditions', issues);
+    if (Array.isArray(input.BusinessRules) && input.CaseKind === 'ATOMIC' && input.BusinessRules.length > 1) {
+      issues.push(issue('MULTIPLE_PRIMARY_BUSINESS_RULES', 'BusinessRules', 'An ATOMIC TestCase must target one primary business rule.'));
+    }
     if (Array.isArray(input.CoverageTags) && input.CoverageTags.some((tag) => !COVERAGE_TAGS.includes(String(tag) as typeof COVERAGE_TAGS[number]))) {
       issues.push(issue('INVALID_COVERAGE_TAG', 'CoverageTags', `CoverageTags must use controlled values: ${COVERAGE_TAGS.join(', ')}.`));
     }
@@ -315,7 +386,14 @@ export function validateTestCase(input: unknown): ValidationIssue[] {
       if (input.AutomationEligibility !== 'NOT_EXECUTABLE' || input.ReviewGateStatus === 'PASS') {
         issues.push(issue('EXPECTATION_GAP_EXECUTION_FORBIDDEN', 'AutomationEligibility', 'Unresolved Expected must be NOT_EXECUTABLE and cannot pass Review Gate.'));
       }
-      if (input.ExpectedResult !== undefined) {
+      if (isPendingAuthorityExpected) {
+        requireString(input, 'ExpectedStatus', issues);
+        requireStringArray(input, 'ExpectedSourceRef', issues);
+        requireString(input, 'ExpectedAuthority', issues);
+        requireString(input, 'ExpectationGapId', issues);
+        requireEnum(input, 'GapClassification', ['EXPECTED_EXTRACTION_MISS', 'TRUE_GAP'], issues);
+        requireString(input, 'ExpectedResultSemantics', issues);
+      } else if (input.ExpectedResult !== undefined) {
         issues.push(issue('EXPECTED_GUESS_FORBIDDEN', 'ExpectedResult', 'Do not populate ExpectedResult when ExpectedBasis is UNKNOWN.'));
       }
     }
@@ -341,6 +419,146 @@ export function validateTestCases(inputs: unknown[]): ValidationIssue[] {
       issues.push(issue('DUPLICATE_TEST_CASE_ID', 'TestCaseId', `Duplicate TestCaseId: ${input.TestCaseId}.`));
     }
     seen.add(input.TestCaseId);
+  }
+  return issues;
+}
+
+export function validateModularTestCaseCatalog(input: unknown): ValidationIssue[] {
+  if (!isRecord(input)) return [issue('INVALID_OBJECT', 'catalog', 'Modular TestCase catalog must be an object.')];
+
+  const issues: ValidationIssue[] = [];
+  if (input.PrimaryGrouping !== 'MODULE' || input.SecondaryGrouping !== 'FEATURE' || input.StatusUsedForGrouping !== false) {
+    issues.push(issue(
+      'STATUS_BASED_PRIMARY_GROUPING_FORBIDDEN',
+      'PrimaryGrouping',
+      'The catalog must be grouped by MODULE then FEATURE; execution state must not determine taxonomy or sort.',
+    ));
+  }
+
+  if (!Array.isArray(input.Cases) || input.Cases.length === 0) {
+    issues.push(issue('CASES_REQUIRED', 'Cases', 'Modular TestCase catalog requires a non-empty Cases array.'));
+    return issues;
+  }
+
+  let lastGroup: string | undefined;
+  const closedGroups = new Set<string>();
+  let previous: number[] | undefined;
+  for (const candidate of input.Cases) {
+    if (!isRecord(candidate)) continue;
+    for (const field of ['TestCaseId', 'ModuleId', 'FeatureId', 'ModuleName', 'FeatureName']) requireString(candidate, field, issues);
+    if (!OPERATIONS.includes(String(candidate.Operation) as typeof OPERATIONS[number])) {
+      issues.push(issue('INVALID_OPERATION', 'Operation', `Operation must be one of: ${OPERATIONS.join(', ')}.`));
+    }
+    if (!SCENARIO_GROUPS.includes(String(candidate.ScenarioGroup) as typeof SCENARIO_GROUPS[number])) {
+      issues.push(issue('INVALID_SCENARIO_GROUP', 'ScenarioGroup', `ScenarioGroup must be one of: ${SCENARIO_GROUPS.join(', ')}.`));
+    }
+
+    const presentationOrder = isRecord(candidate.PresentationOrder) ? candidate.PresentationOrder : undefined;
+    const order = presentationOrder
+      ? ['ModuleOrder', 'FeatureOrder', 'OperationOrder', 'ScenarioOrder', 'CaseOrder'].map((field) => Number(presentationOrder[field]))
+      : undefined;
+    if (order && previous && comparePresentationOrder(order, previous) < 0) {
+      issues.push(issue('INVALID_PRESENTATION_ORDER', 'PresentationOrder', 'Cases must be sorted by ModuleOrder, FeatureOrder, OperationOrder, ScenarioOrder, CaseOrder.'));
+    }
+    if (order) previous = order;
+
+    const group = `${String(candidate.ModuleId)}|${String(candidate.FeatureId)}|${String(candidate.Operation)}`;
+    if (lastGroup !== undefined && group !== lastGroup) closedGroups.add(lastGroup);
+    if (closedGroups.has(group)) {
+      issues.push(issue('NON_CONTIGUOUS_MODULE_FEATURE_OPERATION', 'Cases', `Module/Feature/Operation group reappeared after another group: ${group}.`));
+    }
+    lastGroup = group;
+  }
+  return issues;
+}
+
+export function validateTestCaseDesignQuality(input: unknown): ValidationIssue[] {
+  if (!isRecord(input)) return [qualityIssue('INVALID_OBJECT', 'testCase', 'Design quality input must be an object.')];
+  const issues: ValidationIssue[] = [];
+  const isAtomic = input.CaseKind === 'ATOMIC';
+  if (!hasStringArray(input, 'BusinessRules')) {
+    issues.push(qualityIssue('MISSING_PRIMARY_BUSINESS_RULE', 'BusinessRules', 'Declare the one business rule under test.'));
+  } else if (isAtomic && Array.isArray(input.BusinessRules) && input.BusinessRules.length > 1) {
+    issues.push(qualityIssue('MULTIPLE_PRIMARY_BUSINESS_RULES', 'BusinessRules', 'Independent business rules require independent TestCaseIds.'));
+  }
+  if (!isRecord(input.TestDataDesign)) {
+    issues.push(qualityIssue('MISSING_TEST_DATA', 'TestDataDesign', 'TestData must identify fields, category, key values, source, ownership, uniqueness, disposability, and sensitivity.'));
+  } else {
+    const testDataDesign = input.TestDataDesign;
+    for (const field of ['DataFields', 'KeyValues', 'Source', 'Ownership']) {
+      const value = testDataDesign[field];
+      if ((Array.isArray(value) && value.length === 0) || typeof value !== 'string' && !Array.isArray(value)) {
+        issues.push(qualityIssue('MISSING_TEST_DATA', `TestDataDesign.${field}`, `${field} must be concrete.`));
+      }
+    }
+    if (!TEST_DATA_CATEGORIES.includes(String(testDataDesign.DataCategory) as typeof TEST_DATA_CATEGORIES[number])) {
+      issues.push(qualityIssue('INVALID_TEST_DATA_CATEGORY', 'TestDataDesign.DataCategory', 'Test data category must use a controlled value.'));
+    }
+  }
+  if (!hasStringArray(input, 'SafetyConstraints')) issues.push(qualityIssue('MISSING_SAFETY_CONSTRAINTS', 'SafetyConstraints', 'Safety constraints must be explicit.'));
+  if (!hasStringArray(input, 'DesignTechniques')) issues.push(qualityIssue('MISSING_DESIGN_TECHNIQUE', 'DesignTechniques', 'At least one applicable design technique must be recorded.'));
+  if (isAtomic && input.Operation === 'VALIDATION' && Array.isArray(input.BusinessRules) && input.BusinessRules.length > 1) {
+    issues.push(qualityIssue('OVERBROAD_VALIDATION_CASE', 'BusinessRules', 'A validation case with multiple independent validation rules must be split or explicitly parameterized.'));
+  }
+  if (typeof input.PrimaryAssertion !== 'string' || input.PrimaryAssertion.trim() === '') issues.push(qualityIssue('MISSING_PRIMARY_ASSERTION', 'PrimaryAssertion', 'PrimaryAssertion must be independently judgeable.'));
+  if (typeof input.ExpectedResult !== 'string' || /显示正常|操作正确|显示统计|系统正常|结果正确|页面无异常/.test(input.ExpectedResult)) {
+    issues.push(qualityIssue('VAGUE_EXPECTED_RESULT', 'ExpectedResult', 'Expected must describe an observable, deterministic result.'));
+  }
+  if (!hasStringArray(input, 'PostConditions')) issues.push(qualityIssue('MISSING_POST_CONDITION', 'PostConditions', 'Business PostConditions must be separate from Cleanup.'));
+  if (input.SideEffects !== undefined && input.SideEffects !== 'NONE' && (typeof input.Cleanup !== 'string' || input.Cleanup.trim() === '')) {
+    issues.push(qualityIssue('MISSING_CLEANUP_FOR_MUTATION', 'Cleanup', 'Mutation cases require explicit cleanup.'));
+  }
+  const boundaryValues = isRecord(input.BoundaryValues) ? input.BoundaryValues : undefined;
+  if (boundaryValues?.Applicable === true) {
+    const values = boundaryValues.Values;
+    const designTechniques = Array.isArray(input.DesignTechniques) ? input.DesignTechniques.map(String) : [];
+    if (!Array.isArray(values) || values.length === 0 || boundaryValues.ExpectedKnown !== true || !designTechniques.includes('BOUNDARY_VALUE')) {
+      issues.push(qualityIssue('INVALID_BOUNDARY_DESIGN', 'BoundaryValues', 'Applicable boundaries require known Expected, representative values, and BOUNDARY_VALUE technique.'));
+    }
+  }
+  if (input.DependsOnTestCaseId) issues.push(qualityIssue('IMPLICIT_TESTCASE_DEPENDENCY', 'DependsOnTestCaseId', 'Independent TestCases cannot depend on execution order.', 'WARNING'));
+  if (input.DesignMaturity !== undefined && !DESIGN_MATURITIES.includes(String(input.DesignMaturity) as typeof DESIGN_MATURITIES[number])) {
+    issues.push(qualityIssue('INVALID_DESIGN_MATURITY', 'DesignMaturity', 'DesignMaturity must be DRAFT, REVIEWABLE, EXECUTABLE, or LIMITED.'));
+  }
+  return issues;
+}
+
+export function validateDesignQualityCatalog(input: unknown): ValidationIssue[] {
+  if (!isRecord(input)) return [qualityIssue('INVALID_OBJECT', 'catalog', 'Design quality catalog must be an object.')];
+  const issues: ValidationIssue[] = [];
+  if (input.Mode !== 'DESIGN') issues.push(qualityIssue('INVALID_DESIGN_CATALOG_MODE', 'Mode', 'Design quality catalog must use Mode=DESIGN.'));
+  if (!Array.isArray(input.Cases)) return [...issues, qualityIssue('CASES_REQUIRED', 'Cases', 'Design quality catalog requires Cases.')];
+  for (const testCase of input.Cases) {
+    if (!isRecord(testCase)) continue;
+    issues.push(...validateTestCaseDesignQuality(testCase));
+    if (testCase.ExecutionStatus === 'SKIPPED') issues.push(qualityIssue('CATALOG_GENERATED_SKIPPED_INVALID', 'ExecutionStatus', 'A design catalog must show 尚未执行, not SKIPPED.'));
+    if (testCase.AutomationEligibility !== undefined && testCase.EffectiveAutomationEligibility !== undefined && testCase.AutomationEligibility !== testCase.EffectiveAutomationEligibility) {
+      issues.push(qualityIssue('STALE_EFFECTIVE_STATE_PRESENTATION', 'EffectiveAutomationEligibility', 'Report must show the latest effective governance state, not a stale frozen value.'));
+    }
+    if (testCase.RecommendedPriority && testCase.Priority === 'P0' && testCase.RecommendedPriority !== 'P0') {
+      issues.push(qualityIssue('PRIORITY_INFLATION', 'Priority', 'P0 must be reserved for core smoke, critical path, security, or severe consistency risk.', 'WARNING'));
+    }
+  }
+  return issues;
+}
+
+export function validateDesignQualityReportPresentation(input: unknown): ValidationIssue[] {
+  if (!isRecord(input) || !Array.isArray(input.Rows)) return [qualityIssue('INVALID_OBJECT', 'Rows', 'Report presentation requires Rows.')];
+  const machineEnums = new Set([
+    ...OPERATIONS,
+    ...SCENARIO_GROUPS,
+    ...DESIGN_MATURITIES,
+    ...DESIGN_TECHNIQUES,
+    ...TEST_DATA_CATEGORIES,
+    ...CASE_KINDS,
+    ...AUTOMATION_ELIGIBILITIES,
+  ]);
+  const issues: ValidationIssue[] = [];
+  for (const row of input.Rows) {
+    if (!isRecord(row)) continue;
+    for (const [field, value] of Object.entries(row)) {
+      if (typeof value === 'string' && (machineEnums as Set<string>).has(value)) issues.push(qualityIssue('UNTRANSLATED_MACHINE_ENUM_IN_USER_REPORT', field, `${field} must use the Chinese display label in user-facing reports.`));
+    }
   }
   return issues;
 }

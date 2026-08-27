@@ -1,0 +1,1160 @@
+{
+  "CatalogVersion": "RSSCOMPOSER-BLACKBOX-FINE-GRAINED-CATALOG-V1",
+  "GeneratedFrom": "outputs/blackbox-testcase-generation-standard-rebuild/黑盒细粒度测试用例.json",
+  "AuthorityVersion": "DEV-HANDOFF-REAL-20260824-105102",
+  "HandoffHash": "d0e4c9ee346187cf3e0bb2723efa8925436263e535ba5924076ab019c5cb37e3",
+  "HandoffHashSource": [
+    "handoff/current.json",
+    "handoff/baselines/DEV-HANDOFF-REAL-20260824-105102/manifest-summary.json"
+  ],
+  "GenerationStandardVersion": "GENERIC-BLACKBOX-TESTCASE-GENERATION-STANDARD-V1",
+  "TestCaseIdStandardPath": "../../contracts/generic-stable-testcase-id-standard.md",
+  "FeatureCodeRegistryPath": "test-cases/catalog/feature-code-registry.json",
+  "TestCaseIdRegistryPath": "test-cases/catalog/testcase-id-registry.json",
+  "TestCaseIdMigrationMapPath": "test-cases/catalog/TESTCASE_ID_MIGRATION_MAP.json",
+  "TestCaseIdMigrationReconciliationPath": "test-cases/catalog/TESTCASE_ID_MIGRATION_RECONCILIATION.json",
+  "GenericStandardPath": "../../contracts/generic-blackbox-testcase-generation-standard.md",
+  "GenericReportTemplatePath": "../../docs/generic-blackbox-test-report-template.md",
+  "GenericTyporaStylePath": "../../docs/generic-typora-report.css",
+  "MaterializedAt": "2026-08-27T01:35:33.248Z",
+  "StateType": "CURRENT_EFFECTIVE_STATE",
+  "TestCaseCount": 72,
+  "TestCases": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "保存成功；用户出现在列表；用户名和显示名称与输入一致。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-A",
+        "TC-BB-REAL-002-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "创建失败；出现用户名重复提示；列表中只有原基准用户，不产生第二条相同用户名记录。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "创建失败；出现密码长度校验提示；列表中不存在该用户名。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "保存被拒绝；出现用户名必填提示；列表不新增用户。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "保存被拒绝；出现显示名称必填提示；列表不新增该用户名。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "保存成功；重新查询显示已保存关联；恢复后关联回到运行前状态。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-003-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "任务创建成功；生成唯一任务标识；任务出现在列表并关联正确依赖。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-A",
+        "TC-BB-REAL-004-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "无效模板不产生任务。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "无效车辆不产生任务。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "无效站点不产生任务。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "无效楼层不产生任务。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "任务状态变为已取消。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-005-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "取消入口不可用或提交被拒绝；任务状态保持终态。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-005-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "重发成功；任务产生可追踪的重发结果。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-006-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "重发入口不可用或提交被拒绝；原任务状态保持。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-006-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "保存成功；车辆出现在列表；字段值与输入一致。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "保存被拒绝；出现编号重复提示；列表中不产生第二辆相同编号车辆。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "保存被拒绝；出现车辆类型校验提示；列表中不产生该车辆。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "地图、任务、车辆和充电状态符合批准视觉基线；依赖不可用时显示可诊断空态或错误。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-009-M"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "下载内容来自列表中批准的日志包；不接受任意文件路径；敏感内容不进入报告。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-010-M"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "显示统计结果；字段、单位和时间范围符合批准基线。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "显示批准的无数据空态；不显示伪造统计；不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合当前查询页面可用数据集；不返回明显不匹配的用户管理；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合不存在的用户标识；不返回明显不匹配的用户管理；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "筛选条件被清除；界面恢复该功能定义的默认查询状态。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "指定页显示该页对应的数据集；当前生效的筛选条件未被无故改变。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "合法字段保存成功；重新读取得到修改后的值；非目标字段没有无关变化。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：唯一字段修改后的重复值处理规则和失败后原值保持规则未获批准。",
+      "ExpectationGapId": "GAP-GEN-USER-UPDATE-DUPLICATE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "唯一字段修改后的重复值处理规则和失败后原值保持规则未获批准。"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "删除操作成功；用户记录不再作为正常有效对象出现在普通业务查询结果中。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合已删除用户标识；不返回明显不匹配的用户记录；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：重复删除的幂等成功、对象不存在提示或业务错误规则未获批准。",
+      "ExpectationGapId": "GAP-GEN-USER-DELETE-REPEAT-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "重复删除的幂等成功、对象不存在提示或业务错误规则未获批准。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：删除后是否允许使用原唯一键重新创建对象的规则未获批准。",
+      "ExpectationGapId": "GAP-GEN-USER-DELETE-RECREATE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "删除后是否允许使用原唯一键重新创建对象的规则未获批准。"
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合角色名称查询条件；不返回明显不匹配的角色记录；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "合法且唯一的角色记录创建成功；重新查询可以读取该对象；关键字段与提交值一致。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：解除关联后的权限刷新和在线会话生效时机未获批准。",
+      "ExpectationGapId": "GAP-GEN-ROLE-RELATION-REMOVE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-003-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "解除关联后的权限刷新和在线会话生效时机未获批准。"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：重复绑定应拒绝、幂等成功或产生错误的规则未获批准。",
+      "ExpectationGapId": "GAP-GEN-ROLE-RELATION-DUPLICATE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-003-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "重复绑定应拒绝、幂等成功或产生错误的规则未获批准。"
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：关联权限变化对菜单、页面、按钮和在线会话的生效时机未获批准。",
+      "ExpectationGapId": "GAP-GEN-ROLE-RELATION-EFFECTIVE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-003-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "关联权限变化对菜单、页面、按钮和在线会话的生效时机未获批准。"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：菜单层级的拒绝合同和可观察结果未获批准。",
+      "ExpectationGapId": "GAP-GEN-PERMISSION-1",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "菜单层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：页面层级的拒绝合同和可观察结果未获批准。",
+      "ExpectationGapId": "GAP-GEN-PERMISSION-2",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "页面层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：按钮层级的拒绝合同和可观察结果未获批准。",
+      "ExpectationGapId": "GAP-GEN-PERMISSION-3",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "按钮层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：直接 URL层级的拒绝合同和可观察结果未获批准。",
+      "ExpectationGapId": "GAP-GEN-PERMISSION-4",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "直接 URL层级的拒绝合同和可观察结果未获批准。"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合当前任务查询页面数据集；不返回明显不匹配的任务记录；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合已知任务查询条件；不返回明显不匹配的任务记录；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "指定页显示该页对应的数据集；当前生效的筛选条件未被无故改变。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：排序字段、方向和相同值时的稳定顺序未获批准。",
+      "ExpectationGapId": "GAP-GEN-TASK-QUERY-SORT-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "排序字段、方向和相同值时的稳定顺序未获批准。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：重复任务应拒绝、幂等成功或新建任务的规则未获批准。",
+      "ExpectationGapId": "GAP-GEN-TASK-DUPLICATE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "重复任务应拒绝、幂等成功或新建任务的规则未获批准。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：缺少该依赖时的拒绝提示和是否产生任务的业务合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-TASK-REQUIRED-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "缺少该依赖时的拒绝提示和是否产生任务的业务合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合刚创建任务的唯一标识；不返回明显不匹配的任务记录；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：取消后的状态、查询可见性和终态清理规则未获批准。",
+      "ExpectationGapId": "GAP-GEN-TASK-LIFECYCLE-CANCEL-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-004-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "取消后的状态、查询可见性和终态清理规则未获批准。"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：任务状态与取消操作的允许矩阵未获批准。",
+      "ExpectationGapId": "GAP-GEN-TASK-STATE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-005-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "任务状态与取消操作的允许矩阵未获批准。"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合车辆编号查询条件；不返回明显不匹配的车辆记录；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合不存在的车辆标识；不返回明显不匹配的车辆记录；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：车辆编号为空时的必填校验合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-VEHICLE-REQUIRED-ID-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "车辆编号为空时的必填校验合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：车辆名称为空时的必填校验合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-VEHICLE-REQUIRED-NAME-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "车辆名称为空时的必填校验合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：车辆编号长度边界和越界处理合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-VEHICLE-LENGTH-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "车辆编号长度边界和越界处理合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：车辆编号允许字符集合和拒绝行为未获批准。",
+      "ExpectationGapId": "GAP-GEN-VEHICLE-CHARSET-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "车辆编号允许字符集合和拒绝行为未获批准。"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "合法字段保存成功；重新读取得到修改后的值；非目标字段没有无关变化。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：车辆字段可修改范围和非法值处理合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-VEHICLE-UPDATE-INVALID-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "车辆字段可修改范围和非法值处理合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "删除操作成功；车辆记录不再作为正常有效对象出现在普通业务查询结果中。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "需人工执行",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-008-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合当前统计页面默认查询；不返回明显不匹配的统计结果；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "查询结果符合合法时间范围；不返回明显不匹配的统计结果；查询不修改业务数据。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "筛选条件被清除；界面恢复该功能定义的默认查询状态。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedResult": "指定页显示该页对应的数据集；当前生效的筛选条件未被无故改变。",
+      "ExpectationGapId": null,
+      "CurrentEligibility": "可自动执行",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "本次仅材料化设计资产，未执行该用例。"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：统计结果排序字段、方向和稳定顺序未获批准。",
+      "ExpectationGapId": "GAP-GEN-STATS-SORT-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "统计结果排序字段、方向和稳定顺序未获批准。"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：时间范围边界是否合法以及无效时的拒绝合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-STATS-RANGE-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-A"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "时间范围边界是否合法以及无效时的拒绝合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：缺少时间字段时的校验合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-STATS-MISSING-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "缺少时间字段时的校验合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：超出允许时间范围时的拒绝或裁剪行为未获批准。",
+      "ExpectationGapId": "GAP-GEN-STATS-OVER-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "超出允许时间范围时的拒绝或裁剪行为未获批准。"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：非法筛选格式和拒绝提示合同未获批准。",
+      "ExpectationGapId": "GAP-GEN-STATS-FORMAT-001",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-011-C"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "非法筛选格式和拒绝提示合同未获批准。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：未提供显示名最大长度和超长拒绝 Expected。",
+      "ExpectationGapId": "GAP-FG-USER-VALIDATION-007",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "未提供显示名最大长度和超长拒绝 Expected。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：未提供用户名最小/最大长度，不能猜测 min/max。",
+      "ExpectationGapId": "GAP-FG-USER-VALIDATION-008",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "未提供用户名最小/最大长度，不能猜测 min/max。"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：未提供允许字符集合和错误提示合同。",
+      "ExpectationGapId": "GAP-FG-USER-VALIDATION-009",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "未提供允许字符集合和错误提示合同。"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedResult": "待确认：未定义禁用、启用、在线会话和重新登录的完整状态矩阵。",
+      "ExpectationGapId": "GAP-FG-USER-STATE-011",
+      "CurrentEligibility": "当前不可执行",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "HistoricalTestCaseRefs": [
+        "TC-BB-REAL-002-B"
+      ],
+      "HistoricalExecutionInherited": false,
+      "CurrentReason": "未定义禁用、启用、在线会话和重新登录的完整状态矩阵。"
+    }
+  ]
+}

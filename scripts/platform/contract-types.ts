@@ -64,6 +64,71 @@ export const ACCEPTANCE_EXPECTATIONS = [
 
 export const CASE_KINDS = ['ATOMIC', 'COMPOSITE'] as const;
 export const AUTOMATION_ELIGIBILITIES = ['AUTO_ALLOWED', 'MANUAL_REQUIRED', 'NOT_EXECUTABLE'] as const;
+export const OPERATIONS = [
+  'QUERY',
+  'CREATE',
+  'UPDATE',
+  'DELETE',
+  'VALIDATION',
+  'STATE_TRANSITION',
+  'PERMISSION',
+  'RELATIONSHIP',
+  'IMPORT',
+  'EXPORT',
+  'DOWNLOAD',
+  'UPLOAD',
+  'AUTHENTICATION',
+  'SESSION',
+  'COMPOSITE_LIFECYCLE',
+  'VISUAL',
+  'OTHER',
+] as const;
+export const SCENARIO_GROUPS = [
+  'HAPPY_PATH',
+  'CONDITION',
+  'VALIDATION',
+  'NEGATIVE',
+  'BOUNDARY',
+  'EMPTY_STATE',
+  'DUPLICATE',
+  'PERMISSION',
+  'STATE',
+  'RELATIONSHIP',
+  'POST_CONDITION',
+  'ERROR_HANDLING',
+  'RECOVERY',
+  'IDEMPOTENCY',
+  'COMPOSITE_FLOW',
+  'MANUAL_BOUNDARY',
+] as const;
+export const DESIGN_MATURITIES = ['DRAFT', 'REVIEWABLE', 'EXECUTABLE', 'LIMITED'] as const;
+export const TEST_DATA_CATEGORIES = [
+  'VALID_DATA',
+  'INVALID_DATA',
+  'BOUNDARY_DATA',
+  'EXISTING_DATA',
+  'NON_EXISTING_DATA',
+  'DUPLICATE_DATA',
+  'EMPTY_DATA',
+  'TEST_OWNED_DATA',
+  'DISPOSABLE_DATA',
+  'REFERENCE_DATA',
+] as const;
+export const DESIGN_TECHNIQUES = [
+  'EQUIVALENCE_PARTITIONING',
+  'BOUNDARY_VALUE',
+  'DECISION_TABLE',
+  'STATE_MODEL',
+  'CRUD_LIFECYCLE_MATRIX',
+  'QUERY_TEST_MATRIX',
+  'PERMISSION_MATRIX',
+  'RELATIONSHIP_MATRIX',
+  'ERROR_RECOVERY',
+  'IDEMPOTENCY_ANALYSIS',
+  'PAIRWISE',
+  'REPRESENTATIVE_PARTITION',
+  'MANUAL_BOUNDARY',
+] as const;
 export const LIFECYCLE_STATUSES = ['DRAFT', 'ACTIVE', 'RETIRED'] as const;
 export const REVIEW_GATE_STATUSES = ['PASS', 'LIMITED', 'FAIL'] as const;
 export const RISK_LEVELS = ['RISK_LOW', 'RISK_MEDIUM', 'RISK_HIGH', 'RISK_CRITICAL'] as const;
@@ -85,6 +150,37 @@ export type FlakyClassification = (typeof FLAKY_CLASSIFICATIONS)[number];
 export type AcceptanceExpectation = (typeof ACCEPTANCE_EXPECTATIONS)[number];
 export type CaseKind = (typeof CASE_KINDS)[number];
 export type AutomationEligibility = (typeof AUTOMATION_ELIGIBILITIES)[number];
+export type Operation = (typeof OPERATIONS)[number];
+export type ScenarioGroup = (typeof SCENARIO_GROUPS)[number];
+export type DesignMaturity = (typeof DESIGN_MATURITIES)[number];
+export type TestDataCategory = (typeof TEST_DATA_CATEGORIES)[number];
+export type DesignTechnique = (typeof DESIGN_TECHNIQUES)[number];
+
+export interface PresentationOrder {
+  ModuleOrder: number;
+  FeatureOrder: number;
+  OperationOrder: number;
+  ScenarioOrder: number;
+  CaseOrder: number;
+}
+
+export interface TestDataDesign {
+  DataFields: string[];
+  DataCategory: TestDataCategory;
+  KeyValues: string[];
+  Source: string;
+  Ownership: string;
+  Unique: boolean;
+  Disposable: boolean;
+  Sensitive: boolean;
+}
+
+export interface ModularTestCaseCatalog {
+  PrimaryGrouping: 'MODULE';
+  SecondaryGrouping: 'FEATURE';
+  StatusUsedForGrouping: false;
+  Cases: Array<Record<string, unknown>>;
+}
 export type ClaimType =
   | 'CHARACTERIZATION'
   | 'IMPLEMENTATION_REGRESSION'
@@ -94,6 +190,7 @@ export interface ValidationIssue {
   code: string;
   field: string;
   message: string;
+  severity?: 'WARNING' | 'ERROR';
 }
 
 export interface ObservationEvidence {
@@ -144,6 +241,12 @@ export interface ContractTestCase {
   ApplicabilityStatus: ApplicabilityStatus;
   ExpectedBasis: ExpectedBasis;
   ExpectedResult?: string;
+  ExpectedStatus?: 'EXPECTED_CONFIRMED' | 'EXPECTED_PENDING_AUTHORITY';
+  ExpectedSourceRef?: string[];
+  ExpectedAuthority?: string;
+  ExpectationGapId?: string;
+  GapClassification?: 'EXPECTED_EXTRACTION_MISS' | 'TRUE_GAP';
+  ExpectedResultSemantics?: 'AUTHORITY_GAP_DESCRIPTION_NOT_BUSINESS_ORACLE';
   AutomationType: 'AUTO' | 'AUTO_PARTIAL' | 'MANUAL';
   AutomationFramework: string;
   CaseKind?: CaseKind;
@@ -159,6 +262,19 @@ export interface ContractTestCase {
   DataOwnership?: (typeof DATA_OWNERSHIP_VALUES)[number];
   InteractionMode?: (typeof INTERACTION_MODES)[number];
   ExpectationGapRefs?: string[];
+  ModuleName?: string;
+  FeatureName?: string;
+  Operation?: Operation;
+  ScenarioGroup?: ScenarioGroup;
+  PresentationOrder?: PresentationOrder;
+  BusinessRules?: string[];
+  TestDataDesign?: TestDataDesign;
+  SafetyConstraints?: string[];
+  DesignTechniques?: DesignTechnique[];
+  BoundaryValues?: { Applicable: boolean; Values?: string[]; ExpectedKnown?: boolean };
+  DesignMaturity?: DesignMaturity;
+  EffectiveAutomationEligibility?: AutomationEligibility;
+  DependsOnTestCaseId?: string;
 }
 
 export type LegacyCoverageValue =

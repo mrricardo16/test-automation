@@ -1,0 +1,1412 @@
+{
+  "RegistryVersion": "GENERIC-STABLE-TESTCASE-ID-REGISTRY-V1",
+  "ProjectId": "rsscomposer-blackbox",
+  "TestLayerPrefix": "",
+  "FeatureCodeRegistryPath": "projects/rsscomposer-blackbox/test-cases/catalog/feature-code-registry.json",
+  "IdPattern": "^TC-[A-Z0-9]{2,10}-[A-Z0-9]{2,12}-\\d{3}$",
+  "SequencePolicy": "Per FeatureCode + OperationCode namespace; never renumber or reuse deleted sequences.",
+  "Cases": [
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-合法数据创建成功",
+      "TestCaseId": "TC-USER-CREATE-001",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-USER-CREATE-001"
+      ],
+      "Title": "用户新增-合法数据创建成功",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-用户名重复校验",
+      "TestCaseId": "TC-USER-CREATE-002",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-USER-DUPLICATE-002"
+      ],
+      "Title": "用户新增-用户名重复校验",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-密码低于最小长度",
+      "TestCaseId": "TC-USER-CREATE-003",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-USER-PASSWORD-003"
+      ],
+      "Title": "用户新增-密码低于最小长度",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-用户名为空",
+      "TestCaseId": "TC-USER-CREATE-004",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-USER-USERNAME-004"
+      ],
+      "Title": "用户新增-用户名为空",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-显示名为空",
+      "TestCaseId": "TC-USER-CREATE-005",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 5,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-USER-DISPLAY-005"
+      ],
+      "Title": "用户新增-显示名为空",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户角色关系::TITLE:用户角色关联-保存后重新查询",
+      "TestCaseId": "TC-URB-BIND-001",
+      "FeatureCode": "URB",
+      "OperationCode": "BIND",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-ROLE-BIND-006"
+      ],
+      "Title": "用户角色关联-保存后重新查询",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户角色关系"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务新增::TITLE:任务新增-合法依赖创建成功",
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "FeatureCode": "TNEW",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-CREATE-001"
+      ],
+      "Title": "任务新增-合法依赖创建成功",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务新增::TITLE:任务新增-无效模板引用校验",
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "FeatureCode": "TNEW",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-CREATE-TEMPLATE-002"
+      ],
+      "Title": "任务新增-无效模板引用校验",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务新增::TITLE:任务新增-无效车辆引用校验",
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "FeatureCode": "TNEW",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-CREATE-VEHICLE-003"
+      ],
+      "Title": "任务新增-无效车辆引用校验",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务新增::TITLE:任务新增-无效站点引用校验",
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "FeatureCode": "TNEW",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-CREATE-SITE-004"
+      ],
+      "Title": "任务新增-无效站点引用校验",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务新增::TITLE:任务新增-无效楼层引用校验",
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "FeatureCode": "TNEW",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 5,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-CREATE-FLOOR-005"
+      ],
+      "Title": "任务新增-无效楼层引用校验",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务取消::TITLE:任务状态-允许取消的任务",
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "FeatureCode": "TCANCEL",
+      "OperationCode": "CANCEL",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-STATE-CANCEL-006"
+      ],
+      "Title": "任务状态-允许取消的任务",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务取消"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务取消::TITLE:任务状态-禁止取消的终态任务",
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "FeatureCode": "TCANCEL",
+      "OperationCode": "CANCEL",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-STATE-CANCEL-007"
+      ],
+      "Title": "任务状态-禁止取消的终态任务",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务取消"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务重发::TITLE:任务状态-允许重发的任务",
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "FeatureCode": "TRESEND",
+      "OperationCode": "RESEND",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-STATE-RESEND-008"
+      ],
+      "Title": "任务状态-允许重发的任务",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务重发"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务重发::TITLE:任务状态-禁止重发的任务",
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "FeatureCode": "TRESEND",
+      "OperationCode": "RESEND",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-TASK-STATE-RESEND-009"
+      ],
+      "Title": "任务状态-禁止重发的任务",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务重发"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-合法车辆",
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-VEHICLE-CREATE-001"
+      ],
+      "Title": "车辆新增-合法车辆",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-编号重复",
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-VEHICLE-DUPLICATE-002"
+      ],
+      "Title": "车辆新增-编号重复",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-非法车辆类型",
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-VEHICLE-TYPE-003"
+      ],
+      "Title": "车辆新增-非法车辆类型",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:监控管理::监控看板::TITLE:监控看板-地图与状态人工复核",
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "FeatureCode": "MON",
+      "OperationCode": "VISUAL",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-MONITOR-VISUAL-001"
+      ],
+      "Title": "监控看板-地图与状态人工复核",
+      "ModuleName": "监控管理",
+      "FeatureName": "监控看板"
+    },
+    {
+      "StableCaseKey": "FEATURE:日志管理::日志下载::TITLE:日志下载-批准非敏感日志包",
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "FeatureCode": "LOG",
+      "OperationCode": "DOWNLOAD",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-LOG-DOWNLOAD-001"
+      ],
+      "Title": "日志下载-批准非敏感日志包",
+      "ModuleName": "日志管理",
+      "FeatureName": "日志下载"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-合法时间范围有数据",
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-STATISTICS-QUERY-001"
+      ],
+      "Title": "统计查询-合法时间范围有数据",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-合法时间范围无数据",
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-DETAIL-STATISTICS-QUERY-002"
+      ],
+      "Title": "统计查询-合法时间范围无数据",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-默认加载",
+      "TestCaseId": "TC-USER-QUERY-001",
+      "FeatureCode": "USER",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-USER-QUERY-001"
+      ],
+      "Title": "用户查询-默认加载",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-无匹配结果",
+      "TestCaseId": "TC-USER-QUERY-002",
+      "FeatureCode": "USER",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-USER-QUERY-002"
+      ],
+      "Title": "用户查询-无匹配结果",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-清空筛选条件",
+      "TestCaseId": "TC-USER-RESET-001",
+      "FeatureCode": "USER",
+      "OperationCode": "RESET",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-USER-QUERY-003"
+      ],
+      "Title": "用户查询-清空筛选条件",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-分页切页",
+      "TestCaseId": "TC-USER-PAGE-001",
+      "FeatureCode": "USER",
+      "OperationCode": "PAGE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-USER-QUERY-004"
+      ],
+      "Title": "用户查询-分页切页",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户修改-合法字段保存",
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "FeatureCode": "USER",
+      "OperationCode": "UPDATE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-USER-UPDATE-001"
+      ],
+      "Title": "用户修改-合法字段保存",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户修改-唯一字段重复校验",
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "FeatureCode": "USER",
+      "OperationCode": "UPDATE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-USER-UPDATE-002"
+      ],
+      "Title": "用户修改-唯一字段重复校验",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户删除-正常删除",
+      "TestCaseId": "TC-USER-DELETE-001",
+      "FeatureCode": "USER",
+      "OperationCode": "DELETE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-USER-DELETE-001"
+      ],
+      "Title": "用户删除-正常删除",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户删除-删除后查询",
+      "TestCaseId": "TC-USER-QUERY-003",
+      "FeatureCode": "USER",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-USER-DELETE-002"
+      ],
+      "Title": "用户删除-删除后查询",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户删除-重复删除",
+      "TestCaseId": "TC-USER-DELETE-002",
+      "FeatureCode": "USER",
+      "OperationCode": "DELETE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-USER-DELETE-003"
+      ],
+      "Title": "用户删除-重复删除",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户删除-删除后同唯一键重建",
+      "TestCaseId": "TC-USER-CREATE-006",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 6,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-USER-DELETE-004"
+      ],
+      "Title": "用户删除-删除后同唯一键重建",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:角色查询-按名称查询",
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "FeatureCode": "ROLE",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-ROLE-QUERY-001"
+      ],
+      "Title": "角色查询-按名称查询",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:角色新增-合法数据创建",
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "FeatureCode": "ROLE",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-ROLE-CREATE-001"
+      ],
+      "Title": "角色新增-合法数据创建",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户角色关系::TITLE:角色关联-解除关联",
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "FeatureCode": "URB",
+      "OperationCode": "UNBIND",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-ROLE-RELATION-001"
+      ],
+      "Title": "角色关联-解除关联",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户角色关系"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户角色关系::TITLE:角色关联-重复绑定",
+      "TestCaseId": "TC-URB-BIND-002",
+      "FeatureCode": "URB",
+      "OperationCode": "BIND",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-ROLE-RELATION-002"
+      ],
+      "Title": "角色关联-重复绑定",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户角色关系"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户角色关系::TITLE:角色关联-权限变化生效",
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "FeatureCode": "URB",
+      "OperationCode": "PERMISSION",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-ROLE-RELATION-003"
+      ],
+      "Title": "角色关联-权限变化生效",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户角色关系"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:权限访问-菜单拒绝",
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "FeatureCode": "ROLE",
+      "OperationCode": "PERMISSION",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-PERMISSION-001"
+      ],
+      "Title": "权限访问-菜单拒绝",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:权限访问-页面拒绝",
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "FeatureCode": "ROLE",
+      "OperationCode": "PERMISSION",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-PERMISSION-002"
+      ],
+      "Title": "权限访问-页面拒绝",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:权限访问-按钮拒绝",
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "FeatureCode": "ROLE",
+      "OperationCode": "PERMISSION",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-PERMISSION-003"
+      ],
+      "Title": "权限访问-按钮拒绝",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:权限访问-直接 URL拒绝",
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "FeatureCode": "ROLE",
+      "OperationCode": "PERMISSION",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-PERMISSION-004"
+      ],
+      "Title": "权限访问-直接 URL拒绝",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务查询::TITLE:任务查询-默认加载",
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "FeatureCode": "TQUERY",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-TASK-QUERY-001"
+      ],
+      "Title": "任务查询-默认加载",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务查询::TITLE:任务查询-按条件查询",
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "FeatureCode": "TQUERY",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-TASK-QUERY-002"
+      ],
+      "Title": "任务查询-按条件查询",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务查询::TITLE:任务查询-分页",
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "FeatureCode": "TQUERY",
+      "OperationCode": "PAGE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-TASK-QUERY-003"
+      ],
+      "Title": "任务查询-分页",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务查询::TITLE:任务查询-排序",
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "FeatureCode": "TQUERY",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-TASK-QUERY-004"
+      ],
+      "Title": "任务查询-排序",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务新增::TITLE:任务新增-重复任务",
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "FeatureCode": "TNEW",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 6,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-TASK-CREATE-001"
+      ],
+      "Title": "任务新增-重复任务",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务新增::TITLE:任务新增-缺少必填依赖",
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "FeatureCode": "TNEW",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 7,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-TASK-CREATE-002"
+      ],
+      "Title": "任务新增-缺少必填依赖",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务新增"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务生命周期::TITLE:任务生命周期-新增后查询",
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "FeatureCode": "TLIFE",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-TASK-LIFECYCLE-001"
+      ],
+      "Title": "任务生命周期-新增后查询",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务生命周期"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务生命周期::TITLE:任务生命周期-取消后查询",
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "FeatureCode": "TLIFE",
+      "OperationCode": "CANCEL",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-TASK-LIFECYCLE-002"
+      ],
+      "Title": "任务生命周期-取消后查询",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务生命周期"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务取消::TITLE:任务状态-取消状态矩阵",
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "FeatureCode": "TCANCEL",
+      "OperationCode": "CANCEL",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-TASK-STATE-001"
+      ],
+      "Title": "任务状态-取消状态矩阵",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务取消"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆查询-按编号查询",
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "FeatureCode": "VEH",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-VEHICLE-QUERY-001"
+      ],
+      "Title": "车辆查询-按编号查询",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆查询-无匹配结果",
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "FeatureCode": "VEH",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-VEHICLE-QUERY-002"
+      ],
+      "Title": "车辆查询-无匹配结果",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-编号为空",
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-VEHICLE-CREATE-001"
+      ],
+      "Title": "车辆新增-编号为空",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-名称为空",
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 5,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-VEHICLE-CREATE-002"
+      ],
+      "Title": "车辆新增-名称为空",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-编号长度边界",
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 6,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-VEHICLE-CREATE-003"
+      ],
+      "Title": "车辆新增-编号长度边界",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-非法字符",
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 7,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-VEHICLE-CREATE-004"
+      ],
+      "Title": "车辆新增-非法字符",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆修改-合法字段保存",
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "FeatureCode": "VEH",
+      "OperationCode": "UPDATE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-VEHICLE-UPDATE-001"
+      ],
+      "Title": "车辆修改-合法字段保存",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆修改-非法字段",
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "FeatureCode": "VEH",
+      "OperationCode": "UPDATE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-VEHICLE-UPDATE-002"
+      ],
+      "Title": "车辆修改-非法字段",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆删除-正常删除后查询",
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "FeatureCode": "VEH",
+      "OperationCode": "DELETE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-VEHICLE-DELETE-001"
+      ],
+      "Title": "车辆删除-正常删除后查询",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-默认加载",
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-STATS-QUERY-001"
+      ],
+      "Title": "统计查询-默认加载",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-按时间范围查询",
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-STATS-QUERY-002"
+      ],
+      "Title": "统计查询-按时间范围查询",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-组合条件重置",
+      "TestCaseId": "TC-STAT-RESET-001",
+      "FeatureCode": "STAT",
+      "OperationCode": "RESET",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-STATS-RESET-001"
+      ],
+      "Title": "统计查询-组合条件重置",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-分页",
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "FeatureCode": "STAT",
+      "OperationCode": "PAGE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-GEN-STATS-PAGE-001"
+      ],
+      "Title": "统计查询-分页",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-排序",
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 5,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-STATS-SORT-002"
+      ],
+      "Title": "统计查询-排序",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-时间范围边界",
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "FeatureCode": "STAT",
+      "OperationCode": "VALIDATE",
+      "AssignedSequence": 1,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-STATS-RANGE-001"
+      ],
+      "Title": "统计查询-时间范围边界",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-缺少时间条件",
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "FeatureCode": "STAT",
+      "OperationCode": "VALIDATE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-STATS-MISSING-001"
+      ],
+      "Title": "统计查询-缺少时间条件",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-超出允许范围",
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "FeatureCode": "STAT",
+      "OperationCode": "VALIDATE",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-STATS-OVER-001"
+      ],
+      "Title": "统计查询-超出允许范围",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-非法格式",
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "FeatureCode": "STAT",
+      "OperationCode": "VALIDATE",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-STATS-FORMAT-001"
+      ],
+      "Title": "统计查询-非法格式",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-显示名超长",
+      "TestCaseId": "TC-USER-CREATE-007",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 7,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-REVIEW-001"
+      ],
+      "Title": "用户新增-显示名超长",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-用户名长度边界",
+      "TestCaseId": "TC-USER-CREATE-008",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 8,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-REVIEW-002"
+      ],
+      "Title": "用户新增-用户名长度边界",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户新增-非法字符",
+      "TestCaseId": "TC-USER-CREATE-009",
+      "FeatureCode": "USER",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 9,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-REVIEW-003"
+      ],
+      "Title": "用户新增-非法字符",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户状态-禁用启用与登录影响",
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "FeatureCode": "USER",
+      "OperationCode": "UPDATE",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": true,
+      "LegacyTestCaseIds": [
+        "TC-BB-PENDING-REVIEW-004"
+      ],
+      "Title": "用户状态-禁用启用与登录影响",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-默认查询",
+      "TestCaseId": "TC-USER-QUERY-004",
+      "FeatureCode": "USER",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "用户查询-默认查询",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-用户名精确查询",
+      "TestCaseId": "TC-USER-QUERY-005",
+      "FeatureCode": "USER",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 5,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "用户查询-用户名精确查询",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-显示名模糊查询",
+      "TestCaseId": "TC-USER-QUERY-006",
+      "FeatureCode": "USER",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 6,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "用户查询-显示名模糊查询",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户查询-分页与切页条件保持",
+      "TestCaseId": "TC-USER-QUERY-007",
+      "FeatureCode": "USER",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 7,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "用户查询-分页与切页条件保持",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户修改-单字段与重复值校验",
+      "TestCaseId": "TC-USER-UPDATE-004",
+      "FeatureCode": "USER",
+      "OperationCode": "UPDATE",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "用户修改-单字段与重复值校验",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户管理::TITLE:用户删除-删除后查询/重复删除/重新创建",
+      "TestCaseId": "TC-USER-DELETE-003",
+      "FeatureCode": "USER",
+      "OperationCode": "DELETE",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "用户删除-删除后查询/重复删除/重新创建",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:角色查询与角色新增校验",
+      "TestCaseId": "TC-ROLE-QUERY-002",
+      "FeatureCode": "ROLE",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "角色查询与角色新增校验",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::用户角色关系::TITLE:角色关联-解除/重复绑定/权限变化",
+      "TestCaseId": "TC-URB-UNBIND-002",
+      "FeatureCode": "URB",
+      "OperationCode": "UNBIND",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "角色关联-解除/重复绑定/权限变化",
+      "ModuleName": "系统管理",
+      "FeatureName": "用户角色关系"
+    },
+    {
+      "StableCaseKey": "FEATURE:系统管理::角色管理::TITLE:权限访问-菜单/页面/按钮/直接 URL",
+      "TestCaseId": "TC-ROLE-PERMISSION-005",
+      "FeatureCode": "ROLE",
+      "OperationCode": "PERMISSION",
+      "AssignedSequence": 5,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "权限访问-菜单/页面/按钮/直接 URL",
+      "ModuleName": "系统管理",
+      "FeatureName": "角色管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务查询::TITLE:任务查询-默认/条件/分页/排序",
+      "TestCaseId": "TC-TQUERY-QUERY-004",
+      "FeatureCode": "TQUERY",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "任务查询-默认/条件/分页/排序",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务生命周期::TITLE:任务生命周期-新增后查询/取消后查询",
+      "TestCaseId": "TC-TLIFE-CANCEL-002",
+      "FeatureCode": "TLIFE",
+      "OperationCode": "CANCEL",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "任务生命周期-新增后查询/取消后查询",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务生命周期"
+    },
+    {
+      "StableCaseKey": "FEATURE:任务管理::任务取消::TITLE:任务状态-取消状态矩阵补充",
+      "TestCaseId": "TC-TCANCEL-CANCEL-004",
+      "FeatureCode": "TCANCEL",
+      "OperationCode": "CANCEL",
+      "AssignedSequence": 4,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "任务状态-取消状态矩阵补充",
+      "ModuleName": "任务管理",
+      "FeatureName": "任务取消"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆查询-精确编号/无结果",
+      "TestCaseId": "TC-VEH-QUERY-003",
+      "FeatureCode": "VEH",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "车辆查询-精确编号/无结果",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆新增-编号为空/名称为空/长度边界",
+      "TestCaseId": "TC-VEH-CREATE-008",
+      "FeatureCode": "VEH",
+      "OperationCode": "CREATE",
+      "AssignedSequence": 8,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "车辆新增-编号为空/名称为空/长度边界",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆修改-正常修改/原值/非法字段",
+      "TestCaseId": "TC-VEH-UPDATE-003",
+      "FeatureCode": "VEH",
+      "OperationCode": "UPDATE",
+      "AssignedSequence": 3,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "车辆修改-正常修改/原值/非法字段",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:车辆管理::车辆管理::TITLE:车辆删除-删除后查询",
+      "TestCaseId": "TC-VEH-DELETE-002",
+      "FeatureCode": "VEH",
+      "OperationCode": "DELETE",
+      "AssignedSequence": 2,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "车辆删除-删除后查询",
+      "ModuleName": "车辆管理",
+      "FeatureName": "车辆管理"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-默认条件",
+      "TestCaseId": "TC-STAT-QUERY-006",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 6,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "统计查询-默认条件",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-单月与跨月",
+      "TestCaseId": "TC-STAT-QUERY-007",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 7,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "统计查询-单月与跨月",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-开始等于结束/开始晚于结束",
+      "TestCaseId": "TC-STAT-VALIDATE-005",
+      "FeatureCode": "STAT",
+      "OperationCode": "VALIDATE",
+      "AssignedSequence": 5,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "统计查询-开始等于结束/开始晚于结束",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-缺少开始/结束时间",
+      "TestCaseId": "TC-STAT-VALIDATE-006",
+      "FeatureCode": "STAT",
+      "OperationCode": "VALIDATE",
+      "AssignedSequence": 6,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "统计查询-缺少开始/结束时间",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-超出允许时间范围",
+      "TestCaseId": "TC-STAT-VALIDATE-007",
+      "FeatureCode": "STAT",
+      "OperationCode": "VALIDATE",
+      "AssignedSequence": 7,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "统计查询-超出允许时间范围",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-组合筛选后重置",
+      "TestCaseId": "TC-STAT-QUERY-008",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 8,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "统计查询-组合筛选后重置",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    },
+    {
+      "StableCaseKey": "FEATURE:统计分析::统计查询::TITLE:统计查询-分页与排序",
+      "TestCaseId": "TC-STAT-QUERY-009",
+      "FeatureCode": "STAT",
+      "OperationCode": "QUERY",
+      "AssignedSequence": 9,
+      "CreatedAt": "2026-08-27",
+      "Active": false,
+      "SourceOnly": true,
+      "LegacyTestCaseIds": [],
+      "Title": "统计查询-分页与排序",
+      "ModuleName": "统计分析",
+      "FeatureName": "统计查询"
+    }
+  ]
+}

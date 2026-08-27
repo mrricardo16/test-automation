@@ -1,0 +1,210 @@
+const testData = (items) => items;
+
+function makeCase({ id, moduleName, featureName, operation, title, priority, objective, preconditions, data, steps, expected, supporting, postconditions, cleanup, eligibility, source, risk = 'P1' }) {
+  return {
+    TestCaseId: id,
+    ModuleName: moduleName,
+    FeatureName: featureName,
+    Operation: operation,
+    Title: title,
+    Priority: priority,
+    Objective: objective,
+    Preconditions: preconditions,
+    TestData: data,
+    Steps: steps,
+    ExpectedResult: expected,
+    SupportingAssertions: supporting,
+    PostConditions: postconditions,
+    Cleanup: cleanup,
+    CurrentEligibility: eligibility,
+    ExpectedSource: source,
+    Risk: risk,
+    LatestExecutionResult: '尚未执行',
+    Actual: '尚未执行；新细粒度用例不继承历史粗粒度用例结果。',
+    Evidence: [],
+  };
+}
+
+const userSource = ['handoff-package/04-user-flows.md', 'handoff-package/05-validation-rules.md'];
+const taskSource = ['handoff-package/04-user-flows.md', 'handoff-package/12-test-scenario-seeds.md'];
+const statsSource = ['handoff-package/04-user-flows.md', 'handoff-package/12-test-scenario-seeds.md'];
+
+const approvedDetailedCases = [
+  makeCase({
+    id: 'TC-USER-CREATE-001', moduleName: '系统管理', featureName: '用户管理', operation: '新增', title: '用户新增-合法数据创建成功', priority: 'P0',
+    objective: '验证合法且唯一的用户数据可以保存并出现在用户列表。',
+    preconditions: ['管理员已登录。', '已进入系统管理的用户管理页面。', '测试用户名不存在。'],
+    data: testData([['用户名', 'BB25_USER_<RunId>', '测试自有数据', '每次运行唯一'], ['显示名称', '自动化测试用户', '合法数据', '不包含敏感信息'], ['密码', '受控合法测试密码', '合法数据', '不展示明文']]),
+    steps: ['使用管理员账号登录系统。', '展开“系统管理”并进入“用户管理”。', '点击“新增”。', '输入唯一用户名、显示名称和受控合法密码。', '点击“保存”。', '根据用户名重新查询。'],
+    expected: '保存成功；用户出现在列表；用户名和显示名称与输入一致。', supporting: ['保存成功提示出现。', '重新查询仍能找到该用户。', '用户数量只增加一条。'],
+    postconditions: ['测试用户处于已创建状态。'], cleanup: '删除本次创建的测试用户，并重新查询确认不存在。', eligibility: '可自动执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-USER-CREATE-002', moduleName: '系统管理', featureName: '用户管理', operation: '新增', title: '用户新增-用户名重复校验', priority: 'P1',
+    objective: '验证已存在用户名不能创建第二个用户。',
+    preconditions: ['管理员已登录用户管理。', '基准用户 BB25_USER_BASE 已存在且归属为测试数据。'],
+    data: testData([['用户名', 'BB25_USER_BASE', '重复数据', '只读引用基准用户'], ['其他字段', '合法显示名称和受控合法密码', '合法数据', '不得产生持久化残留']]),
+    steps: ['点击“新增”。', '输入已存在的用户名 BB25_USER_BASE。', '填写其余合法字段。', '点击“保存”。', '根据用户名重新查询。'],
+    expected: '创建失败；出现用户名重复提示；列表中只有原基准用户，不产生第二条相同用户名记录。', supporting: ['用户总数不增加。', '失败提交后不存在新用户残留。'],
+    postconditions: ['基准用户保持不变。'], cleanup: '保留基准用户；查询并清理本次可能产生的测试残留。', eligibility: '可自动执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-USER-CREATE-003', moduleName: '系统管理', featureName: '用户管理', operation: '新增', title: '用户新增-密码低于最小长度', priority: 'P1',
+    objective: '验证新增用户时低于批准最小长度的密码被拒绝。',
+    preconditions: ['管理员已登录用户管理。', '已获得密码最小长度 N 的批准规则。'],
+    data: testData([['用户名', 'BB25_USER_<RunId>', '测试自有数据', '一次性'], ['密码', '长度 N-1', '边界数据', 'N 来自批准规则，不在此猜测具体值']]),
+    steps: ['点击“新增”。', '输入唯一用户名和合法显示名称。', '输入长度为 N-1 的密码。', '点击“保存”。', '根据用户名查询。'],
+    expected: '创建失败；出现密码长度校验提示；列表中不存在该用户名。', supporting: ['非法提交不增加用户数量。', '其他字段输入不改变密码校验结论。'],
+    postconditions: ['不存在由本用例产生的用户。'], cleanup: '查询并删除本次可能产生的残留，确认用户名不存在。', eligibility: '可自动执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-USER-CREATE-004', moduleName: '系统管理', featureName: '用户管理', operation: '新增', title: '用户新增-用户名为空', priority: 'P1',
+    objective: '验证用户名为空时不能创建用户。',
+    preconditions: ['管理员已登录用户管理。'],
+    data: testData([['用户名', '空值', '空数据', '不填充或清空字段'], ['显示名称/密码', '合法测试值', '合法数据', '仅验证用户名必填规则']]),
+    steps: ['点击“新增”。', '保持用户名为空。', '填写合法显示名称和受控合法密码。', '点击“保存”。', '查询用户列表。'],
+    expected: '保存被拒绝；出现用户名必填提示；列表不新增用户。', supporting: ['焦点或错误提示指向用户名字段。', '失败后表单仍可继续修正。'],
+    postconditions: ['列表中不存在本次用户名为空产生的用户。'], cleanup: '确认列表没有本次新增残留。', eligibility: '可自动执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-USER-CREATE-005', moduleName: '系统管理', featureName: '用户管理', operation: '新增', title: '用户新增-显示名为空', priority: 'P1',
+    objective: '验证显示名称为空时不能创建用户。',
+    preconditions: ['管理员已登录用户管理。'],
+    data: testData([['用户名', 'BB25_USER_<RunId>', '测试自有数据', '唯一'], ['显示名称', '空值', '空数据', '仅验证显示名称必填规则'], ['密码', '受控合法测试密码', '合法数据', '不展示明文']]),
+    steps: ['点击“新增”。', '输入唯一用户名。', '保持显示名称为空。', '输入受控合法密码并保存。', '根据用户名查询。'],
+    expected: '保存被拒绝；出现显示名称必填提示；列表不新增该用户名。', supporting: ['错误提示指向显示名称字段。', '失败提交不产生残留对象。'],
+    postconditions: ['用户列表中不存在本次用户名。'], cleanup: '查询并确认没有本次新增残留。', eligibility: '可自动执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-URB-BIND-001', moduleName: '系统管理', featureName: '用户角色关系', operation: '关联', title: '用户角色关联-保存后重新查询', priority: 'P1',
+    objective: '验证测试用户与测试角色的关联保存后可以重新查询到。',
+    preconditions: ['管理员已登录角色与用户关系页面。', '测试用户和测试角色已存在。', '记录运行前关联状态。'],
+    data: testData([['用户', 'BB25_USER_<RunId>', '测试自有数据', '只操作本轮用户'], ['角色', 'BB25_TEST_ROLE', '测试自有数据', '不修改共享角色']]),
+    steps: ['选择测试用户。', '选择测试角色。', '保存关联。', '刷新或重新查询用户角色关系。', '恢复运行前关联状态。'],
+    expected: '保存成功；重新查询显示已保存关联；恢复后关联回到运行前状态。', supporting: ['非测试用户和共享角色关联不变。', '恢复操作后关系状态可再次查询确认。'],
+    postconditions: ['关联状态已恢复为运行前状态。'], cleanup: '移除本次新增关联或恢复原关联，并重新查询确认。', eligibility: '可自动执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-TNEW-CREATE-001', moduleName: '任务管理', featureName: '任务新增', operation: '新增', title: '任务新增-合法依赖创建成功', priority: 'P1',
+    objective: '验证有效模板、车辆、站点和楼层依赖可以生成唯一任务。',
+    preconditions: ['管理员已登录任务管理。', '隔离模板、车辆、站点和楼层均已批准并可清理。'],
+    data: testData([['模板/车辆/站点/楼层', '批准的隔离依赖', '测试自有数据', '不得使用共享运营对象'], ['任务参数', 'BB25_TASK_<RunId>', '一次性数据', '用于查询和清理']]),
+    steps: ['进入任务管理并点击“新增”。', '依次选择合法模板、车辆、站点和楼层。', '填写任务参数并提交。', '根据任务标识查询列表。'],
+    expected: '任务创建成功；生成唯一任务标识；任务出现在列表并关联正确依赖。', supporting: ['保存成功提示出现。', '查询结果中的依赖与提交值一致。'],
+    postconditions: ['测试任务处于已创建状态。'], cleanup: '按批准方案终止或删除测试任务，并查询确认已清理。', eligibility: '需人工执行', source: taskSource, risk: 'P1',
+  }),
+  ...[
+    ['TEMPLATE-002', '无效模板引用', '模板', '无效模板标识', '无效模板不产生任务。'],
+    ['VEHICLE-003', '无效车辆引用', '车辆', '无效车辆标识', '无效车辆不产生任务。'],
+    ['SITE-004', '无效站点引用', '站点', '无效站点标识', '无效站点不产生任务。'],
+    ['FLOOR-005', '无效楼层引用', '楼层', '无效楼层标识', '无效楼层不产生任务。'],
+  ].map(([suffix, title, field, value, expected]) => makeCase({
+    id: `TC-TNEW-CREATE-${suffix.slice(-3)}`, moduleName: '任务管理', featureName: '任务新增', operation: '新增', title: `任务新增-${title}校验`, priority: 'P1',
+    objective: `验证${field}引用无效时任务创建被拒绝。`, preconditions: ['管理员已进入任务新增页面。', '其余任务依赖使用批准的合法隔离数据。'],
+    data: testData([[field, value, '非法数据', '不得使用共享对象'], ['其余依赖', '批准的合法隔离依赖', '合法数据', '用于隔离单一规则']]),
+    steps: [`选择或输入${field}为无效值。`, '填写其余合法任务依赖和参数。', '点击保存。', '查询任务列表。'], expected,
+    supporting: ['出现当前引用无效提示。', '列表中不存在由本次提交产生的任务。'], postconditions: ['不产生非法任务或孤儿任务。'], cleanup: '查询并清理本次可能产生的任务残留。', eligibility: '需人工执行', source: taskSource,
+  })),
+  ...[
+    ['CANCEL-006', '允许取消的任务', '允许取消', '任务状态变为已取消。'],
+    ['CANCEL-007', '禁止取消的终态任务', '禁止取消', '取消入口不可用或提交被拒绝；任务状态保持终态。'],
+    ['RESEND-008', '允许重发的任务', '允许重发', '重发成功；任务产生可追踪的重发结果。'],
+    ['RESEND-009', '禁止重发的任务', '禁止重发', '重发入口不可用或提交被拒绝；原任务状态保持。'],
+  ].map(([suffix, title, rule, expected]) => makeCase({
+    id: `TC-${title.includes('重发') ? 'TRESEND-RESEND' : 'TCANCEL-CANCEL'}-${title.includes('禁止') ? '002' : '001'}`, moduleName: '任务管理', featureName: title.includes('重发') ? '任务重发' : '任务取消', operation: '状态', title: `任务状态-${title}`,
+    priority: 'P1', objective: `验证任务处于${rule}状态时执行对应操作的结果。`, preconditions: ['管理员已登录任务管理。', '已有批准的隔离任务状态夹具。'],
+    data: testData([['任务状态', `批准的${title}状态`, '状态数据', '不得占用业务任务'], ['任务归属', '测试自有任务', '测试自有数据', '可恢复']]),
+    steps: [`选择处于${title}状态的测试任务。`, `执行${title.includes('重发') ? '重发' : '取消'}操作。`, '重新查询任务状态。'], expected,
+    supporting: ['操作结果提示与状态变化一致。', '禁止操作不改变任务原状态。'], postconditions: ['任务处于预期状态或保持原状态。'], cleanup: '恢复或清理测试任务状态，并重新查询确认。', eligibility: '需人工执行', source: taskSource,
+  })),
+  makeCase({
+    id: 'TC-VEH-CREATE-001', moduleName: '车辆管理', featureName: '车辆管理', operation: '新增', title: '车辆新增-合法车辆', priority: 'P1',
+    objective: '验证合法车辆数据可以保存并出现在车辆列表。', preconditions: ['管理员已进入车辆管理。', '测试车辆编号不在运营数据中。'],
+    data: testData([['车辆编号', 'BB25_VEHICLE_<RunId>', '测试自有数据', '唯一'], ['车辆类型', '批准车辆类型', '合法数据', '不得连接真实设备']]),
+    steps: ['点击“新增”。', '输入合法车辆编号、名称和类型。', '点击保存。', '按车辆编号重新查询。'], expected: '保存成功；车辆出现在列表；字段值与输入一致。', supporting: ['车辆数量增加一条。', '清理前后列表结果可比对。'], postconditions: ['测试车辆处于已创建状态。'], cleanup: '删除本次测试车辆并查询确认不存在。', eligibility: '需人工执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-VEH-CREATE-002', moduleName: '车辆管理', featureName: '车辆管理', operation: '新增', title: '车辆新增-编号重复', priority: 'P1',
+    objective: '验证已存在车辆编号不能创建第二辆车辆。', preconditions: ['管理员已进入车辆管理。', '基准车辆编号已存在且归属明确。'],
+    data: testData([['车辆编号', 'BB25_VEHICLE_BASE', '重复数据', '只读引用基准车辆'], ['车辆类型', '批准合法类型', '合法数据', '不产生新车辆']]),
+    steps: ['点击“新增”。', '输入已存在车辆编号。', '填写其余合法字段。', '点击保存。', '重新查询车辆列表。'], expected: '保存被拒绝；出现编号重复提示；列表中不产生第二辆相同编号车辆。', supporting: ['车辆数量不增加。', '失败提交没有残留车辆。'], postconditions: ['基准车辆保持不变。'], cleanup: '保留基准车辆并清理本次残留。', eligibility: '需人工执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-VEH-CREATE-003', moduleName: '车辆管理', featureName: '车辆管理', operation: '新增', title: '车辆新增-非法车辆类型', priority: 'P1',
+    objective: '验证非法车辆类型不能创建车辆。', preconditions: ['管理员已进入车辆管理。', '已批准非法类型输入规则。'],
+    data: testData([['车辆编号', 'BB25_VEHICLE_<RunId>', '测试自有数据', '一次性'], ['车辆类型', '批准的非法枚举值', '非法数据', '不猜测枚举范围']]),
+    steps: ['点击“新增”。', '输入唯一车辆编号。', '选择或输入非法车辆类型。', '点击保存。', '重新查询车辆列表。'], expected: '保存被拒绝；出现车辆类型校验提示；列表中不产生该车辆。', supporting: ['失败提交不增加车辆数量。', '其他字段不影响非法类型规则结论。'], postconditions: ['不存在本次非法类型产生的车辆。'], cleanup: '查询并清理本次可能产生的车辆残留。', eligibility: '需人工执行', source: userSource,
+  }),
+  makeCase({
+    id: 'TC-MON-VISUAL-001', moduleName: '监控管理', featureName: '监控看板', operation: '视觉', title: '监控看板-地图与状态人工复核', priority: 'P2',
+    objective: '人工复核地图、任务、车辆和充电状态的可见性及空态/错误呈现。', preconditions: ['已登录监控看板。', '批准的监控数据源可用或明确记录不可用状态。'],
+    data: testData([['监控数据', '批准的地图、任务、车辆和充电状态', '基准数据', '只读观察']]),
+    steps: ['打开监控看板。', '等待地图和状态区域加载。', '逐项复核地图、任务、车辆和充电状态。', '记录空态、错误和异常布局。'], expected: '地图、任务、车辆和充电状态符合批准视觉基线；依赖不可用时显示可诊断空态或错误。', supporting: ['截图记录人工复核结论。', '不把视觉观察改写为自动化 PASS。'], postconditions: ['只保留人工观察记录。'], cleanup: '', eligibility: '需人工执行', source: ['handoff-package/04-user-flows.md'], risk: 'P2',
+  }),
+  makeCase({
+    id: 'TC-LOG-DOWNLOAD-001', moduleName: '日志管理', featureName: '日志下载', operation: '下载', title: '日志下载-批准非敏感日志包', priority: 'P2',
+    objective: '验证下载行为只处理列表中批准的非敏感日志包。', preconditions: ['已进入日志管理。', '批准的非敏感日志包出现在列表。'],
+    data: testData([['日志包', '批准的非敏感测试日志包', '基准数据', '不得读取任意路径']]),
+    steps: ['查询日志包列表。', '选择批准的非敏感日志包。', '点击下载。', '复核下载来源和脱敏状态。'], expected: '下载内容来自列表中批准的日志包；不接受任意文件路径；敏感内容不进入报告。', supporting: ['下载响应来源可追溯。', '临时下载文件按要求删除。'], postconditions: ['不保留敏感日志内容。'], cleanup: '删除临时下载文件和敏感中间产物。', eligibility: '需人工执行', source: ['handoff-package/04-user-flows.md'], risk: 'P2',
+  }),
+  makeCase({
+    id: 'TC-STAT-QUERY-001', moduleName: '统计分析', featureName: '统计查询', operation: '查询', title: '统计查询-合法时间范围有数据', priority: 'P1',
+    objective: '验证合法时间范围存在数据时显示统计结果。', preconditions: ['已进入统计查询页面。', '批准的有数据时间范围和统计源数据已准备。'],
+    data: testData([['时间范围', '批准的有数据时间范围', '基准数据', '不猜测统计源'], ['筛选条件', '批准的合法筛选条件', '合法数据', '只读查询']]),
+    steps: ['进入统计查询。', '输入批准的有数据时间范围。', '输入合法筛选条件。', '点击查询。'], expected: '显示统计结果；字段、单位和时间范围符合批准基线。', supporting: ['结果属于查询条件范围。', '查询不修改业务数据。'], postconditions: ['统计页面保留查询结果，不产生写入。'], cleanup: '', eligibility: '当前阻塞', source: statsSource,
+  }),
+  makeCase({
+    id: 'TC-STAT-QUERY-002', moduleName: '统计分析', featureName: '统计查询', operation: '查询', title: '统计查询-合法时间范围无数据', priority: 'P1',
+    objective: '验证合法但无数据的时间范围显示批准空态。', preconditions: ['已进入统计查询页面。', '批准的无数据时间范围和空态规则已准备。'],
+    data: testData([['时间范围', '批准的合法无数据时间范围', '空数据', '不得猜测不存在月份'], ['筛选条件', '批准的合法筛选条件', '合法数据', '只读查询']]),
+    steps: ['进入统计查询。', '输入批准的无数据时间范围。', '点击查询。'], expected: '显示批准的无数据空态；不显示伪造统计；不修改业务数据。', supporting: ['空态文案和状态可人工复核。', '查询条件与空态结果对应。'], postconditions: ['统计页面保持无写入状态。'], cleanup: '', eligibility: '当前阻塞', source: statsSource,
+  }),
+];
+
+const gapDefinitions = [
+  ['GAP-FG-USER-QUERY-001', '系统管理', '用户管理', '查询', '用户查询-默认查询', 'Handoff 未定义默认查询条件、默认排序和初始分页。'],
+  ['GAP-FG-USER-QUERY-002', '系统管理', '用户管理', '查询', '用户查询-用户名精确查询', 'Handoff 未定义精确匹配、大小写和前后空格规则。'],
+  ['GAP-FG-USER-QUERY-003', '系统管理', '用户管理', '查询', '用户查询-显示名模糊查询', 'Handoff 未定义模糊匹配范围和特殊字符规则。'],
+  ['GAP-FG-USER-QUERY-004', '系统管理', '用户管理', '查询', '用户查询-无匹配结果', 'Handoff 未定义无匹配结果的空态和分页语义。'],
+  ['GAP-FG-USER-QUERY-005', '系统管理', '用户管理', '查询', '用户查询-清空筛选条件', 'Handoff 未定义重置后的默认条件和结果。'],
+  ['GAP-FG-USER-QUERY-006', '系统管理', '用户管理', '查询', '用户查询-分页与切页条件保持', 'Handoff 未定义分页、切页和条件保持规则。'],
+  ['GAP-FG-USER-VALIDATION-007', '系统管理', '用户管理', '新增', '用户新增-显示名超长', '未提供显示名最大长度和超长拒绝 Expected。'],
+  ['GAP-FG-USER-VALIDATION-008', '系统管理', '用户管理', '新增', '用户新增-用户名长度边界', '未提供用户名最小/最大长度，不能猜测 min/max。'],
+  ['GAP-FG-USER-VALIDATION-009', '系统管理', '用户管理', '新增', '用户新增-非法字符', '未提供允许字符集合和错误提示合同。'],
+  ['GAP-FG-USER-UPDATE-010', '系统管理', '用户管理', '修改', '用户修改-单字段与重复值校验', '未定义可修改字段、唯一字段修改和失败后原值保持。'],
+  ['GAP-FG-USER-STATE-011', '系统管理', '用户管理', '状态', '用户状态-禁用启用与登录影响', '未定义禁用、启用、在线会话和重新登录的完整状态矩阵。'],
+  ['GAP-FG-USER-DELETE-012', '系统管理', '用户管理', '删除', '用户删除-删除后查询/重复删除/重新创建', '未定义删除后查询、重复删除和唯一键复用语义。'],
+  ['GAP-FG-ROLE-013', '系统管理', '角色管理', '查询', '角色查询与角色新增校验', 'Handoff 未定义角色查询、新增、空值和重复名称规则。'],
+  ['GAP-FG-ROLE-014', '系统管理', '用户角色关系', '关联', '角色关联-解除/重复绑定/权限变化', '未定义解除、重复绑定、刷新、重新登录和在线 Session 生效时机。'],
+  ['GAP-FG-ROLE-015', '系统管理', '角色管理', '权限', '权限访问-菜单/页面/按钮/直接 URL', '未定义不同权限层级的拒绝合同。'],
+  ['GAP-FG-TASK-QUERY-016', '任务管理', '任务查询', '查询', '任务查询-默认/条件/分页/排序', 'Handoff 未定义任务查询矩阵。'],
+  ['GAP-FG-TASK-017', '任务管理', '任务新增', '新增', '任务新增-重复任务', '未定义重复有效依赖的幂等键、拒绝或新建规则。'],
+  ['GAP-FG-TASK-018', '任务管理', '任务新增', '新增', '任务新增-缺少必填依赖', '未定义缺少模板、车辆、站点或楼层时的具体拒绝合同。'],
+  ['GAP-FG-TASK-019', '任务管理', '任务生命周期', '组合', '任务生命周期-新增后查询/取消后查询', '未定义跨操作状态、查询可见性和清理终态。'],
+  ['GAP-FG-TASK-020', '任务管理', '任务取消', '状态', '任务状态-取消状态矩阵补充', '需要任务状态×归属×派发状态×权限决策表。'],
+  ['GAP-FG-VEHICLE-021', '车辆管理', '车辆管理', '查询', '车辆查询-精确编号/无结果', 'Handoff 未定义车辆查询匹配和空态规则。'],
+  ['GAP-FG-VEHICLE-022', '车辆管理', '车辆管理', '新增', '车辆新增-编号为空/名称为空/长度边界', '未提供必填字段和编号边界规则。'],
+  ['GAP-FG-VEHICLE-023', '车辆管理', '车辆管理', '新增', '车辆新增-非法字符', '未提供车辆编号允许字符集合。'],
+  ['GAP-FG-VEHICLE-024', '车辆管理', '车辆管理', '修改', '车辆修改-正常修改/原值/非法字段', '未定义车辆可修改字段和失败后原值保持。'],
+  ['GAP-FG-VEHICLE-025', '车辆管理', '车辆管理', '删除', '车辆删除-删除后查询', '未定义车辆删除及真实设备关联约束。'],
+  ['GAP-FG-STAT-026', '统计分析', '统计查询', '查询', '统计查询-默认条件', '未定义默认时间范围、默认筛选和默认排序。'],
+  ['GAP-FG-STAT-027', '统计分析', '统计查询', '查询', '统计查询-单月与跨月', '未定义单月、跨月的统计时间语义。'],
+  ['GAP-FG-STAT-028', '统计分析', '统计查询', '边界', '统计查询-开始等于结束/开始晚于结束', '未定义时间边界合法性和拒绝提示。'],
+  ['GAP-FG-STAT-029', '统计分析', '统计查询', '校验', '统计查询-缺少开始/结束时间', '未定义缺失筛选字段的校验合同。'],
+  ['GAP-FG-STAT-030', '统计分析', '统计查询', '边界', '统计查询-超出允许时间范围', '未定义允许范围和越界行为。'],
+  ['GAP-FG-STAT-031', '统计分析', '统计查询', '查询', '统计查询-组合筛选后重置', '未定义组合条件、重置和结果刷新语义。'],
+  ['GAP-FG-STAT-032', '统计分析', '统计查询', '查询', '统计查询-分页与排序', '未定义分页、排序、筛选后分页和切页保持。'],
+  ['GAP-FG-STAT-033', '统计分析', '统计查询', '校验', '统计查询-非法格式', '缺少批准的 deterministic 非法筛选数据和精确拒绝 Expected。'],
+];
+
+export const fineGrainedGapCandidates = gapDefinitions.map(([GapId, ModuleName, FeatureName, Operation, Title, Reason]) => ({ GapId, ModuleName, FeatureName, Operation, Title, Reason, Status: '规则待确认' }));
+
+export function buildFineGrainedCatalog() {
+  return {
+    CatalogType: 'CURRENT_APPROVED_AND_PROPOSED_DETAILED_CASES',
+    ApprovedDetailedCases: approvedDetailedCases,
+    ProposedDetailedCaseCount: approvedDetailedCases.length + fineGrainedGapCandidates.length,
+    ApprovedDetailedCaseCount: approvedDetailedCases.length,
+    GapCandidates: fineGrainedGapCandidates,
+  };
+}

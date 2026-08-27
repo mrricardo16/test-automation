@@ -6,9 +6,60 @@
   "additionalProperties": false,
   "required": ["TestCaseId", "ModuleId", "FeatureId", "Title", "Priority", "TestType", "TestLayer", "ApplicabilityStatus", "ExpectedBasis", "AutomationType", "AutomationFramework"],
   "properties": {
-    "TestCaseId": { "type": "string", "pattern": "^(TC-[A-Z0-9]+-[A-Z0-9-]+|INFRASTRUCTURE_SELF_TEST)$" },
+    "TestCaseId": {
+      "type": "string",
+      "pattern": "^(TC-[A-Z0-9]+-[A-Z0-9-]+|INFRASTRUCTURE_SELF_TEST)$",
+      "description": "Current project catalogs use TC-<FEATURE_CODE>-<OPERATION_CODE>-<SEQ>; the broad pattern retains compatibility for platform contracts, while testcase-id-validator.mjs enforces the current stable format and the separate TC-BB-REAL historical exception."
+    },
     "ModuleId": { "type": "string", "minLength": 1 },
     "FeatureId": { "type": "string", "minLength": 1 },
+    "ModuleName": { "type": "string", "minLength": 1 },
+    "FeatureName": { "type": "string", "minLength": 1 },
+    "Operation": { "enum": ["QUERY", "CREATE", "UPDATE", "DELETE", "VALIDATION", "STATE_TRANSITION", "PERMISSION", "RELATIONSHIP", "IMPORT", "EXPORT", "DOWNLOAD", "UPLOAD", "AUTHENTICATION", "SESSION", "COMPOSITE_LIFECYCLE", "VISUAL", "OTHER"] },
+    "ScenarioGroup": { "enum": ["HAPPY_PATH", "CONDITION", "VALIDATION", "NEGATIVE", "BOUNDARY", "EMPTY_STATE", "DUPLICATE", "PERMISSION", "STATE", "RELATIONSHIP", "POST_CONDITION", "ERROR_HANDLING", "RECOVERY", "IDEMPOTENCY", "COMPOSITE_FLOW", "MANUAL_BOUNDARY"] },
+    "PresentationOrder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ModuleOrder", "FeatureOrder", "OperationOrder", "ScenarioOrder", "CaseOrder"],
+      "properties": {
+        "ModuleOrder": { "type": "integer", "minimum": 1 },
+        "FeatureOrder": { "type": "integer", "minimum": 1 },
+        "OperationOrder": { "type": "integer", "minimum": 1 },
+        "ScenarioOrder": { "type": "integer", "minimum": 1 },
+        "CaseOrder": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "BusinessRules": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "TestDataDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["DataFields", "DataCategory", "KeyValues", "Source", "Ownership", "Unique", "Disposable", "Sensitive"],
+      "properties": {
+        "DataFields": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "DataCategory": { "enum": ["VALID_DATA", "INVALID_DATA", "BOUNDARY_DATA", "EXISTING_DATA", "NON_EXISTING_DATA", "DUPLICATE_DATA", "EMPTY_DATA", "TEST_OWNED_DATA", "DISPOSABLE_DATA", "REFERENCE_DATA"] },
+        "KeyValues": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "Source": { "type": "string", "minLength": 1 },
+        "Ownership": { "type": "string", "minLength": 1 },
+        "Unique": { "type": "boolean" },
+        "Disposable": { "type": "boolean" },
+        "Sensitive": { "type": "boolean" }
+      }
+    },
+    "SafetyConstraints": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "DesignTechniques": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["EQUIVALENCE_PARTITIONING", "BOUNDARY_VALUE", "DECISION_TABLE", "STATE_MODEL", "CRUD_LIFECYCLE_MATRIX", "QUERY_TEST_MATRIX", "PERMISSION_MATRIX", "RELATIONSHIP_MATRIX", "ERROR_RECOVERY", "IDEMPOTENCY_ANALYSIS", "PAIRWISE", "REPRESENTATIVE_PARTITION", "MANUAL_BOUNDARY"] } },
+    "BoundaryValues": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Applicable"],
+      "properties": {
+        "Applicable": { "type": "boolean" },
+        "Values": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "ExpectedKnown": { "type": "boolean" }
+      }
+    },
+    "DesignMaturity": { "enum": ["DRAFT", "REVIEWABLE", "EXECUTABLE", "LIMITED"] },
+    "EffectiveAutomationEligibility": { "enum": ["AUTO_ALLOWED", "MANUAL_REQUIRED", "NOT_EXECUTABLE"] },
+    "DependsOnTestCaseId": { "type": "string", "minLength": 1 },
     "Title": { "type": "string", "minLength": 1 },
     "Priority": { "enum": ["P0", "P1", "P2", "P3"] },
     "TestType": { "type": "string", "minLength": 1 },
@@ -16,8 +67,48 @@
     "ApplicabilityStatus": { "enum": ["APPLICABLE", "NOT_APPLICABLE", "CONDITIONAL", "UNKNOWN"] },
     "ExpectedBasis": { "enum": ["REQUIREMENT", "DESIGN", "APPROVED_BASELINE", "HANDOFF_BASELINE", "CODE_BEHAVIOR", "UNKNOWN"] },
     "ExpectedResult": { "type": "string", "minLength": 1 },
+    "ExpectedStatus": { "enum": ["EXPECTED_CONFIRMED", "EXPECTED_PENDING_AUTHORITY"] },
+    "ExpectedSourceRef": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "ExpectedAuthority": { "type": "string", "minLength": 1 },
+    "ExpectedAuthorityCompleteness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["AuthoritySourcesAvailable", "AuthoritySourcesSearched", "RelevantSectionsFound", "BusinessRulesExtracted", "ExpectedCandidateFound", "ExpectedSourceRef", "SearchCompleteness"],
+      "properties": {
+        "AuthoritySourcesAvailable": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "AuthoritySourcesSearched": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "RelevantSectionsFound": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "BusinessRulesExtracted": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "ExpectedCandidateFound": { "enum": ["Yes", "No"] },
+        "ExpectedSourceRef": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "SearchCompleteness": { "enum": ["COMPLETE", "INCOMPLETE"] }
+      }
+    },
+    "ExpectationGapId": { "type": "string", "pattern": "^(EG|GAP)-[A-Z0-9]+-[A-Z0-9-]+$" },
+    "GapClassification": { "enum": ["EXPECTED_EXTRACTION_MISS", "TRUE_GAP"] },
+    "ExpectedResultSemantics": { "enum": ["AUTHORITY_GAP_DESCRIPTION_NOT_BUSINESS_ORACLE"] },
+    "BusinessRuleRefs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "TraceabilityRefs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
     "AutomationType": { "enum": ["AUTO", "AUTO_PARTIAL", "MANUAL"] },
     "AutomationFramework": { "type": "string", "minLength": 1 },
+    "CandidateState": { "enum": ["DESIGN_CANDIDATE", "ACTIVE", "RETIRED"] },
+    "DesignState": { "enum": ["REVIEWED", "UNREVIEWED"] },
+    "ActivationStatus": { "enum": ["NOT_ACTIVATED", "AUTO_ACTIVATED", "MANUAL_REQUIRED", "BLOCKED", "NOT_EXECUTABLE"] },
+    "ActivationDecision": { "enum": ["AUTO_ACTIVATE", "MANUAL_REQUIRED", "BLOCKED", "NOT_EXECUTABLE"] },
+    "ExecutionQueueDecision": { "enum": ["ENQUEUE", "MANUAL_QUEUE", "BLOCKED", "EMPTY"] },
+    "ExpectationGapApplicable": { "type": "boolean" },
+    "RiskReasonBefore": { "type": "string", "minLength": 1 },
+    "RiskReasonAfter": { "type": "string", "minLength": 1 },
+    "CurrentAutomationEligibility": { "enum": ["AUTO_ALLOWED", "MANUAL_REQUIRED", "NOT_EXECUTABLE"] },
+    "CurrentRisk": { "enum": ["RISK_LOW", "RISK_MEDIUM", "RISK_HIGH", "RISK_CRITICAL"] },
+    "CurrentReadiness": { "enum": ["READY", "BLOCKED", "MANUAL", "NOT_EXECUTABLE"] },
+    "CurrentBlocker": { "type": "string", "minLength": 1 },
+    "ReadinessChanged": { "type": "boolean" },
+    "ActivationReason": { "type": "string", "minLength": 1 },
+    "PreviousAutomationEligibility": { "enum": ["AUTO_ALLOWED", "MANUAL_REQUIRED", "NOT_EXECUTABLE"] },
+    "PreviousRisk": { "enum": ["RISK_LOW", "RISK_MEDIUM", "RISK_HIGH", "RISK_CRITICAL"] },
+    "PreviousActivationDecision": { "type": "string", "minLength": 1 },
+    "PreviousReadiness": { "enum": ["READY", "BLOCKED", "MANUAL", "NOT_EXECUTABLE"] },
     "CaseKind": { "enum": ["ATOMIC", "COMPOSITE"] },
     "ScenarioSuiteId": { "type": "string", "pattern": "^SS-[A-Z0-9]+-[A-Z0-9-]+$" },
     "Objective": { "type": "string", "minLength": 1 },
@@ -44,7 +135,9 @@
     "Cleanup": { "type": "string", "minLength": 1 },
     "CleanupVerification": { "type": "string", "minLength": 1 },
     "ExpectationGapRefs": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^EG-[A-Z0-9]+-[A-Z0-9-]+$" } },
-    "CoverageTags": { "type": "array", "uniqueItems": true, "items": { "enum": ["HAPPY_PATH", "BUSINESS_RULE", "VALIDATION", "BOUNDARY", "NEGATIVE", "PERMISSION", "AUTHENTICATION", "STATE_TRANSITION", "POST_CONDITION", "DATA_CONSISTENCY", "REFERENTIAL_INTEGRITY", "IDEMPOTENCY", "DUPLICATE", "RECOVERY", "SESSION", "COMPOSITE_FLOW", "LIFECYCLE", "CONCURRENCY", "CLEANUP", "MANUAL_BOUNDARY"] } },
+    "SourceActiveTestCaseId": { "type": "string", "minLength": 1 },
+    "ExpectedSource": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "CoverageTags": { "type": "array", "uniqueItems": true, "items": { "enum": ["HAPPY_PATH", "BUSINESS_RULE", "VALIDATION", "BOUNDARY", "NEGATIVE", "PERMISSION", "AUTHENTICATION", "STATE_TRANSITION", "POST_CONDITION", "DATA_CONSISTENCY", "REFERENTIAL_INTEGRITY", "IDEMPOTENCY", "DUPLICATE", "RECOVERY", "SESSION", "COMPOSITE_FLOW", "LIFECYCLE", "CONCURRENCY", "CLEANUP", "MANUAL_BOUNDARY", "CRUD_LIFECYCLE", "ERROR_MODEL"] } },
     "Dependencies": { "type": "array", "items": { "type": "string", "minLength": 1 } },
     "DestructiveRisk": { "enum": ["NONE", "LOW", "MEDIUM", "HIGH", "CRITICAL", "UNKNOWN"] },
     "EvidenceRequirement": { "type": ["string", "array"] },
@@ -79,7 +172,11 @@
   "allOf": [
     {
       "if": { "required": ["CaseKind"] },
-      "then": { "required": ["ScenarioSuiteId", "Objective", "PrimaryAssertion", "LifecycleStatus", "ReviewGateStatus", "RiskLevel", "SideEffects", "SideEffectScope", "Reversibility", "DataOwnership", "InteractionMode", "AutomationEligibility", "CoverageTags"] },
+      "then": { "properties": { "Priority": { "enum": ["P0", "P1", "P2"] } } }
+    },
+    {
+      "if": { "required": ["CaseKind"] },
+      "then": { "required": ["ScenarioSuiteId", "Objective", "PrimaryAssertion", "LifecycleStatus", "ReviewGateStatus", "RiskLevel", "SideEffects", "SideEffectScope", "Reversibility", "DataOwnership", "InteractionMode", "AutomationEligibility", "CoverageTags", "ModuleName", "FeatureName", "Operation", "ScenarioGroup", "PresentationOrder", "BusinessRules", "TestDataDesign", "SafetyConstraints", "DesignTechniques", "DesignMaturity", "PostConditions"] },
       "else": { "required": ["ExpectedResult"] }
     },
     {
@@ -88,7 +185,21 @@
     },
     {
       "if": { "required": ["ExpectedBasis"], "properties": { "ExpectedBasis": { "const": "UNKNOWN" } } },
-      "then": { "required": ["ExpectationGapRefs"], "properties": { "ExpectedResult": false, "ReviewGateStatus": { "enum": ["LIMITED", "FAIL"] }, "AutomationEligibility": { "const": "NOT_EXECUTABLE" } } }
+      "then": {
+        "required": ["ExpectationGapRefs"],
+        "properties": { "ReviewGateStatus": { "enum": ["LIMITED", "FAIL"] }, "AutomationEligibility": { "const": "NOT_EXECUTABLE" } },
+        "oneOf": [
+          { "properties": { "ExpectedResult": false }, "not": { "required": ["ExpectedStatus"] } },
+          {
+            "required": ["ExpectedStatus", "ExpectedResult", "ExpectedSourceRef", "ExpectedAuthority", "ExpectationGapId", "GapClassification", "ExpectedResultSemantics"],
+            "properties": {
+              "ExpectedStatus": { "const": "EXPECTED_PENDING_AUTHORITY" },
+              "ExpectedAuthority": { "const": "PENDING_AUTHORITY" },
+              "ExpectedResultSemantics": { "const": "AUTHORITY_GAP_DESCRIPTION_NOT_BUSINESS_ORACLE" }
+            }
+          }
+        ]
+      }
     },
     {
       "if": { "required": ["CaseKind"], "properties": { "CaseKind": { "const": "COMPOSITE" } } },

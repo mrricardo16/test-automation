@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { classifyHarnessAuthority } from '../../scripts/platform/harness-authority.mjs';
 
 import {
   validateExecutionResult,
@@ -9,6 +10,10 @@ import {
   adaptLegacyCoverage,
   isValidExecutionResult,
   isValidTestCase,
+  validateModularTestCaseCatalog,
+  validateTestCaseDesignQuality,
+  validateDesignQualityCatalog,
+  validateDesignQualityReportPresentation,
 } from '../../scripts/platform/validate-contracts';
 
 const v2Base = {
@@ -16,6 +21,16 @@ const v2Base = {
   CaseKind: 'COMPOSITE',
   ModuleId: 'MOD-SYNTHETIC',
   FeatureId: 'FEATURE-LIFECYCLE',
+  ModuleName: 'Synthetic',
+  FeatureName: 'Lifecycle',
+  Operation: 'COMPOSITE_LIFECYCLE',
+  ScenarioGroup: 'COMPOSITE_FLOW',
+  PresentationOrder: { ModuleOrder: 1, FeatureOrder: 1, OperationOrder: 1, ScenarioOrder: 1, CaseOrder: 1 },
+  BusinessRules: ['Synthetic lifecycle transition is persisted.'],
+  TestDataDesign: { DataFields: ['name'], DataCategory: 'TEST_OWNED_DATA', KeyValues: ['synthetic-owned'], Source: 'SYNTHETIC', Ownership: 'TEST_OWNED', Unique: true, Disposable: true, Sensitive: false },
+  SafetyConstraints: ['Only synthetic test-owned data may be changed.'],
+  DesignTechniques: ['STATE_MODEL', 'CRUD_LIFECYCLE_MATRIX'],
+  DesignMaturity: 'EXECUTABLE',
   Title: 'Synthetic lifecycle transition',
   Priority: 'P1',
   TestType: 'STATE_TRANSITION',
@@ -318,4 +333,223 @@ test('TC-PLATFORM-09-TESTCASE-V2-001 rejects duplicate IDs and invalid V2 aggreg
     ResolutionStatus: 'OPEN',
     AutomationEligibility: 'AUTO_ALLOWED',
   }).map((item) => item.code)).toContain('INVALID_ENUM');
+});
+
+test('TC-PLATFORM-10-MODULAR-TESTCASE-ARCHITECTURE-001 requires modular classification fields', () => {
+  const { ModuleName, FeatureName, Operation, ScenarioGroup, PresentationOrder, ...legacyV2 } = v2Base;
+  const issues = validateTestCase(legacyV2).map((item) => item.code);
+  expect(issues).toEqual(expect.arrayContaining([
+    'MODULE_CLASSIFICATION_REQUIRED',
+    'FEATURE_CLASSIFICATION_REQUIRED',
+    'OPERATION_CLASSIFICATION_REQUIRED',
+    'SCENARIO_GROUP_CLASSIFICATION_REQUIRED',
+    'PRESENTATION_ORDER_REQUIRED',
+  ]));
+});
+
+test('TC-PLATFORM-10-MODULAR-TESTCASE-ARCHITECTURE-001 keeps status-different query cases adjacent', () => {
+  const queryCase = (id: string, status: string, scenario: string, order: number) => ({
+    ...v2Base,
+    TestCaseId: id,
+    ModuleName: '统计分析',
+    FeatureName: '统计查询',
+    Operation: 'QUERY',
+    ScenarioGroup: scenario,
+    PresentationOrder: { ModuleOrder: 80, FeatureOrder: 10, OperationOrder: 10, ScenarioOrder: order, CaseOrder: 1 },
+    ExecutionStatus: status,
+  });
+  const catalog = {
+    PrimaryGrouping: 'MODULE',
+    SecondaryGrouping: 'FEATURE',
+    StatusUsedForGrouping: false,
+    Cases: [
+      queryCase('TC-SYN-STAT-001', 'BLOCKED', 'HAPPY_PATH', 1),
+      queryCase('TC-SYN-STAT-002', 'BLOCKED', 'EMPTY_STATE', 2),
+      queryCase('TC-SYN-STAT-003', 'ERROR', 'VALIDATION', 3),
+    ],
+  };
+  expect(validateModularTestCaseCatalog(catalog)).toEqual([]);
+});
+
+test('TC-PLATFORM-10-MODULAR-TESTCASE-ARCHITECTURE-001 rejects status-based primary grouping and broken continuity', () => {
+  const catalog = {
+    PrimaryGrouping: 'ExecutionStatus',
+    SecondaryGrouping: 'FEATURE',
+    StatusUsedForGrouping: true,
+    Cases: [
+      { ...v2Base, TestCaseId: 'TC-SYN-QUERY-001', ModuleName: '统计分析', FeatureName: '统计查询', Operation: 'QUERY', ScenarioGroup: 'HAPPY_PATH', PresentationOrder: { ModuleOrder: 80, FeatureOrder: 10, OperationOrder: 10, ScenarioOrder: 1, CaseOrder: 1 } },
+      { ...v2Base, TestCaseId: 'TC-SYN-OTHER-001', ModuleName: '系统管理', FeatureName: '用户管理', Operation: 'CREATE', ScenarioGroup: 'HAPPY_PATH', PresentationOrder: { ModuleOrder: 20, FeatureOrder: 20, OperationOrder: 20, ScenarioOrder: 1, CaseOrder: 1 } },
+      { ...v2Base, TestCaseId: 'TC-SYN-QUERY-002', ModuleName: '统计分析', FeatureName: '统计查询', Operation: 'QUERY', ScenarioGroup: 'EMPTY_STATE', PresentationOrder: { ModuleOrder: 80, FeatureOrder: 10, OperationOrder: 10, ScenarioOrder: 2, CaseOrder: 1 } },
+    ],
+  };
+  const codes = validateModularTestCaseCatalog(catalog).map((item) => item.code);
+  expect(codes).toEqual(expect.arrayContaining(['STATUS_BASED_PRIMARY_GROUPING_FORBIDDEN', 'NON_CONTIGUOUS_MODULE_FEATURE_OPERATION']));
+});
+
+test('TC-PLATFORM-11-TESTCASE-DESIGN-QUALITY-001 rejects an atomic case containing multiple primary business rules', () => {
+  const issues = validateTestCaseDesignQuality({
+    ...v2Base,
+    CaseKind: 'ATOMIC',
+    Operation: 'VALIDATION',
+    BusinessRules: ['重复用户名必须拒绝', '密码低于最小长度必须拒绝'],
+    TestDataDesign: { DataFields: ['用户名', '密码'], DataCategory: 'INVALID_DATA', KeyValues: ['duplicate', 'short'], Source: 'HANDOFF_BASELINE', Ownership: 'TEST_OWNED', Unique: true, Disposable: true, Sensitive: true },
+    SafetyConstraints: ['仅使用 TEST_OWNED 数据。'],
+    DesignTechniques: ['EQUIVALENCE_PARTITIONING', 'BOUNDARY_VALUE'],
+    DesignMaturity: 'REVIEWABLE',
+  }).map((item) => item.code);
+  expect(issues).toContain('MULTIPLE_PRIMARY_BUSINESS_RULES');
+  expect(issues).toContain('OVERBROAD_VALIDATION_CASE');
+});
+
+test('TC-PLATFORM-11-TESTCASE-DESIGN-QUALITY-001 accepts representative password boundary design', () => {
+  const issues = validateTestCaseDesignQuality({
+    ...v2Base,
+    CaseKind: 'ATOMIC',
+    BusinessRules: ['密码长度低于批准最小值必须拒绝'],
+    TestDataDesign: { DataFields: ['密码'], DataCategory: 'BOUNDARY_DATA', KeyValues: ['min-1', 'min', 'min+1', 'max-1', 'max', 'max+1'], Source: 'REQUIREMENT', Ownership: 'TEST_OWNED', Unique: false, Disposable: true, Sensitive: true },
+    SafetyConstraints: ['不得输出真实密码。'],
+    DesignTechniques: ['BOUNDARY_VALUE'],
+    BoundaryValues: { Applicable: true, Values: ['min-1', 'min', 'min+1', 'max-1', 'max', 'max+1'], ExpectedKnown: true },
+    DesignMaturity: 'EXECUTABLE',
+  });
+  expect(issues).not.toEqual(expect.arrayContaining([{ code: 'INVALID_BOUNDARY_DESIGN' }]));
+});
+
+test('TC-PLATFORM-11-TESTCASE-DESIGN-QUALITY-001 rejects design catalog SKIPPED and stale effective state', () => {
+  const issues = validateDesignQualityCatalog({
+    Mode: 'DESIGN',
+    Cases: [{
+      ...v2Base,
+      TestCaseId: 'TC-SYN-QUALITY-001',
+      BusinessRules: ['登录成功'],
+      TestDataDesign: { DataFields: ['账号'], DataCategory: 'VALID_DATA', KeyValues: ['fixture'], Source: 'HANDOFF_BASELINE', Ownership: 'TEST_OWNED', Unique: true, Disposable: true, Sensitive: false },
+      SafetyConstraints: ['隔离账号。'],
+      DesignTechniques: ['EQUIVALENCE_PARTITIONING'],
+      DesignMaturity: 'REVIEWABLE',
+      ExecutionStatus: 'SKIPPED',
+      AutomationEligibility: 'MANUAL_REQUIRED',
+      EffectiveAutomationEligibility: 'AUTO_ALLOWED',
+    }],
+  }).map((item) => item.code);
+  expect(issues).toEqual(expect.arrayContaining(['CATALOG_GENERATED_SKIPPED_INVALID', 'STALE_EFFECTIVE_STATE_PRESENTATION']));
+});
+
+test('TC-PLATFORM-11-TESTCASE-DESIGN-QUALITY-001 rejects machine enums in user-facing report rows', () => {
+  const issues = validateDesignQualityReportPresentation({
+    Rows: [{ Operation: 'QUERY', ScenarioGroup: 'COMPOSITE_FLOW', AutomationEligibility: 'AUTO_ALLOWED', CaseKind: 'ATOMIC' }],
+  }).map((item) => item.code);
+  expect(issues).toContain('UNTRANSLATED_MACHINE_ENUM_IN_USER_REPORT');
+});
+
+test('TC-PLATFORM-14-BLACKBOX-STANDARD-REBUILD-001 accepts a protected pending-authority Expected gap description', () => {
+  const issues = validateTestCase({
+    ...v2Base,
+    ExpectedBasis: 'UNKNOWN',
+    ExpectedResult: '待权威确认：删除后唯一键是否允许复用。',
+    ExpectedStatus: 'EXPECTED_PENDING_AUTHORITY',
+    ExpectedSourceRef: ['EG-SYN-PENDING-001'],
+    ExpectedAuthority: 'PENDING_AUTHORITY',
+    ExpectationGapId: 'EG-SYN-PENDING-001',
+    ExpectationGapRefs: ['EG-SYN-PENDING-001'],
+    GapClassification: 'TRUE_GAP',
+    ExpectedResultSemantics: 'AUTHORITY_GAP_DESCRIPTION_NOT_BUSINESS_ORACLE',
+    AutomationType: 'MANUAL',
+    AutomationEligibility: 'NOT_EXECUTABLE',
+    ReviewGateStatus: 'LIMITED',
+  }).map((item) => item.code);
+
+  expect(issues).not.toContain('EXPECTED_GUESS_FORBIDDEN');
+  expect(issues).not.toContain('MISSING_REQUIRED_FIELD');
+});
+
+test('TC-SYN-HARNESS-A-001 allows formal Web execution through Project Playwright', () => {
+  const result = classifyHarnessAuthority({
+    phase: 'FORMAL_EXECUTION',
+    operation: 'FORMAL_WEB_TEST',
+    harnessType: 'PROJECT_PLAYWRIGHT',
+    formalExecutionEligible: 'YES',
+    harnessAvailable: true,
+    runtimeUrlConfigured: true,
+    credentialsConfigured: true,
+  });
+
+  expect(result).toMatchObject({ decision: 'ALLOWED', executionStatus: 'PASS', formalExecutionEligible: 'YES', issues: [] });
+});
+
+test('TC-SYN-HARNESS-B-001 rejects Agent Browser as a formal Web harness', () => {
+  const result = classifyHarnessAuthority({
+    phase: 'FORMAL_EXECUTION',
+    operation: 'FORMAL_WEB_TEST',
+    harnessType: 'AGENT_BROWSER_PLUGIN',
+    formalExecutionEligible: 'NO',
+    harnessAvailable: true,
+    runtimeUrlConfigured: true,
+    credentialsConfigured: true,
+  });
+
+  expect(result.decision).toBe('REJECTED');
+  expect(result.formalExecutionEligible).toBe('NO');
+  expect(result.issues.map((item) => item.code)).toContain('HARNESS_AUTHORITY_VIOLATION');
+});
+
+test('TC-SYN-HARNESS-C-001 allows Agent Browser diagnostic observation only', () => {
+  const result = classifyHarnessAuthority({
+    phase: 'DIAGNOSTIC',
+    operation: 'DIAGNOSTIC_OBSERVATION',
+    harnessType: 'AGENT_BROWSER_PLUGIN',
+    formalExecutionEligible: 'NO',
+    harnessAvailable: true,
+    stateMutation: false,
+    formalEvidence: false,
+  });
+
+  expect(result).toMatchObject({ decision: 'DIAGNOSTIC_ONLY', executionStatus: 'MANUAL', formalExecutionEligible: 'NO', issues: [] });
+});
+
+test('TC-SYN-HARNESS-D-001 rejects Agent Browser state mutation during Project Preparation', () => {
+  const result = classifyHarnessAuthority({
+    phase: 'PROJECT_PREPARATION',
+    operation: 'CREATE_TEST_USER',
+    harnessType: 'AGENT_BROWSER_PLUGIN',
+    formalExecutionEligible: 'NO',
+    harnessAvailable: true,
+    stateMutation: true,
+    formalEvidence: false,
+  });
+
+  expect(result.decision).toBe('REJECTED');
+  expect(result.issues.map((item) => item.code)).toContain('HARNESS_AUTHORITY_VIOLATION');
+});
+
+test('TC-SYN-HARNESS-E-001 allows Project Preparation mutation through Project Playwright', () => {
+  const result = classifyHarnessAuthority({
+    phase: 'PROJECT_PREPARATION',
+    operation: 'CREATE_TEST_USER',
+    harnessType: 'PROJECT_PLAYWRIGHT',
+    formalExecutionEligible: 'YES',
+    harnessAvailable: true,
+    runtimeUrlConfigured: true,
+    credentialsConfigured: true,
+    stateMutation: true,
+    formalEvidence: false,
+  });
+
+  expect(result).toMatchObject({ decision: 'ALLOWED', executionStatus: 'PASS', formalExecutionEligible: 'YES', issues: [] });
+});
+
+test('TC-SYN-HARNESS-F-001 blocks unavailable Playwright without Agent Browser fallback', () => {
+  const result = classifyHarnessAuthority({
+    phase: 'FORMAL_EXECUTION',
+    operation: 'FORMAL_WEB_TEST',
+    harnessType: 'PROJECT_PLAYWRIGHT',
+    formalExecutionEligible: 'YES',
+    harnessAvailable: false,
+    runtimeUrlConfigured: true,
+    credentialsConfigured: true,
+    fallbackHarnessType: 'AGENT_BROWSER_PLUGIN',
+  });
+
+  expect(result.decision).toBe('BLOCKED');
+  expect(result.executionStatus).toBe('BLOCKED');
+  expect(result.issues.map((item) => item.code)).toEqual(expect.arrayContaining(['PLAYWRIGHT_UNAVAILABLE', 'HARNESS_FALLBACK_FORBIDDEN']));
 });
