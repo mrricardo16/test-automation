@@ -1,0 +1,10 @@
+html, body { overflow-x: hidden; margin: 0; color: #1f2937; background: #f8fafc; font-family: "Microsoft YaHei", sans-serif; }
+.report-container { width: min(96%, 1400px); margin: 0 auto; padding: 24px 0 48px; }
+.report-toc { margin-bottom: 24px; padding: 16px 20px; background: #fff; border: 1px solid #dbe4ee; border-radius: 8px; }
+.report-toc ul { margin: 8px 0 0; padding-left: 22px; } .report-toc a { color: #075985; text-decoration: none; } .toc-level-3 { margin-left: 18px; }
+h1, h2, h3, h4, h5 { scroll-margin-top: 12px; } p, blockquote, pre, .report-table { background: #fff; } blockquote { border-left: 4px solid #38bdf8; margin: 16px 0; padding: 10px 16px; }
+table { border-collapse: collapse; } th, td { padding: 10px; border: 1px solid #cbd5e1; vertical-align: top; text-align: left; line-height: 1.5; } thead th { position: sticky; top: 0; z-index: 2; white-space: nowrap; background: #e0f2fe; }
+.report-table { width: 100%; margin: 16px 0; } .testcase-table-scroll { width: 100%; overflow-x: auto; overflow-y: visible; margin: 16px 0; } .testcase-table { min-width: 2200px; width: max-content; table-layout: auto; background: #fff; }
+.testcase-table td { max-width: 360px; white-space: normal; } .testcase-table td:nth-child(2) { white-space: nowrap; } .step-line, .expected-line, .condition-line, .kv-line, .cleanup-line, .pending-note { margin: 0 0 6px; } .cleanup-line { color: #7c2d12; } .pending-note { color: #9a3412; font-weight: 600; } .kv-list { display: grid; gap: 6px; }
+.evidence-image { display: block; max-width: 240px; max-height: 180px; cursor: zoom-in; } .missing-image { min-width: 180px; padding: 10px; color: #991b1b; background: #fef2f2; border: 1px dashed #ef4444; }
+.lightbox[hidden] { display: none; } .lightbox { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 32px; background: rgba(15, 23, 42, .82); } .lightbox img { max-width: 94vw; max-height: 88vh; } .lightbox-close { position: fixed; top: 16px; right: 20px; color: #fff; background: transparent; border: 0; font-size: 36px; cursor: pointer; }
