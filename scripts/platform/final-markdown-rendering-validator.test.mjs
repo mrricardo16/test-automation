@@ -1,6 +1,11 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { validateFinalMarkdownRendering } from './final-markdown-rendering-validator.mjs';
+import { validateCanonicalTemplate } from '../../projects/rsscomposer-blackbox/scripts/render-final-test-report.mjs';
+
+test('final report template is bound to the current generator contract', () => {
+  assert.deepEqual(validateCanonicalTemplate(), { Status: 'PASS', Missing: [] });
+});
 
 test('final Markdown report satisfies wide-table Typora rendering contract', () => {
   const result = validateFinalMarkdownRendering();

@@ -16,7 +16,7 @@
   "GenericStandardPath": "../../contracts/generic-blackbox-testcase-generation-standard.md",
   "GenericReportTemplatePath": "../../docs/generic-blackbox-test-report-template.md",
   "GenericTyporaStylePath": "../../docs/generic-typora-report.css",
-  "MaterializedAt": "2026-08-27T01:35:33.248Z",
+  "MaterializedAt": "2026-08-27T02:01:15.800Z",
   "CatalogType": "FORMAL_BLACKBOX_FINE_GRAINED_TESTCASE_CATALOG",
   "AuthorityGateStatus": "DESIGN_DEFAULTS_APPLIED_WITH_TRUE_AMBIGUITIES_ONLY",
   "TestCaseCount": 72,

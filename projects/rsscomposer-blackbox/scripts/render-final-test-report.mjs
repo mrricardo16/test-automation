@@ -14,6 +14,26 @@ const operationOrder = { QUERY: 10, AUTHENTICATION: 10, SESSION: 15, CREATE: 20,
 const visualLineBreak = '&#10;';
 const maximumStepsPerVisualLine = 2;
 const maximumStepLineUnits = 30;
+const canonicalTemplateMarkers = [
+  '# 最终测试报告模板',
+  '## 模板绑定',
+  '## 3. 细粒度正式 Catalog',
+  '主 TestCase 表固定为 9 列',
+  '图片证据必须紧跟所属用例',
+  '## 4. 模块状态汇总',
+  '## 5. Current Effective State',
+  '## 6. Expectation Gap',
+  '## 7. 测试结论',
+  '禁止显示 `<br>`',
+  '每条步骤编号；短步骤可一行放 2 条',
+];
+
+export function validateCanonicalTemplate() {
+  const template = fs.readFileSync(templatePath, 'utf8');
+  const missing = canonicalTemplateMarkers.filter((marker) => !template.includes(marker));
+  if (missing.length > 0) throw new Error(`Canonical final report template contract mismatch: ${missing.join(' | ')}`);
+  return { Status: 'PASS', Missing: [] };
+}
 
 function escapeCell(value) { return String(value ?? '—').replaceAll('|', '\\|').replaceAll('\r', '').replaceAll('\n', ' ').trim() || '—'; }
 function markdownRow(values) { return `| ${values.map(escapeCell).join(' | ')} |`; }
@@ -108,6 +128,7 @@ function groupCatalog(cases) {
 }
 
 export function generateFinalReport() {
+  const templateContract = validateCanonicalTemplate();
   const { catalog, history, state } = materializeFineGrainedCatalog();
   const stateById = new Map(state.TestCases.map((item) => [item.TestCaseId, item]));
   const groups = groupCatalog(catalog.TestCases);
@@ -162,7 +183,7 @@ export function generateFinalReport() {
   const markdownValidation = validateMarkdownFiles([reportPath, templatePath, genericReportTemplatePath]);
   if (markdownValidation.invalidMarkdownTableCount > 0) throw new Error(`Generated Markdown contains invalid tables: ${JSON.stringify(markdownValidation.invalid)}`);
   const reconciliation = writeMaterializationReconciliation({ catalog, history, state });
-  return { ReportPath: path.relative(projectDirectory, reportPath).split(path.sep).join('/'), CatalogVersion: catalog.CatalogVersion, MainCatalogCount: catalog.TestCaseCount, HistoricalRetainedCount: history.HistoricalTestCaseCount, ConfirmedCount: confirmed.length, PendingCount: pending.length, GapCount: pending.filter((item) => item.ExpectationGapId).length, ReportMainCatalogCount: reconciliation.ReportMainCatalogCount, FormalBusinessCasesExecuted: 'No' };
+  return { ReportPath: path.relative(projectDirectory, reportPath).split(path.sep).join('/'), CatalogVersion: catalog.CatalogVersion, MainCatalogCount: catalog.TestCaseCount, HistoricalRetainedCount: history.HistoricalTestCaseCount, ConfirmedCount: confirmed.length, PendingCount: pending.length, GapCount: pending.filter((item) => item.ExpectationGapId).length, ReportMainCatalogCount: reconciliation.ReportMainCatalogCount, TemplateContractStatus: templateContract.Status, FormalBusinessCasesExecuted: 'No' };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))) process.stdout.write(`${JSON.stringify(generateFinalReport(), null, 2)}\n`);
