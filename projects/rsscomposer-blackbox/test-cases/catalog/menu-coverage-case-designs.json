@@ -1,0 +1,3972 @@
+{
+  "RunId": "MENU-COVERAGE-EXPANSION-20260827-01",
+  "SourceEvidence": {
+    "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+    "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+    "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+  },
+  "Designs": [
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_VEHICLE",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-VEH-STATE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "车辆管理",
+      "FeatureName": "车辆管理",
+      "FeatureCode": "VEH",
+      "Operation": "STATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "车辆状态控件与未定位安全边界",
+      "Objective": "确认车辆状态区域和状态操作入口可观察；车辆未定位时不得执行初始化、重定位或物理运行。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“车辆管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“车辆管理”页面。",
+        "确认车辆状态区域和状态操作入口可观察；车辆未定位时不得执行初始化、重定位或物理运行。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 1
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-DRAW-PAGE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "FeatureName": "画图工具",
+      "FeatureCode": "DRAW",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "画图工具页面与工具栏加载",
+      "Objective": "通过菜单进入页面，确认画布、工具栏和地图编辑容器可见；不新建、不保存、不发布。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“画图工具”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“画图工具”页面。",
+        "通过菜单进入页面，确认画布、工具栏和地图编辑容器可见；不新建、不保存、不发布。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 2
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-DRAW-QUERY-001",
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "FeatureName": "画图工具",
+      "FeatureCode": "DRAW",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "画图工具加载地图库只读查看",
+      "Objective": "打开地图库查看列表并关闭；不选择切换、不合并、不保存地图。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“画图工具”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“画图工具”页面。",
+        "打开地图库查看列表并关闭；不选择切换、不合并、不保存地图。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 3
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "MANUAL_CANVAS_VISUAL",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "FeatureName": "画图工具",
+      "FeatureCode": "DRAW",
+      "Operation": "VISUAL",
+      "ScenarioGroup": "MANUAL_BOUNDARY",
+      "Title": "画布与工具栏视觉人工验收",
+      "Objective": "人工检查画布、工具按钮、图层入口和地图显示区域；保留截图作为视觉证据。",
+      "PrimaryAssertion": "截图中可见目标页面和工具能力，视觉结论由人工给出。",
+      "Preconditions": [
+        "通过运行时菜单进入“画图工具”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“画图工具”页面。",
+        "人工检查画布、工具按钮、图层入口和地图显示区域；保留截图作为视觉证据。",
+        "保存页面截图并由人工完成视觉验收。"
+      ],
+      "ExpectedResult": "页面和工具栏可见，截图完整；视觉验收结论为 MANUAL。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "Canvas 像素/视觉保真度不自动判定。",
+      "ManualReason": "Canvas 像素与视觉保真度需要人工验收。",
+      "DesignOrder": 4
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-STRAT-PAGE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "FeatureName": "策略管理",
+      "FeatureCode": "STRAT",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "策略管理页面加载",
+      "Objective": "进入页面并确认查询区、表格和新增入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“策略管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“策略管理”页面。",
+        "进入页面并确认查询区、表格和新增入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 5
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-STRAT-QUERY-001",
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "FeatureName": "策略管理",
+      "FeatureCode": "STRAT",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "策略查询与无结果条件",
+      "Objective": "使用唯一无结果条件查询，确认请求完成且页面显示空结果，不修改策略。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“策略管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“策略管理”页面。",
+        "使用唯一无结果条件查询，确认请求完成且页面显示空结果，不修改策略。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 6
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "FeatureName": "策略管理",
+      "FeatureCode": "STRAT",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有策略新增",
+      "Objective": "使用符合页面字段约束的 TEST_OWNED 策略保存并重新查询。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“策略管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“策略管理”页面。",
+        "使用符合页面字段约束的 TEST_OWNED 策略保存并重新查询。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 7
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "FeatureName": "策略管理",
+      "FeatureCode": "STRAT",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有策略修改",
+      "Objective": "修改本用例创建的策略字段并重新查询确认更新。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“策略管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“策略管理”页面。",
+        "修改本用例创建的策略字段并重新查询确认更新。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 8
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "FeatureName": "策略管理",
+      "FeatureCode": "STRAT",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有策略删除",
+      "Objective": "删除本用例创建的策略并查询确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“策略管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“策略管理”页面。",
+        "删除本用例创建的策略并查询确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 9
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-PROC-PAGE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "FeatureName": "进程管理",
+      "FeatureCode": "PROC",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "进程管理页面加载",
+      "Objective": "进入页面并确认进程表格、刷新状态和策略配置入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“进程管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“进程管理”页面。",
+        "进入页面并确认进程表格、刷新状态和策略配置入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 10
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-PROC-QUERY-001",
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "FeatureName": "进程管理",
+      "FeatureCode": "PROC",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "进程查询与无结果条件",
+      "Objective": "使用唯一无结果条件查询，确认页面完成加载且不修改既有进程。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“进程管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“进程管理”页面。",
+        "使用唯一无结果条件查询，确认页面完成加载且不修改既有进程。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 11
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-PROC-CREATE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "FeatureName": "进程管理",
+      "FeatureCode": "PROC",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有进程新增",
+      "Objective": "仅使用 TEST_OWNED 进程配置保存并查询；不得使用正式链路进程。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“进程管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“进程管理”页面。",
+        "仅使用 TEST_OWNED 进程配置保存并查询；不得使用正式链路进程。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 12
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-PROC-UPDATE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "FeatureName": "进程管理",
+      "FeatureCode": "PROC",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有进程修改",
+      "Objective": "修改本用例创建的进程配置并重新查询。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“进程管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“进程管理”页面。",
+        "修改本用例创建的进程配置并重新查询。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 13
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-PROC-DELETE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "FeatureName": "进程管理",
+      "FeatureCode": "PROC",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有进程删除",
+      "Objective": "删除本用例创建的进程并确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“进程管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“进程管理”页面。",
+        "删除本用例创建的进程并确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 14
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_PROCESS",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-PROC-STATE-001",
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "FeatureName": "进程管理",
+      "FeatureCode": "PROC",
+      "Operation": "STATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有进程状态刷新",
+      "Objective": "只刷新本用例拥有进程的状态并读取结果；不得启停正式状态反馈或链式搬运进程。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“进程管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“进程管理”页面。",
+        "只刷新本用例拥有进程的状态并读取结果；不得启停正式状态反馈或链式搬运进程。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 15
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_PROCESS",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-PROC-RELATION-001",
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "FeatureName": "进程管理",
+      "FeatureCode": "PROC",
+      "Operation": "RELATION",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有进程策略配置关系",
+      "Objective": "为本用例拥有的进程打开策略配置，保存合法关系并复查；不改变正式进程绑定。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“进程管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“进程管理”页面。",
+        "为本用例拥有的进程打开策略配置，保存合法关系并复查；不改变正式进程绑定。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 16
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-MAINT-PAGE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "维护任务",
+      "FeatureName": "维护任务",
+      "FeatureCode": "MAINT",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "维护任务页面加载",
+      "Objective": "进入页面并确认时间查询区、表格和新增入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“维护任务”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“维护任务”页面。",
+        "进入页面并确认时间查询区、表格和新增入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 17
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-MAINT-QUERY-001",
+      "ModuleName": "任务模型",
+      "MenuName": "维护任务",
+      "FeatureName": "维护任务",
+      "FeatureCode": "MAINT",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "维护任务查询与无结果条件",
+      "Objective": "使用唯一无结果条件查询，确认页面完成加载。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“维护任务”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“维护任务”页面。",
+        "使用唯一无结果条件查询，确认页面完成加载。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 18
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-MAINT-CREATE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "维护任务",
+      "FeatureName": "维护任务",
+      "FeatureCode": "MAINT",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有维护任务新增",
+      "Objective": "按页面真实必填项创建 TEST_OWNED 维护任务；不派车、不启动执行。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“维护任务”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“维护任务”页面。",
+        "按页面真实必填项创建 TEST_OWNED 维护任务；不派车、不启动执行。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 19
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TTEMP-PAGE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "FeatureName": "任务模板",
+      "FeatureCode": "TTEMP",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "任务模板页面加载",
+      "Objective": "进入页面并确认模板表格、查询和配置入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“任务模板”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“任务模板”页面。",
+        "进入页面并确认模板表格、查询和配置入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 20
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TTEMP-QUERY-001",
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "FeatureName": "任务模板",
+      "FeatureCode": "TTEMP",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "任务模板查询与无结果条件",
+      "Objective": "使用唯一无结果条件查询，确认页面完成加载。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“任务模板”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“任务模板”页面。",
+        "使用唯一无结果条件查询，确认页面完成加载。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 21
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TTEMP-CREATE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "FeatureName": "任务模板",
+      "FeatureCode": "TTEMP",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有任务模板新增",
+      "Objective": "按页面真实必填项创建 TEST_OWNED 任务模板并查询。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“任务模板”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“任务模板”页面。",
+        "按页面真实必填项创建 TEST_OWNED 任务模板并查询。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 22
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TTEMP-UPDATE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "FeatureName": "任务模板",
+      "FeatureCode": "TTEMP",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有任务模板修改",
+      "Objective": "修改本用例创建的任务模板并查询确认更新。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“任务模板”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“任务模板”页面。",
+        "修改本用例创建的任务模板并查询确认更新。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 23
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TTEMP-DELETE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "FeatureName": "任务模板",
+      "FeatureCode": "TTEMP",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有任务模板删除",
+      "Objective": "删除本用例创建的任务模板并确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“任务模板”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“任务模板”页面。",
+        "删除本用例创建的任务模板并确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 24
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TTEMP-RELATION-001",
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "FeatureName": "任务模板",
+      "FeatureCode": "TTEMP",
+      "Operation": "RELATION",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "任务模板配置项关系",
+      "Objective": "在本用例拥有的模板上打开配置，保存合法模板项/步骤关系并复查。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“任务模板”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“任务模板”页面。",
+        "在本用例拥有的模板上打开配置，保存合法模板项/步骤关系并复查。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 25
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TITEM-PAGE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "FeatureName": "模板项管理",
+      "FeatureCode": "TITEM",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "模板项管理页面加载",
+      "Objective": "进入页面并确认模板项表格、查询和新增入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“模板项管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“模板项管理”页面。",
+        "进入页面并确认模板项表格、查询和新增入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 26
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TITEM-QUERY-001",
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "FeatureName": "模板项管理",
+      "FeatureCode": "TITEM",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "模板项查询与无结果条件",
+      "Objective": "使用唯一无结果条件查询，确认页面完成加载。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“模板项管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“模板项管理”页面。",
+        "使用唯一无结果条件查询，确认页面完成加载。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 27
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TITEM-CREATE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "FeatureName": "模板项管理",
+      "FeatureCode": "TITEM",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有模板项新增",
+      "Objective": "按页面真实必填项创建 TEST_OWNED 模板项并查询。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“模板项管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“模板项管理”页面。",
+        "按页面真实必填项创建 TEST_OWNED 模板项并查询。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 28
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TITEM-UPDATE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "FeatureName": "模板项管理",
+      "FeatureCode": "TITEM",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有模板项修改",
+      "Objective": "修改本用例创建的模板项并查询确认更新。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“模板项管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“模板项管理”页面。",
+        "修改本用例创建的模板项并查询确认更新。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 29
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-TITEM-DELETE-001",
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "FeatureName": "模板项管理",
+      "FeatureCode": "TITEM",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有模板项删除",
+      "Objective": "删除本用例创建的模板项并确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“模板项管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“模板项管理”页面。",
+        "删除本用例创建的模板项并确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 30
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-LOG-QUERY-001",
+      "ModuleName": "日志管理",
+      "MenuName": "日志文件",
+      "FeatureName": "日志文件",
+      "FeatureCode": "LOG",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "日志文件按时间和车辆条件查询",
+      "Objective": "使用页面真实查询条件查询并确认列表/空结果状态；不打包、不下载敏感内容。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“日志文件”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“日志文件”页面。",
+        "使用页面真实查询条件查询并确认列表/空结果状态；不打包、不下载敏感内容。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 31
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-OLOG-PAGE-001",
+      "ModuleName": "日志管理",
+      "MenuName": "操作日志",
+      "FeatureName": "操作日志",
+      "FeatureCode": "OLOG",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "操作日志页面加载",
+      "Objective": "进入页面并确认查询区和列表容器可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“操作日志”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“操作日志”页面。",
+        "进入页面并确认查询区和列表容器可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 32
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-OLOG-QUERY-001",
+      "ModuleName": "日志管理",
+      "MenuName": "操作日志",
+      "FeatureName": "操作日志",
+      "FeatureCode": "OLOG",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "操作日志条件查询",
+      "Objective": "按页面真实时间条件查询并确认请求完成。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“操作日志”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“操作日志”页面。",
+        "按页面真实时间条件查询并确认请求完成。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 33
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ELOG-PAGE-001",
+      "ModuleName": "日志管理",
+      "MenuName": "异常日志",
+      "FeatureName": "异常日志",
+      "FeatureCode": "ELOG",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "异常日志页面加载",
+      "Objective": "进入页面并确认车辆、故障和时间条件可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“异常日志”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“异常日志”页面。",
+        "进入页面并确认车辆、故障和时间条件可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 34
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ELOG-QUERY-001",
+      "ModuleName": "日志管理",
+      "MenuName": "异常日志",
+      "FeatureName": "异常日志",
+      "FeatureCode": "ELOG",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "异常日志条件查询",
+      "Objective": "使用唯一无结果条件查询并确认页面完成加载。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“异常日志”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“异常日志”页面。",
+        "使用唯一无结果条件查询并确认页面完成加载。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 35
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ILOG-PAGE-001",
+      "ModuleName": "日志管理",
+      "MenuName": "交互日志",
+      "FeatureName": "交互日志",
+      "FeatureCode": "ILOG",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "交互日志页面加载",
+      "Objective": "进入页面并确认天、开始时间、截止时间条件可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“交互日志”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“交互日志”页面。",
+        "进入页面并确认天、开始时间、截止时间条件可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 36
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ILOG-QUERY-001",
+      "ModuleName": "日志管理",
+      "MenuName": "交互日志",
+      "FeatureName": "交互日志",
+      "FeatureCode": "ILOG",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "交互日志条件查询",
+      "Objective": "使用唯一无结果条件查询并确认页面完成加载。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“交互日志”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“交互日志”页面。",
+        "使用唯一无结果条件查询并确认页面完成加载。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 37
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ENER-PAGE-001",
+      "ModuleName": "统计分析",
+      "MenuName": "能耗统计",
+      "FeatureName": "能耗统计",
+      "FeatureCode": "ENER",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "能耗统计页面加载",
+      "Objective": "进入页面并确认月份选择器、查询入口和统计容器可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“能耗统计”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“能耗统计”页面。",
+        "进入页面并确认月份选择器、查询入口和统计容器可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 38
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ENER-QUERY-001",
+      "ModuleName": "统计分析",
+      "MenuName": "能耗统计",
+      "FeatureName": "能耗统计",
+      "FeatureCode": "ENER",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "能耗统计按月份查询",
+      "Objective": "选择一个合法月份查询并确认请求完成；不把空数据当作产品失败。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“能耗统计”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“能耗统计”页面。",
+        "选择一个合法月份查询并确认请求完成；不把空数据当作产品失败。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 39
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ROLE-UPDATE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "角色管理",
+      "FeatureName": "角色管理",
+      "FeatureCode": "ROLE",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有角色修改",
+      "Objective": "修改本用例创建的角色并查询确认更新；不修改管理员角色。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“角色管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“角色管理”页面。",
+        "修改本用例创建的角色并查询确认更新；不修改管理员角色。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 40
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ROLE-DELETE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "角色管理",
+      "FeatureName": "角色管理",
+      "FeatureCode": "ROLE",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有角色删除",
+      "Objective": "删除本用例创建的角色并确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“角色管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“角色管理”页面。",
+        "删除本用例创建的角色并确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 41
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-ROLE-RELATION-001",
+      "ModuleName": "系统管理",
+      "MenuName": "角色管理",
+      "FeatureName": "角色管理",
+      "FeatureCode": "ROLE",
+      "Operation": "RELATION",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有角色用户和权限关系",
+      "Objective": "在本用例拥有的角色上验证用户分配/权限分配保存与复查；不改变管理员权限。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“角色管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“角色管理”页面。",
+        "在本用例拥有的角色上验证用户分配/权限分配保存与复查；不改变管理员权限。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 42
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-MENU-PAGE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "FeatureName": "菜单管理",
+      "FeatureCode": "MENU",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "菜单管理页面加载",
+      "Objective": "进入页面并确认菜单树、新增、修改、删除入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“菜单管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“菜单管理”页面。",
+        "进入页面并确认菜单树、新增、修改、删除入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 43
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-MENU-CREATE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "FeatureName": "菜单管理",
+      "FeatureCode": "MENU",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有菜单节点新增",
+      "Objective": "在批准的测试父节点下创建唯一 TEST_OWNED 菜单节点并查询。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“菜单管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“菜单管理”页面。",
+        "在批准的测试父节点下创建唯一 TEST_OWNED 菜单节点并查询。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 44
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-MENU-UPDATE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "FeatureName": "菜单管理",
+      "FeatureCode": "MENU",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有菜单节点修改",
+      "Objective": "修改本用例创建的菜单节点并查询确认更新。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“菜单管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“菜单管理”页面。",
+        "修改本用例创建的菜单节点并查询确认更新。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 45
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-MENU-DELETE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "FeatureName": "菜单管理",
+      "FeatureCode": "MENU",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有菜单节点删除",
+      "Objective": "删除本用例创建的叶子菜单节点并确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“菜单管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“菜单管理”页面。",
+        "删除本用例创建的叶子菜单节点并确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 46
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-DICT-PAGE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "FeatureName": "字典管理",
+      "FeatureCode": "DICT",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "字典管理页面加载",
+      "Objective": "进入页面并确认字典列表、树选择和新增/修改/删除入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“字典管理”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“字典管理”页面。",
+        "进入页面并确认字典列表、树选择和新增/修改/删除入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 47
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-DICT-CREATE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "FeatureName": "字典管理",
+      "FeatureCode": "DICT",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有字典项新增",
+      "Objective": "按页面真实必填项创建唯一 TEST_OWNED 字典项并查询。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“字典管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“字典管理”页面。",
+        "按页面真实必填项创建唯一 TEST_OWNED 字典项并查询。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 48
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-DICT-UPDATE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "FeatureName": "字典管理",
+      "FeatureCode": "DICT",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有字典项修改",
+      "Objective": "修改本用例创建的字典项并查询确认更新。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“字典管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“字典管理”页面。",
+        "修改本用例创建的字典项并查询确认更新。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 49
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-DICT-DELETE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "FeatureName": "字典管理",
+      "FeatureCode": "DICT",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有字典项删除",
+      "Objective": "删除本用例创建的字典项并确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“字典管理”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“字典管理”页面。",
+        "删除本用例创建的字典项并确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 50
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-EXT-PAGE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "FeatureName": "外部系统配置",
+      "FeatureCode": "EXT",
+      "Operation": "PAGE_SMOKE",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "外部系统配置页面加载",
+      "Objective": "进入页面并确认查询区、表格和新增入口可见。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“外部系统配置”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“外部系统配置”页面。",
+        "进入页面并确认查询区、表格和新增入口可见。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 51
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-EXT-QUERY-001",
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "FeatureName": "外部系统配置",
+      "FeatureCode": "EXT",
+      "Operation": "QUERY",
+      "ScenarioGroup": "READ_ONLY_CAPABILITY",
+      "Title": "外部系统配置查询",
+      "Objective": "使用唯一无结果条件查询并确认页面完成加载。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“外部系统配置”。",
+        "只读查询不依赖新增业务数据。"
+      ],
+      "TestData": [
+        [
+          "查询条件",
+          "唯一无结果或合法页面条件",
+          "运行时页面真实字段",
+          "不写入业务数据"
+        ]
+      ],
+      "Steps": [
+        "打开“外部系统配置”页面。",
+        "使用唯一无结果条件查询并确认页面完成加载。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 52
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-EXT-CREATE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "FeatureName": "外部系统配置",
+      "FeatureCode": "EXT",
+      "Operation": "CREATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有外部系统配置新增",
+      "Objective": "以本地无副作用 mock 地址创建 TEST_OWNED 配置；不得访问真实外部系统。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“外部系统配置”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“外部系统配置”页面。",
+        "以本地无副作用 mock 地址创建 TEST_OWNED 配置；不得访问真实外部系统。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 53
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-EXT-UPDATE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "FeatureName": "外部系统配置",
+      "FeatureCode": "EXT",
+      "Operation": "UPDATE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有外部系统配置修改",
+      "Objective": "修改本用例创建的配置并查询确认更新。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“外部系统配置”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“外部系统配置”页面。",
+        "修改本用例创建的配置并查询确认更新。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 54
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-EXT-DELETE-001",
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "FeatureName": "外部系统配置",
+      "FeatureCode": "EXT",
+      "Operation": "DELETE",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "测试自有外部系统配置删除",
+      "Objective": "删除本用例创建的配置并确认不存在。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“外部系统配置”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“外部系统配置”页面。",
+        "删除本用例创建的配置并确认不存在。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 55
+    },
+    {
+      "Priority": "P1",
+      "TestCaseType": "ATOMIC",
+      "CaseKind": "ATOMIC",
+      "TestType": "WEB_UI",
+      "TestLayer": "BLACKBOX",
+      "ApplicabilityStatus": "APPLICABLE",
+      "ScopeStatus": "IN_SCOPE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE",
+      "ExpectedAuthority": "USER_APPROVED_MENU_COVERAGE_AUDIT_20260827",
+      "ExpectedSourceRef": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      ],
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionStatus": "SKIPPED",
+      "ExecutionState": "尚未执行",
+      "LatestExecutionResult": "尚未执行",
+      "Actual": "—",
+      "Evidence": [],
+      "HistoricalTestCaseRefs": [],
+      "Cleanup": "仅清理本用例创建的 TEST_OWNED 数据；不得触碰既有业务数据。",
+      "TestCaseId": "TC-EXT-INTEGRATION-001",
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "FeatureName": "外部系统配置",
+      "FeatureCode": "EXT",
+      "Operation": "INTEGRATION",
+      "ScenarioGroup": "TEST_OWNED_LIFECYCLE",
+      "Title": "外部系统配置地址校验与本地 mock 连通性",
+      "Objective": "通过页面保存本地 mock 配置并验证请求只到本地 mock；禁止真实第三方副作用。",
+      "PrimaryAssertion": "页面真实能力按预期可观察，且不产生越界副作用。",
+      "Preconditions": [
+        "通过运行时菜单进入“外部系统配置”。",
+        "若需数据，先通过网页操作创建 TEST_OWNED 前置数据。"
+      ],
+      "TestData": [
+        [
+          "数据前缀",
+          "AT_MENU-COVERAGE-EXPANSION-20260827-01_",
+          "本轮 TEST_OWNED",
+          "运行后必须清理"
+        ]
+      ],
+      "Steps": [
+        "打开“外部系统配置”页面。",
+        "通过页面保存本地 mock 配置并验证请求只到本地 mock；禁止真实第三方副作用。",
+        "根据页面结果和必要的重新查询完成断言。"
+      ],
+      "ExpectedResult": "页面操作结果与预期一致；查询/修改范围仅限本用例数据或只读请求。",
+      "DesignBasis": "真实菜单点击、运行时页面能力扫描、前端 API 与后端路由证据交叉确认。",
+      "CapabilityEvidence": {
+        "audit": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/capability-discovery.json",
+        "matrix": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/menu-coverage-matrix.json",
+        "sourceInventory": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-AUDIT-20260827-01/source-capability-inventory.json"
+      },
+      "CandidateGapDecision": "APPLICABLE_DESIGN",
+      "SafetyBoundary": "不得操作既有正式数据、正式进程、真实第三方或车辆初始化。",
+      "ManualReason": null,
+      "DesignOrder": 56
+    }
+  ],
+  "CandidateDispositions": [
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "车辆管理",
+      "CandidateOperation": "STATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-VEH-STATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-DRAW-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "UPDATE",
+      "Decision": "DEFERRED_SAFETY_BOUNDARY",
+      "TestCaseId": null,
+      "Reason": "会修改或发布共享地图，当前未建立独立地图隔离和回滚证明；不转成自动执行用例。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "DELETE",
+      "Decision": "DEFERRED_SAFETY_BOUNDARY",
+      "TestCaseId": null,
+      "Reason": "会修改或发布共享地图，当前未建立独立地图隔离和回滚证明；不转成自动执行用例。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "STATE",
+      "Decision": "DEFERRED_SAFETY_BOUNDARY",
+      "TestCaseId": null,
+      "Reason": "会修改或发布共享地图，当前未建立独立地图隔离和回滚证明；不转成自动执行用例。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "VISUAL",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-DRAW-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "CREATE",
+      "Decision": "DEFERRED_SAFETY_BOUNDARY",
+      "TestCaseId": null,
+      "Reason": "会修改或发布共享地图，当前未建立独立地图隔离和回滚证明；不转成自动执行用例。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "CandidateOperation": "INTEGRATION",
+      "Decision": "DEFERRED_SAFETY_BOUNDARY",
+      "TestCaseId": null,
+      "Reason": "会修改或发布共享地图，当前未建立独立地图隔离和回滚证明；不转成自动执行用例。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-STRAT-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-STRAT-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-PROC-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-PROC-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-PROC-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-PROC-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-PROC-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "CandidateOperation": "STATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-PROC-STATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "CandidateOperation": "RELATION",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-PROC-RELATION-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "维护任务",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-MAINT-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "维护任务",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-MAINT-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "维护任务",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-MAINT-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TTEMP-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TTEMP-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TTEMP-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TTEMP-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TTEMP-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "CandidateOperation": "RELATION",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TTEMP-RELATION-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TITEM-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TITEM-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TITEM-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TITEM-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-TITEM-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "日志文件",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-LOG-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "操作日志",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-OLOG-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "操作日志",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-OLOG-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "异常日志",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ELOG-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "异常日志",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ELOG-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "交互日志",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ILOG-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "交互日志",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ILOG-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "统计分析",
+      "MenuName": "能耗统计",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ENER-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "统计分析",
+      "MenuName": "能耗统计",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ENER-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "角色管理",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ROLE-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "角色管理",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ROLE-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "角色管理",
+      "CandidateOperation": "RELATION",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-ROLE-RELATION-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-MENU-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-MENU-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-MENU-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-MENU-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-DICT-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-DICT-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-DICT-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-DICT-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "CandidateOperation": "PAGE_SMOKE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-EXT-PAGE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "CandidateOperation": "QUERY",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-EXT-QUERY-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "CandidateOperation": "CREATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-EXT-CREATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "CandidateOperation": "UPDATE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-EXT-UPDATE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "CandidateOperation": "DELETE",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-EXT-DELETE-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "CandidateOperation": "INTEGRATION",
+      "Decision": "APPLICABLE_DESIGN",
+      "TestCaseId": "TC-EXT-INTEGRATION-001",
+      "Reason": "运行时按钮/输入/网络能力与源代码 API 证据均支持该操作。"
+    }
+  ]
+}

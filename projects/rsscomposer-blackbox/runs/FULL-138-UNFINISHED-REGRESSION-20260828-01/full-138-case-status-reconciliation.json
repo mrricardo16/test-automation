@@ -1,0 +1,3928 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "CatalogTotal": 138,
+  "Rows": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-合法数据创建成功",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed with cleanup verification.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed with cleanup verification.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-用户名重复校验",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-002/20260827-083756Z-pid41288-w0-r0/duplicate-rejected.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-002/20260827-083756Z-pid41288-w0-r0/duplicate-rejected.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-密码低于最小长度",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-003/20260827-083808Z-pid41288-w0-r0/short-password-rejected.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-003/20260827-083808Z-pid41288-w0-r0/short-password-rejected.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-用户名为空",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-004/20260827-083816Z-pid41288-w0-r0/empty-username-rejected.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-004/20260827-083816Z-pid41288-w0-r0/empty-username-rejected.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-显示名为空",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-005/20260827-083822Z-pid41288-w0-r0/empty-display-name-rejected.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-005/20260827-083822Z-pid41288-w0-r0/empty-display-name-rejected.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户角色关系",
+      "Scenario": "用户角色关联-保存后重新查询",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-URB-BIND-001/20260827-083946Z-pid1616-w1-r0/user-role-bind-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-URB-BIND-001/20260827-083946Z-pid1616-w1-r0/user-role-bind-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务新增",
+      "Scenario": "任务新增-合法依赖创建成功",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务新增",
+      "Scenario": "任务新增-无效模板引用校验",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务新增",
+      "Scenario": "任务新增-无效车辆引用校验",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务新增",
+      "Scenario": "任务新增-无效站点引用校验",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务新增",
+      "Scenario": "任务新增-无效楼层引用校验",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务取消",
+      "Scenario": "任务状态-允许取消的任务",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务取消",
+      "Scenario": "任务状态-禁止取消的终态任务",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务重发",
+      "Scenario": "任务状态-允许重发的任务",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务重发",
+      "Scenario": "任务状态-禁止重发的任务",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆新增-合法车辆",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆新增-编号重复",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆新增-非法车辆类型",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "监控管理",
+      "Menu": "监控看板",
+      "Scenario": "监控看板-地图与状态人工复核",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "日志管理",
+      "Menu": "日志下载",
+      "Scenario": "日志下载-批准非敏感日志包",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-合法时间范围有数据",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "BlockReason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-合法时间范围无数据",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "BlockReason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户查询-默认加载",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-001/20260827-083830Z-pid41288-w0-r0/default-query-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-001/20260827-083830Z-pid41288-w0-r0/default-query-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户查询-无匹配结果",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-002/20260827-083837Z-pid41288-w0-r0/unmatched-user-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-002/20260827-083837Z-pid41288-w0-r0/unmatched-user-query.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户查询-清空筛选条件",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "FAIL",
+        "Actual": "Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\n\n  267 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  268 |     await evidence.captureCheckpoint(\"reset-control-missing\");\n> 269 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\");\n      |           ^\n  270 |   }\n  271 |   await resetButton.click();\n  272 |   await expect(page.getByRole(\"textbox\", { name: \"登录名\", exact: true })).toHaveValue(\"\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:269:11",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-RESET-001/20260827-083845Z-pid41288-w0-r0/filtered-user-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "FAIL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "FAIL",
+      "ActualResult": "Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\n\n  267 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  268 |     await evidence.captureCheckpoint(\"reset-control-missing\");\n> 269 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\");\n      |           ^\n  270 |   }\n  271 |   await resetButton.click();\n  272 |   await expect(page.getByRole(\"textbox\", { name: \"登录名\", exact: true })).toHaveValue(\"\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:269:11",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-RESET-001/20260827-083845Z-pid41288-w0-r0/filtered-user-query.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户查询-分页切页",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-PAGE-001/20260827-084013Z-pid1616-w1-r0/user-pagination-page-two.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-PAGE-001/20260827-084013Z-pid1616-w1-r0/user-pagination-page-two.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户修改-合法字段保存",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-UPDATE-001/20260827-083856Z-pid1616-w1-r0/user-update-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-UPDATE-001/20260827-083856Z-pid1616-w1-r0/user-update-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户修改-唯一字段重复校验",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户删除-正常删除",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-DELETE-001/20260827-083910Z-pid1616-w1-r0/user-delete-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-DELETE-001/20260827-083910Z-pid1616-w1-r0/user-delete-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户删除-删除后查询",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-003/20260827-083920Z-pid1616-w1-r0/deleted-user-query-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-003/20260827-083920Z-pid1616-w1-r0/deleted-user-query-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户删除-重复删除",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户删除-删除后同唯一键重建",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "角色查询-按名称查询",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-QUERY-001/20260827-083938Z-pid1616-w1-r0/role-query-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-QUERY-001/20260827-083938Z-pid1616-w1-r0/role-query-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "角色新增-合法数据创建",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-CREATE-001/20260827-083929Z-pid1616-w1-r0/role-create-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-CREATE-001/20260827-083929Z-pid1616-w1-r0/role-create-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户角色关系",
+      "Scenario": "角色关联-解除关联",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户角色关系",
+      "Scenario": "角色关联-重复绑定",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户角色关系",
+      "Scenario": "角色关联-权限变化生效",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "权限访问-菜单拒绝",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "权限访问-页面拒绝",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "权限访问-按钮拒绝",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "权限访问-直接 URL拒绝",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务查询",
+      "Scenario": "任务查询-默认加载",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-001/20260827-084049Z-pid1616-w1-r0/task-query-default.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-001/20260827-084049Z-pid1616-w1-r0/task-query-default.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务查询",
+      "Scenario": "任务查询-按条件查询",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-002/20260827-084054Z-pid1616-w1-r0/unmatched-task-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-002/20260827-084054Z-pid1616-w1-r0/unmatched-task-query.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务查询",
+      "Scenario": "任务查询-分页",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": "Error: BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden Error: BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden\n\n  457 |     evidence.setFailureType(\"BLOCKED_PRECONDITION\");\n  458 |     await evidence.captureCheckpoint(\"task-pagination-precondition-missing\");\n> 459 |     throw new Error(\"BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden\");\n      |           ^\n  460 |   }\n  461 |   await next.click();\n  462 |   await evidence.captureCheckpoint(\"task-pagination-page-two\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:459:11",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-PAGE-001/20260827-084100Z-pid1616-w1-r0/task-pagination-precondition-missing.png"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "历史记录未进入终态执行。",
+      "BlockReason": "历史记录未进入终态执行。",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-PAGE-001/20260827-084100Z-pid1616-w1-r0/task-pagination-precondition-missing.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务查询",
+      "Scenario": "任务查询-排序",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务新增",
+      "Scenario": "任务新增-重复任务",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务新增",
+      "Scenario": "任务新增-缺少必填依赖",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务生命周期",
+      "Scenario": "任务生命周期-新增后查询",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务生命周期",
+      "Scenario": "任务生命周期-取消后查询",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务取消",
+      "Scenario": "任务状态-取消状态矩阵",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆查询-按编号查询",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-001/20260827-084002Z-pid1616-w1-r0/vehicle-query-result.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-001/20260827-084002Z-pid1616-w1-r0/vehicle-query-result.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆查询-无匹配结果",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-002/20260827-084007Z-pid1616-w1-r0/unmatched-vehicle-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-002/20260827-084007Z-pid1616-w1-r0/unmatched-vehicle-query.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆新增-编号为空",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆新增-名称为空",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆新增-编号长度边界",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆新增-非法字符",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆修改-合法字段保存",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "ERROR",
+        "Actual": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m \u001b[31mTest timeout of 90000ms exceeded.\u001b[39m Error: locator.fill: Target page, context or browser has been closed\n\n  147 | async function updateVehicleSpeed(page: Page, speed: string): Promise<void> {\n  148 |   const field = page.locator(\".VehicleManage .el-form-item\").filter({ hasText: \"车辆名称\" }).first().locator(\"input\");\n> 149 |   await field.fill(vehicleName);\n      |               ^\n  150 |   await page.getByRole(\"button\", { name: \"搜索\", exact: true }).click();\n  151 |   const row = page.getByRole(\"row\").filter({ hasText: vehicleName }).last();\n  152 |   await expect(row).toBeVisible({ timeout: 10_000 });\n    at updateVehicleSpeed (E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:149:15)\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:473:11",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-UPDATE-001/20260827-084108Z-pid42108-w2-r0/failure.png"
+        ]
+      },
+      "PreviousExecutionStatus": "ERROR",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "ERROR",
+      "ActualResult": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m \u001b[31mTest timeout of 90000ms exceeded.\u001b[39m Error: locator.fill: Target page, context or browser has been closed\n\n  147 | async function updateVehicleSpeed(page: Page, speed: string): Promise<void> {\n  148 |   const field = page.locator(\".VehicleManage .el-form-item\").filter({ hasText: \"车辆名称\" }).first().locator(\"input\");\n> 149 |   await field.fill(vehicleName);\n      |               ^\n  150 |   await page.getByRole(\"button\", { name: \"搜索\", exact: true }).click();\n  151 |   const row = page.getByRole(\"row\").filter({ hasText: vehicleName }).last();\n  152 |   await expect(row).toBeVisible({ timeout: 10_000 });\n    at updateVehicleSpeed (E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:149:15)\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:473:11",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-UPDATE-001/20260827-084108Z-pid42108-w2-r0/failure.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆修改-非法字段",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "车辆管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆删除-正常删除后查询",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-默认加载",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-003/20260827-084243Z-pid10680-w3-r0/statistics-default.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-003/20260827-084243Z-pid10680-w3-r0/statistics-default.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-按时间范围查询",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "PASS",
+        "Actual": "Real Playwright UI execution completed.",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-004/20260827-084248Z-pid10680-w3-r0/statistics-month-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-004/20260827-084248Z-pid10680-w3-r0/statistics-month-query.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-组合条件重置",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "FAIL",
+        "Actual": "Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\n\n  503 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  504 |     await evidence.captureCheckpoint(\"statistics-reset-control-missing\");\n> 505 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\");\n      |           ^\n  506 |   }\n  507 |   await reset.click();\n  508 |   await evidence.captureCheckpoint(\"statistics-reset-result\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:505:11",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-RESET-001/20260827-084253Z-pid10680-w3-r0/statistics-reset-control-missing.png"
+        ]
+      },
+      "PreviousExecutionStatus": "FAIL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "FAIL",
+      "ActualResult": "Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\n\n  503 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  504 |     await evidence.captureCheckpoint(\"statistics-reset-control-missing\");\n> 505 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\");\n      |           ^\n  506 |   }\n  507 |   await reset.click();\n  508 |   await evidence.captureCheckpoint(\"statistics-reset-result\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:505:11",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-RESET-001/20260827-084253Z-pid10680-w3-r0/statistics-reset-control-missing.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-分页",
+      "PreviousFormalResult": {
+        "Bucket": "ExecutedResults",
+        "ExecutionStatus": "FAIL",
+        "Actual": "Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\n\n  516 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  517 |     await evidence.captureCheckpoint(\"statistics-pagination-missing\");\n> 518 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\");\n      |           ^\n  519 |   }\n  520 |   await next.click();\n  521 |   await evidence.captureCheckpoint(\"statistics-pagination-page-two\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:518:11",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-PAGE-001/20260827-084300Z-pid42048-w4-r0/statistics-pagination-missing.png"
+        ]
+      },
+      "PreviousExecutionStatus": "FAIL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "FAIL",
+      "ActualResult": "Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\n\n  516 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  517 |     await evidence.captureCheckpoint(\"statistics-pagination-missing\");\n> 518 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\");\n      |           ^\n  519 |   }\n  520 |   await next.click();\n  521 |   await evidence.captureCheckpoint(\"statistics-pagination-page-two\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:518:11",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-PAGE-001/20260827-084300Z-pid42048-w4-r0/statistics-pagination-missing.png"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-排序",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-时间范围边界",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-缺少时间条件",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-超出允许范围",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "LegacyOrAdded": "Legacy",
+      "Module": "统计分析",
+      "Menu": "统计查询",
+      "Scenario": "统计查询-非法格式",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-显示名超长",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-用户名长度边界",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户新增-非法字符",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "Scenario": "用户状态-禁用启用与登录影响",
+      "PreviousFormalResult": {
+        "Bucket": "PendingResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockReason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-01 任务模板从零到可下单",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-02 建单→派车→执行→完成→反馈",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-03 第三方下发→状态反馈",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-04 取放货业务交互门控",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-05 取消任务两条路径与终态",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-06 优先级与派单顺序",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-07 任务完成等待与链式接续",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-08 任务异常结束与重发",
+      "PreviousFormalResult": {
+        "Bucket": "ManualResults",
+        "ExecutionStatus": "MANUAL",
+        "Actual": null,
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Catalog requires manual visual or interaction acceptance.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-09 指定车任务与派不出去排查",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "LegacyOrAdded": "Legacy",
+      "Module": "任务管理",
+      "Menu": "任务全流程",
+      "Scenario": "FL-TASK-10 任务状态反馈闭环",
+      "PreviousFormalResult": {
+        "Bucket": "BlockedFlowResults",
+        "ExecutionStatus": "BLOCKED",
+        "Actual": null,
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+          "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+        ]
+      },
+      "PreviousExecutionStatus": "BLOCKED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockReason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "LastFormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02"
+    },
+    {
+      "TestCaseId": "TC-VEH-STATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "车辆管理",
+      "Scenario": "车辆状态控件与未定位安全边界",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101034Z-pid42068-w0-r0/vehicle-state-safe-observation.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_VEHICLE",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101034Z-pid42068-w0-r0/vehicle-state-safe-observation.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-DRAW-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "Scenario": "画图工具页面与工具栏加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101039Z-pid42068-w0-r0/failure.png",
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101606Z-pid42844-w0-r0/drawing-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101039Z-pid42068-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101606Z-pid42844-w0-r0/drawing-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-DRAW-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "Scenario": "画图工具加载地图库只读查看",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101101Z-pid26832-w1-r0/failure.png",
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101611Z-pid42844-w0-r0/drawing-library-read-only.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101101Z-pid26832-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101611Z-pid42844-w0-r0/drawing-library-read-only.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "Scenario": "画布与工具栏视觉人工验收",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "MANUAL",
+        "Reason": "Canvas 像素和视觉保真度按规则由人工验收；已保留页面截图。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/画图工具.png"
+        ]
+      },
+      "PreviousExecutionStatus": "MANUAL",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "MANUAL_CANVAS_VISUAL",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "ActualResult": "Canvas 像素和视觉保真度按规则由人工验收；已保留页面截图。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/画图工具.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-STRAT-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "Scenario": "策略管理页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101123Z-pid11376-w2-r0/strategy-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101123Z-pid11376-w2-r0/strategy-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-STRAT-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "Scenario": "策略查询与无结果条件",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101128Z-pid11376-w2-r0/strategy-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101128Z-pid11376-w2-r0/strategy-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "Scenario": "测试自有策略新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-CREATE-001/20260828-032443Z-pid32668-w0-r0/strategy-created.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "Scenario": "测试自有策略修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed; strategy updated, queried, evidenced, and deleted through the visible UI.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-UPDATE-001/20260828-032507Z-pid32668-w0-r0/strategy-updated.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "Scenario": "测试自有策略删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-DELETE-001/20260828-032517Z-pid32668-w0-r0/strategy-deleted.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-PROC-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "Scenario": "进程管理页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101132Z-pid11376-w2-r0/process-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101132Z-pid11376-w2-r0/process-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-PROC-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "Scenario": "进程查询与无结果条件",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101137Z-pid11376-w2-r0/process-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101137Z-pid11376-w2-r0/process-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-PROC-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "Scenario": "测试自有进程新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041947Z-pid33960-w0-r0/process-create-result.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041927Z-pid16240-w0-r0/process-create-result.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041649Z-pid34164-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041449Z-pid20212-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041117Z-pid32792-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-032525Z-pid32668-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-024118Z-pid28772-w3-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-PROC-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "Scenario": "测试自有进程修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-UPDATE-001/20260828-032728Z-pid29784-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-UPDATE-001/20260828-024151Z-pid22776-w4-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-PROC-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "Scenario": "测试自有进程删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-DELETE-001/20260828-042001Z-pid33960-w0-r0/process-delete-result.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-DELETE-001/20260828-032931Z-pid29812-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-DELETE-001/20260828-024224Z-pid23044-w5-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-PROC-STATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "Scenario": "测试自有进程状态刷新",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_PROCESS",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-STATE-001/20260828-042008Z-pid33960-w0-r0/process-state-observed.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-STATE-001/20260828-033132Z-pid24464-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-STATE-001/20260828-024258Z-pid2348-w6-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-PROC-RELATION-001",
+      "LegacyOrAdded": "Added",
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "Scenario": "测试自有进程策略配置关系",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_PROCESS",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-044714Z-pid33664-w0-r0/process-relation-editor.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-043354Z-pid29832-w0-r0/process-relation-editor.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-042015Z-pid33960-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-042015Z-pid33960-w0-r0/process-relation-editor.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-033336Z-pid29472-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-024331Z-pid21320-w7-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-MAINT-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "Scenario": "维护任务页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101142Z-pid11376-w2-r0/maintenance-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101142Z-pid11376-w2-r0/maintenance-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-MAINT-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "Scenario": "维护任务查询与无结果条件",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101147Z-pid11376-w2-r0/maintenance-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101147Z-pid11376-w2-r0/maintenance-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-MAINT-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "Scenario": "测试自有维护任务新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "当前新增维护任务表单提交会直接调用 GotoRecharger/GotoStandby，对车辆发起物理动作；该 Case 不能按普通配置 CRUD 执行。",
+      "BlockReason": "当前新增维护任务表单提交会直接调用 GotoRecharger/GotoStandby，对车辆发起物理动作；该 Case 不能按普通配置 CRUD 执行。",
+      "BlockClassification": "SAFETY_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "Scenario": "任务模板页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101153Z-pid11376-w2-r0/template-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101153Z-pid11376-w2-r0/template-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "Scenario": "任务模板查询与无结果条件",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101158Z-pid11376-w2-r0/template-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101158Z-pid11376-w2-r0/template-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "Scenario": "测试自有任务模板新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-CREATE-001/20260828-042218Z-pid22652-w1-r0/template-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-CREATE-001/20260828-033537Z-pid30436-w5-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-CREATE-001/20260828-024405Z-pid16992-w8-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "Scenario": "测试自有任务模板修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-UPDATE-001/20260828-042227Z-pid22652-w1-r0/template-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-UPDATE-001/20260828-033739Z-pid31164-w6-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-UPDATE-001/20260828-024437Z-pid21296-w9-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "Scenario": "测试自有任务模板删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-042236Z-pid22652-w1-r0/template-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-042236Z-pid22652-w1-r0/template-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-033941Z-pid13636-w7-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-024508Z-pid10576-w10-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-RELATION-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "Scenario": "任务模板配置项关系",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-RELATION-001/20260828-042243Z-pid22652-w1-r0/template-relation-detail.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-RELATION-001/20260828-034142Z-pid29624-w8-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-RELATION-001/20260828-024540Z-pid5012-w11-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-TITEM-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "Scenario": "模板项管理页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101204Z-pid11376-w2-r0/template-item-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101204Z-pid11376-w2-r0/template-item-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-TITEM-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "Scenario": "模板项查询与无结果条件",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101209Z-pid11376-w2-r0/template-item-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101209Z-pid11376-w2-r0/template-item-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-TITEM-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "Scenario": "测试自有模板项新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-CREATE-001/20260828-042251Z-pid22652-w1-r0/template-item-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-CREATE-001/20260828-034344Z-pid19492-w9-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-CREATE-001/20260828-024612Z-pid17284-w12-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-TITEM-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "Scenario": "测试自有模板项修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-UPDATE-001/20260828-042300Z-pid22652-w1-r0/template-item-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-UPDATE-001/20260828-034546Z-pid25700-w10-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-UPDATE-001/20260828-024630Z-pid18616-w13-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-TITEM-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "Scenario": "测试自有模板项删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-042309Z-pid22652-w1-r0/template-item-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-042309Z-pid22652-w1-r0/template-item-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-034747Z-pid2348-w11-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-024648Z-pid30836-w14-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-LOG-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "日志管理",
+      "Menu": "日志文件",
+      "Scenario": "日志文件按时间和车辆条件查询",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101214Z-pid11376-w2-r0/failure.png",
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101625Z-pid38004-w0-r0/log-file-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101214Z-pid11376-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101625Z-pid38004-w0-r0/log-file-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-OLOG-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "日志管理",
+      "Menu": "操作日志",
+      "Scenario": "操作日志页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101236Z-pid41288-w3-r0/operation-log-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101236Z-pid41288-w3-r0/operation-log-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-OLOG-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "日志管理",
+      "Menu": "操作日志",
+      "Scenario": "操作日志条件查询",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101241Z-pid41288-w3-r0/operation-log-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101241Z-pid41288-w3-r0/operation-log-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-ELOG-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "日志管理",
+      "Menu": "异常日志",
+      "Scenario": "异常日志页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101247Z-pid41288-w3-r0/exception-log-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101247Z-pid41288-w3-r0/exception-log-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-ELOG-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "日志管理",
+      "Menu": "异常日志",
+      "Scenario": "异常日志条件查询",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101252Z-pid41288-w3-r0/exception-log-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101252Z-pid41288-w3-r0/exception-log-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-ILOG-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "日志管理",
+      "Menu": "交互日志",
+      "Scenario": "交互日志页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101257Z-pid41288-w3-r0/interaction-log-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101257Z-pid41288-w3-r0/interaction-log-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-ILOG-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "日志管理",
+      "Menu": "交互日志",
+      "Scenario": "交互日志条件查询",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101302Z-pid41288-w3-r0/interaction-log-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101302Z-pid41288-w3-r0/interaction-log-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-ENER-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "统计分析",
+      "Menu": "能耗统计",
+      "Scenario": "能耗统计页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101307Z-pid41288-w3-r0/energy-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101307Z-pid41288-w3-r0/energy-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-ENER-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "统计分析",
+      "Menu": "能耗统计",
+      "Scenario": "能耗统计按月份查询",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101312Z-pid41288-w3-r0/energy-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101312Z-pid41288-w3-r0/energy-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-ROLE-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "测试自有角色修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-UPDATE-001/20260828-042316Z-pid22652-w1-r0/role-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-UPDATE-001/20260828-034950Z-pid17232-w12-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-UPDATE-001/20260828-024707Z-pid18868-w15-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-ROLE-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "测试自有角色删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-042324Z-pid22652-w1-r0/role-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-042324Z-pid22652-w1-r0/role-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-035152Z-pid30252-w13-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-024739Z-pid9428-w16-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-ROLE-RELATION-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "Scenario": "测试自有角色用户和权限关系",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_CONDITIONAL_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-044648Z-pid3296-w0-r0/role-user-relation.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-044615Z-pid31464-w0-r0/role-user-relation.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-044250Z-pid33904-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-043918Z-pid33292-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-043402Z-pid29832-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-042330Z-pid22652-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-035355Z-pid32336-w14-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-024811Z-pid29720-w17-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-MENU-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "Scenario": "菜单管理页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101317Z-pid41288-w3-r0/menu-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101317Z-pid41288-w3-r0/menu-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-MENU-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "Scenario": "测试自有菜单节点新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+      "BlockReason": "菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-MENU-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "Scenario": "测试自有菜单节点修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+      "BlockReason": "菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-MENU-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "Scenario": "测试自有菜单节点删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+      "BlockReason": "菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-DICT-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "Scenario": "字典管理页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101322Z-pid41288-w3-r0/dictionary-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101322Z-pid41288-w3-r0/dictionary-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-DICT-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "Scenario": "测试自有字典项新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-CREATE-001/20260828-042543Z-pid3356-w2-r0/dictionary-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-CREATE-001/20260828-035558Z-pid32508-w15-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-CREATE-001/20260828-024843Z-pid7544-w18-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-DICT-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "Scenario": "测试自有字典项修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-UPDATE-001/20260828-042553Z-pid3356-w2-r0/dictionary-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-UPDATE-001/20260828-035802Z-pid32208-w16-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-UPDATE-001/20260828-024917Z-pid26592-w19-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-DICT-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "Scenario": "测试自有字典项删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_TEST_OWNED_DATA",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-042601Z-pid3356-w2-r0/dictionary-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-042601Z-pid3356-w2-r0/dictionary-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-040005Z-pid29980-w17-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-024950Z-pid17616-w20-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-EXT-PAGE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "Scenario": "外部系统配置页面加载",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101327Z-pid41288-w3-r0/external-page.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101327Z-pid41288-w3-r0/external-page.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-EXT-QUERY-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "Scenario": "外部系统配置查询",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "PASS",
+        "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+        "Evidence": [
+          "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101332Z-pid41288-w3-r0/external-query.png"
+        ]
+      },
+      "PreviousExecutionStatus": "PASS",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_READ_ONLY",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "真实 Playwright 页面/查询交互完成，结果符合用例断言。",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101332Z-pid41288-w3-r0/external-query.png"
+      ],
+      "LastFormalRunId": "MENU-COVERAGE-EXPANSION-20260827-01"
+    },
+    {
+      "TestCaseId": "TC-EXT-CREATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "Scenario": "测试自有外部系统配置新增",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-CREATE-001/20260828-042609Z-pid3356-w2-r0/external-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-CREATE-001/20260828-040208Z-pid32352-w18-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-CREATE-001/20260828-025022Z-pid31580-w21-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-EXT-UPDATE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "Scenario": "测试自有外部系统配置修改",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-UPDATE-001/20260828-042616Z-pid3356-w2-r0/external-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-UPDATE-001/20260828-040411Z-pid19672-w19-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-UPDATE-001/20260828-025039Z-pid27456-w22-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-EXT-DELETE-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "Scenario": "测试自有外部系统配置删除",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "CurrentFinalStatus": "PASS",
+      "ActualResult": "Real Playwright UI execution completed.",
+      "BlockReason": null,
+      "BlockClassification": null,
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-042625Z-pid3356-w2-r0/external-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-042625Z-pid3356-w2-r0/external-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-040614Z-pid892-w20-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-025056Z-pid20536-w23-r0/failure.png"
+      ],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    },
+    {
+      "TestCaseId": "TC-EXT-INTEGRATION-001",
+      "LegacyOrAdded": "Added",
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "Scenario": "外部系统配置地址校验与本地 mock 连通性",
+      "PreviousFormalResult": {
+        "Bucket": "AddedWebResult",
+        "ExecutionStatus": "SKIPPED",
+        "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+        "Evidence": []
+      },
+      "PreviousExecutionStatus": "SKIPPED",
+      "CurrentExpectedStatus": "EXPECTED_CONFIRMED",
+      "AutomationEligibility": "AUTO_ALLOWED_WITH_LOCAL_MOCK",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "ActualResult": "外部系统页面真实能力仅包含配置 CRUD，未发现独立的 Integration/连通性触发入口；仅允许 Local Mock，当前不能把配置保存冒充连通性执行。",
+      "BlockReason": "外部系统页面真实能力仅包含配置 CRUD，未发现独立的 Integration/连通性触发入口；仅允许 Local Mock，当前不能把配置保存冒充连通性执行。",
+      "BlockClassification": "ENVIRONMENT_BLOCKED",
+      "ManualReviewRequired": false,
+      "EvidenceRefs": [],
+      "LastFormalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01"
+    }
+  ],
+  "HistoricalResultConflicts": [
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "KeptBucket": "ExecutedResults",
+      "KeptPriority": 1,
+      "DuplicateBucket": "BlockedFlowResults",
+      "DuplicatePriority": 2,
+      "Resolution": "KEEP_HIGHEST_PRIORITY_EXECUTED_RESULT; CURRENT_CASE_EMITTED_ONCE"
+    }
+  ],
+  "ExistingTerminalResultsPreserved": true,
+  "Added26PassPreserved": true
+}

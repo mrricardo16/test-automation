@@ -1,0 +1,734 @@
+{
+  "RunId": "MENU-COVERAGE-AUDIT-20260827-01",
+  "LegacyCatalogCount": 82,
+  "Mappings": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "Scenario": "用户新增-合法数据创建成功",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "Scenario": "用户新增-用户名重复校验",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "Scenario": "用户新增-密码低于最小长度",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "Scenario": "用户新增-用户名为空",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "Scenario": "用户新增-显示名为空",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "Scenario": "用户角色关联-保存后重新查询",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "RELATION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "Scenario": "任务新增-合法依赖创建成功",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "Scenario": "任务新增-无效模板引用校验",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "Scenario": "任务新增-无效车辆引用校验",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "Scenario": "任务新增-无效站点引用校验",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "Scenario": "任务新增-无效楼层引用校验",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "Scenario": "任务状态-允许取消的任务",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "STATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "Scenario": "任务状态-禁止取消的终态任务",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "STATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "Scenario": "任务状态-允许重发的任务",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "STATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "Scenario": "任务状态-禁止重发的任务",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "STATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "Scenario": "车辆新增-合法车辆",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "Scenario": "车辆新增-编号重复",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "Scenario": "车辆新增-非法车辆类型",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "Scenario": "监控看板-地图与状态人工复核",
+      "Module": "监控管理",
+      "MenuName": "综合看板",
+      "Operation": "VISUAL",
+      "MappingBasis": "LEGACY_CASE_RETAINED_BUT_USER_OUT_OF_SCOPE",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "Scenario": "日志下载-批准非敏感日志包",
+      "Module": "日志管理",
+      "MenuName": "日志文件",
+      "Operation": "DOWNLOAD",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "Scenario": "统计查询-合法时间范围有数据",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "Scenario": "统计查询-合法时间范围无数据",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "Scenario": "用户查询-默认加载",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "Scenario": "用户查询-无匹配结果",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "Scenario": "用户查询-清空筛选条件",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "RESET",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "FAIL"
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "Scenario": "用户查询-分页切页",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "PAGINATION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "Scenario": "用户修改-合法字段保存",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "UPDATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "Scenario": "用户修改-唯一字段重复校验",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "UPDATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "Scenario": "用户删除-正常删除",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "DELETE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "Scenario": "用户删除-删除后查询",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "Scenario": "用户删除-重复删除",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "DELETE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "Scenario": "用户删除-删除后同唯一键重建",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "Scenario": "角色查询-按名称查询",
+      "Module": "系统管理",
+      "MenuName": "角色管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "Scenario": "角色新增-合法数据创建",
+      "Module": "系统管理",
+      "MenuName": "角色管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "Scenario": "角色关联-解除关联",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "RELATION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "Scenario": "角色关联-重复绑定",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "RELATION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "Scenario": "角色关联-权限变化生效",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "PERMISSION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "Scenario": "权限访问-菜单拒绝",
+      "Module": "系统管理",
+      "MenuName": "角色管理",
+      "Operation": "PERMISSION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "Scenario": "权限访问-页面拒绝",
+      "Module": "系统管理",
+      "MenuName": "角色管理",
+      "Operation": "PERMISSION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "Scenario": "权限访问-按钮拒绝",
+      "Module": "系统管理",
+      "MenuName": "角色管理",
+      "Operation": "PERMISSION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "Scenario": "权限访问-直接 URL拒绝",
+      "Module": "系统管理",
+      "MenuName": "角色管理",
+      "Operation": "PERMISSION",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "Scenario": "任务查询-默认加载",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "Scenario": "任务查询-按条件查询",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "Scenario": "任务查询-分页",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "Scenario": "任务查询-排序",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "Scenario": "任务新增-重复任务",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "Scenario": "任务新增-缺少必填依赖",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "Scenario": "任务生命周期-新增后查询",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "Scenario": "任务生命周期-取消后查询",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "STATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "Scenario": "任务状态-取消状态矩阵",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "STATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "Scenario": "车辆查询-按编号查询",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "Scenario": "车辆查询-无匹配结果",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "Scenario": "车辆新增-编号为空",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "Scenario": "车辆新增-名称为空",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "Scenario": "车辆新增-编号长度边界",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "Scenario": "车辆新增-非法字符",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "Scenario": "车辆修改-合法字段保存",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "UPDATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "ERROR"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "Scenario": "车辆修改-非法字段",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "UPDATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "Scenario": "车辆删除-正常删除后查询",
+      "Module": "车辆管理",
+      "MenuName": "车辆管理",
+      "Operation": "DELETE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "Scenario": "统计查询-默认加载",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "Scenario": "统计查询-按时间范围查询",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "PASS"
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "Scenario": "统计查询-组合条件重置",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "FAIL"
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "Scenario": "统计查询-分页",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "FAIL"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "Scenario": "统计查询-排序",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "Scenario": "统计查询-时间范围边界",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "Scenario": "统计查询-缺少时间条件",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "Scenario": "统计查询-超出允许范围",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "Scenario": "统计查询-非法格式",
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Operation": "QUERY",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "Scenario": "用户新增-显示名超长",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "Scenario": "用户新增-用户名长度边界",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "Scenario": "用户新增-非法字符",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "CREATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "Scenario": "用户状态-禁用启用与登录影响",
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Operation": "UPDATE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "MANUAL"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "Module": "任务管理",
+      "MenuName": "任务管理",
+      "Operation": "COMPOSITE_LIFECYCLE",
+      "MappingBasis": "TESTCASE_ID_AND_FEATURE_SEMANTICS",
+      "LegacyExecutionStatus": "BLOCKED"
+    }
+  ]
+}

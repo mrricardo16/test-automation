@@ -23,8 +23,9 @@ test('parses nine-column testcase table and turns presentation separators into s
   const model = parseMarkdownReport(markdownFixture, markdownPath);
   const html = renderHtmlDocument(model, 'body { overflow-x: hidden; }');
   assert.match(html, /class="testcase-table-scroll"/);
-  assert.match(html, /class="step-line"/);
-  assert.match(html, /class="expected-line"/);
+  assert.match(html, /class="[^"]*cell-line[^"]*step-line/);
+  assert.match(html, /class="[^"]*cell-line[^"]*expected-line/);
+  assert.match(html, /data-visible-char-count="\d+"/);
   assert.doesNotMatch(html, /&#10;|<br\b/i);
   assert.match(html, /TC-USER-CREATE-001/);
   assert.match(html, /data:image\/png;base64,/);

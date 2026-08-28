@@ -1,0 +1,756 @@
+{
+  "config": {
+    "argv": [
+      "C:\\nvm4w\\nodejs\\node.exe",
+      "E:\\automated-testing\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/web/real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=json"
+    ],
+    "configFile": "E:\\automated-testing\\playwright.config.ts",
+    "rootDir": "E:/automated-testing/tests/web",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "E:/automated-testing/projects/test-workflow/artifacts/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "E:/automated-testing/tests/web",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "real-project\\TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+      "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-TNEW-CREATE-001 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:19:57.843Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-new-001",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-cd4d9-utomatable-page-observation\\attachments\\checkpoint-task-new-001-f6035e56c166d333beef13ea389dbf04bc3d1cfa.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-d79ae831fb6dfafecff8",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TNEW-CREATE-002 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4256,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:02.276Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-new-002",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-5483e-utomatable-page-observation\\attachments\\checkpoint-task-new-002-36b621a739ca2673d976a936fed52602cba272a1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-846070f87d7b7cd22bc1",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TNEW-CREATE-003 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4005,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:06.551Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-new-003",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-e6f3f-utomatable-page-observation\\attachments\\checkpoint-task-new-003-1885639c339c2e9ebfaef3afcb64d8e53de917f9.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-c0ff1216369d5c1e131c",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TNEW-CREATE-004 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3857,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:10.571Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-new-004",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-d7357-utomatable-page-observation\\attachments\\checkpoint-task-new-004-b0ed9cee1e71a3be23b4bd46ede772db5318a311.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-4d00b4b3bd1c724fe41c",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TNEW-CREATE-005 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3937,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:14.441Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-new-005",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-bbf77-utomatable-page-observation\\attachments\\checkpoint-task-new-005-ed2f4fab295e2df249041da211f1209d35bb9fda.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-7fc44f2d05c0bad36521",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TCANCEL-CANCEL-001 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3756,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:18.415Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-cancel-001",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-2e6cd-utomatable-page-observation\\attachments\\checkpoint-task-cancel-001-6da792d3a4951f33d0dc0450cee7b07337bf8fa9.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-5af327837bc94a99178a",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TCANCEL-CANCEL-002 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3943,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:22.184Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-cancel-002",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-37839-utomatable-page-observation\\attachments\\checkpoint-task-cancel-002-14895436e91cd88be2e781ca00a36aaa0af576f4.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-2423839fb9840b8b5f26",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TRESEND-RESEND-001 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4231,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:26.144Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-resend-001",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-01a85-utomatable-page-observation\\attachments\\checkpoint-task-resend-001-0896e6daa67cf232a41c8800637a76be77ba7e2f.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-db55d7de9c1a8ea6674c",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TRESEND-RESEND-002 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4302,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:30.396Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-resend-002",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-a08d9-utomatable-page-observation\\attachments\\checkpoint-task-resend-002-5e8b4f5a5a0b0ce24ad368d319c897ed8f8e3e24.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-29a467563ddc3c326e70",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-TFLOW-COMPOSITE-008 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4046,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:34.719Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-task-flow-008",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-3e57f-utomatable-page-observation\\attachments\\checkpoint-task-flow-008-866205a5bfbddd5bc731ccd7c78622c42d1a8992.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-4013c2d38ffd8e91a947",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "TC-VEH-CREATE-001 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4137,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:38.790Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-vehicle-create-001",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-df4b5-utomatable-page-observation\\attachments\\checkpoint-vehicle-create-001-3a06800edf7cd896919df096054f5eaec949dcca.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-7501c9a89dcd3d64dd46",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 56,
+          "column": 7
+        },
+        {
+          "title": "TC-VEH-CREATE-002 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3581,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:42.951Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-vehicle-create-002",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-aa04a-utomatable-page-observation\\attachments\\checkpoint-vehicle-create-002-e0957e37803ae6bec5ccc1f77df112308b519321.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-0744ca80aeba70818f6b",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 56,
+          "column": 7
+        },
+        {
+          "title": "TC-VEH-CREATE-003 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3850,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:46.550Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-vehicle-create-003",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-12121-utomatable-page-observation\\attachments\\checkpoint-vehicle-create-003-37877753d5b502612d62daca2df01b92e0b42844.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-7efa8a0ef639300d20d5",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 56,
+          "column": 7
+        },
+        {
+          "title": "TC-VEH-DELETE-001 - manual review automatable page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3947,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:50.418Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-vehicle-delete-001",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-8b7a5-utomatable-page-observation\\attachments\\checkpoint-vehicle-delete-001-f9ddf25226a19537346c7c917eb6166b6fbcd252.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-1623ace25b8f3bb5f475",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 56,
+          "column": 7
+        },
+        {
+          "title": "TC-LOG-DOWNLOAD-001 - manual review log page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3641,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:54.384Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-log-download-page",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-8e56b-review-log-page-observation\\attachments\\checkpoint-log-download-page-5c7e9a9eec5dcbf9f3398ec643b7d675ffbd8169.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-afc46230bfc8cd34db58",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 61,
+          "column": 5
+        },
+        {
+          "title": "TC-DRAW-VISUAL-001 - manual review drawing page observation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4317,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:20:58.039Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "checkpoint-drawing-visual-page",
+                      "contentType": "image/png",
+                      "path": "E:\\automated-testing\\projects\\test-workflow\\artifacts\\test-results\\real-project-TC_MANUAL_EVI-e91e2-ew-drawing-page-observation\\attachments\\checkpoint-drawing-visual-page-d7e8b0b772669d39e0d8b7122db76bce2362df05.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-c6420265ed94e1c378d3",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 65,
+          "column": 5
+        },
+        {
+          "title": "TC-MON-VISUAL-001 - scope boundary recorded without opening dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 173,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T06:21:02.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0e27250cf167d2ecacf-ba2dd5297c54ee61be89",
+          "file": "real-project/TC_MANUAL_EVIDENCE_CLOSURE_20260828_01.spec.ts",
+          "line": 69,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-28T06:19:57.379Z",
+    "duration": 65800.08200000001,
+    "expected": 17,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

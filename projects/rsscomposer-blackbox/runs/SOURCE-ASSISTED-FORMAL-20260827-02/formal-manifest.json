@@ -1,0 +1,426 @@
+{
+  "ExecutionManifestId": "SOURCE-ASSISTED-SOURCE-ASSISTED-FORMAL-20260827-02",
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "FormalHarness": "PROJECT_PLAYWRIGHT",
+  "BrowserVisibility": "HEADED",
+  "InteractionMode": "UNATTENDED",
+  "HumanConfirmationDuringAutoRun": "FORBIDDEN",
+  "EnvironmentReadinessStatus": "BLOCKED_RUNTIME_ENABLEMENT",
+  "EnvironmentReadinessReason": "The safe user-create CRUD case passed; TEST_OWNED map upload is recorded, but active runtime map, running chain/feedback processes, and DummyCar are not all ready.",
+  "ExecutionManifestCases": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "ScriptPath": "tests/web/real-project/TC_USER_FIXTURE_20260827_02.spec.ts",
+      "EntryPoint": "TC-USER-CREATE-001 - create, verify, cleanup and verify test-owned user"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-CREATE-002 - duplicate username is rejected"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-CREATE-003 - too-short password is rejected"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-CREATE-004 - empty username is rejected"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-CREATE-005 - empty display name is rejected"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-URB-BIND-001 - user role relation can be saved and queried"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-QUERY-001 - default user query loads"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-QUERY-002 - unmatched user query returns no row"
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-RESET-001 - user filters can be reset"
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-PAGE-001 - user query can move to a second page"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-UPDATE-001 - legal user field can be saved"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-DELETE-001 - user can be deleted"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-USER-QUERY-003 - deleted user is absent from query"
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-ROLE-QUERY-001 - role query by name returns matching row"
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-ROLE-CREATE-001 - legal role can be created"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-TQUERY-QUERY-001 - task query default page loads"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-TQUERY-QUERY-002 - unmatched task query returns no row"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-TQUERY-PAGE-001 - task query pagination prerequisite is reported"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-VEH-QUERY-001 - vehicle query by name returns the test vehicle"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-VEH-QUERY-002 - unmatched vehicle query returns no row"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-VEH-UPDATE-001 - test vehicle legal field can be saved and restored"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-STAT-QUERY-003 - efficiency statistics default page loads"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-STAT-QUERY-004 - efficiency statistics accepts a legal month range"
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-STAT-RESET-001 - efficiency statistics exposes a reset control"
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-STAT-PAGE-001 - efficiency statistics pagination is available"
+    }
+  ],
+  "ExcludedCaseIds": [
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip."
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "ExecutionStatus": "BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+    }
+  ],
+  "ExecutionQueueStarted": true,
+  "FormalBusinessCasesExecuted": true
+}

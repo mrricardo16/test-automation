@@ -69,6 +69,29 @@
       "RunStatus": "COMPLETED_WITH_BLOCKERS",
       "FinalReport": "projects/rsscomposer-blackbox/runs/BB-REAL-20260824-143008/18-final-blackbox-report.md",
       "ReferenceKind": "FORMAL_CURRENT_RUN"
+    },
+    {
+      "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+      "RunType": "SOURCE_ASSISTED_FORMAL_EXECUTION",
+      "StartedAt": "2026-08-27T11:30:00+08:00",
+      "SourcePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02",
+      "HandoffRunId": "DEV-HANDOFF-REAL-20260824-105102",
+      "HandoffHash": "d0e4c9ee346187cf3e0bb2723efa8925436263e535ba5924076ab019c5cb37e3",
+      "HandoffIntegrity": "PASS",
+      "BlackboxIntegrity": "PASS",
+      "RuntimeStatus": "BLOCKED",
+      "TestCaseTotal": 82,
+      "Pass": 1,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 37,
+      "Manual": 16,
+      "Skipped": 28,
+      "DefectCount": 0,
+      "MismatchCount": 0,
+      "RunStatus": "BLOCKED",
+      "FinalReport": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/final-report.md",
+      "ReferenceKind": "FORMAL_CURRENT_RUN"
     }
   ]
 }

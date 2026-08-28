@@ -1,0 +1,253 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "Rows": [
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-001/20260828-054559Z-pid32528-w0-r0/tc-stat-query-001-runtime-observation.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-002/20260828-054605Z-pid32528-w0-r0/tc-stat-query-002-runtime-observation.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-005/20260828-054609Z-pid32528-w0-r0/tc-stat-query-005-runtime-observation.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-001/20260828-054614Z-pid32528-w0-r0/statistics-range-boundary.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-002/20260828-054619Z-pid32528-w0-r0/statistics-missing-time.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-003/20260828-054623Z-pid32528-w0-r0/statistics-out-of-range.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-004/20260828-054628Z-pid32528-w0-r0/statistics-invalid-format.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-007/20260828-054632Z-pid32528-w0-r0/tc-user-create-007-boundary-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-008/20260828-054637Z-pid32528-w0-r0/tc-user-create-008-boundary-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-009/20260828-054643Z-pid32528-w0-r0/tc-user-create-009-boundary-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-060606Z-pid25632-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-055712Z-pid304-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-054649Z-pid32528-w0-r0/failure.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-060808Z-pid27896-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-055913Z-pid23152-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-054851Z-pid27948-w1-r0/failure.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-061012Z-pid33168-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-060115Z-pid33560-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-055053Z-pid34380-w2-r0/failure.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-061216Z-pid16616-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-060317Z-pid28548-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-055255Z-pid34508-w3-r0/failure.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-061419Z-pid29228-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-060518Z-pid17584-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-055457Z-pid32112-w4-r0/failure.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-001/20260828-061958Z-pid34096-w0-r0/task-new-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-001/20260828-061825Z-pid33684-w0-r0/task-new-001.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-002/20260828-062002Z-pid34096-w0-r0/task-new-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-002/20260828-061832Z-pid33684-w0-r0/task-new-002.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-003/20260828-062006Z-pid34096-w0-r0/task-new-003.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-003/20260828-061836Z-pid33684-w0-r0/task-new-003.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-004/20260828-062010Z-pid34096-w0-r0/task-new-004.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-004/20260828-061841Z-pid33684-w0-r0/task-new-004.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-005/20260828-062014Z-pid34096-w0-r0/task-new-005.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-005/20260828-061845Z-pid33684-w0-r0/task-new-005.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-001/20260828-062018Z-pid34096-w0-r0/task-cancel-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-001/20260828-061848Z-pid33684-w0-r0/task-cancel-001.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-002/20260828-062022Z-pid34096-w0-r0/task-cancel-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-002/20260828-061852Z-pid33684-w0-r0/task-cancel-002.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-001/20260828-062026Z-pid34096-w0-r0/task-resend-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-001/20260828-061856Z-pid33684-w0-r0/task-resend-001.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-002/20260828-062030Z-pid34096-w0-r0/task-resend-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-002/20260828-061900Z-pid33684-w0-r0/task-resend-002.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TFLOW-COMPOSITE-008/20260828-062034Z-pid34096-w0-r0/task-flow-008.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TFLOW-COMPOSITE-008/20260828-061904Z-pid33684-w0-r0/task-flow-008.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-001/20260828-062038Z-pid34096-w0-r0/vehicle-create-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-001/20260828-061908Z-pid33684-w0-r0/vehicle-create-001.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-002/20260828-062043Z-pid34096-w0-r0/vehicle-create-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-002/20260828-061913Z-pid33684-w0-r0/vehicle-create-002.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-003/20260828-062046Z-pid34096-w0-r0/vehicle-create-003.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-003/20260828-061917Z-pid33684-w0-r0/vehicle-create-003.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-DELETE-001/20260828-062050Z-pid34096-w0-r0/vehicle-delete-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-DELETE-001/20260828-061920Z-pid33684-w0-r0/vehicle-delete-001.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-LOG-DOWNLOAD-001/20260828-062054Z-pid34096-w0-r0/log-download-page.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-LOG-DOWNLOAD-001/20260828-061924Z-pid33684-w0-r0/log-download-page.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-DRAW-VISUAL-001/20260828-062058Z-pid34096-w0-r0/drawing-visual-page.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-DRAW-VISUAL-001/20260828-061929Z-pid33684-w0-r0/drawing-visual-page.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": []
+    }
+  ]
+}

@@ -24,8 +24,8 @@ const canonicalTemplateMarkers = [
   '## 5. Current Effective State',
   '## 6. Expectation Gap',
   '## 7. 测试结论',
-  '禁止显示 `<br>`',
-  '每条步骤编号；短步骤可一行放 2 条',
+  '最终显示为换行，不显示 `<br>` 字符串',
+  '每条步骤编号；正文由 Renderer 按 `MAX_VISUAL_CHARS_PER_LINE=15` 主动生成真实视觉换行',
 ];
 
 export function validateCanonicalTemplate() {

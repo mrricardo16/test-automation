@@ -10,8 +10,13 @@ test('final report template is bound to the current generator contract', () => {
 test('final Markdown report satisfies wide-table Typora rendering contract', () => {
   const result = validateFinalMarkdownRendering();
   assert.equal(result.Pass, true, JSON.stringify(result, null, 2));
-  assert.equal(result.Checks.FinalMarkdownContainsBrTag, false);
+  assert.equal(result.Checks.FinalMarkdownContainsBrTag, true);
   assert.equal(result.Checks.HtmlBreakTagAbsent, true);
+  assert.equal(result.LayoutMetrics.HardWrappedCellCount > 0, true);
+  assert.equal(result.LayoutMetrics.VisualLinesOver15Count, 0);
+  assert.equal(result.LayoutMetrics.HeaderWrappedCount, 0);
+  assert.equal(result.LayoutMetrics.TestCaseIdWrappedCount, 0);
+  assert.equal(result.LayoutMetrics.StatusWrappedCount, 0);
   assert.equal(result.Checks.StepLineBreakPolicy, true);
   assert.equal(result.Checks.ExpectedLineBreakPolicy, true);
   assert.equal(result.Checks.InternalOperationEnumVisible, false);

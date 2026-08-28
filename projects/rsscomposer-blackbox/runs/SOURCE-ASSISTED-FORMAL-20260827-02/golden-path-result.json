@@ -1,0 +1,23 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "Status": "BLOCKED",
+  "TestCaseId": "FL-TASK-02",
+  "TemplateCreated": false,
+  "TaskCreated": false,
+  "TaskStateTimeline": [],
+  "VehicleReleased": false,
+  "FeedbackProcessed": false,
+  "CleanupResidualCount": 0,
+  "CleanupStatus": "PASS",
+  "BlockingPrerequisites": [
+    "FEEDBACK_PROCESS_READY",
+    "DUMMY_CAR_LOCATED_AND_SAFE"
+  ],
+  "Evidence": [
+    "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+    "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-provisioning-error.json",
+    "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-runtime-discovery.json",
+    "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-live-api-provisioning.json",
+    "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-initialize-error.json"
+  ]
+}

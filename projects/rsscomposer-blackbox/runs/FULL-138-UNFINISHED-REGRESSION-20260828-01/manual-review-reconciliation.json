@@ -1,0 +1,126 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Rows": [
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "ExecutionAttempted": false,
+      "TargetActionAttempted": false,
+      "EvidenceRefs": [],
+      "Reason": "Catalog requires manual visual or interaction acceptance."
+    },
+    {
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/画图工具.png"
+      ],
+      "Reason": "Canvas 像素和视觉保真度按规则由人工验收；已保留页面截图。"
+    }
+  ]
+}

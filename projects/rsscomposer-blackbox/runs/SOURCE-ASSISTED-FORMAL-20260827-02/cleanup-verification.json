@@ -1,0 +1,10 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "CheckedAt": "2026-08-27T08:50:44.516Z",
+  "Scope": "AT_20260827_02_",
+  "ResidualCount": 1,
+  "UserFixtureResidualCount": 0,
+  "RetainedTestOwnedFixtureCount": 1,
+  "Verification": "PASS",
+  "Note": "Exact test-owned user fixture was deleted and verified absent. The recreated TEST_OWNED DummyCar is intentionally retained for operator continuation after initialization was disabled by confirmed product Bug; no Golden Path business task or template was created and no existing unknown process was changed."
+}

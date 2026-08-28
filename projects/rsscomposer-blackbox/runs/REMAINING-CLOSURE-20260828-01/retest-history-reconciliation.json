@@ -1,0 +1,38 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "SourceRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Rows": [
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "OriginalStatus": "FAIL",
+      "OriginalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+      "CurrentStatus": "FAIL",
+      "RetestStatus": "NOT_REQUIRED",
+      "HistoryPreserved": true
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "OriginalStatus": "FAIL",
+      "OriginalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+      "CurrentStatus": "FAIL",
+      "RetestStatus": "NOT_REQUIRED",
+      "HistoryPreserved": true
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "OriginalStatus": "FAIL",
+      "OriginalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+      "CurrentStatus": "FAIL",
+      "RetestStatus": "NOT_REQUIRED",
+      "HistoryPreserved": true
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "OriginalStatus": "ERROR",
+      "OriginalRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+      "CurrentStatus": "ERROR",
+      "RetestStatus": "NOT_REQUIRED",
+      "HistoryPreserved": true
+    }
+  ]
+}

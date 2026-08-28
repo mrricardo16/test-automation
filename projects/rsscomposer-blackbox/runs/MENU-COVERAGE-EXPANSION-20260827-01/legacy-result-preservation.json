@@ -1,0 +1,416 @@
+{
+  "RunId": "MENU-COVERAGE-EXPANSION-20260827-01",
+  "LegacyCount": 82,
+  "Rows": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "PriorExecutionStatus": "FAIL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "PriorExecutionStatus": "ERROR",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "PriorExecutionStatus": "PASS",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "PriorExecutionStatus": "FAIL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "PriorExecutionStatus": "FAIL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "PriorExecutionStatus": "MANUAL",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "PriorExecutionStatus": "BLOCKED",
+      "PreservedInExpandedCatalog": true
+    }
+  ]
+}

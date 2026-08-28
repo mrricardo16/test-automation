@@ -1,0 +1,13 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "TypeScriptStatus": "LIMITED",
+  "Classification": "INFRASTRUCTURE_VALIDATION_LIMITATION",
+  "MissingFile": "scripts/platform/harness-authority.mjs",
+  "TypeScriptErrors": [
+    "TS2307 missing harness-authority.mjs",
+    "TS7006 implicit any at platform-contract-validator.spec.ts:492,521,554"
+  ],
+  "ProductTestImpact": "NONE_FOR_VALID_EXISTING_RESULTS",
+  "ProductSourceModified": false,
+  "SecretLeakCount": 0
+}

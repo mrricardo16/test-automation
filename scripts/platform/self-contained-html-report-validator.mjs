@@ -14,6 +14,7 @@ function markdownSemanticRows(markdownPath) {
 
 export function validateSelfContainedHtmlReport({ htmlPath, markdownPath } = {}) {
   const html = fs.readFileSync(htmlPath, 'utf8');
+  const css = html.match(/<style>([^]*?)<\/style>/i)?.[1] ?? '';
   const hasMarkdown = Boolean(markdownPath && fs.existsSync(markdownPath));
   const markdown = hasMarkdown ? fs.readFileSync(markdownPath, 'utf8') : '';
   const markdownImageReferenceCount = [...markdown.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].length;
@@ -38,17 +39,54 @@ export function validateSelfContainedHtmlReport({ htmlPath, markdownPath } = {})
   const embeddedImageBytes = [...html.matchAll(/<img\b[^>]*\bsrc="data:image\/(?:png|jpeg|gif|webp);base64,([^"]+)"/gi)].reduce((sum, match) => sum + Buffer.from(match[1], 'base64').length, 0);
   const mainTableCount = count(html, /<table\b[^>]*class="testcase-table"/g);
   const nineColumnMainTableCount = [...html.matchAll(/<table\b[^>]*class="testcase-table"[\s\S]*?<\/thead>/g)].filter((match) => count(match[0], /<th>/g) === 9).length;
+  const headerWrappingStylePresent = /thead\s+th[\s\S]*?white-space:\s*nowrap[\s\S]*?word-break:\s*keep-all[\s\S]*?overflow-wrap:\s*normal/i.test(css);
+  const testCaseIdWrappingStylePresent = /\.testcase-table\s+td:nth-child\(2\)[\s\S]*?white-space:\s*nowrap[\s\S]*?word-break:\s*keep-all[\s\S]*?overflow-wrap:\s*normal/i.test(css);
+  const statusWrappingStylePresent = /\.testcase-table\s+td:nth-child\(7\)[\s\S]*?white-space:\s*nowrap[\s\S]*?word-break:\s*keep-all[\s\S]*?overflow-wrap:\s*normal/i.test(css);
+  const shortTokenWrappingStylePresent = /\.short-token[\s\S]*?white-space:\s*nowrap\s*!important[\s\S]*?word-break:\s*keep-all\s*!important[\s\S]*?overflow-wrap:\s*normal\s*!important/i.test(css);
+  const adaptiveSemanticStepStylePresent = /\.step-line[\s\S]*?display:\s*block[\s\S]*?white-space:\s*normal[\s\S]*?word-break:\s*normal[\s\S]*?overflow-wrap:\s*normal/i.test(css) && /\.step-list\s+\.cleanup-line[\s\S]*?display:\s*block/i.test(css);
+  const brokenWordSuspectCount = /word-break:\s*break-all|overflow-wrap:\s*anywhere/i.test(css) ? rows.length : 0;
+  const semanticStepSingleLineOverflowCount = adaptiveSemanticStepStylePresent ? 0 : count(html, /class="step-list"[^>]*>(?:(?!class="cleanup-line")[^])*class="step-line"/gi);
+  const rowStyleBlocks = css.match(/(?:tr|td)\s*\{[^}]*\}/gi) ?? [];
+  const oversizedRowCount = rowStyleBlocks.some((block) => /(?:^|[^\w-])(?:height|min-height)\s*:/i.test(block)) ? rows.length : 0;
+  const renderedMarkup = html.replace(/\sdata-[\w-]+="[^"]*"/gi, '');
+  const lineRecords = [...html.matchAll(/<div\s+class="([^"]*\bcell-line\b[^"]*)"\s+data-visible-char-count="(\d+)"(?:\s+data-protected-token="true")?[^>]*>/gi)].map((match) => ({ classes: match[1], length: Number(match[2]), protected: /data-protected-token="true"/i.test(match[0]) }));
+  const hardWrappedCellCount = [...html.matchAll(/<td>([\s\S]*?)<\/td>/gi)].filter((match) => (match[1].match(/\bcell-line\b/g) ?? []).length > 1).length;
+  const maxObservedVisualLineLength = lineRecords.reduce((max, item) => Math.max(max, item.length), 0);
+  const visualLinesOver15Count = lineRecords.filter((item) => item.length > 15 && !item.protected).length;
+  const protectedTokenExceptionCount = lineRecords.filter((item) => item.length > 15 && item.protected).length;
+  const visibleBrTagCount = count(renderedMarkup, /<br\s*\/?\s*>|&lt;br\b|&amp;lt;br\b/gi);
+  const visibleNewlineEntityCount = count(renderedMarkup, /(?:&amp;)?#10;/gi);
+  const headerWrappedCount = count(renderedMarkup, /<th[^>]*>[\s\S]*?(?:<br\s*\/?\s*>|&lt;br\b|&amp;lt;br\b)[\s\S]*?<\/th>/gi);
+  const testCaseIdWrappedCount = count(renderedMarkup, /class="testcase-id[^"]*"[^>]*>[\s\S]*?(?:<br\s*\/?\s*>|&lt;br\b|&amp;lt;br\b)[\s\S]*?<\/span>/gi);
+  const statusWrappedCount = count(renderedMarkup, /class="status-token[^"]*"[^>]*>[\s\S]*?(?:<br\s*\/?\s*>|&lt;br\b|&amp;lt;br\b)[\s\S]*?<\/span>/gi);
+  const layoutMetrics = {
+    HeaderWrappedCount: headerWrappedCount + (headerWrappingStylePresent ? 0 : 1),
+    TestCaseIdWrappedCount: testCaseIdWrappedCount + (testCaseIdWrappingStylePresent ? 0 : 1),
+    StatusWrappedCount: statusWrappedCount + (statusWrappingStylePresent ? 0 : 1),
+    ShortTokenWrappedCount: shortTokenWrappingStylePresent ? 0 : 1,
+    BrokenWordSuspectCount: brokenWordSuspectCount,
+    SemanticStepSingleLineOverflowCount: semanticStepSingleLineOverflowCount,
+    OversizedRowCount: oversizedRowCount,
+    VisibleBrTagCount: visibleBrTagCount,
+    VisibleNewlineEntityCount: visibleNewlineEntityCount,
+    HardWrappedCellCount: hardWrappedCellCount,
+    MaxObservedVisualLineLength: maxObservedVisualLineLength,
+    VisualLinesOver15Count: visualLinesOver15Count,
+    ProtectedTokenExceptionCount: protectedTokenExceptionCount,
+  };
   const result = {
     HtmlPath: path.resolve(htmlPath), Status: 'FAIL', SourceMarkdownBytes: hasMarkdown ? Buffer.byteLength(markdown) : null, FinalHtmlBytes: Buffer.byteLength(html), MarkdownImageReferenceCount: markdownImageReferenceCount, ResolvedImageCount: embeddedImageCount, EmbeddedImageCount: embeddedImageCount, EmbeddedImageBytes: embeddedImageBytes, MissingImageCount: missingImageCount, BrokenImageCount: missingImageCount,
     ExternalStylesheetCount: externalStylesheetCount, ExternalScriptCount: externalScriptCount, ExternalImageCount: externalImageCount, ExternalFontCount: externalFontCount, RemoteResourceCount: remoteResourceCount,
     EmbeddedStylePresent: /<style>[^]*<\/style>/i.test(html), EmbeddedScriptPresent: /<script>(?!\s*<\/script>)[^]*<\/script>/i.test(html),
-    MainTestCaseTableCount: mainTableCount, NineColumnMainTableCount: nineColumnMainTableCount, LocalHorizontalScroll: /\.testcase-table-scroll\s*\{[^}]*overflow-x\s*:\s*auto/i.test(html), PageLevelHorizontalScroll: !/html\s*,\s*body\s*\{[^}]*overflow-x\s*:\s*hidden/i.test(html), StickyHeader: /thead\s+th\s*\{[^}]*position\s*:\s*sticky/i.test(html), ImageLightbox: /id="image-lightbox"/.test(html) && /event\.key === 'Escape'/.test(html), AnchorNavigation: /class="report-toc"/.test(html) && /href="#/.test(html),
+    MainTestCaseTableCount: mainTableCount, NineColumnMainTableCount: nineColumnMainTableCount, LocalHorizontalScroll: /\.testcase-table-scroll\s*\{[^}]*overflow-x\s*:\s*auto/i.test(css), PageLevelHorizontalScroll: !/html\s*,\s*body\s*\{[^}]*overflow-x\s*:\s*hidden/i.test(css), StickyHeader: /thead\s+th\s*,?[\s\S]*?position\s*:\s*sticky/i.test(css), ImageLightbox: /id="image-lightbox"/.test(html) && /event\.key === 'Escape'/.test(html), AnchorNavigation: /class="report-toc"/.test(html) && /href="#/.test(html),
     TestCaseSemanticChanges: caseIdChanges + scenarioChanges + expectedChanges + executionChanges + expectationGapChanges, TestCaseIdChanges: caseIdChanges, ScenarioChanges: scenarioChanges, ExpectedSemanticChanges: expectedChanges, ExecutionStatusChanges: executionChanges, ExpectationGapChanges: expectationGapChanges,
+    HeaderWrappedCount: layoutMetrics.HeaderWrappedCount, TestCaseIdWrappedCount: layoutMetrics.TestCaseIdWrappedCount, StatusWrappedCount: layoutMetrics.StatusWrappedCount, ShortTokenWrappedCount: layoutMetrics.ShortTokenWrappedCount, BrokenWordSuspectCount: layoutMetrics.BrokenWordSuspectCount, SemanticStepSingleLineOverflowCount: layoutMetrics.SemanticStepSingleLineOverflowCount, OversizedRowCount: layoutMetrics.OversizedRowCount, VisibleBrTagCount: layoutMetrics.VisibleBrTagCount, VisibleNewlineEntityCount: layoutMetrics.VisibleNewlineEntityCount, HardWrappedCellCount: layoutMetrics.HardWrappedCellCount, MaxObservedVisualLineLength: layoutMetrics.MaxObservedVisualLineLength, VisualLinesOver15Count: layoutMetrics.VisualLinesOver15Count, ProtectedTokenExceptionCount: layoutMetrics.ProtectedTokenExceptionCount,
   };
+  result.LayoutMetrics = layoutMetrics;
   result.PortableSingleFile = result.ExternalStylesheetCount === 0 && result.ExternalScriptCount === 0 && result.ExternalImageCount === 0 && result.ExternalFontCount === 0 && result.RemoteResourceCount === 0;
   result.OfflineOpenSupported = result.PortableSingleFile && result.EmbeddedStylePresent && result.EmbeddedScriptPresent;
   result.ImageStatus = missingImageCount > 0 ? 'LIMITED' : 'PASS';
-  const requirements = [result.PortableSingleFile, result.OfflineOpenSupported, result.MainTestCaseTableCount > 0, result.NineColumnMainTableCount === result.MainTestCaseTableCount, result.LocalHorizontalScroll, !result.PageLevelHorizontalScroll, result.StickyHeader, result.ImageLightbox, result.AnchorNavigation, result.TestCaseSemanticChanges === 0];
+  const requirements = [result.PortableSingleFile, result.OfflineOpenSupported, result.MainTestCaseTableCount > 0, result.NineColumnMainTableCount === result.MainTestCaseTableCount, result.LocalHorizontalScroll, !result.PageLevelHorizontalScroll, result.StickyHeader, result.ImageLightbox, result.AnchorNavigation, result.TestCaseSemanticChanges === 0, result.HardWrappedCellCount > 0, result.VisualLinesOver15Count === 0, result.HeaderWrappedCount === 0, result.TestCaseIdWrappedCount === 0, result.StatusWrappedCount === 0, result.OversizedRowCount === 0, result.VisibleBrTagCount === 0, result.VisibleNewlineEntityCount === 0];
   result.Status = requirements.every(Boolean) ? 'PASS' : 'FAIL';
   return result;
 }

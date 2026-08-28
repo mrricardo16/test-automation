@@ -1,0 +1,1201 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "Rows": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0/fixture-cleanup-verified.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-002/20260827-083756Z-pid41288-w0-r0/duplicate-rejected.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-003/20260827-083808Z-pid41288-w0-r0/short-password-rejected.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-004/20260827-083816Z-pid41288-w0-r0/empty-username-rejected.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-005/20260827-083822Z-pid41288-w0-r0/empty-display-name-rejected.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-URB-BIND-001/20260827-083946Z-pid1616-w1-r0/user-role-bind-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-001/20260828-061958Z-pid34096-w0-r0/task-new-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-001/20260828-061825Z-pid33684-w0-r0/task-new-001.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-002/20260828-062002Z-pid34096-w0-r0/task-new-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-002/20260828-061832Z-pid33684-w0-r0/task-new-002.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-003/20260828-062006Z-pid34096-w0-r0/task-new-003.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-003/20260828-061836Z-pid33684-w0-r0/task-new-003.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-004/20260828-062010Z-pid34096-w0-r0/task-new-004.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-004/20260828-061841Z-pid33684-w0-r0/task-new-004.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-005/20260828-062014Z-pid34096-w0-r0/task-new-005.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-005/20260828-061845Z-pid33684-w0-r0/task-new-005.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-001/20260828-062018Z-pid34096-w0-r0/task-cancel-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-001/20260828-061848Z-pid33684-w0-r0/task-cancel-001.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-002/20260828-062022Z-pid34096-w0-r0/task-cancel-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-002/20260828-061852Z-pid33684-w0-r0/task-cancel-002.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-001/20260828-062026Z-pid34096-w0-r0/task-resend-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-001/20260828-061856Z-pid33684-w0-r0/task-resend-001.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-002/20260828-062030Z-pid34096-w0-r0/task-resend-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-002/20260828-061900Z-pid33684-w0-r0/task-resend-002.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-001/20260828-062038Z-pid34096-w0-r0/vehicle-create-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-001/20260828-061908Z-pid33684-w0-r0/vehicle-create-001.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-002/20260828-062043Z-pid34096-w0-r0/vehicle-create-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-002/20260828-061913Z-pid33684-w0-r0/vehicle-create-002.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-003/20260828-062046Z-pid34096-w0-r0/vehicle-create-003.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-003/20260828-061917Z-pid33684-w0-r0/vehicle-create-003.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-LOG-DOWNLOAD-001/20260828-062054Z-pid34096-w0-r0/log-download-page.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-LOG-DOWNLOAD-001/20260828-061924Z-pid33684-w0-r0/log-download-page.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-001/20260828-054559Z-pid32528-w0-r0/tc-stat-query-001-runtime-observation.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-002/20260828-054605Z-pid32528-w0-r0/tc-stat-query-002-runtime-observation.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-001/20260827-083830Z-pid41288-w0-r0/default-query-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-002/20260827-083837Z-pid41288-w0-r0/unmatched-user-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "CurrentFinalStatus": "FAIL",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-RESET-001/20260827-083845Z-pid41288-w0-r0/filtered-user-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-PAGE-001/20260827-084013Z-pid1616-w1-r0/user-pagination-page-two.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-UPDATE-001/20260827-083856Z-pid1616-w1-r0/user-update-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-DELETE-001/20260827-083910Z-pid1616-w1-r0/user-delete-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-003/20260827-083920Z-pid1616-w1-r0/deleted-user-query-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-QUERY-001/20260827-083938Z-pid1616-w1-r0/role-query-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-CREATE-001/20260827-083929Z-pid1616-w1-r0/role-create-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-001/20260827-084049Z-pid1616-w1-r0/task-query-default.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-002/20260827-084054Z-pid1616-w1-r0/unmatched-task-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-PAGE-001/20260827-084100Z-pid1616-w1-r0/task-pagination-precondition-missing.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-001/20260827-084002Z-pid1616-w1-r0/vehicle-query-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-002/20260827-084007Z-pid1616-w1-r0/unmatched-vehicle-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-060606Z-pid25632-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-055712Z-pid304-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-054649Z-pid32528-w0-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-060808Z-pid27896-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-055913Z-pid23152-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-054851Z-pid27948-w1-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-061012Z-pid33168-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-060115Z-pid33560-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-055053Z-pid34380-w2-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-061216Z-pid16616-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-060317Z-pid28548-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-055255Z-pid34508-w3-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-UPDATE-001/20260827-084108Z-pid42108-w2-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "CurrentFinalStatus": "ERROR",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-061419Z-pid29228-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-060518Z-pid17584-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-055457Z-pid32112-w4-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-DELETE-001/20260828-062050Z-pid34096-w0-r0/vehicle-delete-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-DELETE-001/20260828-061920Z-pid33684-w0-r0/vehicle-delete-001.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-003/20260827-084243Z-pid10680-w3-r0/statistics-default.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-004/20260827-084248Z-pid10680-w3-r0/statistics-month-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "CurrentFinalStatus": "FAIL",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-RESET-001/20260827-084253Z-pid10680-w3-r0/statistics-reset-control-missing.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "CurrentFinalStatus": "FAIL",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-PAGE-001/20260827-084300Z-pid42048-w4-r0/statistics-pagination-missing.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-005/20260828-054609Z-pid32528-w0-r0/tc-stat-query-005-runtime-observation.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-001/20260828-054614Z-pid32528-w0-r0/statistics-range-boundary.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-002/20260828-054619Z-pid32528-w0-r0/statistics-missing-time.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-003/20260828-054623Z-pid32528-w0-r0/statistics-out-of-range.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-004/20260828-054628Z-pid32528-w0-r0/statistics-invalid-format.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-007/20260828-054632Z-pid32528-w0-r0/tc-user-create-007-boundary-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-008/20260828-054637Z-pid32528-w0-r0/tc-user-create-008-boundary-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-009/20260828-054643Z-pid32528-w0-r0/tc-user-create-009-boundary-result.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TFLOW-COMPOSITE-008/20260828-062034Z-pid34096-w0-r0/task-flow-008.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TFLOW-COMPOSITE-008/20260828-061904Z-pid33684-w0-r0/task-flow-008.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-VEH-STATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-VEH-STATE-001/20260827-101034Z-pid42068-w0-r0/vehicle-state-safe-observation.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-DRAW-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-LOG-QUERY-001/20260827-101214Z-pid11376-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-DRAW-PAGE-001/20260827-101606Z-pid42844-w0-r0/drawing-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-DRAW-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-LOG-QUERY-001/20260827-101214Z-pid11376-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-DRAW-QUERY-001/20260827-101611Z-pid42844-w0-r0/drawing-library-read-only.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "CurrentFinalStatus": "MANUAL_REVIEW_PENDING",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-DRAW-VISUAL-001/20260828-062058Z-pid34096-w0-r0/drawing-visual-page.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-DRAW-VISUAL-001/20260828-061929Z-pid33684-w0-r0/drawing-visual-page.png"
+      ],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-STRAT-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-STRAT-PAGE-001/20260827-101123Z-pid11376-w2-r0/strategy-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STRAT-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-STRAT-QUERY-001/20260827-101128Z-pid11376-w2-r0/strategy-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-CREATE-001/20260828-032443Z-pid32668-w0-r0/strategy-created.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-UPDATE-001/20260828-032507Z-pid32668-w0-r0/strategy-updated.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-DELETE-001/20260828-032517Z-pid32668-w0-r0/strategy-deleted.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-PROC-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-PROC-PAGE-001/20260827-101132Z-pid11376-w2-r0/process-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-PROC-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-PROC-QUERY-001/20260827-101137Z-pid11376-w2-r0/process-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-PROC-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041947Z-pid33960-w0-r0/process-create-result.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041927Z-pid16240-w0-r0/process-create-result.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041649Z-pid34164-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041449Z-pid20212-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-041117Z-pid32792-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-032525Z-pid32668-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-CREATE-001/20260828-024118Z-pid28772-w3-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-PROC-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-UPDATE-001/20260828-032728Z-pid29784-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-UPDATE-001/20260828-024151Z-pid22776-w4-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-PROC-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-DELETE-001/20260828-042001Z-pid33960-w0-r0/process-delete-result.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-DELETE-001/20260828-032931Z-pid29812-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-DELETE-001/20260828-024224Z-pid23044-w5-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-PROC-STATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-STATE-001/20260828-042008Z-pid33960-w0-r0/process-state-observed.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-STATE-001/20260828-033132Z-pid24464-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-STATE-001/20260828-024258Z-pid2348-w6-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-PROC-RELATION-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-044714Z-pid33664-w0-r0/process-relation-editor.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-043354Z-pid29832-w0-r0/process-relation-editor.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-042015Z-pid33960-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-042015Z-pid33960-w0-r0/process-relation-editor.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-033336Z-pid29472-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-PROC-RELATION-001/20260828-024331Z-pid21320-w7-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-MAINT-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-MAINT-PAGE-001/20260827-101142Z-pid11376-w2-r0/maintenance-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-MAINT-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-MAINT-QUERY-001/20260827-101147Z-pid11376-w2-r0/maintenance-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-MAINT-CREATE-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-TTEMP-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-TTEMP-PAGE-001/20260827-101153Z-pid11376-w2-r0/template-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TTEMP-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-TTEMP-QUERY-001/20260827-101158Z-pid11376-w2-r0/template-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TTEMP-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-CREATE-001/20260828-042218Z-pid22652-w1-r0/template-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-CREATE-001/20260828-033537Z-pid30436-w5-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-CREATE-001/20260828-024405Z-pid16992-w8-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TTEMP-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-UPDATE-001/20260828-042227Z-pid22652-w1-r0/template-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-UPDATE-001/20260828-033739Z-pid31164-w6-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-UPDATE-001/20260828-024437Z-pid21296-w9-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TTEMP-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-042236Z-pid22652-w1-r0/template-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-042236Z-pid22652-w1-r0/template-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-033941Z-pid13636-w7-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-DELETE-001/20260828-024508Z-pid10576-w10-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TTEMP-RELATION-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-RELATION-001/20260828-042243Z-pid22652-w1-r0/template-relation-detail.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-RELATION-001/20260828-034142Z-pid29624-w8-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TTEMP-RELATION-001/20260828-024540Z-pid5012-w11-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TITEM-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-TITEM-PAGE-001/20260827-101204Z-pid11376-w2-r0/template-item-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TITEM-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-TITEM-QUERY-001/20260827-101209Z-pid11376-w2-r0/template-item-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TITEM-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-CREATE-001/20260828-042251Z-pid22652-w1-r0/template-item-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-CREATE-001/20260828-034344Z-pid19492-w9-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-CREATE-001/20260828-024612Z-pid17284-w12-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TITEM-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-UPDATE-001/20260828-042300Z-pid22652-w1-r0/template-item-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-UPDATE-001/20260828-034546Z-pid25700-w10-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-UPDATE-001/20260828-024630Z-pid18616-w13-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-TITEM-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-042309Z-pid22652-w1-r0/template-item-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-042309Z-pid22652-w1-r0/template-item-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-034747Z-pid2348-w11-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-TITEM-DELETE-001/20260828-024648Z-pid30836-w14-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-LOG-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-LOG-QUERY-001/20260827-101214Z-pid11376-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-LOG-QUERY-001/20260827-101625Z-pid38004-w0-r0/log-file-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-OLOG-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-OLOG-PAGE-001/20260827-101236Z-pid41288-w3-r0/operation-log-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-OLOG-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-OLOG-QUERY-001/20260827-101241Z-pid41288-w3-r0/operation-log-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ELOG-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-ELOG-PAGE-001/20260827-101247Z-pid41288-w3-r0/exception-log-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ELOG-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-ELOG-QUERY-001/20260827-101252Z-pid41288-w3-r0/exception-log-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ILOG-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-ILOG-PAGE-001/20260827-101257Z-pid41288-w3-r0/interaction-log-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ILOG-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-ILOG-QUERY-001/20260827-101302Z-pid41288-w3-r0/interaction-log-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ENER-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-ENER-PAGE-001/20260827-101307Z-pid41288-w3-r0/energy-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ENER-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-ENER-QUERY-001/20260827-101312Z-pid41288-w3-r0/energy-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-UPDATE-001/20260828-042316Z-pid22652-w1-r0/role-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-UPDATE-001/20260828-034950Z-pid17232-w12-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-UPDATE-001/20260828-024707Z-pid18868-w15-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-042324Z-pid22652-w1-r0/role-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-042324Z-pid22652-w1-r0/role-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-035152Z-pid30252-w13-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-DELETE-001/20260828-024739Z-pid9428-w16-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-ROLE-RELATION-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-044648Z-pid3296-w0-r0/role-user-relation.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-044615Z-pid31464-w0-r0/role-user-relation.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-044250Z-pid33904-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-043918Z-pid33292-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-043402Z-pid29832-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-042330Z-pid22652-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-035355Z-pid32336-w14-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-ROLE-RELATION-001/20260828-024811Z-pid29720-w17-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-MENU-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-MENU-PAGE-001/20260827-101317Z-pid41288-w3-r0/menu-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-MENU-CREATE-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-MENU-UPDATE-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-MENU-DELETE-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    },
+    {
+      "TestCaseId": "TC-DICT-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-DICT-PAGE-001/20260827-101322Z-pid41288-w3-r0/dictionary-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-DICT-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-CREATE-001/20260828-042543Z-pid3356-w2-r0/dictionary-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-CREATE-001/20260828-035558Z-pid32508-w15-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-CREATE-001/20260828-024843Z-pid7544-w18-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-DICT-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-UPDATE-001/20260828-042553Z-pid3356-w2-r0/dictionary-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-UPDATE-001/20260828-035802Z-pid32208-w16-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-UPDATE-001/20260828-024917Z-pid26592-w19-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-DICT-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-042601Z-pid3356-w2-r0/dictionary-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-042601Z-pid3356-w2-r0/dictionary-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-040005Z-pid29980-w17-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-DICT-DELETE-001/20260828-024950Z-pid17616-w20-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-EXT-PAGE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-EXT-PAGE-001/20260827-101327Z-pid41288-w3-r0/external-page.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-EXT-QUERY-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC-EXT-QUERY-001/20260827-101332Z-pid41288-w3-r0/external-query.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-EXT-CREATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-CREATE-001/20260828-042609Z-pid3356-w2-r0/external-created.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-CREATE-001/20260828-040208Z-pid32352-w18-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-CREATE-001/20260828-025022Z-pid31580-w21-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-EXT-UPDATE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-UPDATE-001/20260828-042616Z-pid3356-w2-r0/external-updated.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-UPDATE-001/20260828-040411Z-pid19672-w19-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-UPDATE-001/20260828-025039Z-pid27456-w22-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-EXT-DELETE-001",
+      "CurrentFinalStatus": "PASS",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-042625Z-pid3356-w2-r0/external-before-delete.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-042625Z-pid3356-w2-r0/external-deleted.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-040614Z-pid892-w20-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-EXT-DELETE-001/20260828-025056Z-pid20536-w23-r0/failure.png"
+      ],
+      "EvidenceRequired": true
+    },
+    {
+      "TestCaseId": "TC-EXT-INTEGRATION-001",
+      "CurrentFinalStatus": "BLOCKED_BEFORE_EXECUTION",
+      "EvidenceRefs": [],
+      "EvidenceRequired": false
+    }
+  ],
+  "PreviousRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Resolution": "Existing artifact files only; stale directory/file references resolved by basename within project runs.",
+  "NormalizedAt": "2026-08-28T07:45:25.005Z"
+}

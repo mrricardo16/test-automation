@@ -1,0 +1,100 @@
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { chromium } from "playwright";
+
+const baseUrl = (process.env.WEB_TEST_BASE_URL ?? "http://localhost:8223").replace(/\/$/, "");
+const username = process.env.WEB_TEST_USERNAME;
+const password = process.env.WEB_TEST_PASSWORD;
+const runId = process.env.FORMAL_RUN_ID ?? "SOURCE-ASSISTED-FORMAL-20260827-02";
+const mapCode = process.env.TEST_MAP_CODE ?? "AT_0827_02_MAP";
+const processCode = "taskstatemission";
+const processName = "状态反馈进程";
+const processId = "1144667";
+const outputRoot = path.resolve(process.env.PROCESS_EVIDENCE_ROOT ?? `projects/rsscomposer-blackbox/runs/${runId}/artifacts/process/current-formal-map`);
+if (!username || !password) throw new Error("BLOCKED: administrator credentials are missing");
+
+const evidence = { RunId: runId, MapCode: mapCode, ProcessId: processId, ProcessCode: processCode, ProcessName: processName, Status: "BLOCKED", Operation: "FORMAL_UI_ENABLE_AND_REFRESH_FEEDBACK_PROCESS" };
+const sanitizeMessage = (value) => typeof value === "string" ? value.replace(/(token|password|authorization|secret)\s*[:=]\s*[^\s,;]+/gi, "$1=REDACTED").slice(0, 240) : null;
+const safeData = (value) => {
+  if (!value || typeof value !== "object") return value ?? null;
+  if (Array.isArray(value)) return value.map((item) => item && typeof item === "object" ? Object.fromEntries(Object.entries(item).filter(([key]) => !/token|password|authorization|secret|cookie/i.test(key))) : item);
+  return Object.fromEntries(Object.entries(value).filter(([key]) => !/token|password|authorization|secret|cookie/i.test(key)));
+};
+const parseResponse = async (response) => {
+  const body = await response.json().catch(() => ({}));
+  return { httpStatus: response.status(), statusCode: body?.statusCode ?? body?.code ?? null, isSuccess: body?.isSuccess ?? null, message: sanitizeMessage(body?.message), data: safeData(body?.data) };
+};
+const normalizeRows = async () => page.getByRole("row").evaluateAll((rows) => rows.map((row) => ({ text: row.innerText.replace(/\s+/g, " ").trim(), cells: Array.from(row.querySelectorAll("td")).map((cell) => cell.innerText.replace(/\s+/g, " ").trim()) })).filter((row) => row.text));
+
+const browser = await chromium.launch({ headless: false });
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+try {
+  await page.goto(`${baseUrl}/#/login?redirect=/dashboard`, { waitUntil: "domcontentloaded" });
+  await page.getByPlaceholder("用户名").fill(username);
+  await page.getByPlaceholder("用户密码").fill(password);
+  const loginResponsePromise = page.waitForResponse((response) => response.request().method() === "POST" && response.url().includes("/Account/Login"), { timeout: 30_000 });
+  await page.getByRole("button").filter({ hasText: "录" }).click();
+  evidence.Login = await parseResponse(await loginResponsePromise);
+  await page.waitForURL("**/#/dashboard", { timeout: 30_000 });
+  const scene = page.getByRole("menuitem", { name: "场景管理", exact: true }).first();
+  if ((await scene.getAttribute("aria-expanded")) !== "true") await scene.click();
+  await page.getByRole("link", { name: "进程管理", exact: true }).click();
+  await page.waitForURL("**/#/Sys/MissionManage", { timeout: 30_000 });
+  const mapFilter = page.locator(".MissionManage .el-select").first();
+  await mapFilter.click();
+  await page.getByRole("option", { name: `${mapCode} - ${mapCode}`, exact: true }).click();
+  const beforeQueryPromise = page.waitForResponse((response) => response.request().method() === "POST" && response.url().includes("/Mission/GetPageMissionList"), { timeout: 30_000 }).catch(() => null);
+  await page.getByRole("button", { name: "搜索", exact: true }).click();
+  const beforeQuery = await beforeQueryPromise;
+  evidence.BeforeQuery = { response: beforeQuery ? await parseResponse(beforeQuery) : null, rows: await normalizeRows() };
+  const target = page.getByRole("row").filter({ hasText: processCode }).filter({ hasText: processName }).first();
+  await target.waitFor({ state: "visible", timeout: 30_000 });
+  evidence.RowBefore = (await target.innerText()).replace(/\s+/g, " ").trim();
+  await target.click();
+  const modify = page.getByRole("button", { name: "修改", exact: true });
+  await modify.click();
+  const dialog = page.getByRole("dialog").last();
+  const switchInput = dialog.locator('input[role="switch"]');
+  const switchElement = dialog.locator(".el-switch").first();
+  await switchElement.waitFor({ state: "visible", timeout: 30_000 });
+  evidence.AutoStartBefore = await switchInput.getAttribute("aria-checked");
+  if (evidence.AutoStartBefore !== "true") await switchElement.click();
+  evidence.AutoStartAfter = await switchInput.getAttribute("aria-checked");
+  if (evidence.AutoStartAfter !== "true") throw new Error("BLOCKED: feedback process auto-start switch did not become enabled");
+  const updateResponsePromise = page.waitForResponse((response) => response.request().method() === "POST" && response.url().includes("/Mission/UpdateMission"), { timeout: 30_000 });
+  await dialog.getByRole("button", { name: "确定", exact: true }).click();
+  evidence.UpdateResponse = await parseResponse(await updateResponsePromise);
+  if (evidence.UpdateResponse.isSuccess !== true) throw new Error(`BLOCKED: feedback process update rejected: ${evidence.UpdateResponse.message ?? "unknown response"}`);
+  const refreshResponsePromise = page.waitForResponse((response) => response.url().includes("/ctrl/RefreshMap"), { timeout: 60_000 });
+  await page.getByRole("button", { name: "刷新地图", exact: true }).click();
+  const refreshDialog = page.getByRole("dialog").last();
+  await refreshDialog.getByRole("button", { name: "确定", exact: true }).click();
+  evidence.RefreshMapResponse = await parseResponse(await refreshResponsePromise);
+  const afterQueryPromise = page.waitForResponse((response) => response.request().method() === "POST" && response.url().includes("/Mission/GetPageMissionList"), { timeout: 30_000 }).catch(() => null);
+  await page.getByRole("button", { name: "搜索", exact: true }).click();
+  const afterQuery = await afterQueryPromise;
+  evidence.AfterQuery = { response: afterQuery ? await parseResponse(afterQuery) : null, rows: await normalizeRows() };
+  const statusResponsePromise = page.waitForResponse((response) => response.request().method() === "GET" && response.url().includes("/Mission/GetMissionRunningStatus"), { timeout: 30_000 }).catch(() => null);
+  await page.getByRole("button", { name: "刷新状态", exact: true }).click();
+  const statusResponse = await statusResponsePromise;
+  evidence.RunningStatusResponse = statusResponse ? await parseResponse(statusResponse) : null;
+  evidence.FinalRows = await normalizeRows();
+  const finalRow = evidence.FinalRows.find((row) => row.text.includes(processCode) && row.text.includes(processName));
+  evidence.FinalRow = finalRow ?? null;
+  evidence.AutoStartEnabled = finalRow?.text.includes("是") === true;
+  evidence.Running = finalRow?.text.includes("运行中") === true;
+  evidence.Status = evidence.Running ? "PASS" : "BLOCKED";
+  evidence.BlockReason = evidence.Running ? null : "Feedback process exists and auto-start update succeeded, but refreshed runtime state is not running";
+  await mkdir(outputRoot, { recursive: true });
+  await page.screenshot({ path: path.join(outputRoot, "feedback-process-after-enable.png"), fullPage: true });
+  await writeFile(path.join(outputRoot, "feedback-process-start.json"), `${JSON.stringify(evidence, null, 2)}\n`, "utf8");
+  console.log(JSON.stringify({ status: evidence.Status, mapCode, processId, autoStartEnabled: evidence.AutoStartEnabled, running: evidence.Running }));
+} catch (error) {
+  evidence.Status = String(error?.message ?? error).startsWith("BLOCKED:") ? "BLOCKED" : "ERROR";
+  evidence.Error = sanitizeMessage(String(error?.message ?? error));
+  await mkdir(outputRoot, { recursive: true });
+  await writeFile(path.join(outputRoot, "feedback-process-start-error.json"), `${JSON.stringify(evidence, null, 2)}\n`, "utf8");
+  throw error;
+} finally {
+  await browser.close();
+}

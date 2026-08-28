@@ -1,0 +1,491 @@
+{
+  "RunId": "MENU-COVERAGE-EXPANSION-20260827-01",
+  "Scope": "NEW_CASES_ONLY",
+  "FormalTestExecutionStarted": true,
+  "ResultSources": [
+    "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+    "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright-TC_DRAW_TC_LOG_QUERY.json",
+    "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright-TC_DRAW.json",
+    "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright-TC_LOG_QUERY.json"
+  ],
+  "AddedCaseCount": 56,
+  "ResultCount": 56,
+  "Counts": {
+    "MANUAL": 1,
+    "PASS": 26,
+    "SKIPPED": 29
+  },
+  "Rows": [
+    {
+      "TestCaseId": "TC-VEH-STATE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5126,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101034Z-pid42068-w0-r0/vehicle-state-safe-observation.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright-TC_DRAW.json",
+      "DurationMs": 4990,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101039Z-pid42068-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101606Z-pid42844-w0-r0/drawing-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright-TC_DRAW.json",
+      "DurationMs": 5554,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101101Z-pid26832-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101611Z-pid42844-w0-r0/drawing-library-read-only.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-STRAT-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4726,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101123Z-pid11376-w2-r0/strategy-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-STRAT-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4644,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101128Z-pid11376-w2-r0/strategy-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-PROC-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4550,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101132Z-pid11376-w2-r0/process-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-PROC-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5424,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101137Z-pid11376-w2-r0/process-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-MAINT-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5023,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101142Z-pid11376-w2-r0/maintenance-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-MAINT-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5836,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101147Z-pid11376-w2-r0/maintenance-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4945,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101153Z-pid11376-w2-r0/template-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5447,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101158Z-pid11376-w2-r0/template-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-TITEM-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4953,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101204Z-pid11376-w2-r0/template-item-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-TITEM-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4981,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101209Z-pid11376-w2-r0/template-item-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-LOG-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright-TC_LOG_QUERY.json",
+      "DurationMs": 9422,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101214Z-pid11376-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101625Z-pid38004-w0-r0/log-file-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-OLOG-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5489,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101236Z-pid41288-w3-r0/operation-log-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-OLOG-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5253,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101241Z-pid41288-w3-r0/operation-log-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-ELOG-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4898,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101247Z-pid41288-w3-r0/exception-log-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-ELOG-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5161,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101252Z-pid41288-w3-r0/exception-log-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-ILOG-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4891,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101257Z-pid41288-w3-r0/interaction-log-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-ILOG-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5341,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101302Z-pid41288-w3-r0/interaction-log-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-ENER-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4799,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101307Z-pid41288-w3-r0/energy-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-ENER-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 5177,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101312Z-pid41288-w3-r0/energy-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-MENU-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4950,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101317Z-pid41288-w3-r0/menu-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-DICT-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4889,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101322Z-pid41288-w3-r0/dictionary-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-EXT-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4801,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101327Z-pid41288-w3-r0/external-page.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-EXT-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "SourceResultFile": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/TC_MENU_COVERAGE_20260827_01-playwright.json",
+      "DurationMs": 4911,
+      "Error": null,
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-EXPANSION-20260827-01/artifacts/web/20260827-101332Z-pid41288-w3-r0/external-query.png"
+      ],
+      "Reason": "真实 Playwright 页面/查询交互完成，结果符合用例断言。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "ExecutionStatus": "MANUAL",
+      "Reason": "Canvas 像素和视觉保真度按规则由人工验收；已保留页面截图。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/画图工具.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-PROC-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-PROC-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-PROC-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-PROC-STATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-PROC-RELATION-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-MAINT-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-TTEMP-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-TTEMP-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-TTEMP-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-TTEMP-RELATION-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-TITEM-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-TITEM-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-TITEM-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-ROLE-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-ROLE-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-ROLE-RELATION-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-MENU-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-MENU-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-MENU-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-DICT-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-DICT-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-DICT-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-EXT-CREATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-EXT-UPDATE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-EXT-DELETE-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    },
+    {
+      "TestCaseId": "TC-EXT-INTEGRATION-001",
+      "ExecutionStatus": "SKIPPED",
+      "Reason": "本轮已完成自动化资格设计，但尚未完成该页面表单的 TEST_OWNED 前置数据准备；未伪造执行结果。",
+      "EvidencePaths": []
+    }
+  ]
+}

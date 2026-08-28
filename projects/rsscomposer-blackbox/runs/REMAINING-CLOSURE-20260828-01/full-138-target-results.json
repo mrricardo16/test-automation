@@ -1,0 +1,307 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "Source": "Playwright JSON reporter plus TEST_OWNED evidence directories; preserved direct current-run PASS rows after targeted artifact replacement; preserved direct current-run PASS rows after targeted artifact replacement",
+  "TargetCaseIds": [
+    "TC-STRAT-CREATE-001",
+    "TC-STRAT-UPDATE-001",
+    "TC-STRAT-DELETE-001",
+    "TC-PROC-CREATE-001",
+    "TC-PROC-UPDATE-001",
+    "TC-PROC-DELETE-001",
+    "TC-PROC-STATE-001",
+    "TC-PROC-RELATION-001",
+    "TC-TTEMP-CREATE-001",
+    "TC-TTEMP-UPDATE-001",
+    "TC-TTEMP-DELETE-001",
+    "TC-TTEMP-RELATION-001",
+    "TC-TITEM-CREATE-001",
+    "TC-TITEM-UPDATE-001",
+    "TC-TITEM-DELETE-001",
+    "TC-ROLE-UPDATE-001",
+    "TC-ROLE-DELETE-001",
+    "TC-ROLE-RELATION-001",
+    "TC-DICT-CREATE-001",
+    "TC-DICT-UPDATE-001",
+    "TC-DICT-DELETE-001",
+    "TC-EXT-CREATE-001",
+    "TC-EXT-UPDATE-001",
+    "TC-EXT-DELETE-001"
+  ],
+  "Rows": [
+    {
+      "TestCaseId": "TC-PROC-CREATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 7109,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-PROC-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 7395,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-PROC-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 6583,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-PROC-STATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 6853,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-TTEMP-CREATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 8600,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-TTEMP-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 9216,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-TTEMP-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 7313,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-TTEMP-RELATION-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 8376,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-TITEM-CREATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 8788,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-TITEM-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 8597,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-TITEM-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 6792,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-ROLE-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 7827,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-ROLE-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 6886,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-DICT-CREATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 9639,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-DICT-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 8175,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-DICT-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 7830,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-EXT-CREATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 7229,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-EXT-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 9112,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-EXT-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 8162,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-ROLE-RELATION-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 11851,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-PROC-RELATION-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "DurationMs": 7879,
+      "ActualVerification": "Real Playwright UI execution completed.",
+      "EvidencePaths": [],
+      "ErrorMessages": [],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed."
+    },
+    {
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "ActualVerification": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI.",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-CREATE-001/20260828-032443Z-pid32668-w0-r0/strategy-created.png"
+      ],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI."
+    },
+    {
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "ActualVerification": "Real Playwright UI execution completed; strategy updated, queried, evidenced, and deleted through the visible UI.",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-UPDATE-001/20260828-032507Z-pid32668-w0-r0/strategy-updated.png"
+      ],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed; strategy updated, queried, evidenced, and deleted through the visible UI."
+    },
+    {
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "ActualVerification": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI.",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-DELETE-001/20260828-032517Z-pid32668-w0-r0/strategy-deleted.png"
+      ],
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI."
+    }
+  ],
+  "Counts": {
+    "PASS": 24,
+    "FAIL": 0,
+    "ERROR": 0,
+    "BLOCKED": 0,
+    "MANUAL": 0,
+    "SKIPPED": 0
+  },
+  "ExitCode": 0,
+  "PreviousRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "PreserveHistoricalTargetResults": true
+}

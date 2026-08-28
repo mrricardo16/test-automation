@@ -22,6 +22,9 @@ projects/*/
 !projects/rsscomposer-blackbox/
 !projects/rsscomposer-blackbox/**
 projects/rsscomposer-blackbox/artifacts/
+projects/rsscomposer-blackbox/runs/*/artifacts/
+projects/rsscomposer-blackbox/reports/Typora_Hook_Log.txt
+projects/rsscomposer-blackbox/runs/*/Typora_Hook_Log.txt
 
 .env
 .env.*

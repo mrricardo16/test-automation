@@ -1,0 +1,295 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "ReviewedCount": 17,
+  "AutomatablePortionCompletedCount": 17,
+  "EvidenceCapturedCount": 16,
+  "BoundaryRecordedCount": 1,
+  "Rows": [
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-001/20260828-061958Z-pid34096-w0-r0/task-new-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-001/20260828-061825Z-pid33684-w0-r0/task-new-001.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-002/20260828-062002Z-pid34096-w0-r0/task-new-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-002/20260828-061832Z-pid33684-w0-r0/task-new-002.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-003/20260828-062006Z-pid34096-w0-r0/task-new-003.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-003/20260828-061836Z-pid33684-w0-r0/task-new-003.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-004/20260828-062010Z-pid34096-w0-r0/task-new-004.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-004/20260828-061841Z-pid33684-w0-r0/task-new-004.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-005/20260828-062014Z-pid34096-w0-r0/task-new-005.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TNEW-CREATE-005/20260828-061845Z-pid33684-w0-r0/task-new-005.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-001/20260828-062018Z-pid34096-w0-r0/task-cancel-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-001/20260828-061848Z-pid33684-w0-r0/task-cancel-001.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-002/20260828-062022Z-pid34096-w0-r0/task-cancel-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TCANCEL-CANCEL-002/20260828-061852Z-pid33684-w0-r0/task-cancel-002.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-001/20260828-062026Z-pid34096-w0-r0/task-resend-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-001/20260828-061856Z-pid33684-w0-r0/task-resend-001.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-002/20260828-062030Z-pid34096-w0-r0/task-resend-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TRESEND-RESEND-002/20260828-061900Z-pid33684-w0-r0/task-resend-002.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-001/20260828-062038Z-pid34096-w0-r0/vehicle-create-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-001/20260828-061908Z-pid33684-w0-r0/vehicle-create-001.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-002/20260828-062043Z-pid34096-w0-r0/vehicle-create-002.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-002/20260828-061913Z-pid33684-w0-r0/vehicle-create-002.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-003/20260828-062046Z-pid34096-w0-r0/vehicle-create-003.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-CREATE-003/20260828-061917Z-pid33684-w0-r0/vehicle-create-003.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "BOUNDARY_RECORDED",
+      "EvidenceCaptured": false,
+      "EvidenceRefs": [],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "该用例属于综合看板范围边界记录；综合看板明确 OUT_OF_SCOPE，本轮不打开、不操作。",
+      "RequiredAction": "不纳入19菜单覆盖；若未来范围改变，另行建立批准的看板验收。"
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-LOG-DOWNLOAD-001/20260828-062054Z-pid34096-w0-r0/log-download-page.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-LOG-DOWNLOAD-001/20260828-061924Z-pid33684-w0-r0/log-download-page.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-DELETE-001/20260828-062050Z-pid34096-w0-r0/vehicle-delete-001.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-VEH-DELETE-001/20260828-061920Z-pid33684-w0-r0/vehicle-delete-001.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TFLOW-COMPOSITE-008/20260828-062034Z-pid34096-w0-r0/task-flow-008.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-TFLOW-COMPOSITE-008/20260828-061904Z-pid33684-w0-r0/task-flow-008.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "PreviousStatus": "MANUAL_REVIEW_PENDING",
+      "ReviewStatus": "COMPLETED_AUTOMATABLE_PORTION",
+      "ExecutionAttempted": true,
+      "TargetActionAttempted": false,
+      "AutomatableObservationStatus": "PASS",
+      "EvidenceCaptured": true,
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-DRAW-VISUAL-001/20260828-062058Z-pid34096-w0-r0/drawing-visual-page.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web-manual/TC-DRAW-VISUAL-001/20260828-061929Z-pid33684-w0-r0/drawing-visual-page.png"
+      ],
+      "HumanJudgmentRemaining": true,
+      "FinalFormalStatus": "MANUAL_REVIEW_PENDING",
+      "ConcreteReason": "页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+      "RequiredAction": "由授权人员依据业务/视觉/物理验收标准完成最终人工结论。"
+    }
+  ]
+}

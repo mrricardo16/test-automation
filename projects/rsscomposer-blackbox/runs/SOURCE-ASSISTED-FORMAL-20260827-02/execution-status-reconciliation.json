@@ -1,0 +1,27 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "CatalogTotal": 82,
+  "ReportTestCaseCount": 82,
+  "UniqueTestCaseIdCount": 82,
+  "MissingTestCaseIds": [],
+  "UnexpectedTestCaseIds": [],
+  "DuplicateTestCaseIdCount": 0,
+  "FormalManifestCount": 25,
+  "FormalExecutedCount": 24,
+  "FormalPassCount": 20,
+  "FormalFailCount": 3,
+  "FormalErrorCount": 1,
+  "FormalBlockedCount": 14,
+  "FormalSkippedCount": 0,
+  "PendingAuthorityCount": 28,
+  "NotYetExecutedCount": 62,
+  "DefectCount": 1,
+  "CleanupResidualCount": 1,
+  "UnexpectedBusinessResidualCount": 0,
+  "Checks": {
+    "CatalogEqualsReport": true,
+    "DuplicateTestCaseId": true,
+    "PendingAsSkipped": true,
+    "ActualTraceable": true
+  }
+}

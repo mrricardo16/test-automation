@@ -1,0 +1,5 @@
+# Defect List
+
+| BugId | Status | Detail |
+| --- | --- | --- |
+| BUG-RSSCOMPOSER-DUMMYCAR-RESET-RESTART-001 | 已复现，待产品修复 | [BUG-RSSCOMPOSER-DUMMYCAR-RESET-RESTART-001](defect-feedback/BUG-RSSCOMPOSER-DUMMYCAR-RESET-RESTART-001.md)

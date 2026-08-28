@@ -1,0 +1,77 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "Evidence": [
+    {
+      "Name": "login",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-WEB-LOGIN-001/20260827-035902Z-pid25216-w0-r0"
+    },
+    {
+      "Name": "fixture",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0"
+    },
+    {
+      "Name": "apiCars",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json"
+    },
+    {
+      "Name": "infrastructure",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json"
+    },
+    {
+      "Name": "firstAttempt",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/first-attempt-error"
+    },
+    {
+      "Name": "mock",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/mock/summary.json"
+    },
+    {
+      "Name": "sourceIntegrity",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/source-integrity/before.json"
+    },
+    {
+      "Name": "mapProvisioning",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json"
+    },
+    {
+      "Name": "processProvisioning",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-provisioning-error.json"
+    },
+    {
+      "Name": "processStart",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json"
+    },
+    {
+      "Name": "runtimeDiscovery",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-runtime-discovery.json"
+    },
+    {
+      "Name": "dummyCarProvisioning",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-live-api-provisioning.json"
+    },
+    {
+      "Name": "dummyCarInitialization",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-initialize-error.json"
+    },
+    {
+      "Name": "dummyCarBug",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/defects/BUG-RSSCOMPOSER-DUMMYCAR-RESET-RESTART-001.md"
+    },
+    {
+      "Name": "dummyCarReadiness",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+    },
+    {
+      "Name": "database",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+    },
+    {
+      "Name": "goldenFixtureRegistry",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/golden-fixture-registry.json"
+    },
+    {
+      "Name": "goldenPathResult",
+      "RelativePath": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/golden-path-result.json"
+    }
+  ]
+}

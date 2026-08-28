@@ -1,0 +1,32 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "CurrentCatalogCount": 138,
+  "ReportMustUseCurrentExpandedCatalog": true,
+  "DashboardOutOfScope": true,
+  "NineColumns": [
+    "测试场景",
+    "TestCaseId",
+    "前置条件",
+    "测试数据",
+    "操作步骤",
+    "预期结果",
+    "状态",
+    "实际验证",
+    "图片示例"
+  ],
+  "LegacyAddedSplitInFinalTable": false,
+  "StatusCounts": {
+    "PASS": 80,
+    "FAIL": 3,
+    "ERROR": 6,
+    "BLOCKED_BEFORE_EXECUTION": 32,
+    "BLOCKED_AFTER_PARTIAL_EXECUTION": 0,
+    "MANUAL_REVIEW_PENDING": 17,
+    "NEVER_ATTEMPTED": 0,
+    "SKIPPED": 0
+  },
+  "ReportStatus": "PASS_WITH_DECLARED_INFRASTRUCTURE_LIMITATION",
+  "MarkdownPath": "projects/rsscomposer-blackbox/reports/RSSComposer调度系统测试报告.md",
+  "HtmlPath": "projects/rsscomposer-blackbox/reports/RSSComposer调度系统测试报告.html",
+  "EmbeddedImageCount": 193
+}

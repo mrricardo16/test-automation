@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-08-28T14:27:05.8095946+08:00",
+  "exclusionDirectories": [
+    "bin",
+    "obj",
+    "node_modules",
+    "dist",
+    "coverage",
+    ".vs",
+    ".idea",
+    ".vscode",
+    "cache",
+    "tmp",
+    "temp",
+    "Build"
+  ],
+  "backend": {
+    "Root": "D:\\HZ_RSS40\\03_trunk\\src_m_logclient",
+    "FileCount": 42,
+    "TreeHash": "b2a944c2b295748160000c268e18543209dadc702dcb3d36551578724cfbd1df",
+    "Exclusions": [
+      "bin",
+      "obj",
+      "node_modules",
+      "dist",
+      "coverage",
+      ".vs",
+      ".idea",
+      ".vscode",
+      "cache",
+      "tmp",
+      "temp",
+      "Build"
+    ]
+  },
+  "frontend": {
+    "Root": "D:\\HZ_RSS40\\03_trunk\\src_m_ui",
+    "FileCount": 3508,
+    "TreeHash": "f434aeea65b61761127ec4a2a0dcecf5603899edd8425cb0a2cf91c1242591f9",
+    "Exclusions": [
+      "bin",
+      "obj",
+      "node_modules",
+      "dist",
+      "coverage",
+      ".vs",
+      ".idea",
+      ".vscode",
+      "cache",
+      "tmp",
+      "temp",
+      "Build"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "RunId": "MENU-COVERAGE-EXPANSION-20260827-01",
+  "Phase": "CATALOG_EXPANSION_AND_MENU_COVERAGE_GATE",
+  "ExecutionStarted": false,
+  "LegacyCatalogCount": 82,
+  "AddedCaseCount": 56,
+  "ExpandedCatalogCount": 138,
+  "InScopeLeafMenuCount": 19,
+  "ZeroCoverageMenusBeforeExpansion": [
+    "画图工具",
+    "策略管理",
+    "进程管理",
+    "维护任务",
+    "任务模板",
+    "模板项管理",
+    "操作日志",
+    "异常日志",
+    "交互日志",
+    "能耗统计",
+    "菜单管理",
+    "字典管理",
+    "外部系统配置"
+  ],
+  "ZeroCoverageMenusAfterExpansion": [],
+  "PartialMenusAddressed": [
+    "车辆管理",
+    "日志文件",
+    "角色管理"
+  ],
+  "OutOfScopeExcluded": [
+    "综合看板"
+  ],
+  "CandidateGapCountReviewed": 61,
+  "ApplicableDesignedCount": 56,
+  "DeferredSafetyBoundaryCount": 5,
+  "PrunedNotApplicableCount": 0,
+  "MenuCoverageGateStatus": "PASS",
+  "HistoricalResultPreservationStatus": "PASS",
+  "FormalTestExecutionStarted": false,
+  "CommitPerformed": false,
+  "PushPerformed": false
+}

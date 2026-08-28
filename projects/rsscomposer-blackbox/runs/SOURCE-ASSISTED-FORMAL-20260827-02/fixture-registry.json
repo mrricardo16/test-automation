@@ -1,0 +1,63 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "DataPolicy": "TEST_OWNED_ONLY",
+  "Prefix": "AT_20260827_02_",
+  "SensitiveValuesPersisted": false,
+  "Fixtures": [
+    {
+      "Kind": "USER",
+      "TestCaseId": "TC-USER-CREATE-001",
+      "Login": "AT_20260827_02_U001",
+      "DisplayName": "自动化测试用户",
+      "Lifecycle": "CREATED_VERIFIED_DELETED_VERIFIED",
+      "CleanupStatus": "PASS",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0"
+      ]
+    },
+    {
+      "Kind": "MAP_INFRASTRUCTURE",
+      "TestCaseId": null,
+      "Code": "AT_0827_02_MAP",
+      "Name": "AT_0827_02_MAP",
+      "Lifecycle": "UPLOADED_SELECTED_DRAFT_RETAINED",
+      "CleanupStatus": "RETAINED_TEST_OWNED",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json"
+      ]
+    },
+    {
+      "Kind": "PROCESS_INFRASTRUCTURE",
+      "TestCaseId": null,
+      "Code": "chaineddeliverymission",
+      "Name": "链式搬运进程",
+      "ProcessId": "1144666",
+      "Lifecycle": "BOUND_TEST_MAP_RUNNING_RETAINED",
+      "CleanupStatus": "RETAINED_TEST_OWNED",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-provisioning-error.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-runtime-discovery.json"
+      ]
+    },
+    {
+      "Kind": "DUMMY_CAR",
+      "TestCaseId": null,
+      "Code": "dummyomniforkliftcar",
+      "Name": "AT_0827_02_DUMMY",
+      "CarId": 1901,
+      "Lifecycle": "CREATED_INITIALIZATION_FAILED_RETAINED_FOR_OPERATOR_CONTINUATION",
+      "CleanupStatus": "RETAINED_BY_OPERATOR",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-live-api-provisioning.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-initialize-error.json"
+      ]
+    }
+  ],
+  "GoldenPathBusinessFixture": {
+    "Created": false,
+    "CleanupStatus": "PASS",
+    "Reason": "Golden Path was not started because runtime prerequisites were blocked."
+  },
+  "ResidualCount": 1
+}

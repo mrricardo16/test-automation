@@ -1,0 +1,11 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "Status": "BLOCKED",
+  "Evidence": {
+    "Map": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+    "ProcessProvisioning": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-provisioning-error.json",
+    "ProcessRuntime": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-runtime-discovery.json",
+    "DummyCar": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json",
+    "Result": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/golden-path-result.json"
+  }
+}

@@ -1,0 +1,570 @@
+{
+  "GateName": "Menu Coverage Gate",
+  "GateVersion": "2026-08-27.1",
+  "Status": "PASS",
+  "InScopeLeafMenuCount": 19,
+  "OutOfScopeMenuCount": 1,
+  "OutOfScopeCaseCount": 1,
+  "MissingMenuCount": 0,
+  "MissingMenus": [],
+  "MissingOperationCount": 0,
+  "MissingOperations": [],
+  "Rows": [
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "车辆管理",
+      "Route": "/Sys/VehicleManage",
+      "CaseCount": 13,
+      "CaseIds": [
+        "TC-VEH-CREATE-001",
+        "TC-VEH-CREATE-002",
+        "TC-VEH-CREATE-003",
+        "TC-VEH-QUERY-001",
+        "TC-VEH-QUERY-002",
+        "TC-VEH-CREATE-004",
+        "TC-VEH-CREATE-005",
+        "TC-VEH-CREATE-006",
+        "TC-VEH-CREATE-007",
+        "TC-VEH-UPDATE-001",
+        "TC-VEH-UPDATE-002",
+        "TC-VEH-DELETE-001",
+        "TC-VEH-STATE-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "QUERY",
+        "STATE",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "STATE"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "画图工具",
+      "Route": "/Sys/drawing-tool",
+      "CaseCount": 3,
+      "CaseIds": [
+        "TC-DRAW-PAGE-001",
+        "TC-DRAW-QUERY-001",
+        "TC-DRAW-VISUAL-001"
+      ],
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "VISUAL"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "VISUAL"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "策略管理",
+      "Route": "/Sys/StrategyManage",
+      "CaseCount": 5,
+      "CaseIds": [
+        "TC-STRAT-PAGE-001",
+        "TC-STRAT-QUERY-001",
+        "TC-STRAT-CREATE-001",
+        "TC-STRAT-UPDATE-001",
+        "TC-STRAT-DELETE-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PAGE_SMOKE",
+        "QUERY",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "场景管理",
+      "MenuName": "进程管理",
+      "Route": "/Sys/MissionManage",
+      "CaseCount": 7,
+      "CaseIds": [
+        "TC-PROC-PAGE-001",
+        "TC-PROC-QUERY-001",
+        "TC-PROC-CREATE-001",
+        "TC-PROC-UPDATE-001",
+        "TC-PROC-DELETE-001",
+        "TC-PROC-STATE-001",
+        "TC-PROC-RELATION-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PAGE_SMOKE",
+        "QUERY",
+        "RELATION",
+        "STATE",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "RELATION"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务管理",
+      "Route": "/Task/TaskManage",
+      "CaseCount": 28,
+      "CaseIds": [
+        "TC-TNEW-CREATE-001",
+        "TC-TNEW-CREATE-002",
+        "TC-TNEW-CREATE-003",
+        "TC-TNEW-CREATE-004",
+        "TC-TNEW-CREATE-005",
+        "TC-TCANCEL-CANCEL-001",
+        "TC-TCANCEL-CANCEL-002",
+        "TC-TRESEND-RESEND-001",
+        "TC-TRESEND-RESEND-002",
+        "TC-TQUERY-QUERY-001",
+        "TC-TQUERY-QUERY-002",
+        "TC-TQUERY-PAGE-001",
+        "TC-TQUERY-QUERY-003",
+        "TC-TNEW-CREATE-006",
+        "TC-TNEW-CREATE-007",
+        "TC-TLIFE-QUERY-001",
+        "TC-TLIFE-CANCEL-001",
+        "TC-TCANCEL-CANCEL-003",
+        "TC-TFLOW-COMPOSITE-001",
+        "TC-TFLOW-COMPOSITE-002",
+        "TC-TFLOW-COMPOSITE-003",
+        "TC-TFLOW-COMPOSITE-004",
+        "TC-TFLOW-COMPOSITE-005",
+        "TC-TFLOW-COMPOSITE-006",
+        "TC-TFLOW-COMPOSITE-007",
+        "TC-TFLOW-COMPOSITE-008",
+        "TC-TFLOW-COMPOSITE-009",
+        "TC-TFLOW-COMPOSITE-010"
+      ],
+      "CoveredOperations": [
+        "COMPOSITE_LIFECYCLE",
+        "CREATE",
+        "QUERY",
+        "STATE"
+      ],
+      "RequiredDesignedOperations": [],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "维护任务",
+      "Route": "/Task/TaskMaintanance",
+      "CaseCount": 3,
+      "CaseIds": [
+        "TC-MAINT-PAGE-001",
+        "TC-MAINT-QUERY-001",
+        "TC-MAINT-CREATE-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "任务模板",
+      "Route": "/Task/TaskTemManage",
+      "CaseCount": 6,
+      "CaseIds": [
+        "TC-TTEMP-PAGE-001",
+        "TC-TTEMP-QUERY-001",
+        "TC-TTEMP-CREATE-001",
+        "TC-TTEMP-UPDATE-001",
+        "TC-TTEMP-DELETE-001",
+        "TC-TTEMP-RELATION-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PAGE_SMOKE",
+        "QUERY",
+        "RELATION",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "任务模型",
+      "MenuName": "模板项管理",
+      "Route": "/Task/TaskTemItemManage",
+      "CaseCount": 5,
+      "CaseIds": [
+        "TC-TITEM-PAGE-001",
+        "TC-TITEM-QUERY-001",
+        "TC-TITEM-CREATE-001",
+        "TC-TITEM-UPDATE-001",
+        "TC-TITEM-DELETE-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PAGE_SMOKE",
+        "QUERY",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "日志文件",
+      "Route": "/Logs/LogFileManager",
+      "CaseCount": 2,
+      "CaseIds": [
+        "TC-LOG-DOWNLOAD-001",
+        "TC-LOG-QUERY-001"
+      ],
+      "CoveredOperations": [
+        "DOWNLOAD",
+        "QUERY"
+      ],
+      "RequiredDesignedOperations": [
+        "QUERY"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "操作日志",
+      "Route": "/Logs/SysLogManager",
+      "CaseCount": 2,
+      "CaseIds": [
+        "TC-OLOG-PAGE-001",
+        "TC-OLOG-QUERY-001"
+      ],
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "异常日志",
+      "Route": "/Logs/ExceptionLogManager",
+      "CaseCount": 2,
+      "CaseIds": [
+        "TC-ELOG-PAGE-001",
+        "TC-ELOG-QUERY-001"
+      ],
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "日志管理",
+      "MenuName": "交互日志",
+      "Route": "/Logs/ThirdLogManager",
+      "CaseCount": 2,
+      "CaseIds": [
+        "TC-ILOG-PAGE-001",
+        "TC-ILOG-QUERY-001"
+      ],
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "统计分析",
+      "MenuName": "效能统计",
+      "Route": "/Statistics/EfficStatisticsManager",
+      "CaseCount": 11,
+      "CaseIds": [
+        "TC-STAT-QUERY-001",
+        "TC-STAT-QUERY-002",
+        "TC-STAT-QUERY-003",
+        "TC-STAT-QUERY-004",
+        "TC-STAT-RESET-001",
+        "TC-STAT-PAGE-001",
+        "TC-STAT-QUERY-005",
+        "TC-STAT-VALIDATE-001",
+        "TC-STAT-VALIDATE-002",
+        "TC-STAT-VALIDATE-003",
+        "TC-STAT-VALIDATE-004"
+      ],
+      "CoveredOperations": [
+        "QUERY"
+      ],
+      "RequiredDesignedOperations": [],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": false,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "统计分析",
+      "MenuName": "能耗统计",
+      "Route": "/Statistics/ElectStatisticsManager",
+      "CaseCount": 2,
+      "CaseIds": [
+        "TC-ENER-PAGE-001",
+        "TC-ENER-QUERY-001"
+      ],
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "用户管理",
+      "Route": "/Employee/User",
+      "CaseCount": 23,
+      "CaseIds": [
+        "TC-USER-CREATE-001",
+        "TC-USER-CREATE-002",
+        "TC-USER-CREATE-003",
+        "TC-USER-CREATE-004",
+        "TC-USER-CREATE-005",
+        "TC-URB-BIND-001",
+        "TC-USER-QUERY-001",
+        "TC-USER-QUERY-002",
+        "TC-USER-RESET-001",
+        "TC-USER-PAGE-001",
+        "TC-USER-UPDATE-001",
+        "TC-USER-UPDATE-002",
+        "TC-USER-DELETE-001",
+        "TC-USER-QUERY-003",
+        "TC-USER-DELETE-002",
+        "TC-USER-CREATE-006",
+        "TC-URB-UNBIND-001",
+        "TC-URB-BIND-002",
+        "TC-URB-PERMISSION-001",
+        "TC-USER-CREATE-007",
+        "TC-USER-CREATE-008",
+        "TC-USER-CREATE-009",
+        "TC-USER-UPDATE-003"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PAGINATION",
+        "PERMISSION",
+        "QUERY",
+        "RELATION",
+        "RESET",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "角色管理",
+      "Route": "/Employee/Role",
+      "CaseCount": 9,
+      "CaseIds": [
+        "TC-ROLE-QUERY-001",
+        "TC-ROLE-CREATE-001",
+        "TC-ROLE-PERMISSION-001",
+        "TC-ROLE-PERMISSION-002",
+        "TC-ROLE-PERMISSION-003",
+        "TC-ROLE-PERMISSION-004",
+        "TC-ROLE-UPDATE-001",
+        "TC-ROLE-DELETE-001",
+        "TC-ROLE-RELATION-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PERMISSION",
+        "QUERY",
+        "RELATION",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "菜单管理",
+      "Route": "/Employee/Menu",
+      "CaseCount": 4,
+      "CaseIds": [
+        "TC-MENU-PAGE-001",
+        "TC-MENU-CREATE-001",
+        "TC-MENU-UPDATE-001",
+        "TC-MENU-DELETE-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PAGE_SMOKE",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "字典管理",
+      "Route": "/Employee/DictManager",
+      "CaseCount": 4,
+      "CaseIds": [
+        "TC-DICT-PAGE-001",
+        "TC-DICT-CREATE-001",
+        "TC-DICT-UPDATE-001",
+        "TC-DICT-DELETE-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "PAGE_SMOKE",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    },
+    {
+      "ModuleName": "系统管理",
+      "MenuName": "外部系统配置",
+      "Route": "/Employee/ExSystemManager",
+      "CaseCount": 6,
+      "CaseIds": [
+        "TC-EXT-PAGE-001",
+        "TC-EXT-QUERY-001",
+        "TC-EXT-CREATE-001",
+        "TC-EXT-UPDATE-001",
+        "TC-EXT-DELETE-001",
+        "TC-EXT-INTEGRATION-001"
+      ],
+      "CoveredOperations": [
+        "CREATE",
+        "DELETE",
+        "INTEGRATION",
+        "PAGE_SMOKE",
+        "QUERY",
+        "UPDATE"
+      ],
+      "RequiredDesignedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "INTEGRATION"
+      ],
+      "MissingOperations": [],
+      "DiscoveryPageReachable": true,
+      "CoverageStatus": "COVERED_BY_CATALOG"
+    }
+  ],
+  "OutOfScopeCaseIds": [
+    "TC-MON-VISUAL-001"
+  ],
+  "Rule": "每个 IN_SCOPE 叶子菜单必须至少有一个 PAGE_SMOKE 或等价页面用例；综合看板不进入分母。"
+}

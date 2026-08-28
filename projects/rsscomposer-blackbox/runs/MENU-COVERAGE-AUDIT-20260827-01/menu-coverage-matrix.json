@@ -1,0 +1,519 @@
+{
+  "RunId": "MENU-COVERAGE-AUDIT-20260827-01",
+  "Matrix": [
+    {
+      "Module": "场景管理",
+      "Menu": "车辆管理",
+      "InScope": true,
+      "Route": "/Sys/VehicleManage",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE"
+      ],
+      "ExistingCaseCount": 12,
+      "NewCaseCount": 0,
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "QUERY",
+        "UPDATE",
+        "DELETE"
+      ],
+      "MissingOperations": [
+        "STATE"
+      ],
+      "PageSmokeCoverage": "COVERED_BY_EXISTING_CASE_AND_RUNTIME_DISCOVERY",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "LEGACY_PARTIAL",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "InScope": true,
+      "Route": "/Sys/drawing-tool",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "VISUAL",
+        "QUERY",
+        "CREATE",
+        "INTEGRATION"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "VISUAL",
+        "QUERY",
+        "CREATE",
+        "INTEGRATION"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "InScope": true,
+      "Route": "/Sys/StrategyManage",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "InScope": true,
+      "Route": "/Sys/MissionManage",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "RELATION"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "RELATION"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务管理",
+      "InScope": true,
+      "Route": "/Task/TaskManage",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "ExistingCaseCount": 28,
+      "NewCaseCount": 0,
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "STATE",
+        "QUERY",
+        "COMPOSITE_LIFECYCLE"
+      ],
+      "MissingOperations": [],
+      "PageSmokeCoverage": "COVERED_BY_EXISTING_CASE_AND_RUNTIME_DISCOVERY",
+      "PrimaryOperationCoverage": "COVERED",
+      "ExecutionStatus": "LEGACY_PARTIAL",
+      "CoverageStatus": "COVERED",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "InScope": true,
+      "Route": "/Task/TaskMaintanance",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "InScope": true,
+      "Route": "/Task/TaskTemManage",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "InScope": true,
+      "Route": "/Task/TaskTemItemManage",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "日志文件",
+      "InScope": true,
+      "Route": "/Logs/LogFileManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "DOWNLOAD"
+      ],
+      "ExistingCaseCount": 1,
+      "NewCaseCount": 0,
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "DOWNLOAD"
+      ],
+      "MissingOperations": [
+        "QUERY"
+      ],
+      "PageSmokeCoverage": "COVERED_BY_EXISTING_CASE_AND_RUNTIME_DISCOVERY",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "LEGACY_PARTIAL",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "操作日志",
+      "InScope": true,
+      "Route": "/Logs/SysLogManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "异常日志",
+      "InScope": true,
+      "Route": "/Logs/ExceptionLogManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "交互日志",
+      "InScope": true,
+      "Route": "/Logs/ThirdLogManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "统计分析",
+      "Menu": "效能统计",
+      "InScope": true,
+      "Route": "/Statistics/EfficStatisticsManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE"
+      ],
+      "ExistingCaseCount": 11,
+      "NewCaseCount": 0,
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "MissingOperations": [],
+      "PageSmokeCoverage": "COVERED_BY_EXISTING_FORMAL_CASE; RUNTIME_RECHECK_NEEDED",
+      "PrimaryOperationCoverage": "COVERED",
+      "ExecutionStatus": "LEGACY_PARTIAL",
+      "CoverageStatus": "COVERED",
+      "Notes": "Runtime page was not confirmed reachable during discovery."
+    },
+    {
+      "Module": "统计分析",
+      "Menu": "能耗统计",
+      "InScope": true,
+      "Route": "/Statistics/ElectStatisticsManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "InScope": true,
+      "Route": "/Employee/User",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "ExistingCaseCount": 23,
+      "NewCaseCount": 0,
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "RELATION",
+        "QUERY",
+        "RESET",
+        "PAGINATION",
+        "UPDATE",
+        "DELETE",
+        "PERMISSION"
+      ],
+      "MissingOperations": [],
+      "PageSmokeCoverage": "COVERED_BY_EXISTING_CASE_AND_RUNTIME_DISCOVERY",
+      "PrimaryOperationCoverage": "COVERED",
+      "ExecutionStatus": "LEGACY_PARTIAL",
+      "CoverageStatus": "COVERED",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "InScope": true,
+      "Route": "/Employee/Role",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "ExistingCaseCount": 6,
+      "NewCaseCount": 0,
+      "CoveredOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "PERMISSION"
+      ],
+      "MissingOperations": [
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "PageSmokeCoverage": "COVERED_BY_EXISTING_CASE_AND_RUNTIME_DISCOVERY",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "LEGACY_PARTIAL",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "InScope": true,
+      "Route": "/Employee/Menu",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "InScope": true,
+      "Route": "/Employee/DictManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "InScope": true,
+      "Route": "/Employee/ExSystemManager",
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "INTEGRATION"
+      ],
+      "ExistingCaseCount": 0,
+      "NewCaseCount": 0,
+      "CoveredOperations": [],
+      "MissingOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "INTEGRATION"
+      ],
+      "PageSmokeCoverage": "MISSING",
+      "PrimaryOperationCoverage": "PARTIAL",
+      "ExecutionStatus": "NO_LEGACY_CASE",
+      "CoverageStatus": "PARTIAL",
+      "Notes": "Runtime page opened during capability discovery; no business mutation performed."
+    }
+  ]
+}

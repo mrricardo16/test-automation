@@ -1,0 +1,8 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Status": "ERROR",
+  "Count": 1,
+  "TestCaseIds": [
+    "TC-VEH-UPDATE-001"
+  ]
+}

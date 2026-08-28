@@ -1,0 +1,325 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "MenuGateStatus": "PASS",
+  "Menus": [
+    {
+      "Module": "场景管理",
+      "Menu": "车辆管理",
+      "TotalCases": 13,
+      "Pass": 3,
+      "Fail": 0,
+      "Error": 6,
+      "Blocked": 0,
+      "ManualReview": 4,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-VEH-CREATE-001: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-VEH-CREATE-002: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-VEH-CREATE-003: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-VEH-CREATE-004: 车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+        "TC-VEH-CREATE-005: 车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+        "TC-VEH-CREATE-006: 车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+        "TC-VEH-CREATE-007: 车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+        "TC-VEH-UPDATE-001: \u001b[31mTest timeout of 90000ms exceeded.\u001b[39m \u001b[31mTest timeout of 90000ms exceeded.\u001b[39m Error: locator.fill: Target page, context or browser has been closed\n\n  147 | async function updateVehicleSpeed(page: Page, speed: string): Promise<void> {\n  148 |   const field = page.locator(\".VehicleManage .el-form-item\").filter({ hasText: \"车辆名称\" }).first().locator(\"input\");\n> 149 |   await field.fill(vehicleName);\n      |               ^\n  150 |   await page.getByRole(\"button\", { name: \"搜索\", exact: true }).click();\n  151 |   const row = page.getByRole(\"row\").filter({ hasText: vehicleName }).last();\n  152 |   await expect(row).toBeVisible({ timeout: 10_000 });\n    at updateVehicleSpeed (E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:149:15)\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:473:11",
+        "TC-VEH-UPDATE-002: 车辆列表未发现此前固定测试车辆，无法安全构造稳定更新夹具；未执行初始化、物理动作或业务车辆修改。",
+        "TC-VEH-DELETE-001: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。"
+      ]
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "TotalCases": 3,
+      "Pass": 2,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 1,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-DRAW-VISUAL-001: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。"
+      ]
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "TotalCases": 5,
+      "Pass": 5,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "TotalCases": 7,
+      "Pass": 7,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务管理",
+      "TotalCases": 28,
+      "Pass": 2,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 16,
+      "ManualReview": 10,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-TNEW-CREATE-001: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TNEW-CREATE-002: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TNEW-CREATE-003: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TNEW-CREATE-004: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TNEW-CREATE-005: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TCANCEL-CANCEL-001: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TCANCEL-CANCEL-002: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TRESEND-RESEND-001: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TRESEND-RESEND-002: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TQUERY-PAGE-001: 历史记录未进入终态执行。",
+        "TC-TQUERY-QUERY-003: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-TNEW-CREATE-006: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-TNEW-CREATE-007: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-TLIFE-QUERY-001: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TLIFE-CANCEL-001: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TCANCEL-CANCEL-003: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-TFLOW-COMPOSITE-001: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-002: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-003: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-004: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-005: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-006: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-007: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-008: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。",
+        "TC-TFLOW-COMPOSITE-009: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+        "TC-TFLOW-COMPOSITE-010: AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。"
+      ]
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "TotalCases": 3,
+      "Pass": 2,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 1,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-MAINT-CREATE-001: 当前新增维护任务表单提交会直接调用 GotoRecharger/GotoStandby，对车辆发起物理动作；该 Case 不能按普通配置 CRUD 执行。"
+      ]
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "TotalCases": 6,
+      "Pass": 6,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "TotalCases": 5,
+      "Pass": 5,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "日志文件",
+      "TotalCases": 2,
+      "Pass": 1,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 1,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-LOG-DOWNLOAD-001: 页面可达性、可见控件和安全只读观察已完成；最终视觉、物理或业务交互验收仍需人工判断。"
+      ]
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "操作日志",
+      "TotalCases": 2,
+      "Pass": 2,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "异常日志",
+      "TotalCases": 2,
+      "Pass": 2,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "交互日志",
+      "TotalCases": 2,
+      "Pass": 2,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "统计分析",
+      "Menu": "效能统计",
+      "TotalCases": 11,
+      "Pass": 9,
+      "Fail": 2,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": [
+        "TC-STAT-RESET-001: Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\n\n  503 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  504 |     await evidence.captureCheckpoint(\"statistics-reset-control-missing\");\n> 505 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\");\n      |           ^\n  506 |   }\n  507 |   await reset.click();\n  508 |   await evidence.captureCheckpoint(\"statistics-reset-result\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:505:11",
+        "TC-STAT-PAGE-001: Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\n\n  516 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  517 |     await evidence.captureCheckpoint(\"statistics-pagination-missing\");\n> 518 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\");\n      |           ^\n  519 |   }\n  520 |   await next.click();\n  521 |   await evidence.captureCheckpoint(\"statistics-pagination-page-two\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:518:11"
+      ]
+    },
+    {
+      "Module": "统计分析",
+      "Menu": "能耗统计",
+      "TotalCases": 2,
+      "Pass": 2,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "用户管理",
+      "TotalCases": 23,
+      "Pass": 15,
+      "Fail": 1,
+      "Error": 0,
+      "Blocked": 7,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-USER-RESET-001: Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\n\n  267 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  268 |     await evidence.captureCheckpoint(\"reset-control-missing\");\n> 269 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\");\n      |           ^\n  270 |   }\n  271 |   await resetButton.click();\n  272 |   await expect(page.getByRole(\"textbox\", { name: \"登录名\", exact: true })).toHaveValue(\"\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:269:11",
+        "TC-USER-UPDATE-002: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-USER-DELETE-002: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-USER-CREATE-006: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-URB-UNBIND-001: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-URB-BIND-002: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-URB-PERMISSION-001: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-USER-UPDATE-003: Expected authority is pending; case is not executable and is not counted as a formal skip."
+      ]
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "TotalCases": 9,
+      "Pass": 5,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 4,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-ROLE-PERMISSION-001: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-ROLE-PERMISSION-002: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-ROLE-PERMISSION-003: Expected authority is pending; case is not executable and is not counted as a formal skip.",
+        "TC-ROLE-PERMISSION-004: Expected authority is pending; case is not executable and is not counted as a formal skip."
+      ]
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "TotalCases": 4,
+      "Pass": 1,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 3,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-MENU-CREATE-001: 菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+        "TC-MENU-UPDATE-001: 菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。",
+        "TC-MENU-DELETE-001: 菜单管理只能操作 TEST_OWNED 菜单；当前发现未提供经批准的 TEST_OWNED 父菜单，不能把 RSS Root、正式菜单或自动化依赖菜单作为父级。"
+      ]
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "TotalCases": 4,
+      "Pass": 4,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 0,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "FULL",
+      "OutstandingReasons": []
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "TotalCases": 6,
+      "Pass": 5,
+      "Fail": 0,
+      "Error": 0,
+      "Blocked": 1,
+      "ManualReview": 0,
+      "NeverAttempted": 0,
+      "ExecutionCoverage": "PARTIAL",
+      "OutstandingReasons": [
+        "TC-EXT-INTEGRATION-001: 外部系统页面真实能力仅包含配置 CRUD，未发现独立的 Integration/连通性触发入口；仅允许 Local Mock，当前不能把配置保存冒充连通性执行。"
+      ]
+    }
+  ],
+  "InScopeLeafMenuCount": 19,
+  "DashboardOutOfScope": true,
+  "OutOfScopeCaseIds": [
+    "TC-MON-VISUAL-001"
+  ]
+}

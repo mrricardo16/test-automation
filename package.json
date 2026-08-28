@@ -39,6 +39,7 @@
     "materialize:fine-grained-catalog": "node projects/rsscomposer-blackbox/scripts/render-final-test-report.mjs",
     "test:fine-grained-catalog": "node --test projects/rsscomposer-blackbox/scripts/materialize-fine-grained-catalog.test.mjs",
     "validate:fine-grained-catalog": "node projects/rsscomposer-blackbox/scripts/validate-fine-grained-catalog.mjs",
+    "validate:menu-coverage": "node scripts/platform/menu-coverage-expansion.mjs --validate",
     "generate:blackbox-standard-rebuild": "node projects/rsscomposer-blackbox/scripts/blackbox-standard-rebuild.mjs",
     "validate:blackbox-standard-rebuild": "node projects/rsscomposer-blackbox/scripts/validate-blackbox-standard-rebuild.mjs",
     "governance": "node --test tests/platform/governance-check.spec.mjs && node scripts/platform/governance-check.mjs",

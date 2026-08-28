@@ -1,0 +1,33 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "Markdown": {
+    "NineColumns": true,
+    "AllCurrentTestCasesPresent": true,
+    "DuplicateTestCaseId": 0,
+    "MissingTestCaseId": 0,
+    "PendingAsSkipped": 0,
+    "GenericFillerActual": 0,
+    "RawBrVisible": false,
+    "BrokenNewlineEntity": false
+  },
+  "HTML": {
+    "SingleFile": true,
+    "NineColumns": true,
+    "ExternalResourceCount": 0,
+    "NetworkDependencyCount": 0,
+    "EmbeddedImageReconciliation": "PASS",
+    "EmbeddedImageCaseCount": 25,
+    "LocalHorizontalScroll": true,
+    "PageHorizontalScroll": false,
+    "HeaderNoWrap": true,
+    "TestCaseIdNoWrap": true,
+    "ScenarioForcedCharBreak": false,
+    "StatusForcedCharBreak": false,
+    "StickyHeader": true,
+    "ImageLightbox": true,
+    "TopTOC": true,
+    "SearchFeature": false
+  },
+  "ReportBackfill": "PASS",
+  "SecretSafety": "PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Status": "FAIL",
+  "Count": 3,
+  "TestCaseIds": [
+    "TC-USER-RESET-001",
+    "TC-STAT-RESET-001",
+    "TC-STAT-PAGE-001"
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Rows": [
+    {
+      "TestCaseId": "TC-DRAW-MAP-CREATE-001",
+      "Operation": "CREATE",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "共享正式地图写入/发布/删除或拓扑变更缺少隔离地图与回滚证明；设计覆盖保留，禁止强制执行。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-MAP-UPDATE-001",
+      "Operation": "UPDATE",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "共享正式地图写入/发布/删除或拓扑变更缺少隔离地图与回滚证明；设计覆盖保留，禁止强制执行。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-MAP-DELETE-001",
+      "Operation": "DELETE",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "共享正式地图写入/发布/删除或拓扑变更缺少隔离地图与回滚证明；设计覆盖保留，禁止强制执行。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-MAP-STATE-001",
+      "Operation": "STATE",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "共享正式地图写入/发布/删除或拓扑变更缺少隔离地图与回滚证明；设计覆盖保留，禁止强制执行。"
+    },
+    {
+      "TestCaseId": "TC-DRAW-MAP-INTEGRATION-001",
+      "Operation": "INTEGRATION",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "共享正式地图写入/发布/删除或拓扑变更缺少隔离地图与回滚证明；设计覆盖保留，禁止强制执行。"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "EvidenceRefs": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-MAINT-CREATE-001",
+      "Operation": "CASE_LEVEL",
+      "Classification": "SAFETY_BLOCKED",
+      "Reason": "当前新增维护任务表单提交会直接调用 GotoRecharger/GotoStandby，对车辆发起物理动作；该 Case 不能按普通配置 CRUD 执行。",
+      "EvidenceRefs": []
+    }
+  ]
+}

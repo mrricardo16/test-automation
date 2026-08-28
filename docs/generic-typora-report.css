@@ -6,12 +6,10 @@ html, body {
 
 #write {
   width: calc(100% - 48px);
-  max-width: 1400px;
+  max-width: 1500px;
   overflow-x: hidden;
 }
 
-/* Typora's current table DOM is figure.md-table-fig > table. The generic fallback
-   keeps any table figure local-scrollable without widening small summary tables. */
 #write figure.md-table-fig,
 #write .md-table-fig,
 #write .md-table-container {
@@ -31,14 +29,13 @@ html, body {
 #write .md-table-container:has(table th:nth-child(9)) > table,
 #write table:has(th:nth-child(9)) {
   display: table !important;
-  width: max-content !important;
-  min-width: 2300px !important;
+  width: 2000px !important;
+  min-width: 2000px !important;
   max-width: none !important;
-  table-layout: auto !important;
+  table-layout: fixed !important;
   margin: 0 !important;
 }
 
-/* Headers remain horizontal; only body cells use natural wrapping. */
 #write table th {
   white-space: nowrap !important;
   word-break: keep-all !important;
@@ -46,54 +43,78 @@ html, body {
   vertical-align: middle;
   text-align: center;
   font-weight: 700;
-  padding: 10px 12px;
+  padding: 8px 10px;
 }
 
 #write table td {
-  white-space: pre-line !important;
+  white-space: normal !important;
   word-break: normal !important;
-  overflow-wrap: break-word;
+  overflow-wrap: normal !important;
   vertical-align: top;
-  line-height: 1.55;
-  padding: 6px 8px;
+  line-height: 1.45;
+  padding: 8px 10px;
 }
 
-/* Keep TestCaseId readable; it may scroll horizontally at very narrow widths. */
-#write table:has(th:nth-child(9)) th:nth-child(2),
-#write table:has(th:nth-child(9)) td:nth-child(2) {
-  min-width: 240px !important;
+#write table:has(th:nth-child(9)) th:nth-child(1), #write table:has(th:nth-child(9)) td:nth-child(1) { width: 170px !important; word-break: keep-all !important; }
+#write table:has(th:nth-child(9)) th:nth-child(2), #write table:has(th:nth-child(9)) td:nth-child(2) { width: 210px !important; white-space: nowrap !important; word-break: keep-all !important; overflow-wrap: normal !important; }
+#write table:has(th:nth-child(9)) th:nth-child(3), #write table:has(th:nth-child(9)) td:nth-child(3) { width: 230px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(4), #write table:has(th:nth-child(9)) td:nth-child(4) { width: 240px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(5), #write table:has(th:nth-child(9)) td:nth-child(5) { width: 300px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(6), #write table:has(th:nth-child(9)) td:nth-child(6) { width: 300px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(7), #write table:has(th:nth-child(9)) td:nth-child(7) { width: 130px !important; white-space: nowrap !important; word-break: keep-all !important; overflow-wrap: normal !important; }
+#write table:has(th:nth-child(9)) th:nth-child(8), #write table:has(th:nth-child(9)) td:nth-child(8) { width: 250px !important; }
+#write table:has(th:nth-child(9)) th:nth-child(9), #write table:has(th:nth-child(9)) td:nth-child(9) { width: 170px !important; }
+
+#write table:has(th:nth-child(9)) td:nth-child(5),
+#write table:has(th:nth-child(9)) td:nth-child(6) {
+  white-space: normal !important;
+}
+
+.semantic-list,
+.structured-cell,
+.kv-list,
+.image-gallery { display: block; }
+.cell-line,
+.semantic-item,
+.step-line,
+.expected-line,
+.condition-line,
+.actual-line,
+.kv-line {
+  display: block;
+  vertical-align: top;
+  margin: 0 10px 6px 0;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.short-token,
+.no-break,
+.testcase-id,
+.status-token,
+.table-header,
+.field-label {
   white-space: nowrap !important;
   word-break: keep-all !important;
   overflow-wrap: normal !important;
 }
-
-#write table:has(th:nth-child(9)) th:nth-child(1), #write table:has(th:nth-child(9)) td:nth-child(1) { min-width: 180px !important; word-break: keep-all !important; overflow-wrap: normal !important; }
-#write table:has(th:nth-child(9)) th:nth-child(3), #write table:has(th:nth-child(9)) td:nth-child(3) { min-width: 260px !important; }
-#write table:has(th:nth-child(9)) th:nth-child(4), #write table:has(th:nth-child(9)) td:nth-child(4) { min-width: 300px !important; }
-#write table:has(th:nth-child(9)) th:nth-child(5), #write table:has(th:nth-child(9)) td:nth-child(5) { min-width: 440px !important; }
-#write table:has(th:nth-child(9)) th:nth-child(6), #write table:has(th:nth-child(9)) td:nth-child(6) { min-width: 420px !important; }
-#write table:has(th:nth-child(9)) th:nth-child(7), #write table:has(th:nth-child(9)) td:nth-child(7) { min-width: 180px !important; white-space: nowrap !important; }
-#write table:has(th:nth-child(9)) th:nth-child(8), #write table:has(th:nth-child(9)) td:nth-child(8) { min-width: 280px !important; }
-#write table:has(th:nth-child(9)) th:nth-child(9), #write table:has(th:nth-child(9)) td:nth-child(9) { min-width: 300px !important; }
-
-/* Unicode line separators are used inside cells so the Markdown source never
-   exposes a literal HTML break tag. Steps are grouped by the renderer; the
-   browser only preserves the intentional visual rows here. */
-#write table:has(th:nth-child(9)) td:nth-child(5),
-#write table:has(th:nth-child(9)) td:nth-child(6) {
-  white-space: pre-line !important;
-}
-
+.step-list .cleanup-line { display: block; margin: 4px 0 0; }
+.evidence-image,
 #write table td img {
-  max-width: 260px;
+  width: auto;
+  max-width: 180px;
+  max-height: 120px;
   height: auto;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
-/* Report hierarchy: module → feature → operation. */
+/* Report hierarchy: module -> feature -> operation. */
 #write h3, #write h4, #write h5 {
   white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 #write h3 {

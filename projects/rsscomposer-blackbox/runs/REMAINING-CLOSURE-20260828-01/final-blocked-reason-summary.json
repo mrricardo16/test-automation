@@ -1,0 +1,45 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "FinalBlockedCount": 32,
+  "FinalBlockedBeforeExecutionCount": 32,
+  "FinalBlockedAfterPartialExecutionCount": 0,
+  "ByClassification": {
+    "ENVIRONMENT_BLOCKED": [
+      "TC-USER-UPDATE-002",
+      "TC-USER-DELETE-002",
+      "TC-USER-CREATE-006",
+      "TC-URB-UNBIND-001",
+      "TC-URB-BIND-002",
+      "TC-URB-PERMISSION-001",
+      "TC-ROLE-PERMISSION-001",
+      "TC-ROLE-PERMISSION-002",
+      "TC-ROLE-PERMISSION-003",
+      "TC-ROLE-PERMISSION-004",
+      "TC-TQUERY-PAGE-001",
+      "TC-TQUERY-QUERY-003",
+      "TC-TNEW-CREATE-006",
+      "TC-TNEW-CREATE-007",
+      "TC-TCANCEL-CANCEL-003",
+      "TC-USER-UPDATE-003",
+      "TC-MENU-CREATE-001",
+      "TC-MENU-UPDATE-001",
+      "TC-MENU-DELETE-001",
+      "TC-EXT-INTEGRATION-001"
+    ],
+    "SAFETY_BLOCKED": [
+      "TC-TLIFE-QUERY-001",
+      "TC-TLIFE-CANCEL-001",
+      "TC-TFLOW-COMPOSITE-001",
+      "TC-TFLOW-COMPOSITE-002",
+      "TC-TFLOW-COMPOSITE-003",
+      "TC-TFLOW-COMPOSITE-004",
+      "TC-TFLOW-COMPOSITE-005",
+      "TC-TFLOW-COMPOSITE-006",
+      "TC-TFLOW-COMPOSITE-007",
+      "TC-TFLOW-COMPOSITE-009",
+      "TC-TFLOW-COMPOSITE-010",
+      "TC-MAINT-CREATE-001"
+    ]
+  },
+  "NoGenericUnknownClassification": true
+}

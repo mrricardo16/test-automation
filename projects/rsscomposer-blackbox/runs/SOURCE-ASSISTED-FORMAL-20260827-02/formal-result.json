@@ -1,0 +1,1184 @@
+{
+  "FormalRunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "FormalSystemRunStatus": "BLOCKED",
+  "FormalBusinessCasesExecuted": true,
+  "FormalManifestCount": 25,
+  "FormalExecutedCount": 24,
+  "ExecutedResults": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed with cleanup verification.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-002/20260827-083756Z-pid41288-w0-r0/duplicate-rejected.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-003/20260827-083808Z-pid41288-w0-r0/short-password-rejected.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-004/20260827-083816Z-pid41288-w0-r0/empty-username-rejected.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-005/20260827-083822Z-pid41288-w0-r0/empty-display-name-rejected.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-URB-BIND-001/20260827-083946Z-pid1616-w1-r0/user-role-bind-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-001/20260827-083830Z-pid41288-w0-r0/default-query-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-002/20260827-083837Z-pid41288-w0-r0/unmatched-user-query.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "ExecutionStatus": "FAIL",
+      "Actual": "Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\n\n  267 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  268 |     await evidence.captureCheckpoint(\"reset-control-missing\");\n> 269 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: user query page has no reset or clear filter control\");\n      |           ^\n  270 |   }\n  271 |   await resetButton.click();\n  272 |   await expect(page.getByRole(\"textbox\", { name: \"登录名\", exact: true })).toHaveValue(\"\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:269:11",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-RESET-001/20260827-083845Z-pid41288-w0-r0/filtered-user-query.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-PAGE-001/20260827-084013Z-pid1616-w1-r0/user-pagination-page-two.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-UPDATE-001/20260827-083856Z-pid1616-w1-r0/user-update-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-DELETE-001/20260827-083910Z-pid1616-w1-r0/user-delete-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-QUERY-003/20260827-083920Z-pid1616-w1-r0/deleted-user-query-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-QUERY-001/20260827-083938Z-pid1616-w1-r0/role-query-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-ROLE-CREATE-001/20260827-083929Z-pid1616-w1-r0/role-create-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-001/20260827-084049Z-pid1616-w1-r0/task-query-default.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-QUERY-002/20260827-084054Z-pid1616-w1-r0/unmatched-task-query.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "ExecutionStatus": "BLOCKED",
+      "Actual": "Error: BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden Error: BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden\n\n  457 |     evidence.setFailureType(\"BLOCKED_PRECONDITION\");\n  458 |     await evidence.captureCheckpoint(\"task-pagination-precondition-missing\");\n> 459 |     throw new Error(\"BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden\");\n      |           ^\n  460 |   }\n  461 |   await next.click();\n  462 |   await evidence.captureCheckpoint(\"task-pagination-page-two\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:459:11",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-PAGE-001/20260827-084100Z-pid1616-w1-r0/task-pagination-precondition-missing.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-001/20260827-084002Z-pid1616-w1-r0/vehicle-query-result.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-QUERY-002/20260827-084007Z-pid1616-w1-r0/unmatched-vehicle-query.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "ExecutionStatus": "ERROR",
+      "Actual": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m \u001b[31mTest timeout of 90000ms exceeded.\u001b[39m Error: locator.fill: Target page, context or browser has been closed\n\n  147 | async function updateVehicleSpeed(page: Page, speed: string): Promise<void> {\n  148 |   const field = page.locator(\".VehicleManage .el-form-item\").filter({ hasText: \"车辆名称\" }).first().locator(\"input\");\n> 149 |   await field.fill(vehicleName);\n      |               ^\n  150 |   await page.getByRole(\"button\", { name: \"搜索\", exact: true }).click();\n  151 |   const row = page.getByRole(\"row\").filter({ hasText: vehicleName }).last();\n  152 |   await expect(row).toBeVisible({ timeout: 10_000 });\n    at updateVehicleSpeed (E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:149:15)\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:473:11",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-VEH-UPDATE-001/20260827-084108Z-pid42108-w2-r0/failure.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-003/20260827-084243Z-pid10680-w3-r0/statistics-default.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "ExecutionStatus": "PASS",
+      "Actual": "Real Playwright UI execution completed.",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-QUERY-004/20260827-084248Z-pid10680-w3-r0/statistics-month-query.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "ExecutionStatus": "FAIL",
+      "Actual": "Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\n\n  503 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  504 |     await evidence.captureCheckpoint(\"statistics-reset-control-missing\");\n> 505 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no reset or clear filter control\");\n      |           ^\n  506 |   }\n  507 |   await reset.click();\n  508 |   await evidence.captureCheckpoint(\"statistics-reset-result\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:505:11",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-RESET-001/20260827-084253Z-pid10680-w3-r0/statistics-reset-control-missing.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "ExecutionStatus": "FAIL",
+      "Actual": "Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control Error: FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\n\n  516 |     evidence.setFailureType(\"FAIL_BUSINESS_ASSERTION\");\n  517 |     await evidence.captureCheckpoint(\"statistics-pagination-missing\");\n> 518 |     throw new Error(\"FAIL_BUSINESS_ASSERTION: efficiency statistics page has no pagination control\");\n      |           ^\n  519 |   }\n  520 |   await next.click();\n  521 |   await evidence.captureCheckpoint(\"statistics-pagination-page-two\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:518:11",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-STAT-PAGE-001/20260827-084300Z-pid42048-w4-r0/statistics-pagination-missing.png"
+      ]
+    }
+  ],
+  "SupportingPreflightResults": [
+    {
+      "TestCaseId": "TC-WEB-LOGIN-001",
+      "ExecutionStatus": "PASS",
+      "Actual": "管理员真实登录后进入调度总览。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-WEB-LOGIN-001/20260827-035902Z-pid25216-w0-r0"
+      ]
+    }
+  ],
+  "BlockedFlowResults": [
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "Title": "统计查询-合法时间范围有数据",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "BLOCKED_DATA_PRECONDITION",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "Title": "统计查询-合法时间范围无数据",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "BLOCKED_DATA_PRECONDITION",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "只读数据库目标已解析，但该用例所需的批准统计数据时间范围未具备；未通过 SQL 创建业务数据。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "Title": "任务查询-分页",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "DESIGN_DEFAULT",
+      "MappingStatus": "MAPPED_EXECUTED",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": "tests/web/real-project/TC_ALLOWED_WEB_20260827_03.spec.ts",
+      "EntryPoint": "TC-TQUERY-PAGE-001 - task query pagination prerequisite is reported",
+      "Reason": "Error: BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden Error: BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden\n\n  457 |     evidence.setFailureType(\"BLOCKED_PRECONDITION\");\n  458 |     await evidence.captureCheckpoint(\"task-pagination-precondition-missing\");\n> 459 |     throw new Error(\"BLOCKED_PRECONDITION: no safe web-created task data is available to form a second page; physical task creation is withheld because DummyCar initialization is forbidden\");\n      |           ^\n  460 |   }\n  461 |   await next.click();\n  462 |   await evidence.captureCheckpoint(\"task-pagination-page-two\");\n    at E:\\automated-testing\\tests\\web\\real-project\\TC_ALLOWED_WEB_20260827_03.spec.ts:459:11",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-TQUERY-PAGE-001/20260827-084100Z-pid1616-w1-r0/task-pagination-precondition-missing.png"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "Title": "任务生命周期-新增后查询",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "DESIGN_DEFAULT",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "Title": "任务生命周期-取消后查询",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "Title": "FL-TASK-01 任务模板从零到可下单",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "Title": "FL-TASK-02 建单→派车→执行→完成→反馈",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "Title": "FL-TASK-03 第三方下发→状态反馈",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "Title": "FL-TASK-04 取放货业务交互门控",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "Title": "FL-TASK-05 取消任务两条路径与终态",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "Title": "FL-TASK-06 优先级与派单顺序",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "Title": "FL-TASK-07 任务完成等待与链式接续",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "Title": "FL-TASK-09 指定车任务与派不出去排查",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "Title": "FL-TASK-10 任务状态反馈闭环",
+      "AutomationEligibility": "AUTO_ALLOWED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "BLOCKED_RUNTIME_PREREQUISITE",
+      "ExecutionStatus": "BLOCKED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "AT 地图、链式搬运进程和状态反馈进程已确认运行，但 DummyCar 未完成定位；物理执行不安全。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json"
+      ]
+    }
+  ],
+  "ManualResults": [
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "Title": "任务新增-合法依赖创建成功",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "Title": "任务新增-无效模板引用校验",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "Title": "任务新增-无效车辆引用校验",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "Title": "任务新增-无效站点引用校验",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "Title": "任务新增-无效楼层引用校验",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "Title": "任务状态-允许取消的任务",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "Title": "任务状态-禁止取消的终态任务",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "Title": "任务状态-允许重发的任务",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "Title": "任务状态-禁止重发的任务",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "Title": "车辆新增-合法车辆",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "Title": "车辆新增-编号重复",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "Title": "车辆新增-非法车辆类型",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "Title": "监控看板-地图与状态人工复核",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "Title": "日志下载-批准非敏感日志包",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "HANDOFF_BASELINE",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "Title": "车辆删除-正常删除后查询",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "DESIGN_DEFAULT",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "Title": "FL-TASK-08 任务异常结束与重发",
+      "AutomationEligibility": "MANUAL_REQUIRED",
+      "ExpectedStatus": "EXPECTED_CONFIRMED",
+      "ExpectedBasis": "FLOW_DESIGN",
+      "MappingStatus": "MANUAL_REQUIRED",
+      "ExecutionStatus": "MANUAL",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Catalog requires manual visual or interaction acceptance.",
+      "Evidence": []
+    }
+  ],
+  "PendingResults": [
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "Title": "用户修改-唯一字段重复校验",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "Title": "用户删除-重复删除",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "Title": "用户删除-删除后同唯一键重建",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "Title": "角色关联-解除关联",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "Title": "角色关联-重复绑定",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "Title": "角色关联-权限变化生效",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "Title": "权限访问-菜单拒绝",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "Title": "权限访问-页面拒绝",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "Title": "权限访问-按钮拒绝",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "Title": "权限访问-直接 URL拒绝",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "Title": "任务查询-排序",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "Title": "任务新增-重复任务",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "Title": "任务新增-缺少必填依赖",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "Title": "任务状态-取消状态矩阵",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "Title": "车辆新增-编号为空",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "Title": "车辆新增-名称为空",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "Title": "车辆新增-编号长度边界",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "Title": "车辆新增-非法字符",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "Title": "车辆修改-非法字段",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "Title": "统计查询-排序",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "Title": "统计查询-时间范围边界",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "Title": "统计查询-缺少时间条件",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "Title": "统计查询-超出允许范围",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "Title": "统计查询-非法格式",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "Title": "用户新增-显示名超长",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "Title": "用户新增-用户名长度边界",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "Title": "用户新增-非法字符",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "Title": "用户状态-禁用启用与登录影响",
+      "AutomationEligibility": "NOT_EXECUTABLE",
+      "ExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ExpectedBasis": "PENDING_AUTHORITY",
+      "MappingStatus": "PENDING_EXPECTED_AUTHORITY",
+      "ExecutionStatus": "BLOCKED",
+      "ApplicabilityStatus": "PENDING_AUTHORITY",
+      "CoverageStatus": "UNTESTED",
+      "ScriptPath": null,
+      "EntryPoint": null,
+      "Reason": "Expected authority is pending; case is not executable and is not counted as a formal skip.",
+      "Evidence": []
+    }
+  ],
+  "FormalPassCount": 20,
+  "FormalFailCount": 3,
+  "FormalErrorCount": 1,
+  "FormalBlockedCount": 14,
+  "ManualRequired": 16,
+  "PendingAuthorityCount": 28,
+  "FormalSkippedCount": 0,
+  "NotYetExecutedCount": 62,
+  "Pending": 28,
+  "CleanupResidualCount": 1,
+  "RetainedTestOwnedFixtureCount": 1,
+  "CleanupStatus": "PARTIAL_INTENTIONAL_RETENTION",
+  "DummyCarInitializationPolicy": "SKIPPED_AFTER_OPERATOR_CONFIRMATION",
+  "DummyCarBug": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/defects/BUG-RSSCOMPOSER-DUMMYCAR-RESET-RESTART-001.md",
+  "AttemptHistory": [
+    {
+      "Attempt": 1,
+      "ExecutionStatus": "ERROR",
+      "Classification": "TEST_DATA_DESIGN",
+      "Actual": "过长登录名被运行时截断，创建后用完整值查询不到；证据已保留。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/first-attempt-error"
+      ]
+    },
+    {
+      "Attempt": 2,
+      "ExecutionStatus": "ERROR",
+      "Classification": "FIXTURE_RESIDUAL_FROM_PRIOR_ATTEMPT",
+      "Actual": "重复创建返回业务码4002；随后已按实际保存值清理。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/first-attempt-error"
+      ]
+    },
+    {
+      "Attempt": 3,
+      "ExecutionStatus": "PASS",
+      "Classification": "FORMAL_EXECUTION",
+      "Actual": "使用字段允许长度的本轮登录名完成新增、验证、删除、验证。",
+      "Evidence": [
+        "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0"
+      ]
+    }
+  ],
+  "FLDesignStatus": "PASS",
+  "FLExecutionStatus": "BLOCKED",
+  "FLExecutionReason": "FL-01..10 require a backend-active map, running chain/feedback processes and/or a DummyCar; current runtime prerequisites are not all confirmed.",
+  "RuntimeEnablement": {
+    "TestMapProvisioningStatus": "PASS",
+    "ActiveMapStatus": "PASS_MANUALLY_CONFIRMED",
+    "ChainProcessProvisioningStatus": "PASS",
+    "ChainProcessRunningStatus": "PASS",
+    "FeedbackProcessProvisioningStatus": "PRESENT_MANUALLY_CREATED",
+    "FeedbackProcessRunningStatus": "PASS",
+    "DummyCarReadinessStatus": "FAIL_PRODUCT_FAILURE",
+    "MapProcessReadinessStatus": "BLOCKED",
+    "GoldenPathStatus": "BLOCKED"
+  },
+  "EvidenceIndex": {
+    "login": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-WEB-LOGIN-001/20260827-035902Z-pid25216-w0-r0",
+    "fixture": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/TC-USER-CREATE-001/20260827-040907Z-pid35088-w0-r0",
+    "apiCars": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/credential-smoke-getallcar.json",
+    "infrastructure": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/api/infrastructure-smoke-map-process.json",
+    "firstAttempt": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/web/first-attempt-error",
+    "mock": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/mock/summary.json",
+    "sourceIntegrity": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/source-integrity/before.json",
+    "mapProvisioning": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/map/map-provisioning-evidence.json",
+    "processProvisioning": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-provisioning-error.json",
+    "processStart": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-formal-map/process-start-evidence.json",
+    "runtimeDiscovery": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/process/current-runtime-discovery.json",
+    "dummyCarProvisioning": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-live-api-provisioning.json",
+    "dummyCarInitialization": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-initialize-error.json",
+    "dummyCarBug": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/defects/BUG-RSSCOMPOSER-DUMMYCAR-RESET-RESTART-001.md",
+    "dummyCarReadiness": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/dummy-car/dummy-car-readiness.json",
+    "database": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/artifacts/db/readonly-probe.json",
+    "goldenFixtureRegistry": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/golden-fixture-registry.json",
+    "goldenPathResult": "projects/rsscomposer-blackbox/runs/SOURCE-ASSISTED-FORMAL-20260827-02/golden-path-result.json"
+  }
+}

@@ -49,8 +49,88 @@ function imageReferences(value) {
   return [...String(value ?? '').matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)].map((match) => ({ alt: match[1], reference: match[2] }));
 }
 
-function textLines(value) {
-  return String(value ?? '').replace(/&#10;/g, '\n').split(/\n|　(?=\d+、|【清理】)/).map((item) => item.trim()).filter(Boolean);
+export const MAX_VISUAL_CHARS_PER_LINE = 15;
+const protectedTokenPattern = /[A-Za-z0-9]+(?:[_-][A-Za-z0-9<>]+)+/g;
+const protectedTokenOnlyPattern = /^[A-Za-z0-9]+(?:[_-][A-Za-z0-9<>]+)+$/u;
+
+function semanticItems(value) {
+  return String(value ?? '')
+    .replace(/<br\s*\/?\s*>|&#10;/gi, '\n')
+    .split(/[\r\n　]+/u)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function visibleLength(value) {
+  return [...String(value ?? '').replace(/[`*_]/g, '')].length;
+}
+
+function isVisualBreakPoint(value) {
+  return /[\s，；：、。！？/→]$/u.test(value);
+}
+
+function atomize(value) {
+  const atoms = [];
+  let cursor = 0;
+  for (const match of String(value).matchAll(protectedTokenPattern)) {
+    atoms.push(...[...String(value).slice(cursor, match.index)]);
+    atoms.push(match[0]);
+    cursor = match.index + match[0].length;
+  }
+  atoms.push(...[...String(value).slice(cursor)]);
+  return atoms;
+}
+
+function hardWrapLine(value) {
+  const atoms = atomize(String(value ?? '').trim());
+  const lines = [];
+  let remaining = atoms;
+  while (remaining.length) {
+    if (visibleLength(remaining[0]) > MAX_VISUAL_CHARS_PER_LINE) {
+      lines.push(remaining.shift());
+      continue;
+    }
+    let length = 0;
+    let take = 0;
+    let preferredTake = 0;
+    while (take < remaining.length) {
+      const nextLength = length + visibleLength(remaining[take]);
+      if (nextLength > MAX_VISUAL_CHARS_PER_LINE) break;
+      length = nextLength;
+      take += 1;
+      if (length >= 10 && isVisualBreakPoint(remaining.slice(0, take).join(''))) preferredTake = take;
+    }
+    if (take === 0) take = 1;
+    const splitAt = preferredTake > 0 ? preferredTake : take;
+    lines.push(remaining.splice(0, splitAt).join('').trim());
+  }
+  return lines.filter(Boolean);
+}
+
+function hardWrappedItems(value) {
+  return semanticItems(value).flatMap((item) => hardWrapLine(item));
+}
+
+function isShortToken(value) {
+  const text = String(value ?? '').replace(/[`*_]/g, '').trim();
+  const visibleChinese = (text.match(/[\u3400-\u9fff]/gu) ?? []).length;
+  return visibleChinese > 0 && visibleChinese <= 6 && !/[，；：。！？]/u.test(text);
+}
+
+function renderSemanticText(value, context) {
+  return renderInlineMarkdown(value, context);
+}
+
+function renderCellLine(value, context, className, prefix = '') {
+  const raw = `${prefix}${value}`;
+  const classes = [`cell-line`, className];
+  if (isShortToken(raw) || protectedTokenOnlyPattern.test(raw.trim())) classes.push('short-token');
+  const protectedToken = protectedTokenOnlyPattern.test(raw.trim());
+  return `<div class="${classes.join(' ')}" data-visible-char-count="${visibleLength(raw)}"${protectedToken ? ' data-protected-token="true"' : ''}>${prefix ? `<span class="field-label">${renderInlineMarkdown(prefix, context)}</span>` : ''}${renderSemanticText(value, context)}</div>`;
+}
+
+function renderSemanticList(value, context, itemClass) {
+  return `<div class="semantic-list ${itemClass}-list">${hardWrappedItems(value).map((line) => renderCellLine(line, context, itemClass)).join('')}</div>`;
 }
 
 function renderInlineText(value) {
@@ -78,19 +158,37 @@ function renderImage(alt, reference, context) {
 }
 
 function renderStepLines(value, context) {
-  return textLines(value).map((line) => line.startsWith('【清理】') ? `<div class="cleanup-line">${renderInlineMarkdown(line, context)}</div>` : `<div class="step-line">${renderInlineMarkdown(line, context)}</div>`).join('');
+  const items = semanticItems(value);
+  const regular = items.filter((item) => !item.startsWith('【清理】'));
+  const cleanup = items.filter((item) => item.startsWith('【清理】'));
+  const regularHtml = regular.flatMap((item) => hardWrapLine(item).map((line) => renderCellLine(line, context, 'step-line'))).join('');
+  const cleanupHtml = cleanup.flatMap((item) => hardWrapLine(item).map((line) => renderCellLine(line, context, 'cleanup-line'))).join('');
+  return `<div class="structured-cell step-list">${regularHtml}${cleanupHtml}</div>`;
 }
 
 function renderExpectedLines(value, context) {
-  return textLines(value).map((line) => line.startsWith('【待确认】') ? `<div class="pending-note">${renderInlineMarkdown(line, context)}</div>` : `<div class="expected-line">${renderInlineMarkdown(line, context)}</div>`).join('');
+  const items = semanticItems(value);
+  const lines = items.flatMap((item) => hardWrapLine(item).map((line) => ({ line, pending: item.startsWith('【待确认】') })));
+  return `<div class="structured-cell expected-list">${lines.map(({ line, pending }) => renderCellLine(line, context, pending ? 'pending-note' : 'expected-line')).join('')}</div>`;
 }
 
 function renderKeyValueLines(value, context) {
-  return `<div class="kv-list">${textLines(value).map((line) => `<div class="kv-line">${renderInlineMarkdown(line, context)}</div>`).join('')}</div>`;
+  const lines = semanticItems(value).flatMap((line) => {
+    const match = /^(.*?：)(.*)$/u.exec(line);
+    if (!match) return hardWrapLine(line).map((item) => ({ value: item, prefix: '' }));
+    const label = match[1];
+    const valueLines = hardWrapLine(match[2]);
+    if (!valueLines.length) return [{ value: '', prefix: label }];
+    if (visibleLength(label) + visibleLength(valueLines[0]) <= MAX_VISUAL_CHARS_PER_LINE) {
+      return [{ value: valueLines[0], prefix: label }, ...valueLines.slice(1).map((item) => ({ value: item, prefix: '' }))];
+    }
+    return [{ value: '', prefix: label }, ...valueLines.map((item) => ({ value: item, prefix: '' }))];
+  });
+  return `<div class="kv-list">${lines.map(({ value: item, prefix }) => renderCellLine(item, context, 'kv-line', prefix)).join('')}</div>`;
 }
 
 function renderConditionLines(value, context) {
-  return textLines(value).map((line) => `<div class="condition-line">${renderInlineMarkdown(line, context)}</div>`).join('');
+  return renderSemanticList(value, context, 'condition-line');
 }
 
 function renderTestCaseCell(header, sourceCell, context) {
@@ -98,8 +196,12 @@ function renderTestCaseCell(header, sourceCell, context) {
   if (header === '预期结果') return renderExpectedLines(sourceCell, context);
   if (header === '测试数据') return renderKeyValueLines(sourceCell, context);
   if (header === '前置条件') return renderConditionLines(sourceCell, context);
-  if (header === '图片示例') return renderInlineMarkdown(sourceCell, context);
-  return renderInlineMarkdown(sourceCell, context);
+  if (header === '实际验证') return renderSemanticList(sourceCell, context, 'actual-line');
+  if (header === '测试场景') return `<span class="scenario-token no-break">${renderSemanticText(sourceCell, context)}</span>`;
+  if (header === 'TestCaseId') return `<span class="testcase-id no-break">${renderInlineMarkdown(sourceCell, context)}</span>`;
+  if (header === '状态') return `<span class="status-token no-break">${renderInlineMarkdown(sourceCell, context)}</span>`;
+  if (header === '图片示例') return `<div class="image-gallery">${renderInlineMarkdown(sourceCell, context)}</div>`;
+  return renderSemanticText(sourceCell, context);
 }
 
 export function parseMarkdownReport(markdown, markdownPath) {
@@ -134,7 +236,7 @@ export function renderHtmlDocument(model, cssText) {
     if (block.type === 'list') return `<${block.ordered ? 'ol' : 'ul'}>${block.items.map((item) => `<li>${renderInlineMarkdown(item, context)}</li>`).join('')}</${block.ordered ? 'ol' : 'ul'}>`;
     if (block.type === 'table') {
       const tableClass = block.isTestCase ? 'testcase-table' : 'report-table';
-      const table = `<table class="${tableClass}"><thead><tr>${block.headers.map((header) => `<th>${escapeHtml(header)}</th>`).join('')}</tr></thead><tbody>${block.rows.map((row) => {
+      const table = `<table class="${tableClass}"><thead><tr>${block.headers.map((header) => `<th><span class="table-header">${escapeHtml(header)}</span></th>`).join('')}</tr></thead><tbody>${block.rows.map((row) => {
         const values = Object.fromEntries(block.headers.map((header, index) => [header, row[index] ?? '']));
         const attributes = block.isTestCase ? ` data-case-id="${escapeHtml(values.TestCaseId)}" data-scenario="${escapeHtml(values.测试场景)}" data-status="${escapeHtml(values.状态)}" data-expected="${escapeHtml(values.预期结果)}"` : '';
         return `<tr${attributes}>${row.map((cell, index) => `<td>${block.isTestCase ? renderTestCaseCell(block.headers[index], cell, context) : renderInlineMarkdown(cell, context)}</td>`).join('')}</tr>`;

@@ -1,0 +1,23 @@
+{
+  "ManifestId": "REMAINING-CLOSURE-MANIFEST-REMAINING-CLOSURE-20260828-01",
+  "Scope": "FROZEN_138_CLOSURE_ONLY",
+  "TargetCaseIds": [
+    "TC-STAT-QUERY-001",
+    "TC-STAT-QUERY-002",
+    "TC-VEH-CREATE-004",
+    "TC-VEH-CREATE-005",
+    "TC-VEH-CREATE-006",
+    "TC-VEH-CREATE-007",
+    "TC-VEH-UPDATE-002",
+    "TC-STAT-QUERY-005",
+    "TC-STAT-VALIDATE-001",
+    "TC-STAT-VALIDATE-002",
+    "TC-STAT-VALIDATE-003",
+    "TC-STAT-VALIDATE-004",
+    "TC-USER-CREATE-007",
+    "TC-USER-CREATE-008",
+    "TC-USER-CREATE-009"
+  ],
+  "ExistingTerminalIntersection": [],
+  "NoRerunPassFailError": true
+}

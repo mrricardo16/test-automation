@@ -1,0 +1,29 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Status": "PASS_WITH_DECLARED_INFRASTRUCTURE_LIMITATION",
+  "Checks": {
+    "FinalCatalogCount": 138,
+    "FinalPartitionCount": 138,
+    "DuplicateTestCaseId": 0,
+    "FormalSkippedSemanticValid": true,
+    "ExpectedPendingCount": 0,
+    "All19MenusDesignCovered": true,
+    "DashboardOutOfScope": true,
+    "ExistingTerminalResultsPreserved": true,
+    "Added26PassPreserved": true,
+    "TargetRows": 24,
+    "TargetPass": 24,
+    "PassCasesWithEvidence": 70,
+    "FailOrErrorCasesWithEvidence": 4,
+    "CleanupStatus": "VERIFIED",
+    "UnexpectedBusinessResidualCount": 0,
+    "MarkdownCaseRows": 138,
+    "MarkdownContainsBr": false,
+    "HtmlExternalImageCount": 0,
+    "HtmlEmbeddedImageCount": 137
+  },
+  "ValidationNotes": [
+    "Canonical report is generated from the current 138-case catalog and 19-menu gate.",
+    "TypeScript validation remains an infrastructure limitation because scripts/platform/harness-authority.mjs is absent; this does not invalidate the executed Web results."
+  ]
+}

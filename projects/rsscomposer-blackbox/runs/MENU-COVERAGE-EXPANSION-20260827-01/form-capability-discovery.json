@@ -1,0 +1,244 @@
+{
+  "RunId": "MENU-COVERAGE-EXPANSION-20260827-01",
+  "MutationPerformed": false,
+  "Records": [
+    {
+      "MenuName": "策略管理",
+      "ModuleName": "场景管理",
+      "Route": "/Sys/StrategyManage",
+      "NewButtonFound": true,
+      "DialogFound": true,
+      "Fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": null,
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        }
+      ],
+      "Screenshot": "E:\\automated-testing\\projects\\rsscomposer-blackbox\\runs\\MENU-COVERAGE-EXPANSION-20260827-01\\artifacts\\form-discovery\\策略管理.png",
+      "Error": null
+    },
+    {
+      "MenuName": "进程管理",
+      "ModuleName": "场景管理",
+      "Route": "/Sys/MissionManage",
+      "NewButtonFound": false,
+      "DialogFound": false,
+      "Fields": [],
+      "Screenshot": null,
+      "Error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "MenuName": "维护任务",
+      "ModuleName": "任务模型",
+      "Route": "/Task/TaskMaintanance",
+      "NewButtonFound": true,
+      "DialogFound": true,
+      "Fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        }
+      ],
+      "Screenshot": "E:\\automated-testing\\projects\\rsscomposer-blackbox\\runs\\MENU-COVERAGE-EXPANSION-20260827-01\\artifacts\\form-discovery\\维护任务.png",
+      "Error": null
+    },
+    {
+      "MenuName": "任务模板",
+      "ModuleName": "任务模型",
+      "Route": "/Task/TaskTemManage",
+      "NewButtonFound": false,
+      "DialogFound": false,
+      "Fields": [],
+      "Screenshot": null,
+      "Error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "MenuName": "模板项管理",
+      "ModuleName": "任务模型",
+      "Route": "/Task/TaskTemItemManage",
+      "NewButtonFound": true,
+      "DialogFound": true,
+      "Fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        }
+      ],
+      "Screenshot": "E:\\automated-testing\\projects\\rsscomposer-blackbox\\runs\\MENU-COVERAGE-EXPANSION-20260827-01\\artifacts\\form-discovery\\模板项管理.png",
+      "Error": null
+    },
+    {
+      "MenuName": "角色管理",
+      "ModuleName": "系统管理",
+      "Route": "/Employee/Role",
+      "NewButtonFound": false,
+      "DialogFound": false,
+      "Fields": [],
+      "Screenshot": null,
+      "Error": "locator.click: Timeout 30000ms exceeded."
+    },
+    {
+      "MenuName": "菜单管理",
+      "ModuleName": "系统管理",
+      "Route": "/Employee/Menu",
+      "NewButtonFound": true,
+      "DialogFound": false,
+      "Fields": [],
+      "Screenshot": null,
+      "Error": null
+    },
+    {
+      "MenuName": "字典管理",
+      "ModuleName": "系统管理",
+      "Route": "/Employee/DictManager",
+      "NewButtonFound": true,
+      "DialogFound": true,
+      "Fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": null,
+          "text": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "placeholder": null,
+          "ariaLabel": null,
+          "name": "",
+          "text": "",
+          "required": true
+        }
+      ],
+      "Screenshot": "E:\\automated-testing\\projects\\rsscomposer-blackbox\\runs\\MENU-COVERAGE-EXPANSION-20260827-01\\artifacts\\form-discovery\\字典管理.png",
+      "Error": null
+    },
+    {
+      "MenuName": "外部系统配置",
+      "ModuleName": "系统管理",
+      "Route": "/Employee/ExSystemManager",
+      "NewButtonFound": false,
+      "DialogFound": false,
+      "Fields": [],
+      "Screenshot": null,
+      "Error": "page.waitForFunction: Timeout 15000ms exceeded."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "TypeScriptStatus": "LIMITED",
+  "Classification": "INFRASTRUCTURE_VALIDATION_LIMITATION",
+  "MissingFile": "scripts/platform/harness-authority.mjs",
+  "TypeScriptErrors": [
+    "TS2307 missing harness-authority.mjs",
+    "TS7006 implicit any at platform-contract-validator.spec.ts:492,521,554"
+  ],
+  "ProductTestImpact": "NONE_FOR_VALID_EXISTING_RESULTS",
+  "ProductSourceModified": false,
+  "ProductSourceTreeHashEqualityCurrentRun": true,
+  "ProductSourceTreeHashCurrentRun": {
+    "Before": {
+      "Backend": "b2a944c2b295748160000c268e18543209dadc702dcb3d36551578724cfbd1df",
+      "Frontend": "f434aeea65b61761127ec4a2a0dcecf5603899edd8425cb0a2cf91c1242591f9"
+    },
+    "After": {
+      "Backend": "b2a944c2b295748160000c268e18543209dadc702dcb3d36551578724cfbd1df",
+      "Frontend": "f434aeea65b61761127ec4a2a0dcecf5603899edd8425cb0a2cf91c1242591f9"
+    }
+  },
+  "ProductSourceTreeHashNote": "Current-run before/after equality verified; earlier recorded backend hash differs because it came from a prior source snapshot, not from this run's edits.",
+  "SecretLeakCount": 0
+}

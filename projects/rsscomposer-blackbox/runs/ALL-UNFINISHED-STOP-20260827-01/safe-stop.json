@@ -1,0 +1,29 @@
+{
+  "RunId": "ALL-UNFINISHED-STOP-20260827-01",
+  "CurrentCase": null,
+  "CurrentPhase": "PRE-FLIGHT / TASK-PAGE-INSPECTION",
+  "SafeStopStatus": "PASS_SAFE_STOPPED",
+  "FormalTestCaseStarted": false,
+  "NewFixtureCreatedThisRound": 0,
+  "RunningTaskFound": false,
+  "OwnedTestProcessesFound": 0,
+  "CleanupResidualCount": 0,
+  "UnexpectedResidualCount": 0,
+  "PriorRetainedInfrastructure": [
+    {
+      "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+      "Fixture": "AT_0827_02_DUMMY",
+      "Reason": "Operator-approved retained TEST_OWNED runtime infrastructure; not created this round and not removed."
+    }
+  ],
+  "CanonicalReportGenerated": false,
+  "CommitCreated": false,
+  "PushPerformed": false,
+  "EvidencePreserved": true,
+  "ExistingRunArtifactsPreserved": true,
+  "Notes": [
+    "The exploratory Playwright command was interrupted while inspecting the task page before any formal TestCase was started.",
+    "No task submission, physical dispatch, DummyCar initialization, ResetAGV, or new fixture creation occurred in this round.",
+    "Existing PASS, FAIL, ERROR, BLOCKED evidence and reports were not overwritten or rolled back."
+  ]
+}

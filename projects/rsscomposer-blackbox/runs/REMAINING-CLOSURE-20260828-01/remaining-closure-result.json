@@ -1,0 +1,229 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "TargetCaseIds": [
+    "TC-STAT-QUERY-001",
+    "TC-STAT-QUERY-002",
+    "TC-STAT-QUERY-005",
+    "TC-STAT-VALIDATE-001",
+    "TC-STAT-VALIDATE-002",
+    "TC-STAT-VALIDATE-003",
+    "TC-STAT-VALIDATE-004",
+    "TC-USER-CREATE-007",
+    "TC-USER-CREATE-008",
+    "TC-USER-CREATE-009",
+    "TC-VEH-CREATE-004",
+    "TC-VEH-CREATE-005",
+    "TC-VEH-CREATE-006",
+    "TC-VEH-CREATE-007",
+    "TC-VEH-UPDATE-002"
+  ],
+  "Rows": [
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-001/20260828-054559Z-pid32528-w0-r0/tc-stat-query-001-runtime-observation.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-002/20260828-054605Z-pid32528-w0-r0/tc-stat-query-002-runtime-observation.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-QUERY-005/20260828-054609Z-pid32528-w0-r0/tc-stat-query-005-runtime-observation.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-001/20260828-054614Z-pid32528-w0-r0/statistics-range-boundary.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-002/20260828-054619Z-pid32528-w0-r0/statistics-missing-time.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-003/20260828-054623Z-pid32528-w0-r0/statistics-out-of-range.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-STAT-VALIDATE-004/20260828-054628Z-pid32528-w0-r0/statistics-invalid-format.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-007/20260828-054632Z-pid32528-w0-r0/tc-user-create-007-boundary-result.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-008/20260828-054637Z-pid32528-w0-r0/tc-user-create-008-boundary-result.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "ExecutionStatus": "PASS",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "Actual": "网页统计/用户边界校验已完成；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-USER-CREATE-009/20260828-054643Z-pid32528-w0-r0/tc-user-create-009-boundary-result.png"
+      ],
+      "ErrorMessages": []
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "ExecutionStatus": "ERROR",
+      "Status": "ERROR",
+      "PlaywrightStatus": "timedOut_or_fixture_missing",
+      "Actual": "车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-060606Z-pid25632-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-055712Z-pid304-w0-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-004/20260828-054649Z-pid32528-w0-r0/failure.png"
+      ],
+      "ErrorMessages": [
+        "车辆表单确认交互超时"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "ExecutionStatus": "ERROR",
+      "Status": "ERROR",
+      "PlaywrightStatus": "timedOut_or_fixture_missing",
+      "Actual": "车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-060808Z-pid27896-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-055913Z-pid23152-w1-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-005/20260828-054851Z-pid27948-w1-r0/failure.png"
+      ],
+      "ErrorMessages": [
+        "车辆表单确认交互超时"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "ExecutionStatus": "ERROR",
+      "Status": "ERROR",
+      "PlaywrightStatus": "timedOut_or_fixture_missing",
+      "Actual": "车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-061012Z-pid33168-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-060115Z-pid33560-w2-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-006/20260828-055053Z-pid34380-w2-r0/failure.png"
+      ],
+      "ErrorMessages": [
+        "车辆表单确认交互超时"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "ExecutionStatus": "ERROR",
+      "Status": "ERROR",
+      "PlaywrightStatus": "timedOut_or_fixture_missing",
+      "Actual": "车辆编辑抽屉可见，但车辆边界校验的确认交互未在运行时完成，Playwright 两轮定向执行均超时；未执行初始化、ResetAGV、地图写入或物理动作。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-061216Z-pid16616-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-060317Z-pid28548-w3-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-CREATE-007/20260828-055255Z-pid34508-w3-r0/failure.png"
+      ],
+      "ErrorMessages": [
+        "车辆表单确认交互超时"
+      ]
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "ExecutionStatus": "ERROR",
+      "Status": "ERROR",
+      "PlaywrightStatus": "timedOut_or_fixture_missing",
+      "Actual": "车辆列表未发现此前固定测试车辆，无法安全构造稳定更新夹具；未执行初始化、物理动作或业务车辆修改。",
+      "EvidencePaths": [
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-061419Z-pid29228-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-060518Z-pid17584-w4-r0/failure.png",
+        "projects/rsscomposer-blackbox/runs/REMAINING-CLOSURE-20260828-01/artifacts/web/TC-VEH-UPDATE-002/20260828-055457Z-pid32112-w4-r0/failure.png"
+      ],
+      "ErrorMessages": [
+        "固定测试车辆不存在"
+      ]
+    }
+  ],
+  "Counts": {
+    "PASS": 10,
+    "FAIL": 0,
+    "ERROR": 5,
+    "BLOCKED": 0,
+    "MANUAL": 0,
+    "SKIPPED": 0
+  },
+  "ExecutionHistory": [
+    {
+      "RunId": "REMAINING-CLOSURE-20260828-01",
+      "Attempt": 1,
+      "Result": "10 PASS, 5 ERROR",
+      "Note": "15 个 AUTO_ALLOWED_NOW 目标均真实执行；车辆目标保留两轮定向超时证据。"
+    },
+    {
+      "RunId": "REMAINING-CLOSURE-20260828-01",
+      "Attempt": 2,
+      "Result": "5 ERROR",
+      "Note": "仅定向重跑车辆目标；未重跑前 10 个 PASS。"
+    }
+  ]
+}

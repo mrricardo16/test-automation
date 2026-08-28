@@ -1,0 +1,10 @@
+{
+  "RunId": "MENU-COVERAGE-AUDIT-20260827-01",
+  "LegacyCatalogCount": 82,
+  "InScopeLeafMenuCount": 19,
+  "OutOfScopeMenuCount": 1,
+  "CoverageGapCount": 74,
+  "MissingMenuCount": 13,
+  "MissingOperationCount": 61,
+  "FormalTestExecutionStarted": false
+}

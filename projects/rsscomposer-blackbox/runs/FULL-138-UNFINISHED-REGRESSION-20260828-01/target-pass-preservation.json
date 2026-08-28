@@ -1,0 +1,27 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "Source": "Direct current-run Playwright results preserved after targeted rerun artifact replacement",
+  "Rows": [
+    {
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "ActualVerification": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI.",
+      "EvidencePaths": ["projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-CREATE-001/20260828-032443Z-pid32668-w0-r0/strategy-created.png"]
+    },
+    {
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "ActualVerification": "Real Playwright UI execution completed; strategy updated, queried, evidenced, and deleted through the visible UI.",
+      "EvidencePaths": ["projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-UPDATE-001/20260828-032507Z-pid32668-w0-r0/strategy-updated.png"]
+    },
+    {
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "Status": "PASS",
+      "PlaywrightStatus": "passed",
+      "ActualVerification": "Real Playwright UI execution completed; strategy created, queried, evidenced, and deleted through the visible UI.",
+      "EvidencePaths": ["projects/rsscomposer-blackbox/runs/FULL-138-UNFINISHED-REGRESSION-20260828-01/artifacts/web/TC-STRAT-DELETE-001/20260828-032517Z-pid32668-w0-r0/strategy-deleted.png"]
+    }
+  ]
+}

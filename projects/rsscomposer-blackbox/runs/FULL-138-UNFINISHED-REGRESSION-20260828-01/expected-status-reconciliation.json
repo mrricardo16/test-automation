@@ -1,0 +1,864 @@
+{
+  "RunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "SourceExpectedPendingCount": 28,
+  "ReconciledExpectedConfirmedCount": 138,
+  "ReconciledExpectedPendingCount": 0,
+  "Rows": [
+    {
+      "TestCaseId": "TC-USER-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-003",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-004",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-005",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-003",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-004",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-005",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-TRESEND-RESEND-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-003",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-MON-VISUAL-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-LOG-DOWNLOAD-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "HANDOFF_BASELINE"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-USER-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-002",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-USER-QUERY-003",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-USER-DELETE-002",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-006",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-ROLE-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-ROLE-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-URB-UNBIND-001",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-URB-BIND-002",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-URB-PERMISSION-001",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-001",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-002",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-003",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-ROLE-PERMISSION-004",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-TQUERY-QUERY-003",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-006",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-TNEW-CREATE-007",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-TLIFE-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-TLIFE-CANCEL-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TCANCEL-CANCEL-003",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-VEH-QUERY-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-004",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-005",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-006",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-VEH-CREATE-007",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-002",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-VEH-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-003",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-004",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "DESIGN_DEFAULT"
+    },
+    {
+      "TestCaseId": "TC-STAT-QUERY-005",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-001",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-002",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-003",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-STAT-VALIDATE-004",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-007",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-008",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-USER-CREATE-009",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-USER-UPDATE-003",
+      "SourceExpectedStatus": "EXPECTED_PENDING_AUTHORITY",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "USER_APPROVED_RUNTIME_BASELINE_FROM_TITLE_SOURCE_AND_UI_RULES",
+      "Exception": null
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-002",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-003",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-004",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-005",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-006",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-007",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-008",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-009",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-TFLOW-COMPOSITE-010",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "FLOW_DESIGN"
+    },
+    {
+      "TestCaseId": "TC-VEH-STATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-DRAW-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-DRAW-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-DRAW-VISUAL-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-STRAT-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-STRAT-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-STRAT-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-STRAT-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-STRAT-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-PROC-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-PROC-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-PROC-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-PROC-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-PROC-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-PROC-STATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-PROC-RELATION-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-MAINT-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-MAINT-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-MAINT-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TTEMP-RELATION-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TITEM-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TITEM-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TITEM-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TITEM-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-TITEM-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-LOG-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-OLOG-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-OLOG-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ELOG-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ELOG-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ILOG-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ILOG-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ENER-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ENER-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ROLE-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ROLE-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-ROLE-RELATION-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-MENU-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-MENU-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-MENU-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-MENU-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-DICT-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-DICT-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-DICT-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-DICT-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-EXT-PAGE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-EXT-QUERY-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-EXT-CREATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-EXT-UPDATE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-EXT-DELETE-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    },
+    {
+      "TestCaseId": "TC-EXT-INTEGRATION-001",
+      "SourceExpectedStatus": "EXPECTED_CONFIRMED",
+      "ReconciledExpectedStatus": "EXPECTED_CONFIRMED",
+      "Basis": "RUNTIME_CAPABILITY_DISCOVERY_AND_SOURCE_API_EVIDENCE"
+    }
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "RunId": "MENU-COVERAGE-AUDIT-20260827-01",
+  "Pages": [
+    {
+      "Module": "场景管理",
+      "MenuName": "车辆管理",
+      "Route": "/Sys/VehicleManage",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Sys/VehicleManage/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "删除",
+        "去充电",
+        "去休息",
+        "下线",
+        "刷新地图",
+        "初始化",
+        "暂停",
+        "启动",
+        "重定位",
+        "下线"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/assets/images/car/car-normal.png",
+        "GET /src/views/Sys/VehicleManage/index.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_tabs_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_image_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_divider_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_tab-pane_style_css.js",
+        "GET /src/components/HzTable/index.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_row_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_select_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_option_style_css.js",
+        "GET /src/views/Sys/VehicleManage/component/VehicleInformation.vue",
+        "GET /src/api/sys/vehicle.ts",
+        "GET /src/views/Sys/VehicleManage/component/VehicleEdit.vue",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-tabs.css",
+        "GET /node_modules/.vite/deps/chunk-AG257WOV.js",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-image.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-divider.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-tab-pane.css",
+        "GET /node_modules/.vite/deps/element-plus_es_components_pagination_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_tag_style_css.js",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-row.css",
+        "GET /node_modules/.vite/deps/chunk-6TNCWOUP.js",
+        "GET /node_modules/.vite/deps/chunk-M3BTXV4O.js",
+        "GET /src/views/Sys/VehicleManage/component/CarShapePreview.vue",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-image-viewer.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-pagination.css",
+        "GET /node_modules/.vite/deps/element-plus_es_components_image-viewer_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_drawer_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_upload_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_col_style_css.js",
+        "GET /src/components/HzNumberInput/index.vue",
+        "GET /src/components/HzSelect/index.vue",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-option-group.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-select.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-option.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-drawer.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-upload.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-col.css",
+        "GET /api/Car/GetCarSubClass",
+        "POST /api/Map/GetPageMapListAll",
+        "GET /api/Map/GetMapLayer",
+        "GET /api/Car/GetPageCarClassName",
+        "POST /api/Car/GetPageCarList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/车辆管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "场景管理",
+      "MenuName": "画图工具",
+      "Route": "/Sys/drawing-tool",
+      "SourceRouteCandidate": "/drawing-tool",
+      "ComponentName": "src/views/drawing-tool/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "VISUAL",
+        "QUERY",
+        "CREATE",
+        "INTEGRATION"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "VISUAL",
+        "QUERY",
+        "CREATE",
+        "INTEGRATION"
+      ],
+      "ObservedButtons": [
+        "超级管理员",
+        "✕",
+        "普通点",
+        "站点",
+        "休息点",
+        "充电点",
+        "直线",
+        "▼",
+        "直线(倒车)",
+        "▼",
+        "曲线",
+        "▼",
+        "曲线(倒车)",
+        "▼",
+        "区域",
+        "文本",
+        "移动",
+        "对齐",
+        "▼",
+        "删除",
+        "定位",
+        "📋场景定义",
+        "🧰绘图工具",
+        "图层 ▸",
+        "＋新建",
+        "📂加载(本地)",
+        "🗄️加载(库)",
+        "☁️上传",
+        "🔄刷新后台",
+        "📁合并地图",
+        "💾保存",
+        "🔍地图检查",
+        "🎯适应",
+        "⛶全屏",
+        "↶撤销"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/drawing-tool/index.vue",
+        "GET /src/modules/draw/App.vue",
+        "GET /src/modules/draw/stores/mapStore.js",
+        "GET /src/modules/draw/components/CreateMapModal.vue",
+        "GET /src/modules/draw/components/AppFeedbackLayer.vue",
+        "GET /src/modules/draw/components/MapEditorShell.vue",
+        "GET /src/modules/draw/styles/theme.css",
+        "GET /src/modules/draw/composables/app/useAppFacade.js",
+        "GET /src/modules/draw/composables/useHistory.js",
+        "GET /src/modules/draw/composables/useElementOps.js",
+        "GET /src/modules/draw/composables/useContextMenuHandler.js",
+        "GET /src/modules/draw/composables/useMapIO.js",
+        "GET /src/modules/draw/stores/layerStore.js",
+        "GET /src/modules/draw/utils/notify.js",
+        "GET /src/modules/draw/api/map.js",
+        "GET /src/modules/draw/components/ToastNotification.vue",
+        "GET /src/modules/draw/components/LoadingProgress.vue",
+        "GET /src/modules/draw/components/PointTypeContextMenu.vue",
+        "GET /src/modules/draw/components/LineActionContextMenu.vue",
+        "GET /src/modules/draw/components/DrawingCanvas.vue",
+        "GET /src/modules/draw/components/ObjectEditorPanel.vue",
+        "GET /src/modules/draw/components/SceneDefinitionPanel.vue",
+        "GET /src/modules/draw/components/KeyboardEventHandler.vue",
+        "GET /src/modules/draw/components/MapCheckDialog.vue",
+        "GET /src/modules/draw/components/DrawingSideToolbar.vue",
+        "GET /src/modules/draw/components/DrawingTools.vue",
+        "GET /src/modules/draw/composables/shell/useMapEditorShellEventRelay.js",
+        "GET /src/modules/draw/composables/useViewControl.js",
+        "GET /src/modules/draw/composables/useAlignment.js",
+        "GET /src/modules/draw/composables/app/useToastMessage.js",
+        "GET /src/modules/draw/composables/app/useUploadActions.js",
+        "GET /src/modules/draw/composables/app/useAppBootstrap.js",
+        "GET /src/modules/draw/composables/app/useEditorActions.js",
+        "GET /src/modules/draw/utils/idGenerator.js",
+        "GET /src/modules/draw/utils/lineActionFields.js",
+        "GET /src/modules/draw/utils/inputBox.js",
+        "GET /src/modules/draw/utils/floorDialog.js",
+        "GET /src/modules/draw/utils/priorityDialog.js",
+        "GET /src/modules/draw/utils/rgvActionDialog.js",
+        "GET /src/modules/draw/composables/editor/actionRegistry.js",
+        "GET /src/modules/draw/utils/mapLoader.js",
+        "GET /src/modules/draw/composables/mapIO/fileHandler.js",
+        "GET /src/modules/draw/composables/mapIO/layerUtils.js",
+        "GET /src/modules/draw/composables/mapIO/payloadBuilder.js",
+        "GET /src/modules/draw/composables/mapIO/loadPipeline.js",
+        "GET /src/modules/draw/composables/mapIO/mergePipeline.js",
+        "GET /src/modules/draw/utils/request.js",
+        "GET /src/modules/draw/components/AreaHandler.vue",
+        "GET /src/modules/draw/components/MoveModeHandler.vue",
+        "GET /src/modules/draw/components/MouseEventHandler.vue",
+        "GET /src/modules/draw/components/AnchorEditHandler.vue",
+        "GET /src/modules/draw/utils/CanvasRenderer.js",
+        "GET /src/modules/draw/utils/eventUtils.js",
+        "GET /src/modules/draw/composables/canvas/useDrawingCanvasChildListeners.js",
+        "GET /src/modules/draw/composables/canvas/useCanvasCacheDirtyManager.js",
+        "GET /src/modules/draw/composables/canvas/useDrawingCanvasRenderState.js",
+        "GET /src/modules/draw/composables/canvas/useCanvasStateBridge.js",
+        "GET /src/modules/draw/composables/canvas/useCanvasViewState.js",
+        "GET /src/modules/draw/composables/canvas/useCanvasMutationOps.js",
+        "GET /src/modules/draw/composables/canvas/useCanvasActiveEditors.js",
+        "GET /src/modules/draw/components/PointProperties.vue",
+        "GET /src/modules/draw/components/LineProperties.vue",
+        "GET /src/modules/draw/components/TextProperties.vue",
+        "GET /src/modules/draw/components/AreaProperties.vue",
+        "GET /src/modules/draw/composables/usePropertyPanelEditor.js",
+        "GET /src/modules/draw/utils/floatingPanelLayout.js",
+        "GET /src/modules/draw/composables/keyboard/keyboardShortcuts.js",
+        "GET /src/modules/draw/components/ElementList.vue",
+        "GET /src/modules/draw/composables/mapCheck/runMapCheck.js",
+        "GET /src/modules/draw/components/MapSelectorModal.vue",
+        "GET /src/modules/draw/components/LayerDropdown.vue",
+        "GET /src/modules/draw/utils/mapSwitchGuard.js",
+        "GET /src/modules/draw/components/ToolButton.vue",
+        "GET /src/modules/draw/config/toolConfig.js",
+        "GET /src/modules/draw/utils/alignmentUtils.js",
+        "GET /src/modules/draw/components/InputBoxDialog.vue"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/画图工具.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "场景管理",
+      "MenuName": "策略管理",
+      "Route": "/Sys/StrategyManage",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Sys/StrategyManage/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "删除",
+        "重启续发(调度侧)",
+        "重启续发(车载侧)",
+        "RGV重启策略",
+        "其他策略"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Task/StrategyManage/index.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_collapse_style_css.js",
+        "GET /node_modules/.vite/deps/element-plus_es_components_collapse-item_style_css.js",
+        "GET /src/views/Task/StrategyManage/components/StrategyEdit.vue",
+        "GET /src/api/task/strategy.ts",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-collapse-item.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-collapse.css",
+        "POST /api/Dict/GetDicChildByDictName",
+        "POST /api/Strategy/GetPageStrategyList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/策略管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "场景管理",
+      "MenuName": "进程管理",
+      "Route": "/Sys/MissionManage",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Sys/MissionManage/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "RELATION"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "STATE",
+        "RELATION"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "策略配置",
+        "删除",
+        "刷新地图",
+        "刷新状态"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Task/MissionManage/index.vue",
+        "GET /src/components/Pagination/index.vue",
+        "GET /src/api/task/mission.ts",
+        "GET /src/views/Task/MissionManage/components/MissionEdit.vue",
+        "GET /src/views/Task/MissionManage/components/MissionStrategyConfig.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_switch_style_css.js",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-switch.css",
+        "GET /api/Mission/GetPageMissionClassName",
+        "POST /api/Map/GetPageMapListAll",
+        "POST /api/Mission/GetPageMissionList",
+        "GET /api/Mission/GetMissionRunningStatus"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/进程管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "任务模型",
+      "MenuName": "任务管理",
+      "Route": "/Task/TaskManage",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Task/TaskManage/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增"
+      ],
+      "ObservedInputLabels": [
+        "开始时间",
+        "结束时间"
+      ],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Task/TaskManage/index.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_date-picker_style_css.js",
+        "GET /src/api/task/task.ts",
+        "GET /src/views/Task/TaskManage/components/Priority.vue",
+        "GET /src/views/Task/TaskManage/components/TaskDetails.vue",
+        "GET /src/views/Task/TaskManage/components/Subtask.vue",
+        "GET /src/views/Task/TaskManage/components/TaskScript.vue",
+        "GET /src/views/Task/TaskManage/components/AddTask.vue",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-date-picker-panel.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-date-picker.css",
+        "GET /src/api/task/taskTem.ts",
+        "GET /api/Tmp/GetAllTemp",
+        "POST /api/Map/GetPageMapListAll",
+        "POST /api/Task/GetPageTaskList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/任务管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "任务模型",
+      "MenuName": "维护任务",
+      "Route": "/Task/TaskMaintanance",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Task/TaskMaintanance/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增"
+      ],
+      "ObservedInputLabels": [
+        "开始时间",
+        "截止时间"
+      ],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Task/TaskMaintanance/index.vue",
+        "GET /src/api/task/taskmaintanance.ts",
+        "GET /src/views/Task/TaskMaintanance/components/TaskMaintananceEdit.vue",
+        "POST /api/Map/GetPageMapListAll",
+        "POST /api/TaskMaintananc/GetPageTaskMaintanancList",
+        "GET /api/TaskMaintananc/WeeklyTaskMaintanancCount"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/维护任务.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "任务模型",
+      "MenuName": "任务模板",
+      "Route": "/Task/TaskTemManage",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Task/TaskTemManage/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "删除",
+        "配置"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Task/TaskTemManage/index.vue",
+        "GET /src/views/Task/TaskTemManage/components/TaskTemEdit.vue",
+        "GET /src/views/Task/TaskTemManage/components/TmpItemDetail.vue",
+        "POST /api/Tmp/GetPageTempList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/任务模板.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "任务模型",
+      "MenuName": "模板项管理",
+      "Route": "/Task/TaskTemItemManage",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Task/TaskTemItemManage/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "删除"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Task/TaskTemItemManage/index.vue",
+        "GET /src/views/Task/TaskTemItemManage/components/TaskTemItemEdit.vue",
+        "GET /src/api/task/taskTemItem.ts",
+        "POST /api/TmpItem/GetPageTaskTempItemList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/模板项管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "日志管理",
+      "MenuName": "日志文件",
+      "Route": "/Logs/LogFileManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Logs/LogFileManager/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "DOWNLOAD"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "DOWNLOAD"
+      ],
+      "ObservedButtons": [
+        "超级管理员",
+        "搜索",
+        "重置",
+        "主动打包",
+        "下载已选 (0)",
+        "AT_0827_02_DUMMYID: 1901IP: 127.0.0.1在线"
+      ],
+      "ObservedInputLabels": [
+        "开始时间",
+        "结束时间",
+        "搜索车牌号或名称",
+        "开始日期",
+        "开始时间",
+        "结束日期",
+        "结束时间",
+        "开始日期",
+        "开始时间",
+        "结束日期",
+        "结束时间"
+      ],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Logs/LogFileManager/index.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_card_style_css.js",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-card.css",
+        "POST /api/Map/GetPageMapListAll",
+        "GET /api/Car/GetAllCarList",
+        "GET /api/LogAnalysis/Vehicle-Packages"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/日志文件.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "日志管理",
+      "MenuName": "操作日志",
+      "Route": "/Logs/SysLogManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Logs/SysLogManager/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ObservedButtons": [
+        "搜索"
+      ],
+      "ObservedInputLabels": [
+        "开始时间",
+        "截止时间"
+      ],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Logs/SysLogManager/index.vue",
+        "POST /api/SystemLog/GetPageSysLogList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/操作日志.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "日志管理",
+      "MenuName": "异常日志",
+      "Route": "/Logs/ExceptionLogManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Logs/ExceptionLogManager/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ObservedButtons": [
+        "查询"
+      ],
+      "ObservedInputLabels": [
+        "请输入车辆信息",
+        "请输入故障编号/故障信息",
+        "开始时间",
+        "结束时间"
+      ],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Logs/ExceptionLogManager/index.vue",
+        "GET /src/components/ECharts/index.vue",
+        "GET /node_modules/.vite/deps/echarts_core.js",
+        "GET /node_modules/.vite/deps/echarts_renderers.js",
+        "GET /node_modules/.vite/deps/echarts_charts.js",
+        "GET /node_modules/.vite/deps/echarts_components.js",
+        "GET /api/Car/GetAllCarList",
+        "POST /api/FaultDesc/GetPageFaultList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/异常日志.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "日志管理",
+      "MenuName": "交互日志",
+      "Route": "/Logs/ThirdLogManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Logs/ThirdLogManager/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ObservedButtons": [
+        "搜索"
+      ],
+      "ObservedInputLabels": [
+        "请输入天",
+        "开始时间",
+        "截止时间"
+      ],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Logs/ThirdLogManager/index.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_time-picker_style_css.js",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-time-picker.css",
+        "POST /api/MSGSendThird/GetPageMsgSendThirdLogList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/交互日志.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "统计分析",
+      "MenuName": "效能统计",
+      "Route": "/Statistics/EfficStatisticsManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Statistics/EfficStatisticsManager/index.vue",
+      "PageReachable": false,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": false,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE"
+      ],
+      "ObservedButtons": [],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/效能统计.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "统计分析",
+      "MenuName": "能耗统计",
+      "Route": "/Statistics/ElectStatisticsManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Statistics/ElectStatisticsManager/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY"
+      ],
+      "ObservedButtons": [
+        "查询"
+      ],
+      "ObservedInputLabels": [
+        "选择月"
+      ],
+      "NetworkPaths": [
+        "GET /src/views/Statistics/ElectStatisticsManager/index.vue",
+        "POST /api/Statistics/GetCarEleConsumeStatistics"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/能耗统计.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "系统管理",
+      "MenuName": "用户管理",
+      "Route": "/Employee/User",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Employee/User/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "删除",
+        "密码初始化",
+        "指定用户角色"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Employee/User/index.vue",
+        "GET /src/views/Employee/User/components/EditUser.vue",
+        "GET /src/views/Employee/User/components/AssignUserRoles.vue",
+        "POST /api/User/GetAllRole",
+        "POST /api/User/GetUserList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/用户管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "系统管理",
+      "MenuName": "角色管理",
+      "Route": "/Employee/Role",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Employee/Role/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "RELATION"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "删除",
+        "用户分配",
+        "角色权限分配"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Employee/Role/index.vue",
+        "GET /src/api/employee/role.ts",
+        "GET /src/views/Employee/Role/components/AddRole.vue",
+        "GET /src/views/Employee/Role/components/UserAssignment.vue",
+        "GET /src/views/Employee/Role/components/RolePremission.vue",
+        "GET /node_modules/.vite/deps/element-plus_es_components_tree_style_css.js",
+        "GET /node_modules/.vite/deps/chunk-N53V5BHO.js",
+        "GET /node_modules/.vite/deps/chunk-SEYPQPG4.js",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-tree.css",
+        "GET /node_modules/.pnpm/element-plus@2.13.7_typescr_0fa4751f8fa020301a8746973788e8b7/node_modules/element-plus/theme-chalk/el-text.css",
+        "POST /api/Role/GetRolePage"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/角色管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "系统管理",
+      "MenuName": "菜单管理",
+      "Route": "/Employee/Menu",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Employee/Menu/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ObservedButtons": [
+        "新增",
+        "修改",
+        "删除"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Employee/Menu/index.vue",
+        "GET /src/api/employee/menu.ts",
+        "GET /api/Menu/GetMenuTree"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/菜单管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "系统管理",
+      "MenuName": "字典管理",
+      "Route": "/Employee/DictManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Sys/DictManager/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "ObservedButtons": [
+        "新增",
+        "修改",
+        "删除"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Sys/DictManager/index.vue",
+        "GET /src/views/Sys/DictManager/DictEdit.vue",
+        "GET /src/api/sys/dict.ts",
+        "GET /api/Dict/GetSysDic",
+        "POST /api/Dict/GetPageDictList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/字典管理.png",
+      "ScopeStatus": "IN_SCOPE"
+    },
+    {
+      "Module": "系统管理",
+      "MenuName": "外部系统配置",
+      "Route": "/Employee/ExSystemManager",
+      "SourceRouteCandidate": null,
+      "ComponentName": "src/views/Sys/ExSystemManager/index.vue",
+      "PageReachable": true,
+      "RuntimeMenuLinkFound": true,
+      "RuntimeMenuRouteReached": true,
+      "SourceRouteReached": false,
+      "PrimaryFunctions": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "INTEGRATION"
+      ],
+      "SupportedOperations": [
+        "PAGE_SMOKE",
+        "QUERY",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "INTEGRATION"
+      ],
+      "ObservedButtons": [
+        "搜索",
+        "新增",
+        "修改",
+        "删除"
+      ],
+      "ObservedInputLabels": [],
+      "NetworkPaths": [
+        "GET /api/info/GetAllCar",
+        "GET /api/info/GetAllCarImg",
+        "GET /api/CarFault/GetRecentList",
+        "GET /api/Statistics/GetDashboardStatistics",
+        "GET /src/views/Sys/ExSystemManager/index.vue",
+        "GET /src/views/Sys/ExSystemManager/components/ExSystemOptions.vue",
+        "GET /src/api/sys/exsystem.ts",
+        "POST /api/ExSystem/GetPageExSystemList"
+      ],
+      "CapabilityEvidenceScreenshot": "projects/rsscomposer-blackbox/runs/MENU-COVERAGE-AUDIT-20260827-01/artifacts/navigation/外部系统配置.png",
+      "ScopeStatus": "IN_SCOPE"
+    }
+  ],
+  "FormalTestExecutionStarted": false
+}

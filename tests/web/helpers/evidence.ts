@@ -4,7 +4,7 @@ import path from "node:path";
 
 const CONSOLE_LIMIT = 300;
 const NETWORK_LIMIT = 500;
-const EVIDENCE_ROOT = path.resolve("projects/test-workflow/artifacts/web");
+const EVIDENCE_ROOT = path.resolve(process.env.WEB_EVIDENCE_ROOT ?? "projects/test-workflow/artifacts/web");
 
 export type EvidenceFailureType =
   | "ERROR_LOCATOR"
@@ -99,7 +99,7 @@ function createRunId(testInfo: TestInfo): string {
 }
 
 function testCaseId(testInfo: TestInfo): string {
-  return testInfo.title.match(/(?:TC-(?:WEB|SM)-[A-Z0-9-]+|INFRASTRUCTURE_SELF_TEST)/)?.[0] ?? "WEB-UNCLASSIFIED";
+  return testInfo.title.match(/(?:TC-[A-Z0-9]{2,10}-[A-Z0-9-]+|INFRASTRUCTURE_SELF_TEST)/)?.[0] ?? "WEB-UNCLASSIFIED";
 }
 
 function toCaseStatus(status: string, blocked: boolean, failureType?: EvidenceFailureType): EvidenceCaptureResult["caseStatus"] {

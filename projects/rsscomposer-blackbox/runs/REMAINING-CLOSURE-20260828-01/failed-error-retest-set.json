@@ -1,0 +1,43 @@
+{
+  "RunId": "REMAINING-CLOSURE-20260828-01",
+  "SourceRunId": "FULL-138-UNFINISHED-REGRESSION-20260828-01",
+  "OriginalFailIds": [
+    "TC-USER-RESET-001",
+    "TC-STAT-RESET-001",
+    "TC-STAT-PAGE-001"
+  ],
+  "OriginalErrorIds": [
+    "TC-VEH-UPDATE-001"
+  ],
+  "Rows": [
+    {
+      "TestCaseId": "TC-USER-RESET-001",
+      "OriginalStatus": "FAIL",
+      "RetestEligibility": "NO_PRODUCT_CHANGE",
+      "RetestStatus": "NOT_REQUIRED",
+      "Reason": "无产品修复、配置变化或新前置条件；保留原失败证据。"
+    },
+    {
+      "TestCaseId": "TC-STAT-RESET-001",
+      "OriginalStatus": "FAIL",
+      "RetestEligibility": "NO_PRODUCT_CHANGE",
+      "RetestStatus": "NOT_REQUIRED",
+      "Reason": "无产品修复、配置变化或新前置条件；保留原失败证据。"
+    },
+    {
+      "TestCaseId": "TC-STAT-PAGE-001",
+      "OriginalStatus": "FAIL",
+      "RetestEligibility": "NO_PRODUCT_CHANGE",
+      "RetestStatus": "NOT_REQUIRED",
+      "Reason": "无产品修复、配置变化或新前置条件；保留原失败证据。"
+    },
+    {
+      "TestCaseId": "TC-VEH-UPDATE-001",
+      "OriginalStatus": "ERROR",
+      "RetestEligibility": "NO_PRODUCT_CHANGE",
+      "RetestStatus": "NOT_REQUIRED",
+      "Reason": "车辆固定夹具仍不存在，且本轮确认车辆表单运行时限制；不通过初始化或共享车辆变更制造重测前置条件。"
+    }
+  ],
+  "PreserveOriginalHistory": true
+}

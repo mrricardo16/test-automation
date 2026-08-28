@@ -1,0 +1,9 @@
+{
+  "RunId": "SOURCE-ASSISTED-FORMAL-20260827-02",
+  "Status": "BLOCKED",
+  "TemplateCreated": false,
+  "TaskCreated": false,
+  "Fixtures": [],
+  "CleanupStatus": "PASS",
+  "Reason": "Map/process/DummyCar readiness was blocked; no Golden Path business fixture was created."
+}

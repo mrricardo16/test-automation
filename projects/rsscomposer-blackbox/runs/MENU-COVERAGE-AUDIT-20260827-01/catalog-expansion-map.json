@@ -1,0 +1,527 @@
+{
+  "LegacyCount": 82,
+  "NewCount": 82,
+  "FinalCount": 82,
+  "AddedTestCaseIds": [],
+  "Reason": "Phase 1-4 audit only; expansion is intentionally deferred until the user reviews the inventory and gaps.",
+  "MenuCoverageGap": [
+    {
+      "Module": "场景管理",
+      "Menu": "车辆管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "STATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "STATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "VISUAL",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "画图工具",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "INTEGRATION",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "策略管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "STATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "场景管理",
+      "Menu": "进程管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "RELATION",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "维护任务",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "任务模板",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "RELATION",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "任务模型",
+      "Menu": "模板项管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "日志文件",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "操作日志",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "操作日志",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "操作日志",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "异常日志",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "异常日志",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "异常日志",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "交互日志",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "交互日志",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "日志管理",
+      "Menu": "交互日志",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "统计分析",
+      "Menu": "能耗统计",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "统计分析",
+      "Menu": "能耗统计",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "统计分析",
+      "Menu": "能耗统计",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "角色管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "RELATION",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "菜单管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "字典管理",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "GapType": "PAGE_SMOKE",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "IN_SCOPE leaf menu has no confirmed existing page coverage."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "PAGE_SMOKE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "QUERY",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "CREATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "UPDATE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "DELETE",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    },
+    {
+      "Module": "系统管理",
+      "Menu": "外部系统配置",
+      "GapType": "PRIMARY_OPERATION",
+      "MissingOperation": "INTEGRATION",
+      "Reason": "Runtime capability was observed but no Legacy 82 TestCase is mapped to this menu operation."
+    }
+  ]
+}
